@@ -123,10 +123,29 @@ void CheckPseudolocalesAndStableIds() {
   assert(!Find("error.invalid_mutation_setting"));
 }
 
+void CheckSpanishTooltips() {
+  size_t checked = 0;
+  for (const SpanishEntry & entry : SPANISH_CANDIDATE) {
+    const bool is_tooltip_source = entry.id.starts_with("instruction.")
+      || entry.id.starts_with("trait.")
+      || entry.id == "configuration.setting_locked.title"
+      || entry.id == "configuration.reaction_triggers.zero_help.title"
+      || entry.id == "shell.well_mixed.placement_help"
+      || entry.id == "organism.head.follow"
+      || entry.id == "organism.head.stop_following";
+    if (!is_tooltip_source) continue;
+    assert(entry.value != entry.source);
+    assert(SpanishText(entry.source) == entry.value);
+    ++checked;
+  }
+  assert(checked == 54);
+}
+
 } // namespace
 
 int main() {
   CheckCatalog();
   CheckArguments();
   CheckPseudolocalesAndStableIds();
+  CheckSpanishTooltips();
 }

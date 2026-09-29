@@ -413,7 +413,9 @@ emp::String AvidaWebApp::BuildOrganismModeHTML() const {
         "<button type='button' class='head-marker head-", marker_id,
         is_tracked ? " is-tracked" : "", "' data-organism-head='", marker_id,
         "' aria-pressed='", is_tracked ? "true" : "false",
-        "' title='", text(is_tracked ? "Stop following" : "Follow"), " ",
+        "' title='", emp::MakeWebSafe(PresentationText(
+          is_tracked ? "Stop following" : "Follow"
+        )), " ",
         genome_head_labels[marker_id], " head'>", genome_head_labels[marker_id],
         " <span aria-hidden='true'>&rarr;</span></button>"
       );
@@ -430,7 +432,7 @@ emp::String AvidaWebApp::BuildOrganismModeHTML() const {
     );
     if (pos < genome.size()) {
       out.Append(
-        "<code title='", emp::MakeWebSafe(inst_set.GetDescription(genome[pos])), "'>",
+        "<code title='", emp::MakeWebSafe(PresentationText(inst_set.GetDescription(genome[pos]))), "'>",
         emp::MakeWebSafe(inst_set.GetName(genome[pos])), "</code>"
       );
     } else {
@@ -567,7 +569,7 @@ emp::String AvidaWebApp::BuildOrganismModeHTML() const {
   out += "<dl class='analysis-trait-list'>";
   for (const auto & trait : organism_analysis_traits) {
     out.Append(
-      "<div title='", emp::MakeWebSafe(trait.description), "'><dt>",
+      "<div title='", emp::MakeWebSafe(PresentationText(trait.description)), "'><dt>",
       emp::MakeWebSafe(trait.name), "</dt><dd>", emp::MakeWebSafe(trait.value), "</dd></div>"
     );
   }
@@ -597,7 +599,7 @@ emp::String AvidaWebApp::BuildOrganismStatsHTML() {
   for (const emp::String & name : trait_names) {
     const auto & trait = Avida().GetTrait(name);
     out.Append(
-      "<div class='trait-row' title='", emp::MakeWebSafe(trait.GetDesc()), "'><dt>",
+      "<div class='trait-row' title='", emp::MakeWebSafe(PresentationText(trait.GetDesc())), "'><dt>",
       emp::MakeWebSafe(name), "</dt><dd>", emp::MakeWebSafe(trait.AsString(*organism)),
       "</dd></div>"
     );
@@ -615,7 +617,7 @@ emp::String AvidaWebApp::BuildOrganismStatsHTML() {
     const size_t inst_id = genome[pos];
     const emp::String & description = inst_set.GetDescription(inst_id);
     out.Append(
-      "<li title='", emp::MakeWebSafe(description), "'><code>",
+      "<li title='", emp::MakeWebSafe(PresentationText(description)), "'><code>",
       emp::MakeWebSafe(inst_set.GetName(inst_id)), "</code></li>"
     );
   }

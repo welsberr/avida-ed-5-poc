@@ -11,8 +11,8 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "2e65ec0c24c77063ef19d4d36deead14438df5b9",
-    "source_worktree_was_dirty": false,
+    "source_revision": "6e496fceb7328e755c99f6c3d5dc324ce8cfc674",
+    "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
       {
@@ -23,12 +23,12 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "c22fad051552de1bcb3f4dcbb5744c9cfdb91421513ec83571588ec304c05d2b"
+        "sha256_current": "51739ba2e8bab711ea8db0063e7036859a354ad171126f046d5794a0d79c12ac"
       },
       {
         "path": "source/web/EducationRecording.hpp",
         "sha256_at_draft": "a5956d42c84a19644b494058c41ed370f3d63775a82e352d3b1369a41d751903",
-        "sha256_current": "70c2f7cca027667029a2cd7adec68abc50ce0ad383e54150c8ae29cdba5689eb"
+        "sha256_current": "023cc093b83eb5fc57949abf0511e7302b8200a2c7cc133f8206fa8f2c0eb7ff"
       },
       {
         "path": "source/web/EducationArchive.hpp",
@@ -57,7 +57,7 @@
       {
         "path": "source/web/OrganismAnalysis.hpp",
         "sha256_at_draft": "bf89aeff75cd54995f0c6bad69b378f6d91398fee421e9a7c562fb2d53c53ec7",
-        "sha256_current": "7f08f10eaaef40b191310b77696abfd7748b188ec5e1484be83c178569abfc96"
+        "sha256_current": "961015969d7e523d74c0d1ad9846bf7233753b33b7936a66f50eb876338dafc8"
       },
       {
         "path": "docs/avida-ed5-education-roadmap.md",
@@ -65,11 +65,11 @@
       },
       {
         "path": "source/web/SpanishCatalog.hpp",
-        "sha256_current": "20e9c05f4f462f72a82387fdbbaebb6c9c5e375a49712128c1dd909968a4a9ed"
+        "sha256_current": "dbbf9a081925430eed91b21e8deb58ebbcdd8e80a56ff31332df86fa5bfc56f4"
       },
       {
         "path": "source/web/LocalizationTests.cpp",
-        "sha256_current": "fb4e9c56b9abe3c0c566a0e54de24a27dbada2a16c8b4420beba3c375c561501"
+        "sha256_current": "7c90ac5477fd84883d74837ffd92b748269a3c36a200d3d0efb217d93662f3f9"
       },
       {
         "path": "scripts/localize_es_catalog.py",
@@ -89,7 +89,7 @@
       },
       {
         "path": "scripts/finalize_es_catalog_provenance.py",
-        "sha256_current": "0cc888f0720e6f163e6d1c1c24737fa6565ca4497d1aac5ff40a44e2843c991b"
+        "sha256_current": "d7340abacb03c043b985bedb4be608ba2212f29a9eb7dfb80ec13fa53d1c3789"
       },
       {
         "path": "scripts/validate_es_catalog.py",
@@ -105,7 +105,7 @@
       },
       {
         "path": "source/web/ConfigurationPanels.hpp",
-        "sha256_current": "a7326ca093ed6e04c47b6d207d72f51ada9430a67f5dfefdf16e6d807bcdecd5"
+        "sha256_current": "f626c2af63c7ff693c15b89f52d3000ba4ae829a2cf6df9bd24dc9e4b301c202"
       },
       {
         "path": "source/web/Ed4ColorPalettes.hpp",
@@ -113,11 +113,11 @@
       },
       {
         "path": "web/Avida.html",
-        "sha256_current": "2e54246b770b3d466eeb3309e6c6f383ea47e1a9c1795f343a1c82daa40cd314"
+        "sha256_current": "2e0c8aeca76479b7a498e5ad527660c4c0a23e014b653b38a910f646829cb7d2"
       },
       {
         "path": "web/education-plots.js",
-        "sha256_current": "fd5cfbdaf2eb698a7d8869b7990e8954acd227654add5d0af957c8616ea0c87a"
+        "sha256_current": "6ebb2af59128ed528532670375ff5995f76f01ea83cf5f0c6c31f2e4c0c83425"
       },
       {
         "path": "web/vendor/plotly-1.53.0.min.js",
@@ -126,6 +126,10 @@
       {
         "path": "scripts/import_ed4_color_palettes.py",
         "sha256_current": "2835dd124cc89b7488a76fb0f8b33da4cd5184bda3f3a593192f0c613b822c3b"
+      },
+      {
+        "path": "web/vendor/plotly-locale-es-1.53.0.js",
+        "sha256_current": "a6bb92f2fdd81d6ba4147489462e5536d68d2a03296267a133ccf5593ee594aa"
       }
     ],
     "created_utc": "2026-09-29T06:26:31Z",
@@ -137,7 +141,7 @@
     "review_confidence": null,
     "translation_confidence": "machine-generated candidate; not a human language or scientific review",
     "glossary_version": "avida-ed-es-glossary-draft-2",
-    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 285-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
+    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 337-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
     "archive_contract": {
       "save_format": "avida-ed5-education-experiment",
       "save_schema_version": 1,
@@ -200,15 +204,15 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-29T22:22:21Z",
+    "updated_utc": "2026-09-29T22:45:03Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
-    "catalog_entry_count": 285,
+    "catalog_entry_count": 337,
     "model_translated_entry_count": 189,
     "glossary_preserved_entry_count": 7,
     "human_reviewed_entry_count": 0,
     "terminology_lineage": "Relevant general terms follow the TalkOrigins Spanish translation compendium; Avida-specific distinctions are explicit overrides.",
-    "assistant_edit_suggestion_count": 89
+    "assistant_edit_suggestion_count": 141
   },
   "messages": [
     {
@@ -3130,6 +3134,526 @@
       "placeholders": [],
       "translation_method": "Codex-assisted UI localization; pending competent human review",
       "source_contract_sha256": "ac080cb34e8540dbd0baa51d2d9858f31c6af8eaa09492b5b3c16e1ed1540f0c"
+    },
+    {
+      "id": "configuration.setting_locked.title",
+      "source": "This setting is locked after a run starts.",
+      "value": "Este ajuste queda bloqueado después de iniciar una ejecución.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "a01bf552ba2bcdfdb2ec368bf6cbf860d097328af403d956582954abc7520dab"
+    },
+    {
+      "id": "configuration.reaction_triggers.zero_help.title",
+      "source": "Zero allows unlimited triggers per gestation.",
+      "value": "Cero permite disparadores ilimitados por gestación.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "08be53c7f4bb9870d529dd411b5f1e3cf6c10da02343af09be8e078fff0f319d"
+    },
+    {
+      "id": "shell.well_mixed.placement_help",
+      "source": "Select any organism to inspect it. Drag from the freezer to add organisms. Display slots have no effect on placement or reproduction.",
+      "value": "Seleccione cualquier organismo para inspeccionarlo. Arrastre organismos desde el almacén para agregarlos. Las posiciones de visualización no afectan la colocación ni la reproducción.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "d20d7653977b161c225ce412e86361b75d2d514796ecfa84c20be4110b5d477d"
+    },
+    {
+      "id": "instruction.nop_a.description",
+      "source": "No operation; selects component A as an argument.",
+      "value": "Sin operación; selecciona el componente A como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "b70c7d5eed3953a00c5607501bbc5d9cd87381543d9de9b48cf426221e6a7e1f"
+    },
+    {
+      "id": "instruction.nop_b.description",
+      "source": "No operation; selects component B as an argument.",
+      "value": "Sin operación; selecciona el componente B como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "bcb104f33246b4e7e517ae79197a9a36c20df4e14eb4852ae98b5050f0ef75a3"
+    },
+    {
+      "id": "instruction.nop_c.description",
+      "source": "No operation; selects component C as an argument.",
+      "value": "Sin operación; selecciona el componente C como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "b2cc1cce0f5fe0ef519e41015ab6a8ba98a3a732ff766992cc6dff53f9429239"
+    },
+    {
+      "id": "instruction.nop_d.description",
+      "source": "No operation; selects component D as an argument.",
+      "value": "Sin operación; selecciona el componente D como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "955368fa2ae69a037dade483f4fda5b91a4e6c857e613aa4dd8472b0159be07f"
+    },
+    {
+      "id": "instruction.nop_e.description",
+      "source": "No operation; selects component E as an argument.",
+      "value": "Sin operación; selecciona el componente E como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "e69aa16db3655586d2213e292e23f9ce5ddab7133b02d7197100c6ddbdb6f515"
+    },
+    {
+      "id": "instruction.nop_f.description",
+      "source": "No operation; selects component F as an argument.",
+      "value": "Sin operación; selecciona el componente F como argumento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "4240b1f25a3192d503fcfd71a57b080d22acf9d2cfd8a759566e1bfad03191e1"
+    },
+    {
+      "id": "instruction.const.description",
+      "source": "Push a selected constant onto a selected stack.",
+      "value": "Inserta una constante seleccionada en una pila seleccionada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "b8c66740d9d40a91be4ebe4534366fb5232e62e9799ab86270f629e707256e4e"
+    },
+    {
+      "id": "instruction.offset.description",
+      "source": "Add a selected constant to a popped stack value.",
+      "value": "Suma una constante seleccionada a un valor extraído de una pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "0e4b74c7347dda316844dac54328de02d3ea87b78827b10b6ac0d01d7b101617"
+    },
+    {
+      "id": "instruction.not.description",
+      "source": "Apply logical NOT to a popped stack value.",
+      "value": "Aplica la operación NOT lógica a un valor extraído de una pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "60e660722c54e5058db517d68581b3beb24ab70996fe8224a5ad70d43d6e57a5"
+    },
+    {
+      "id": "instruction.shift.description",
+      "source": "Left-shift one popped value by another.",
+      "value": "Desplaza un valor extraído a la izquierda según otro valor extraído.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "2839bb5de1a061113aaa809e53b951acd159bff5475f82b9c41524a9d40ea697"
+    },
+    {
+      "id": "instruction.add.description",
+      "source": "Add two popped stack values.",
+      "value": "Suma dos valores extraídos de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "234dcffd3444efa8d776f8c400f084466da37ed1db9e1639bcb42f570f1ba50a"
+    },
+    {
+      "id": "instruction.sub.description",
+      "source": "Subtract one popped stack value from another.",
+      "value": "Resta un valor extraído de la pila a otro.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "cd7ce724e643dff4c4b2da918a9664f7a6abc342c8be8f3bc6dc9e49449899ab"
+    },
+    {
+      "id": "instruction.mult.description",
+      "source": "Multiply two popped stack values.",
+      "value": "Multiplica dos valores extraídos de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "db434fdc776bc0473e8d0f87d722e937ff076c05935861a71e8e3bed8b51b5ca"
+    },
+    {
+      "id": "instruction.div.description",
+      "source": "Divide two popped stack values; division by zero is an error.",
+      "value": "Divide dos valores extraídos de la pila; la división entre cero produce un error.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "2d934c0fb0c12add1c219aeef62badea2b5f26aac8bc07663a906db27a662801"
+    },
+    {
+      "id": "instruction.mod.description",
+      "source": "Calculate the remainder of two popped values.",
+      "value": "Calcula el resto de dos valores extraídos de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "d671ccca8224aab49603657d0bf0e6c7bb1dc1c1e38048aa0b9dfbede87454a1"
+    },
+    {
+      "id": "instruction.exp.description",
+      "source": "Raise one popped stack value to the power of another.",
+      "value": "Eleva un valor extraído de la pila a la potencia de otro.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "3e338f76b18cea4fea7681413ce78899cdf35dabb47d0143e7a8ad49954929fa"
+    },
+    {
+      "id": "instruction.sort.description",
+      "source": "Sort the top values of two selected stacks.",
+      "value": "Ordena los valores superiores de dos pilas seleccionadas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "0c1a6ccef8e133e9108bfa329aa92ae0c8891a44f1cadc894517dc3c82545dbe"
+    },
+    {
+      "id": "instruction.test_less.description",
+      "source": "Test whether one popped value is less than another.",
+      "value": "Comprueba si un valor extraído de la pila es menor que otro.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "6513ca174c2cc842582d98edf13b531304b6318d73c98ec212985d2d5f092ad7"
+    },
+    {
+      "id": "instruction.test_equ.description",
+      "source": "Test whether two popped stack values are equal.",
+      "value": "Comprueba si dos valores extraídos de la pila son iguales.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "231827850ae66aa9ccb2c9f028cd8ce68e71cad8b40706c003e733c9b722b056"
+    },
+    {
+      "id": "instruction.nand.description",
+      "source": "Apply bitwise NAND to two popped stack values.",
+      "value": "Aplica NAND bit a bit a dos valores extraídos de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "b942ce56ce8887cdf5c553c92c99c2d864b7cb38dcc7f4da7efd894d877f7cfa"
+    },
+    {
+      "id": "instruction.if.description",
+      "source": "Skip the next instruction when the selected value is zero.",
+      "value": "Omite la siguiente instrucción cuando el valor seleccionado es cero.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "0be237e991ee7b231af4062eea6a4e6adca7442fe048370e3baa171b2cf6bbbe"
+    },
+    {
+      "id": "instruction.if_not.description",
+      "source": "Skip the next instruction when the selected value is nonzero.",
+      "value": "Omite la siguiente instrucción cuando el valor seleccionado no es cero.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "ef6ee6cdc84437235d25aa72d3ba680805949228ef2f6cbba1e41e5f5c637bed"
+    },
+    {
+      "id": "instruction.scope.description",
+      "source": "Mark a scope boundary identified by following Nops.",
+      "value": "Marca un límite de ámbito identificado por las instrucciones Nop siguientes.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "de2111bcfccb3c472c220ee55809f732fe9cbc4d2363cec7634544fea6705d3f"
+    },
+    {
+      "id": "instruction.continue.description",
+      "source": "Jump backward to the selected scope boundary.",
+      "value": "Salta hacia atrás hasta el límite de ámbito seleccionado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "9fb80565647b46b4bcc21c6a062388c9c47daaff44ec38adb656cac86c4bc681"
+    },
+    {
+      "id": "instruction.break.description",
+      "source": "Jump forward to the selected scope boundary.",
+      "value": "Salta hacia delante hasta el límite de ámbito seleccionado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "1e32585b77740dfc211b5ec4607712e5c288fc41a298e97e88e15b13b23cefb0"
+    },
+    {
+      "id": "instruction.stack_pop.description",
+      "source": "Discard the top value of a selected stack.",
+      "value": "Descarta el valor superior de una pila seleccionada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "958e1a8826038405928b056186009ddb78fd92cf21e3a5af2f83a3f7d85a26b5"
+    },
+    {
+      "id": "instruction.stack_dup.description",
+      "source": "Copy the top value of one stack onto another.",
+      "value": "Copia el valor superior de una pila en otra.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "c3995dc8baf10ced85a7a167c3c8ac44cfdd0f790be705eb16e4aa3c051e1246"
+    },
+    {
+      "id": "instruction.stack_swap.description",
+      "source": "Exchange the top values of two selected stacks.",
+      "value": "Intercambia los valores superiores de dos pilas seleccionadas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "144a944a6ef9d26275ff481dc8619e9ffb14bdc1b043847b8410708580f4d71d"
+    },
+    {
+      "id": "instruction.stack_move.description",
+      "source": "Move the top value from one stack to another.",
+      "value": "Mueve el valor superior de una pila a otra.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "ba2b57fa6b6d102074fa6bb8ee3cc4b700e4e1b83abfa3e7f10bc9dc7d7c8e8e"
+    },
+    {
+      "id": "instruction.copy_inst.description",
+      "source": "Copy an instruction between selected genome heads.",
+      "value": "Copia una instrucción entre los cabezales seleccionados del genoma.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "6005223a78a50930b1863b45d6884ca0a8e88d9e96b1dac7526bdd5a05115041"
+    },
+    {
+      "id": "instruction.load.description",
+      "source": "Load a memory value onto a selected stack.",
+      "value": "Carga un valor de memoria en una pila seleccionada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "3b81e3b61406682ac9f55d9aa00b79ace7c246de17d714e36671f7b2d6785ca0"
+    },
+    {
+      "id": "instruction.store.description",
+      "source": "Store a popped stack value in memory.",
+      "value": "Almacena en memoria un valor extraído de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "46c64637761d409d4fc756af4ac7fb8641061e9c3d7235466bad2aae00bcefc1"
+    },
+    {
+      "id": "instruction.head_pos.description",
+      "source": "Push a selected head's position onto a stack.",
+      "value": "Inserta en una pila la posición del cabezal seleccionado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "92ca3749d6697fc6553a53f204b5f7f609f4f45553a9c10e02df27a6785bc7a4"
+    },
+    {
+      "id": "instruction.set_head.description",
+      "source": "Set a selected head from a popped stack value.",
+      "value": "Establece la posición de un cabezal seleccionado con un valor extraído de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "4c281f32576ab0fd047ff51f97602a0893c79309b3a6478a3477fcdd4e7beb33"
+    },
+    {
+      "id": "instruction.jump_head.description",
+      "source": "Move one selected head to another head's position.",
+      "value": "Mueve un cabezal seleccionado a la posición de otro cabezal.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "103145490844a1b687b583b48c6e5730f0fef79dcde0a7a7a5f2263d67e48b3c"
+    },
+    {
+      "id": "instruction.offset_head.description",
+      "source": "Move a selected head by a popped offset.",
+      "value": "Desplaza un cabezal seleccionado según un desplazamiento extraído de la pila.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "594c20b606606c127a2e3539dfd57c7f0515b9c6eaf2b594545bd8628a411f30"
+    },
+    {
+      "id": "trait.metabolic_base.description",
+      "source": "Relative base speed of the virtual CPU for this organism.",
+      "value": "Velocidad base relativa de la CPU virtual de este organismo.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "ac22c380ff5303794e3de493b1a9fbde0e9de7f0e4bc65899265905fa48c6e85"
+    },
+    {
+      "id": "trait.metabolic_mult.description",
+      "source": "Bonus speed multiple from tasks.",
+      "value": "Multiplicador de velocidad adicional obtenido al realizar tareas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "e9deeec7dbb3c89d630e21b539f19a96840bedf5b4ce164ca7f979c6cd9f8ca7"
+    },
+    {
+      "id": "trait.parent_bonus.description",
+      "source": "Bonus received while producing this offspring.",
+      "value": "Bonificación recibida al producir esta descendencia.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "dd745ec3395d6e768c2efb294a30c56985bf460ca19c112b2886fa3914a619ec"
+    },
+    {
+      "id": "trait.gestation_cost.description",
+      "source": "How many CPU cycles to produce an offspring?",
+      "value": "¿Cuántos ciclos de CPU se necesitan para producir descendencia?",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "796df088f0c10058b991db7299bc20174f3225d2d6e94cecc91972b1a615a3e5"
+    },
+    {
+      "id": "trait.generation.description",
+      "source": "Number of offspring in chain since inject",
+      "value": "Número de generaciones descendientes desde la inyección.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "dc4f90352f5588ae2331eee1c7433a45a407abf9249b5cb0816954708456a4bd"
+    },
+    {
+      "id": "trait.pop_pos.description",
+      "source": "Position in the grid population of this organism.",
+      "value": "Posición de este organismo en la cuadrícula de población.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "3beacef4b8a9eb079d431f16aa34f58fb43d2804a4d12143b63c3c4bf60b13e8"
+    },
+    {
+      "id": "trait.task_counts.description",
+      "source": "Times organism performed each task this gestation.",
+      "value": "Número de veces que el organismo realizó cada tarea durante esta gestación.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "48400e1bd54c1db8e062c0c0c7e287b72e42020a45b22a99abd2cf721c4431e6"
+    },
+    {
+      "id": "trait.parent_task_counts.description",
+      "source": "Times organism's parent performed each task (its gestation).",
+      "value": "Número de veces que el progenitor del organismo realizó cada tarea durante su gestación.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "e0219bf21e6cb781004cfafecdc67bc173bfd9f4ab12791c3c25ffd4b6ed1a35"
+    },
+    {
+      "id": "trait.inputs.description",
+      "source": "Input values provided to this organism.",
+      "value": "Valores de entrada proporcionados a este organismo.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "4ac32a7ed1e9e05eba0df0e58aef787c2bf825bae6b6476402899f5a4cfb09f9"
+    },
+    {
+      "id": "trait.logic_counts.description",
+      "source": "Number of times each logic task was performed.",
+      "value": "Número de veces que se realizó cada tarea lógica.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "cabab1c04690d2d62170e4fc67d187763eb14480860ab3e501061510ff2d2293"
+    },
+    {
+      "id": "trait.offspring_count.description",
+      "source": "Number of direct offspring produced by this organism",
+      "value": "Número de descendientes directos producidos por este organismo.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "0ab4e88b26363fc9bce26686dd88054262e0854959544948959fa19e8ee38371"
+    },
+    {
+      "id": "trait.genotype_id.description",
+      "source": "Unique ID for group of identical genomes",
+      "value": "Identificador único del grupo de genomas idénticos.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "2df2a6a1bb13d949a01e9eb921eea8534a8f788d7e2a2c6694620614b4b8876e"
+    },
+    {
+      "id": "trait.hardware.description",
+      "source": "Virtual CPU for this organism",
+      "value": "CPU virtual de este organismo.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
+      "source_contract_sha256": "6bc2ec3983cf2a4068d9bd73279e5c52024e9d29f14d3b9f122ddb5c03e7fb9c"
     }
   ]
 }

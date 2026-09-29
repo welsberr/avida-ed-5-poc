@@ -77,10 +77,17 @@ void AvidaWebApp::BuildInterface() {
   logo.Alt("Avida-ED").AddAttr("class", "brand-logo");
   brand << logo;
 
-  language_selector.SetOption("English", [this](){ SetLocale("en"); });
-  language_selector.SetOption("Español", [this](){ SetLocale("es"); });
-  language_selector.SetOption("Pseudo: expanded strings", [this](){ SetLocale("qps-ploc"); });
-  language_selector.SetOption("Pseudo: right-to-left layout", [this](){ SetLocale("qps-plocm"); });
+  // This selector is a persistent widget member while the interface is rebuilt. Use fixed option
+  // IDs so each build replaces the four labels and callbacks instead of appending duplicates.
+  language_selector.SetOption(PresentationText("English").str(), [this](){ SetLocale("en"); }, 0);
+  language_selector.SetOption(PresentationText("Español").str(), [this](){ SetLocale("es"); }, 1);
+  language_selector.SetOption(
+    PresentationText("Pseudo: expanded strings").str(), [this](){ SetLocale("qps-ploc"); }, 2
+  );
+  language_selector.SetOption(
+    PresentationText("Pseudo: right-to-left layout").str(),
+    [this](){ SetLocale("qps-plocm"); }, 3
+  );
   language_selector.SelectID(
     active_locale == avida::web::localization::Locale::ENGLISH ? 0
       : active_locale == avida::web::localization::Locale::SPANISH ? 1
@@ -197,9 +204,9 @@ void AvidaWebApp::BuildInterface() {
   org_stats_mode.SetAttr("aria-pressed", "false");
   freezer_mode.SetAttr("aria-pressed", "false");
   configure_mode.SetAttr("aria-pressed", "false");
-  pop_stats_mode.SetTitle("Pop Stats");
-  org_stats_mode.SetTitle("Org Stats");
-  freezer_mode.SetTitle("Freezer");
+  pop_stats_mode.SetTitle(PresentationText("Population Statistics"));
+  org_stats_mode.SetTitle(PresentationText("Organism Statistics"));
+  freezer_mode.SetTitle(PresentationText("Freezer"));
   configure_mode.SetTitle(PresentationText(
     "The lesson holds other settings fixed; see Experiment setup for the controlled values."
   ));
@@ -254,7 +261,7 @@ void AvidaWebApp::BuildInterface() {
   population_canvas.SetAttr("tabindex", "0");
   population_canvas.SetAttr("data-grid-width", PopulationWidth());
   population_canvas.SetAttr("data-grid-height", PopulationHeight());
-  population_canvas.SetTitle(population_adapter_t::PLACEMENT_HELP);
+  population_canvas.SetTitle(PresentationText(population_adapter_t::PLACEMENT_HELP));
   population_canvas.SetAttr("oncontextmenu", "event.preventDefault();");
   population_canvas.OnKeydown(std::function<void(UI::KeyboardEvent)>{
     [this](UI::KeyboardEvent event) {

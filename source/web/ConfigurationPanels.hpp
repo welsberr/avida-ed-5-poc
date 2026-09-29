@@ -27,7 +27,9 @@ void AvidaWebApp::AddConfigurationSetting(UI::Div & scope_panel,
   setting_panel.AddAttr(
     "class", is_locked ? "configuration-setting is-locked" : "configuration-setting"
   );
-  if (is_locked) setting_panel.SetTitle("This setting is locked after a run starts.");
+  if (is_locked) setting_panel.SetTitle(
+    PresentationText("This setting is locked after a run starts.")
+  );
   setting_panel << emp::MakeString(
     "<label class='configuration-label' for='", control_id, "'>",
     emp::MakeWebSafe(HumanizeSettingName(local_name)), "</label>"
@@ -233,7 +235,7 @@ void AvidaWebApp::BuildEnvironmentConfiguration(UI::Div & content) {
     triggers_input.Disabled(run_started);
     triggers_input.AddAttr("class", "configuration-input");
     triggers_input.SetAttr("onwheel", "this.blur()");
-    triggers_input.SetTitle("Zero allows unlimited triggers per gestation.");
+    triggers_input.SetTitle(PresentationText("Zero allows unlimited triggers per gestation."));
     configuration_inputs.push_back(triggers_input);
     triggers_field << configuration_inputs.back();
     fields << triggers_field;

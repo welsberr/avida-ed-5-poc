@@ -22,17 +22,24 @@
       filename: "avida-ed5-ancestor-sequence"
     }
   ];
+  const plotLocales = new WeakMap();
 
   function update(payloadText) {
     if (!window.Plotly) return;
     const payload = JSON.parse(payloadText);
+    const locale = payload.locale === "es" ? "es" : "en";
     for (const spec of plotSpecs) {
       const target = document.getElementById(spec.id);
       if (!target) continue;
       if (!payload.updates.length) {
         window.Plotly.purge(target);
+        plotLocales.delete(target);
         continue;
       }
+      if (plotLocales.has(target) && plotLocales.get(target) !== locale) {
+        window.Plotly.purge(target);
+      }
+      plotLocales.set(target, locale);
 
       const y = payload[spec.key];
       const data = [{
@@ -70,6 +77,7 @@
       };
       const config = {
         responsive: true,
+        locale,
         displaylogo: false,
         scrollZoom: true,
         doubleClick: "reset",

@@ -34,6 +34,7 @@ SOURCE_FILES = [
     "web/Avida.html",
     "web/education-plots.js",
     "web/vendor/plotly-1.53.0.min.js",
+    "web/vendor/plotly-locale-es-1.53.0.js",
     "source/web/LocalizationTests.cpp",
     "scripts/localize_es_catalog.py",
     "scripts/generate_es_runtime_catalog.py",

@@ -166,12 +166,15 @@ $(WEB_WELL_MIXED_EXE): $(WEB_CODE) Makefile $(KEY_HEADERS) $(EMP_HEADERS) $(shel
 	mkdir -p $(WEB_DIR)
 	$(CXX_web) $(FLAGS) -DAVIDA_WEB_POPULATION=PopWellMixed $(WEB_CODE) -o $@
 
-EDUCATION_TESTS := $(addprefix $(BUILD_DIR)/test_,education_experiment education_json education_records sequence_comparison)
+EDUCATION_TESTS := $(addprefix $(BUILD_DIR)/test_,education_experiment education_json education_records sequence_comparison localization)
 
 test-education: $(EDUCATION_TESTS)
 	@set -e; for test in $^; do $$test; done
 
 $(BUILD_DIR)/test_%: tests/%_test.cpp Makefile $(KEY_HEADERS) $(EMP_HEADERS) | $(BUILD_DIR)
+	$(CXX) $(FLAGS_DEBUG) -O1 -fno-exceptions $< -o $@
+
+$(BUILD_DIR)/test_localization: source/web/LocalizationTests.cpp Makefile $(KEY_HEADERS) $(EMP_HEADERS) | $(BUILD_DIR)
 	$(CXX) $(FLAGS_DEBUG) -O1 -fno-exceptions $< -o $@
 
 test-education-plots:

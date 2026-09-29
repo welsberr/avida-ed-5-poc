@@ -105,6 +105,8 @@ void AvidaWebApp::CommitEducationSamples() {
 std::string AvidaWebApp::BuildEducationPlotPayload() const {
   const auto samples = education_run_recorder.Samples();
   std::string out = "{\"run_id\":" + EducationJSONQuote(active_education_run.id)
+    + ",\"locale\":"
+    + EducationJSONQuote(active_locale == avida::web::localization::Locale::SPANISH ? "es" : "en")
     + ",\"updates\":[";
   for (size_t index = 0; index < samples.size(); ++index) {
     if (index) out += ',';
@@ -142,7 +144,7 @@ std::string AvidaWebApp::BuildEducationPlotPayload() const {
   out += ",\"richness_title\":";
   out += EducationJSONQuote(PresentationText("Sequence richness over time").str());
   out += ",\"richness_axis\":";
-  out += EducationJSONQuote(PresentationText("Distinct sequences").str());
+  out += EducationJSONQuote(Localized("results.richness_history.axis").str());
   out += ",\"ancestor\":";
   out += EducationJSONQuote(PresentationText("Ancestor sequence").str());
   out += ",\"ancestor_title\":";
@@ -184,7 +186,7 @@ emp::String AvidaWebApp::BuildEducationResultsHTML() const {
   const auto context = avida::web::localization::Format(
     "results.sample_context", active_locale, context_args
   );
-  out += "<p class='results-context'>" + (context ? context->text : text("Run")) + "</p>";
+  out += "<p class='results-context'>" + (context ? context->text : Localized(avida::web::localization::key::RUN).str()) + "</p>";
   out += "<figure class='result-chart'><figcaption>" + text("Population size (organisms)") + "</figcaption>";
   out += "<div id='population-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='" + text("Population size by update") + "'></div></figure>";
   out += "<figure class='result-chart'><figcaption>" + text("Sequence richness (distinct sequences)") + "</figcaption>";

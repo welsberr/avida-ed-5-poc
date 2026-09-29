@@ -12,6 +12,8 @@ The web interface uses [Empirical](https://github.com/devosoft/Empirical), inclu
 
 `web/vendor/plotly-1.53.0.min.js` is Plotly.js v1.53.0, Copyright 2012–2020 Plotly, Inc., distributed under the MIT license. The upstream license header is retained in the file.
 
+`web/vendor/plotly-locale-es-1.53.0.js` is Plotly.js's Spanish locale bundle for v1.53.0 and is distributed under the same MIT license.
+
 ## coi-serviceworker
 
 `web/coi-serviceworker.js` is coi-serviceworker v0.1.7 by Guido Zuidhof and contributors, distributed under the MIT license. It supplies COOP/COEP response policy through a service worker for the GitHub Pages static deployment. The license and source are available from the [upstream repository](https://github.com/gzuidhof/coi-serviceworker).
