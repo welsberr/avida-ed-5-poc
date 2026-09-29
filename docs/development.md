@@ -7,6 +7,7 @@
 - **Empirical:** submodule pinned to `f41efa29f047d81a56037fe9f6307c958dd6f3c7` from [devosoft/Empirical](https://github.com/devosoft/Empirical), including its submodules.
 - **Web compiler:** Emscripten SDK 6.0.10, pinned by image digest in `Dockerfile`.
 - **Graph library:** Plotly.js 1.53.0, bundled with its upstream license notice.
+- **Cross-origin isolation helper:** `coi-serviceworker` 0.1.7, bundled from its MIT-licensed release for static hosting.
 
 ## Container build
 
@@ -17,6 +18,12 @@ docker compose up --build
 ```
 
 The page is served at <http://127.0.0.1:18505/Avida.html>. The server sends the cross-origin isolation headers needed for shared WebAssembly memory and worker execution. Compose binds only to loopback by default.
+
+## GitHub Pages
+
+The [Pages workflow](../.github/workflows/pages.yml) builds the app in the pinned Emscripten container and deploys a static artifact with a landing page at the site root and the app under `/app/`. It initializes Empirical's submodules before building. The published entry point is <https://welsberr.github.io/avida-ed-5-poc/>.
+
+GitHub Pages serves static files and does not let this project set COOP/COEP response headers. Because the Avida app uses WebAssembly threads, it loads the locally bundled `coi-serviceworker` helper, which applies those policies through a service worker. The first app visit can reload once before the worker controls the page. The standalone landing page does not require isolation. The direct local server continues to set COOP/COEP headers itself.
 
 To build without Docker, install the pinned Emscripten release and initialize Empirical:
 

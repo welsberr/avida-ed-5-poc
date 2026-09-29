@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c1e2e">
   <title>Avida 5 — Digital Evolution Research Platform</title>
+  <script src="coi-serviceworker.js"></script>
   <link rel="stylesheet" href="Avida.css">
 </head>
 <body>
@@ -33,13 +34,13 @@
     if (!window.crossOriginIsolated || typeof SharedArrayBuffer === "undefined") {
       startupRoot.innerHTML = `
         <section class="startup-warning" role="alert">
-          <h1>Avida needs its worker-enabled web server</h1>
-          <p>Avida runs population updates in a background WebAssembly worker. Browsers only
-          enable the worker's shared memory when the server sends the required COOP and COEP
-          security headers; a plain file or <code>python -m http.server</code> cannot do that.</p>
-          <p>From the project root, run <code>make web</code> and then <code>make server</code>.
-          Open <code>http://127.0.0.1:8080/Avida.html</code> exactly as printed—an older
-          <code>localhost:8000</code> tab may be a different, non-worker server.</p>
+          <h1>Avida needs cross-origin isolation</h1>
+          <p>This browser has not enabled the shared memory used by the simulation worker.
+          On GitHub Pages, reload once to let the local service worker set the required
+          security policy. The app also needs a secure browser context and service-worker
+          support.</p>
+          <p>For local use, build with <code>make web</code> and run <code>make server</code>.
+          Open the address printed by the server.</p>
         </section>`;
     } else {
       const script = document.createElement("script");

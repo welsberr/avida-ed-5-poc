@@ -22,6 +22,8 @@ The project builds on the public [Avida 5 repository](https://github.com/mercere
 
 ## Try it
 
+The GitHub Pages landing page links to the hosted app: <https://welsberr.github.io/avida-ed-5-poc/>. On its first launch, the app may reload once while its service worker enables the shared memory required by the simulation worker. The hosted app requires JavaScript, WebAssembly, HTTPS, and service-worker support.
+
 The container setup pins the Emscripten image and Empirical revision so the build does not depend on installing a compiler on your computer. You need Git, Docker, and Docker Compose.
 
 ```sh

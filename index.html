@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1e2e">
+  <title>Avida-ED 5 — Digital Evolution</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172b3b;
+      background: #f3f6f8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    header { padding: 3.5rem 1.25rem 4rem; color: white; background: #0c1e2e; }
+    .wrap { width: min(100%, 70rem); margin: 0 auto; }
+    .eyebrow { color: #a8d7ee; font-size: .82rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    h1 { max-width: 15ch; margin: .65rem 0 1rem; font-size: clamp(2.4rem, 7vw, 4.7rem); line-height: 1.02; }
+    header p { max-width: 43rem; margin: 0; color: #d8e4ec; font-size: 1.15rem; line-height: 1.65; }
+    main { padding: 2rem 1.25rem 4rem; }
+    .content { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(16rem, .8fr); gap: 1.25rem; align-items: start; }
+    section, aside { padding: 1.5rem; border: 1px solid #d8e0e6; border-radius: .8rem; background: white; box-shadow: 0 .5rem 1.8rem #0c1e2e0d; }
+    h2 { margin: 0 0 .8rem; font-size: 1.35rem; }
+    p { line-height: 1.65; }
+    .launch { display: inline-flex; min-height: 3rem; align-items: center; justify-content: center; margin: .5rem 0 .25rem; padding: .7rem 1.1rem; border-radius: .4rem; color: white; background: #075b86; font-weight: 700; text-decoration: none; }
+    .launch:hover, .launch:focus-visible { background: #064669; text-decoration: underline; }
+    a { color: #075b86; }
+    .note { color: #435565; font-size: .94rem; }
+    ul { padding-left: 1.2rem; line-height: 1.7; }
+    footer { padding: 1.25rem; border-top: 1px solid #d8e0e6; color: #435565; font-size: .9rem; }
+    @media (max-width: 760px) {
+      header { padding: 2.5rem 1rem 3rem; }
+      main { padding: 1rem 1rem 2.5rem; }
+      .content { grid-template-columns: 1fr; }
+      section, aside { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">Avida-ED 5 proof of concept</div>
+      <h1>Explore digital evolution</h1>
+      <p>Run a small Avida experiment, observe digital organisms across generations, and compare how mutation changes the variation in a population.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="content">
+      <section aria-labelledby="try-heading">
+        <h2 id="try-heading">Try the interactive prototype</h2>
+        <p>The app provides a familiar Avida-ED workspace for setting up a population, running the experiment, and inspecting the results. Live graphs show population size, sequence diversity, and the ancestor's share.</p>
+        <a class="launch" href="app/Avida.html">Launch the Avida 5 app</a>
+        <p class="note">The app may reload once on first use while it enables the shared WebAssembly memory needed for background simulation. Use a modern browser with JavaScript, WebAssembly, and service workers enabled.</p>
+      </section>
+      <aside aria-labelledby="about-heading">
+        <h2 id="about-heading">About this project</h2>
+        <p>This is an early research and teaching prototype based on Avida 5. It is not a classroom-ready replacement for Avida-ED 4, and the sample experiment is an illustration rather than evidence for a general scientific conclusion.</p>
+        <ul>
+          <li><a href="https://github.com/welsberr/avida-ed-5-poc">Project source and build notes</a></li>
+          <li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/experiment-guide.md">How to read the experiment</a></li>
+          <li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/researcher-overview.md">Researcher overview</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Avida-ED 5 proof of concept · Michigan State University and Avida-ED are not implied to endorse this independent prototype.</div>
+  </footer>
+</body>
+</html>
