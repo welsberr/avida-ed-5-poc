@@ -1,0 +1,40 @@
+# Tool generated files
+.vscode/
+*~
+*.dSYM
+__pycache__/
+build/test_*
+Ideas.pptx
+CLAUDE.md
+DEVEL_NOTES
+analysis_plans.md
+timing.txt
+
+# Web
+*.wasm
+*.wasm.map
+*.worker.js
+web/Avida.data
+web/Avida.js
+
+# Backup files
+bak/
+*-bak
+old
+
+# Avida specific
+build/Avida
+build/*.cfg
+build/avida.log
+build/data
+data/
+final_save
+runs/
+tmp/
+
+# DOSSIER
+build/DOSSIER
+build/DOSSIER.cfg
+
+# DATA
+seed_*

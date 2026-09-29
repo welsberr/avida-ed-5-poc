@@ -1,0 +1,3135 @@
+{
+  "schema": "avida-ed-message-catalog-draft.v1",
+  "metadata": {
+    "locale": "es",
+    "language_name": "Español",
+    "status": "machine_translated_pending_human_review",
+    "reviewed": false,
+    "runtime_eligible": false,
+    "runtime_enabled": true,
+    "runtime_enablement_scope": "Development preview only; not release-eligible until human review.",
+    "release_blocked_pending_review": true,
+    "ui_validation_status": "pending_browser_visual_layout_checks",
+    "source_locale": "en",
+    "source_revision": "52b4bb1b7a1cf16baaa815918143e1c7d8a9a4f4",
+    "source_worktree_was_dirty": true,
+    "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
+    "source_files": [
+      {
+        "path": "source/web/Localization.hpp",
+        "sha256_at_draft": "0d9a1af54363d20aa46cfb95cf58e8f1c8c0ced406f86d4ab748d4967540eef0",
+        "sha256_current": "34c363882e32715e6df4164ce16e9a90f609c370f1e3b503904a2928d6a71c75"
+      },
+      {
+        "path": "source/web/Layout.hpp",
+        "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
+        "sha256_current": "c22fad051552de1bcb3f4dcbb5744c9cfdb91421513ec83571588ec304c05d2b"
+      },
+      {
+        "path": "source/web/EducationRecording.hpp",
+        "sha256_at_draft": "a5956d42c84a19644b494058c41ed370f3d63775a82e352d3b1369a41d751903",
+        "sha256_current": "70c2f7cca027667029a2cd7adec68abc50ce0ad383e54150c8ae29cdba5689eb"
+      },
+      {
+        "path": "source/web/EducationArchive.hpp",
+        "sha256_at_draft": "0812a484f9548541019fe9652361eeeaf693201886f11b69e89f805fdb0a847c",
+        "sha256_current": "6a32a130808d2536668e04326dcd3ef8f227aa2bca8a6ba6ef2662fc531bd680"
+      },
+      {
+        "path": "source/web/SequenceComparison.hpp",
+        "sha256_at_draft": "0488224428a53279055086b4024a2f9d99de71d7f90d11375fbb5d493b2e9746",
+        "sha256_current": "0488224428a53279055086b4024a2f9d99de71d7f90d11375fbb5d493b2e9746"
+      },
+      {
+        "path": "source/web/RunControl.hpp",
+        "sha256_at_draft": "81aafa165d9c98c0b686b8e39ba60c1e4a437b39e864e51f22878ab87a6b82b7",
+        "sha256_current": "b2515a6b1a80cd8e037e6f583c8a46fd3b11beb61150bacad31e38d34dbbaa29"
+      },
+      {
+        "path": "source/web/AvidaWebApp.hpp",
+        "sha256_at_draft": "0fd9ddfcf31d6fc65d53d107beb851d183b62913d2f3b1cb9c46ceb152b9d8d3"
+      },
+      {
+        "path": "source/web/PopulationView.hpp",
+        "sha256_at_draft": "e0e7943d4411f9f82b2875934c03ba6363b33f03ed665e5f370e57217fb4f45d",
+        "sha256_current": "81e84c07f452dc42b6bf396a90314f6e55d483eab7d72c738f59b574ba02f6d3"
+      },
+      {
+        "path": "source/web/OrganismAnalysis.hpp",
+        "sha256_at_draft": "bf89aeff75cd54995f0c6bad69b378f6d91398fee421e9a7c562fb2d53c53ec7",
+        "sha256_current": "7f08f10eaaef40b191310b77696abfd7748b188ec5e1484be83c178569abfc96"
+      },
+      {
+        "path": "docs/avida-ed5-education-roadmap.md",
+        "note": "English scientific definitions and intended student workflow"
+      },
+      {
+        "path": "source/web/SpanishCatalog.hpp",
+        "sha256_current": "20e9c05f4f462f72a82387fdbbaebb6c9c5e375a49712128c1dd909968a4a9ed"
+      },
+      {
+        "path": "source/web/LocalizationTests.cpp",
+        "sha256_current": "fb4e9c56b9abe3c0c566a0e54de24a27dbada2a16c8b4420beba3c375c561501"
+      },
+      {
+        "path": "scripts/localize_es_catalog.py",
+        "sha256_current": "665fec10296f5410e4d5023c5eb1e8b9d03578713ddc30c4afde9cb20b85db90"
+      },
+      {
+        "path": "scripts/generate_es_runtime_catalog.py",
+        "sha256_current": "6211cde91ee1a5c71fae6c7a820e3d20857bf73017bd539be87128df20987672"
+      },
+      {
+        "path": "source/web/OrganismLayout.hpp",
+        "sha256_current": "e7bf3ceb6567b535b8d764134ff198402decbd894eb227971221a468dda8f0b2"
+      },
+      {
+        "path": "scripts/add_es_runtime_inventory.py",
+        "sha256_current": "7db3208789e42518bc5a7a1eca2b7a2943bac8f9cbfca207641c6141c1293a2f"
+      },
+      {
+        "path": "scripts/finalize_es_catalog_provenance.py",
+        "sha256_current": "0cc888f0720e6f163e6d1c1c24737fa6565ca4497d1aac5ff40a44e2843c991b"
+      },
+      {
+        "path": "scripts/validate_es_catalog.py",
+        "sha256_current": "7bc9d9e2a0e4e67aca839f9d2c98c8c3f954ef181e59a323a346c418daa6ab2c"
+      },
+      {
+        "path": "web/Avida.css",
+        "sha256_current": "73682bc6cff50172930d3ac89f28fca2512a7da9a74d7ebb2f024fe56829ab96"
+      },
+      {
+        "path": "source/web/FreezerPanel.hpp",
+        "sha256_current": "f76bd41d923f2c7baac81a73a76df9e1e96e79bd33b1d4905ca0c4a06173e834"
+      },
+      {
+        "path": "source/web/ConfigurationPanels.hpp",
+        "sha256_current": "a7326ca093ed6e04c47b6d207d72f51ada9430a67f5dfefdf16e6d807bcdecd5"
+      },
+      {
+        "path": "source/web/Ed4ColorPalettes.hpp",
+        "sha256_current": "065fefb780d28978f45f9f566f7e4d02855b60995f3645e70a25badc90f167ce"
+      },
+      {
+        "path": "web/Avida.html",
+        "sha256_current": "0f6b737dd0bc4ae426d194fc1c2cb0d1134f94250a88c4b2293eb0f8afd5e62e"
+      },
+      {
+        "path": "web/education-plots.js",
+        "sha256_current": "fd5cfbdaf2eb698a7d8869b7990e8954acd227654add5d0af957c8616ea0c87a"
+      },
+      {
+        "path": "web/vendor/plotly-1.53.0.min.js",
+        "sha256_current": "79126c798fb5c46a4c4fa507e427fff1ca2640562b62811d3e08e6378dd9c99a"
+      },
+      {
+        "path": "scripts/import_ed4_color_palettes.py",
+        "sha256_current": "2835dd124cc89b7488a76fb0f8b33da4cd5184bda3f3a593192f0c613b822c3b"
+      }
+    ],
+    "created_utc": "2026-09-29T06:26:31Z",
+    "steward": "Wesley R. Elsberry",
+    "drafted_with": "OpenAI Codex; AI-assisted translation draft",
+    "translator_identity": "AI-assisted draft; no qualified human translator attested",
+    "reviewer": null,
+    "reviewed_utc": null,
+    "review_confidence": null,
+    "translation_confidence": "machine-generated candidate; not a human language or scientific review",
+    "glossary_version": "avida-ed-es-glossary-draft-2",
+    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 285-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
+    "archive_contract": {
+      "save_format": "avida-ed5-education-experiment",
+      "save_schema_version": 1,
+      "save_extension": ".json",
+      "export_file": "avida-education-results.csv",
+      "export_columns": [
+        "run_id",
+        "preset_id",
+        "treatment_id",
+        "seed",
+        "status",
+        "update",
+        "population_count",
+        "sequence_richness",
+        "ancestor_sequence_fraction"
+      ],
+      "export_contains_completed_runs_only": true
+    },
+    "review_gate": "Before review/promotion, compare the complete runtime source inventory, calculate each unit hash over source text/context/placeholder contract, validate placeholder parity and plural variants, and obtain competent Spanish scientific-language review.",
+    "protected_values": [
+      "0%",
+      "1%",
+      "0.01",
+      "42",
+      "43",
+      "44",
+      "250",
+      "10 × 10",
+      "AvidaVM-v1",
+      "AvidaVM-standard-v2-no-xor",
+      "population_count",
+      "sequence_richness",
+      "ancestor_sequence_fraction",
+      "mutation-variation",
+      "mutation-variation-quick",
+      "mutation-0",
+      "mutation-1",
+      "avida-ed5-education-experiment",
+      "schema_version",
+      "metric_definition_version",
+      "checkpoint_base64",
+      "run_id",
+      "preset_id",
+      "treatment_id",
+      "status",
+      "update",
+      "{update}",
+      "{target}",
+      "{seed}",
+      "{count}",
+      "{reason}"
+    ],
+    "plural_and_number_handling": "Draft message variants use explicit one/other forms. Runtime selection and locale number formatting must use the browser Intl.PluralRules and Intl.NumberFormat bridge; do not enable this file until that path and placeholder parity are tested.",
+    "terminology_review_required": [
+      "fitness / aptitud",
+      "mutation / randomization wording",
+      "sequence richness",
+      "ancestor sequence versus ancestry",
+      "update versus generation",
+      "metabolic rate and gestation cost"
+    ],
+    "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
+    "updated_utc": "2026-09-29T22:12:06Z",
+    "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
+    "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
+    "catalog_entry_count": 285,
+    "model_translated_entry_count": 189,
+    "glossary_preserved_entry_count": 7,
+    "human_reviewed_entry_count": 0,
+    "terminology_lineage": "Relevant general terms follow the TalkOrigins Spanish translation compendium; Avida-specific distinctions are explicit overrides.",
+    "assistant_edit_suggestion_count": 89
+  },
+  "messages": [
+    {
+      "id": "shell.app_title",
+      "source": "Avida-ED",
+      "value": "Avida-ED",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c3b78e3ca80a031cfc70627ea34f85a1764b7742db221c58b73efa76c9f2492f"
+    },
+    {
+      "id": "shell.lesson_title",
+      "source": "Mutation and genetic variation",
+      "value": "Mutación y variación genética",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "53df675037d4b3bf74f311ce366e37965e53c4235f3624b4dd5007aa7e355be5"
+    },
+    {
+      "id": "shell.preview_label",
+      "source": "Avida 5 education preview",
+      "value": "Vista previa educativa de Avida 5",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d2c2b78420ded1b455d1c8e3576fc62f8b9e3fccf6571939feb09821f2dd7b41"
+    },
+    {
+      "id": "shell.language.label",
+      "source": "Language",
+      "value": "Idioma",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "4ef42b681b1f3b4f31c6223951f6fa3e9ed9caedb9e1e412d1ed7b9b972f678a"
+    },
+    {
+      "id": "shell.mode.population",
+      "source": "Population",
+      "value": "Población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "42e5c62764563092a3c808bc9b1f838f3e4eedabc576c8c749e1bedb0b03865f"
+    },
+    {
+      "id": "shell.mode.sequences",
+      "source": "Sequences",
+      "value": "Secuencias",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "f5dd5f3f1cf742127476dc803ac76c20a380df00008efa770c432ea08e759116"
+    },
+    {
+      "id": "shell.mode.compare",
+      "source": "Compare runs",
+      "value": "Análisis",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "38fa4a780208ecf978a716bfaf6d900164b1e7aac254713e465d3611c7cced8e"
+    },
+    {
+      "id": "shell.mode.population.accessible",
+      "source": "Population Mode",
+      "value": "Modo de Población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "82787b2aa13ee65a22c9733f801f2f1c1efec692ee784c800193b7faa1f67837"
+    },
+    {
+      "id": "shell.mode.organism.accessible",
+      "source": "Organism Mode",
+      "value": "Modo de Organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6651eb22ee8e2a8387170bda4428d72419b5bac5f3248d9161b61208867f5f80"
+    },
+    {
+      "id": "shell.mode.compare.accessible",
+      "source": "Compare saved runs",
+      "value": "Comparar ejecuciones guardadas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a1c4d81c677ec05e9f4e72292aabe0803309f80be7455bc1ffe3df801ea9a726"
+    },
+    {
+      "id": "shell.mode.compare.disabled_help",
+      "source": "Complete two runs to compare them.",
+      "value": "Complete dos ejecuciones para compararlas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7ccd4a349fb1ca6c6f9a1ea3c95ba76de51fbb74dd9926f40ddad7eb1837fbaa"
+    },
+    {
+      "id": "shell.mode.compare.help",
+      "source": "Compare the completed runs.",
+      "value": "Comparar las ejecuciones completadas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "12e1e59d01d9a15b9861ff311e052d51bba2379025ba0296794fc1bb9a55946c"
+    },
+    {
+      "id": "shell.sidepanel.run",
+      "source": "Run",
+      "value": "Ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "10e159ef541729a31d79d5a414cfc966af533fd220485fc18ed051bb27192632"
+    },
+    {
+      "id": "shell.sidepanel.cell",
+      "source": "Cell",
+      "value": "Célula",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b6823a6dd681713e4997687dd363a8e559af48f944af89d2d4fc80f47b9164e7"
+    },
+    {
+      "id": "shell.sidepanel.saved_organisms",
+      "source": "Freezer",
+      "value": "Almacén",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "bbe5bc0c5059955f646190a83e1b310eb528917ab8ae8cb495cdec7cd6558449"
+    },
+    {
+      "id": "shell.sidepanel.setup",
+      "source": "Setup",
+      "value": "Ajustes",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "04411ee3f6a5179a38ac9608995c4eb0de73340df3a65a2baeb2c67140561cd1"
+    },
+    {
+      "id": "shell.sidepanel.population_stats.accessible",
+      "source": "Population Statistics",
+      "value": "Estadísticas de la población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "db9fec92b2321b2e2b4ed482c95b64f8ad3202bc5d68b8e18e5411d5bc43a937"
+    },
+    {
+      "id": "shell.sidepanel.organism_stats.accessible",
+      "source": "Organism Statistics",
+      "value": "Estadísticas del organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "79982d75b6f36289d00a9c36fb8d3fd71d80130851444489034fa8f0af8b89c3"
+    },
+    {
+      "id": "shell.sidepanel.freezer.accessible",
+      "source": "Freezer",
+      "value": "Almacén",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "9f9dc6ed21679f006449970df8e1ad8d0d82c135656fc8fab17d769fcb0ad438"
+    },
+    {
+      "id": "shell.sidepanel.setup.help",
+      "source": "The lesson holds other settings fixed; see Experiment setup for the controlled values.",
+      "value": "La lección mantiene otros valores fijos; consulte la configuración del experimento para los valores controlados.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b0296bb14fb2bfbd8d5d920dc2ad5c41d149b6a313cea36a4e3f250c08db41b7"
+    },
+    {
+      "id": "shell.grid.accessible",
+      "source": "Spatial grid population",
+      "value": "Población en cuadrícula espacial",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "0f413cba7ba8ff64221092458972e1a59997801f6fcd68b7693907fa545a7c35"
+    },
+    {
+      "id": "shell.grid.placement_help",
+      "source": "Drag organisms between the grid and freezer. Right-click an occupied cell for actions.",
+      "value": "Arrastre organismos entre la cuadrícula y el almacén. Haga clic derecho en una celda ocupada para ver las acciones disponibles.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "9bac7d2a08174e0aa53deb90abdeddbb68ad3ff936fb0ac17d692874a5406623"
+    },
+    {
+      "id": "shell.run",
+      "source": "Run",
+      "value": "Ejecutar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "734e3cbc59b02045f963729afbd0ba958bb95c436fd7ebe586a14997fcd46dee"
+    },
+    {
+      "id": "shell.status.update",
+      "source": "Update {update}",
+      "value": "Actualización {update}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "bcc79933ce3c021655c715113ed38f8f39555ac96a50580d48fd19a9959ce3f8"
+    },
+    {
+      "id": "shell.status.paused",
+      "source": "Paused at update {update}",
+      "value": "Pausado en la actualización {update}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7680be3079004102a6f47af29448c54458e2d9740479a9cb497f6b59097cf5fe"
+    },
+    {
+      "id": "shell.pause",
+      "source": "Pause",
+      "value": "Pausar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9dcdb0d4b8fb860c921b361c40151aff60ba24ee6e81ff98b75bb05b9a8919fc"
+    },
+    {
+      "id": "shell.step",
+      "source": "Step",
+      "value": "Paso",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "98a73ffbfbc24c9077689aec95cbafd2298640b0f6d5c316ba0d55e0dcc2f73f"
+    },
+    {
+      "id": "shell.reset",
+      "source": "Start a new run",
+      "value": "Iniciar una nueva ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b42c07ec9c185d9dd410fb11846d6dbd755e394eb2363cac565f671ae4054a96"
+    },
+    {
+      "id": "shell.step.accessible",
+      "source": "Advance one population update",
+      "value": "Avanzar una actualización de población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c286a0f9633203bb3209a77ca61baae5725f710a79605542e29871a593331843"
+    },
+    {
+      "id": "shell.play.accessible",
+      "source": "Play at up to ten updates per second",
+      "value": "Reproducir hasta diez actualizaciones por segundo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a6f8ddfb9730c57732c8f6053455c291618727bebac67f62d903723c008f23b6"
+    },
+    {
+      "id": "shell.pause.accessible",
+      "source": "Pause evolution",
+      "value": "Pausar la evolución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "dba844fbebc66e87b8859f3fda41918218934a43101d23d73775bf64a241fec1"
+    },
+    {
+      "id": "shell.fast_forward",
+      "source": "Fast-forward",
+      "value": "Avance rápido",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b33a873fc80dc8b2dbccccdc41a2ae29ff7190cf3605ff768d7fa512efd27900"
+    },
+    {
+      "id": "shell.restart.help",
+      "source": "Start a new run; keep recorded results on the run shelf.",
+      "value": "Iniciar una nueva ejecución; mantener los resultados registrados en la estantería de la ejecución.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "623840e97eda88bc2e0c4dc5e126cc1164db72137727771f597d55ff5c936160"
+    },
+    {
+      "id": "shell.organism_actions",
+      "source": "Organism actions",
+      "value": "Acciones del organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "5b4705fd6c804762b210f75560c034534d633871063157631f357cb6284c8bf0"
+    },
+    {
+      "id": "shell.save_organism",
+      "source": "Save Organism",
+      "value": "Guardar organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "57a3a65ec5cfd3197541c42b2a0ba8cc9c75547b2aa6f3dbfbb0e8823d331590"
+    },
+    {
+      "id": "shell.remove_organism",
+      "source": "Remove Organism",
+      "value": "Eliminar organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "77690b5670459447ead67e097f2a79ca61f83719503e286385af41c35b3233e4"
+    },
+    {
+      "id": "shell.staged_organisms.one",
+      "source": "{count} organism staged",
+      "value": "{count} organismo preparado",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "17c8e711f62b7d45ec72bb9fde1fa4f4bf302d8060454ba5d77842437233fdb5"
+    },
+    {
+      "id": "shell.staged_organisms.other",
+      "source": "{count} organisms staged",
+      "value": "{count} organismos preparados",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "65dc14db1ef8ff1f3325b2e5ed2912b8c67efc1cf71f431ea738506d26606633"
+    },
+    {
+      "id": "shell.locale.pseudo_expanded",
+      "source": "Pseudo: expanded strings",
+      "value": "Pseudo: cadenas expandidas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "0b8545733ccf28a0aebc2d2938df0102f919a38b1c3eff3003b1a5f0b458a603"
+    },
+    {
+      "id": "shell.locale.pseudo_rtl",
+      "source": "Pseudo: right-to-left layout",
+      "value": "Pseudo: diseño de derecha a izquierda",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "bfaf3a4903641b478540e94f344ff1fff53de1dff27cd6d0b1cb3fcd1f6d4bbd"
+    },
+    {
+      "id": "lessons.mutation_variation.title",
+      "source": "Mutation and genetic variation",
+      "value": "Mutación y variación genética",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "f6ae8c94f70db41575bb5e11d410f13861cfac42d35deb04bfccaed4f71f1cef"
+    },
+    {
+      "id": "lessons.mutation_variation.question",
+      "source": "How does the mutation setting affect genetic variation over time?",
+      "value": "¿Cómo afecta la configuración de mutación a la variación genética a lo largo del tiempo?",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "332323c6db25d788e2e4ec25ff9dac6ce7d1439bfd85e04750182ff162820aa9"
+    },
+    {
+      "id": "lessons.mutation_variation.richness",
+      "source": "Sequence richness is the number of distinct genome sequences present.",
+      "value": "La riqueza de secuencias es el número de secuencias genómicas distintas presentes.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c4536dc9f6b5545f2806129171d4b48fee573d199b3cf56cb04c3363dd57f805"
+    },
+    {
+      "id": "lessons.mutation_variation.interpretation",
+      "source": "Compare runs as observations; one run does not establish a general outcome.",
+      "value": "Compare las ejecuciones como observaciones; una sola ejecución no establece un resultado general.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7cdd16b4ad20bd5ba2abffc2ea68eb352d96b6262c6d9b63735eaaa3727d7c9c"
+    },
+    {
+      "id": "lesson.procedure",
+      "source": "Run the same 10 × 10 world with three fixed seeds. Compare observations; a single run is not a general result.",
+      "value": "Ejecute el mismo mundo de 10 × 10 con tres semillas fijas. Compare las observaciones; una sola ejecución no es un resultado general.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "35d450de23d57d3f868728124e6c3fac06fd82c5a09050dcf55e3d629bff6145"
+    },
+    {
+      "id": "lesson.fixed_conditions",
+      "source": "The bundled ancestor, CPU and instruction set, grid, and ten logic-task rewards stay fixed. This is selection-active evolution, not neutral evolution.",
+      "value": "El ancestro incluido, el conjunto de instrucciones, la cuadrícula y las diez recompensas de tareas lógicas permanecen fijos. Esta es evolución activa por selección, no evolución neutral.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "35e6d4043a95bf07910da18f1638c6a1a5bebac4880f5993447e4808cf37cf0d"
+    },
+    {
+      "id": "lesson.richness_limit",
+      "source": "Sequence richness counts distinct ordered sequences present now. It is not a mutation count or every sequence ever seen. More sequences do not establish greater fitness or adaptation. Treat each run as an observation, not a universal outcome.",
+      "value": "La riqueza de secuencias cuenta las secuencias ordenadas distintas presentes ahora. No es un conteo de mutaciones ni todas las secuencias jamás vistas. Más secuencias no establecen mayor aptitud o adaptación. Trate cada ejecución como una observación, no como un resultado universal.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "8b8372c7099e084a487f2d4b316c6a11ad272ad627fb53315241df72668643e6"
+    },
+    {
+      "id": "lessons.mutation_variation.prediction",
+      "source": "Record your prediction",
+      "value": "Registre su predicción",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c97960c8cfe1b08140e4abba55c1d63e133b3a314922840f0f3e3a0e1845f722"
+    },
+    {
+      "id": "lesson.prediction.new_sequences",
+      "source": "Will new sequences appear at 0% mutation? At 1% mutation?",
+      "value": "¿Aparecerán nuevas secuencias al 0% de mutación? ¿Al 1% de mutación?",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1f24786353b097dd45ef7aee6c906995c9c8349f8959ce6ea285b21f784feaf0"
+    },
+    {
+      "id": "lesson.prediction.richness",
+      "source": "Must sequence richness rise at every update?",
+      "value": "¿Debe aumentar la riqueza de secuencias en cada actualización?",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "41efd9256e888ec85a1a3bee8213b8822fa2da5998e79311daf8d2fd16f98397"
+    },
+    {
+      "id": "lesson.prediction.seeds",
+      "source": "Will runs that start with the same seed follow the same path?",
+      "value": "¿Seguirán las ejecuciones que comienzan con la misma semilla el mismo camino?",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a269217eb48092baa579d2cdacde981f255e9984d0e700601df9ea8e2eae77b6"
+    },
+    {
+      "id": "lesson.learning_record.heading",
+      "source": "Learning record",
+      "value": "Registro de aprendizaje",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "601fc16e318984c37de232146f78896468115008b501be3768ec4965bd30d049"
+    },
+    {
+      "id": "lesson.learning_record.help",
+      "source": "Write a prediction before running, then record what you observed. These notes travel with the saved experiment.",
+      "value": "Escriba una predicción antes de ejecutar, luego registre lo que observó. Estas notas viajan con el experimento guardado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b94b31e7578f320f7dd22513810d3f3eea3b15788eb4578a7ca7aef0b112cfe3"
+    },
+    {
+      "id": "lesson.prediction.label",
+      "source": "Prediction",
+      "value": "Predicción",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "564dc74f866851eaea4d13f25cf9a8d7333183c67395adb0923b723b800ab18c"
+    },
+    {
+      "id": "lesson.prediction.accessible",
+      "source": "Prediction before running",
+      "value": "Predicción antes de ejecutar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "29c45fda85b7c691952bd79b2daeb517c1a73f50600fb979931390b50107347b"
+    },
+    {
+      "id": "lesson.prediction.placeholder",
+      "source": "What do you expect to happen?",
+      "value": "¿Qué espera que ocurra?",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "02fd69746b7f97004d13a3c0a1f121b1dbc43cd17a8ed846ee038fbf589f25fb"
+    },
+    {
+      "id": "lesson.observations.label",
+      "source": "Observations",
+      "value": "Observaciones",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3c201de2c769d0fd216be59dafc69fcd31409601b946ce118e252de28f0910e7"
+    },
+    {
+      "id": "lesson.observations.accessible",
+      "source": "Observation after running",
+      "value": "Observación tras la ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "4878540346e138304dc23c58cfb4cb145fa71cf080dbb04814f6e6fae96b56dd"
+    },
+    {
+      "id": "lesson.observations.placeholder",
+      "source": "What did the recorded runs show?",
+      "value": "¿Qué mostraron las ejecuciones registradas?",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c46e9ebc1fb8c8372335fede2e52d2666a2a995600f714b3df019b335ef7d8cb"
+    },
+    {
+      "id": "experiment.setup.heading",
+      "source": "Experiment setup",
+      "value": "Configuración del experimento",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "034438f8eeb6131397dda803b2497847956ba86f8ff953a700be6afc2b19837c"
+    },
+    {
+      "id": "experiment.preset.label",
+      "source": "Experiment preset",
+      "value": "Preajuste del experimento",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "90e75487d7bd3d6dbf321c60dcb2e8923fb9c36d65aeecab16bc79ffa8dd1656"
+    },
+    {
+      "id": "experiment.preset.full",
+      "source": "Mutation variation · every update",
+      "value": "Mutación variable · cada actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "3948105aeaff015df220361a18217cdb6ff0ed6625a82e993242d046402bb62c"
+    },
+    {
+      "id": "experiment.preset.quick",
+      "source": "Quick check · every 10 updates",
+      "value": "Chequeo · cada 10 actualizaciones",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "04767c26f013d9c52a12b44da41e57c3872863f65f4230868c6346099ebaa611"
+    },
+    {
+      "id": "experiment.treatment.label",
+      "source": "Mutation treatment",
+      "value": "Tratamiento de mutación",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "13d707f0d97b6cce68816c5ee1cd0db8a92682647a5e33703c416f2323c8a2d5"
+    },
+    {
+      "id": "experiment.preset.zero_mutation",
+      "source": "0% mutation",
+      "value": "0% de mutación",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3e5c840db638d6775890b9e0921a73d94217f3aaea5c03fdabf1176435238024"
+    },
+    {
+      "id": "experiment.preset.one_percent",
+      "source": "1% mutation",
+      "value": "1% de mutación",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6aa06fd4055d2873ac668c076771761765f2f87d67815fd43756ee6e9d9d54f6"
+    },
+    {
+      "id": "experiment.mutation.setting",
+      "source": "Per-site mutation setting ({percent}%)",
+      "value": "Configuración de probabilidad de mutación por sitio ({percent}%)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "percent"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "8682b95634ca9bf59924e0d41d6a8d0b99c2708f0febf517760206b80910db74"
+    },
+    {
+      "id": "experiment.mutation.help",
+      "source": "At reproduction, each copied genome site has the stated chance of being selected for instruction randomization. The replacement instruction can match the instruction that was already there.",
+      "value": "En la reproducción, cada sitio del genoma copiado tiene la probabilidad declarada de ser seleccionado para la aleatorización de instrucciones. La instrucción de reemplazo puede coincidir con la instrucción que ya estaba presente.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3529444fc81da6a882598f6f2e92b42452f48c5fa7c0f8e28f2c7b68055c0c50"
+    },
+    {
+      "id": "experiment.mutation.help.short",
+      "source": "The setting is the chance of mutation at each copied genome site.",
+      "value": "La configuración es la probabilidad de mutación en cada sitio del genoma copiado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "db7e25615439c78eb086bc45e5389e4a1d12e337fc8a100b1ce900b5da426f47"
+    },
+    {
+      "id": "experiment.seed.label",
+      "source": "Random seed",
+      "value": "Semilla aleatoria",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d1fcbe7a5c436332502063788f7e9150920c2907fe839746a3edfe874c7f75e4"
+    },
+    {
+      "id": "experiment.target.label",
+      "source": "Stop at update",
+      "value": "Detenerse en la actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "69169b6ef470c98bc93f388bcf67281bd29db66ceebfb206dedbba9fd2573f56"
+    },
+    {
+      "id": "experiment.run_to_target",
+      "source": "Run to target",
+      "value": "Ejecutar hasta el objetivo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3023881f87c48c0e8f1635371eb16cc3936493f3c705aef5a9ab223353370641"
+    },
+    {
+      "id": "status.paused",
+      "source": "Paused at update {update}",
+      "value": "Pausado en la actualización {update}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c9cfbf00ead0369c4e81147d847ee8256b03ef98a7ab59df9512fe0b906080a8"
+    },
+    {
+      "id": "status.update",
+      "source": "Update {update} of {target}",
+      "value": "Actualización {update} de {target}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "target",
+        "update"
+      ],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "2a62a48c1e0571a4ac2955f0849a2a7350bb8e7797cc5bb355b9d206762588b2"
+    },
+    {
+      "id": "status.pausing",
+      "source": "Pausing after update {update}",
+      "value": "Pausando después de la actualización {update}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "63678be9493737cb7bab1c146d3c642f0bb979364c69f5288e9e9a388959c294"
+    },
+    {
+      "id": "status.finished",
+      "source": "Finished at target: update {update}",
+      "value": "Finalizado en el objetivo: actualización {update}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "4922a902dd4f3a9d1fbc9ebe97785a6e2c09bbe0681f89875437dcedd1f0b063"
+    },
+    {
+      "id": "population.heading",
+      "source": "Current population",
+      "value": "Población actual",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "947718ba8ad5843f99b8f117f2b06a67cd42c2326c724ae9f8059e25a7f1ed06"
+    },
+    {
+      "id": "metrics.population.organisms",
+      "source": "Organisms",
+      "value": "Organismos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "89aea5faa6aa67a64473ea794089a520f2d8bdf9d763fd003c3d3b0b69a57b22"
+    },
+    {
+      "id": "metrics.population_count.description",
+      "source": "Number of living organisms.",
+      "value": "Número de organismos vivos.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6e40c8a772b33a852d818c42fadefe34ca192bf8891df27aa56138ad2d0229a6"
+    },
+    {
+      "id": "metrics.sequence.richness",
+      "source": "Distinct sequences",
+      "value": "Riqueza de secuencias",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d52da94868f8c7316478864793607837175c83b7619c7801fa9a4b27512058ca"
+    },
+    {
+      "id": "metrics.mutation.per_site_rate",
+      "source": "Per-site mutation setting",
+      "value": "Configuración de probabilidad de mutación por sitio",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "83399c3cfc19e24ef2e7f9a88cc9dbff9ef8d2ce423be5072a0209618a25f235"
+    },
+    {
+      "id": "metrics.population_count.label",
+      "source": "Population size (organisms)",
+      "value": "Tamaño de la población (organismos)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1c82c56bad994da0223260d84572a8912afb059962b5c027d5dbad65e84e24ae"
+    },
+    {
+      "id": "metrics.population_count.definition",
+      "source": "Number of occupied cells in the same snapshot.",
+      "value": "Número de celdas ocupadas en la misma instantánea.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9e78112e1c47f8ac25b584c9fba23ad18e7e0b7c335eb0f74842ce0edc607d2d"
+    },
+    {
+      "id": "metrics.sequence_richness.label",
+      "source": "Sequence richness (distinct sequences)",
+      "value": "Riqueza de secuencias (secuencias distintas)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d3ac7b494c6c4e0c2f544de1be5173f82ecbcd2eccd311f558eb0c174a7cc25a"
+    },
+    {
+      "id": "metrics.sequence_richness.definition",
+      "source": "Number of distinct ordered genome sequences present at this update.",
+      "value": "Número de secuencias genómicas ordenadas distintas presentes en esta actualización.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9d6734d6489387ff8c752e40bf5129ff723d6854e43741b7063c7ca25bb6bc42"
+    },
+    {
+      "id": "metrics.ancestor_sequence_fraction.label",
+      "source": "Ancestor sequence (% of population)",
+      "value": "Fracción de secuencia del ancestro (% de la población)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "39bdab36c25c15e5cba515c94ac263dcb21093a45788b11fd8f263ff63e056e2"
+    },
+    {
+      "id": "metrics.ancestor_sequence_fraction.definition",
+      "source": "Share of organisms whose current sequence exactly matches the original ancestor; this is not ancestry.",
+      "value": "Proporción de organismos cuya secuencia actual coincide exactamente con la del ancestro original; esto no es ascendencia.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "69ccffe20d2e95a3525ccd9b8f71839117f4c4fca927a8dcfce839975e3f7ea2"
+    },
+    {
+      "id": "results.heading",
+      "source": "Recorded observations",
+      "value": "Observaciones registradas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "ac70b9e16103c9add7381471850fffdc7dcf153a2ec1921151ca3c7b32074449"
+    },
+    {
+      "id": "results.empty",
+      "source": "Start the population to record update 0 and each completed update.",
+      "value": "Inicie la población para registrar la actualización 0 y cada actualización completada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "86ddbe64f2f2ef38054f46d6a5312d5e1425e6b2bb9d8b528b90c89ce133dbdd"
+    },
+    {
+      "id": "results.sample_context",
+      "source": "Run {treatment} per-site mutation · seed {seed} · sample every {interval} update(s). Values are captured at completed update boundaries.",
+      "value": "Ejecutar con {treatment} de mutación por sitio · semilla {seed} · tomar una muestra cada {interval} actualización(es). Los valores se registran al completar cada actualización.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "interval",
+        "seed",
+        "treatment"
+      ],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "446ea7ce1c83cc3fcd6241d59eec07c87e9d9551dba3f0d78decb08df3cc99ca"
+    },
+    {
+      "id": "results.rows.one",
+      "source": "{count} recorded update row",
+      "value": "{count} fila de actualización registrada",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "ae7b31e1135cd108850372544c3458d6c564c56da8784432d4e7e3bc3c4b33a6"
+    },
+    {
+      "id": "results.rows.other",
+      "source": "{count} recorded update rows",
+      "value": "{count} filas de actualización registradas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "b48c69d4fb212d0814503c6abafc9bb0ce3c911b3bdc9c74ee06b42e44647188"
+    },
+    {
+      "id": "results.table.update",
+      "source": "Update",
+      "value": "Actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "ba59b1127313adc3c64133a2480634586bfa8bf4cc3dcbabd5813da0ba8a2eab"
+    },
+    {
+      "id": "results.table.population",
+      "source": "Population (N)",
+      "value": "Población (N)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "44632fb5176fb6b7868b06e5485759e348305c6671b0e35ce6b0730b7219013f"
+    },
+    {
+      "id": "results.table.richness",
+      "source": "Sequence richness (S)",
+      "value": "Riqueza de secuencias (S)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "fdf1205353a0d24995982a6732dad9abe973a162ee0ff2d26b681dd80aed30cd"
+    },
+    {
+      "id": "results.table.ancestor_fraction",
+      "source": "Ancestor sequence (%)",
+      "value": "Secuencia del ancestro (%)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1c3da2f109adcae8df4ec617f24e61d36fa01ac0d52bea9456c454b80f447688"
+    },
+    {
+      "id": "results.chart.population.aria",
+      "source": "Population size by update",
+      "value": "Tamaño de la población por actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3d8d951282b66b6a2110d469ac6c07859462cafb0b8f1cf8bd3a3cba74294472"
+    },
+    {
+      "id": "results.chart.richness.aria",
+      "source": "Sequence richness by update",
+      "value": "Riqueza de secuencias por actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "55ab3dce3f43adbbd174ea3a417726376758325cd9e54581fbf13cba93d8a945"
+    },
+    {
+      "id": "results.chart.ancestor_fraction.aria",
+      "source": "Ancestor sequence fraction by update",
+      "value": "Fracción de secuencia del ancestro por actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b656e1a2960c1e4f54700a12ac99ec3fddb8be717b80595a4e6cbc700d432a95"
+    },
+    {
+      "id": "results.chart.color_scale.aria",
+      "source": "Color scale from low to high",
+      "value": "Escala de colores de bajo a alto",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "fb739e0541678c4b1892ab28e75a01e4e8616e0876d2a4dd7378613c5bd7c222"
+    },
+    {
+      "id": "results.color_legend.heading",
+      "source": "Population colors",
+      "value": "Colores de la población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "17b333824a00d413cf4fdcf3ec727147bbab1df27d510903c1e0fd30ecfea88b"
+    },
+    {
+      "id": "results.color_legend.blank",
+      "source": "Blank",
+      "value": "En blanco",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d6a026b069fc1697faa61c4071696efa6fc8ea5f30fe06abd561408cf8f23513"
+    },
+    {
+      "id": "results.color_legend.no_colors",
+      "source": "No organism colors are displayed.",
+      "value": "No se muestran colores de organismos.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "92fc69457d024b979b6900406f3f338c910cd905b214c67d96b94d62058a090f"
+    },
+    {
+      "id": "results.color_legend.no_scale",
+      "source": "Start the population to establish the scale.",
+      "value": "Inicie la población para establecer la escala.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "886214fc1ac6211ff5e43c346042a6bba3db12b5bb03f823d4025cd281dc6ee9"
+    },
+    {
+      "id": "results.color_legend.empty",
+      "source": "No organisms are currently in the population.",
+      "value": "No hay organismos actualmente en la población.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3efef000538f3126524ab0ff5f7e7463ef19ce1175fe57b035ce80b2c1be57d0"
+    },
+    {
+      "id": "results.color_legend.staged",
+      "source": "Staged organisms",
+      "value": "Organismos en espera",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "eccf7677e80038e5e3248c6a63426bb0d881d255f0d0cb57d5dfec0502dc8711"
+    },
+    {
+      "id": "results.color_legend.other",
+      "source": "Other genotypes",
+      "value": "Otros genotipos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3e6577f229fb24d079a636a338013223790826bc39d81827e25acfe94881a407"
+    },
+    {
+      "id": "results.color_legend.no_tasks",
+      "source": "No tasks performed",
+      "value": "No se han realizado tareas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "747de2f9f8028ddfe090b45f7ff59c2169ba504a9399dee2a237b0babb29f1eb"
+    },
+    {
+      "id": "results.color_legend.more_groups",
+      "source": "{count} more groups ({organisms} organisms)",
+      "value": "{count} grupos más ({organisms} organismos)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count",
+        "organisms"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "75db2617adac078331b1371c3934e7a3e8b474c790ffe9035c6d9762e2679af8"
+    },
+    {
+      "id": "results.color_mode.blank",
+      "source": "Blank",
+      "value": "En blanco",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7fc4b0884bfb0b309a2199c4638ffd36156c5b59af3b4d7dee14ece0a00db023"
+    },
+    {
+      "id": "results.color_mode.genotype",
+      "source": "Genotype",
+      "value": "Genotipo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "bca090defd211f8dc007a5b140427fa283ade4d8e5d3f7cfd10f0e02a3a88128"
+    },
+    {
+      "id": "results.color_mode.phenotype",
+      "source": "Phenotype",
+      "value": "Fenotipo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "95211f624c2c3c89db6c2b355cb3e370e3b571a4cdf99669393472ff20f0bbd6"
+    },
+    {
+      "id": "results.color_mode.gestation_cost",
+      "source": "Gestation Cost",
+      "value": "Costo de Gestación",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "759315c6b4af6f869f20427266d0dce785c1d094a99f0bfa8f41079fbc14195b"
+    },
+    {
+      "id": "results.color_mode.metabolic_rate",
+      "source": "Metabolic Rate",
+      "value": "Tasa Metabólica",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3c8e5963da461bfb961e386b34732092ce88cc865b877cb2e31391c46edd18b8"
+    },
+    {
+      "id": "results.color_mode.fitness",
+      "source": "Fitness",
+      "value": "Aptitud",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9a52383d6042ff91649126b320b1dc40a84fce85df17a5af0134c5bc8c2df15a"
+    },
+    {
+      "id": "results.color_mode.description.gestation",
+      "source": "Color organisms by the CPU cycles required to produce their offspring.",
+      "value": "Colorear organismos según los ciclos de CPU necesarios para producir su descendencia.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9c234e642525b351baac6faef8d59e071e3fbd268a63563b87a4b2a538f05978"
+    },
+    {
+      "id": "results.color_mode.description.metabolism",
+      "source": "Color organisms by metabolic base multiplied by metabolic multiplier.",
+      "value": "Colorear organismos según la tasa metabólica base multiplicada por el multiplicador metabólico.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "2c6bd691ad91abfa86e8af0d09ceddaeeb3a361cc352db4faa32953f52682e50"
+    },
+    {
+      "id": "results.color_mode.description.fitness",
+      "source": "Color organisms by current metabolic rate divided by gestation cost.",
+      "value": "Colorear organismos según la tasa metabólica actual dividida por el costo de gestación.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "2a4da7e13c46bd377f266ddf4f77d1ca2692b6ac3f6cbeb865016eae7beaf4fa"
+    },
+    {
+      "id": "results.color_mode.description.genotype",
+      "source": "Color abundant organisms by identical genome.",
+      "value": "Colorear organismos abundantes según el genoma idéntico.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a8d9dd6775a74508d5047e8cc409c4de3b0a9cc5a1c366c5819a53466e4f819b"
+    },
+    {
+      "id": "results.color_mode.description.phenotype",
+      "source": "Color organisms by the combination of reactions their parent performed.",
+      "value": "Colorear organismos según la combinación de reacciones que realizó su progenitor.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "849ffb994078f8409b4d927985ac87ae00de5159829e4ac0d06b6c0577cc9998"
+    },
+    {
+      "id": "run_shelf.heading",
+      "source": "Run shelf",
+      "value": "Estantería de ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "e556403506c77e6d17928d74ea0dd2d0a156d705a0ee37638086a7bdb3a449f5"
+    },
+    {
+      "id": "run_shelf.description",
+      "source": "Completed observations remain here when you start another run. A completed run is result-only.",
+      "value": "Las observaciones completas permanecen aquí cuando inicia otra ejecución. Una ejecución completada es solo de resultados.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "f5019c2c753fc2d9efcc9759a7aeca1c65a64882e36c14b2f127fba78736d2b7"
+    },
+    {
+      "id": "run_shelf.empty",
+      "source": "No completed runs yet. Use the three listed seeds in both mutation treatments.",
+      "value": "Aún no hay ejecuciones completadas. Utilice las tres semillas listadas en ambos tratamientos de mutación.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a7d73244fe99dd6eb9c25180a7ea8e1441ca27c466742c3d944d5356ab3875b4"
+    },
+    {
+      "id": "run_shelf.planned_guidance",
+      "source": "Complete seeds 42, 43, and 44 at both 0% and 1%. The same seed does not pair later random trajectories.",
+      "value": "Complete las semillas 42, 43 y 44 tanto al 0% como al 1%. La misma semilla no empareja trayectorias aleatorias posteriores.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d9410435382e95a9a7f4a351be87dd90bfc169270488995f67d752f468ddd235"
+    },
+    {
+      "id": "compare.heading",
+      "source": "Compare completed runs",
+      "value": "Comparar ejecuciones completadas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b86d6a67182d85a193678fd9ba7a9763868158b01e2b72098d1a0df1860848a3"
+    },
+    {
+      "id": "compare.independence",
+      "source": "Each line is an independent stochastic trajectory. The three seeds are reused across treatments as starting values; they do not guarantee paired random histories.",
+      "value": "Cada línea es una trayectoria estocástica independiente. Las tres semillas se reutilizan en los tratamientos como valores iniciales; no garantizan historias aleatorias emparejadas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "5317b861680d475b07b3f78657a1cbf20031ef7400918e6f1f8b7831d8a47f8c"
+    },
+    {
+      "id": "compare.metrics",
+      "source": "Compare population size and exact sequence richness. An endpoint table reports the final sample of every completed run.",
+      "value": "Compare el tamaño de la población y la riqueza de secuencias exacta. Una tabla de puntos finales reporta la muestra final de cada ejecución completada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "f255515c556a10927ac2d2e5fce388831ea2700af691f956ff4d7fb8e93a873a"
+    },
+    {
+      "id": "compare.incomplete",
+      "source": "Complete at least two target runs before comparing.",
+      "value": "Complete al menos dos ejecuciones objetivo antes de comparar.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7299de50c303058c04ace5898c658b349f04b6ac2f4dc5a9759325c75d1a1605"
+    },
+    {
+      "id": "compare.only_completed",
+      "source": "Only completed runs are overlaid; colors identify treatment. Each line is a single stochastic trajectory.",
+      "value": "Solo se superponen las ejecuciones completadas; los colores identifican el tratamiento. Cada línea representa una única trayectoria estocástica.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "01c99211fb62a7685cf156abf12cf0da66ce6adc8087178d4dcc420a71505057"
+    },
+    {
+      "id": "compare.endpoints.heading",
+      "source": "Completed run endpoints",
+      "value": "Puntos finales de las ejecuciones completadas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c8cd6e950b3a5bfd3750cd0b553a220fa3fb66c9b93afe3de0c516118dc2dfbd"
+    },
+    {
+      "id": "compare.table.run",
+      "source": "Run",
+      "value": "Ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d6a0f53f3911d6b94b042854ce4c1b93187884f9cd0bb86328555da8d0a9ed74"
+    },
+    {
+      "id": "compare.table.treatment",
+      "source": "Treatment",
+      "value": "Tratamiento",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3920e91b8b93565e7be61b18b53e889b288b94090ca7a67c6da537945e24beb6"
+    },
+    {
+      "id": "compare.table.seed",
+      "source": "Seed",
+      "value": "Semilla",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "60d92071accd9d581457525967924fd3f53d4a9c6e6fd010b731dabaf914eb34"
+    },
+    {
+      "id": "compare.table.update",
+      "source": "Update",
+      "value": "Actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "10d4e60efc7bc899b61067b3aca256d2d5cb9b5c8a08a72f4623e6280891df03"
+    },
+    {
+      "id": "compare.back",
+      "source": "Back to population and run setup",
+      "value": "Volver a la configuración de la población y la ejecución",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1c9a7a5bbf6dbbe0129e27e9b6bda4817b73275b04335ba7a7314e7796e78ba0"
+    },
+    {
+      "id": "sequence.heading",
+      "source": "Selected sequence and ancestor",
+      "value": "Secuencia seleccionada y secuencia del ancestro",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "516e50af6804a77cf3347b1dd4bdd8b9b88e4ed742e1e279b1ad24ea4f99fe73"
+    },
+    {
+      "id": "sequence.eyebrow",
+      "source": "Genome comparison",
+      "value": "Comparación de genomas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "03382a41dcffe9d258f0bcdad9eb1881a985c42ab773d85873fa93a482619e1e"
+    },
+    {
+      "id": "sequence.position_note",
+      "source": "Positions are compared directly; this is not sequence alignment. An insertion or deletion can shift later positions.",
+      "value": "Las posiciones se comparan directamente; esto no es alineación de secuencias. Una inserción o deleción puede desplazar posiciones posteriores.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "5c126bb843d7efaa7a2257f670adad9c6293772af8ee4ef9fb11781f39d371f3"
+    },
+    {
+      "id": "sequence.ancestor_unavailable",
+      "source": "The lesson reference ancestor is unavailable for this run.",
+      "value": "La secuencia de ancestro de referencia de la lección no está disponible para esta ejecución.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "036a4df24ff1776dd46614ec664fa387276c250fdad07b5b1ed85ca7bd4095f8"
+    },
+    {
+      "id": "sequence.same_instruction",
+      "source": "Same instruction",
+      "value": "Instrucción idéntica",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c4314ec49458cb2f84ac6d3500c9a0891609dd10d7f8975700335f5efe9a1b11"
+    },
+    {
+      "id": "sequence.different_instruction",
+      "source": "Different instruction",
+      "value": "Instrucción diferente",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "3bd6be04bd34606d418969a99f392767988972478f1795b375c68a8ebc08ad93"
+    },
+    {
+      "id": "sequence.only_selected",
+      "source": "Only in selected",
+      "value": "Solo en la selección",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "43d23891a437f1865287f1271e23800933946c7bdeaf22145db4a40789e1b880"
+    },
+    {
+      "id": "sequence.only_ancestor",
+      "source": "Only in ancestor",
+      "value": "Solo en el ancestro",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "e9bd5fb74365e4a24ecfa7f1f3903cb26c78c839cbf3832112bcd7c7e3b2a2de"
+    },
+    {
+      "id": "sequence.position",
+      "source": "Position",
+      "value": "Posición",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6195d2b26918e6c6a2f28296a1b37751797b1d7b451cb7ba7ec04d9a36117aeb"
+    },
+    {
+      "id": "sequence.ancestor",
+      "source": "Ancestor",
+      "value": "Ancestro",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "34ee0f9fcc4d177eea2b39c6e1396c4efb7f9980dba102d7f0aea443de24783e"
+    },
+    {
+      "id": "sequence.selected",
+      "source": "Selected",
+      "value": "Seleccionado",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "88789c37a1fdceabb8cd58a7e1e76fed737a56d0733aea3bc501be7a28d049d9"
+    },
+    {
+      "id": "sequence.difference",
+      "source": "Difference",
+      "value": "Diferencia",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "21ba445c6b8edb0cfa4fbbd0768633592b657c37c5ce2a6cc42bcc79a925a894"
+    },
+    {
+      "id": "sequence.not_present",
+      "source": "Not present",
+      "value": "No presente",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1588a42b73c06d4377a11bbb06ed9387ef7f1b500d17d8c761743d502f00b124"
+    },
+    {
+      "id": "sequence.showing_first",
+      "source": "Showing the first {shown} of {total} positions. Counts above include both complete sequences.",
+      "value": "Mostrando los primeros {shown} de {total} posiciones. Los conteos superiores incluyen tanto secuencias completas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "shown",
+        "total"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "60204c981e4f6537797316c2bcc7edd013e2869164794b154eafc8698a58a1f5"
+    },
+    {
+      "id": "sequence.length",
+      "source": "Sequence length: {count} instructions",
+      "value": "Longitud de secuencia: {count} instrucciones",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9c67c32fceedadc3bbfdb14d81120fd961fb524edddc69bb4ea75e78ba4593d4"
+    },
+    {
+      "id": "save.experiment",
+      "source": "Save experiment JSON",
+      "value": "Guardar experimento JSON",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "41847ea22e29f301749230dc0d3b29fd0964a08d1f0d73bbbc01d97938010672"
+    },
+    {
+      "id": "open.experiment",
+      "source": "Open experiment JSON",
+      "value": "Abrir experimento JSON",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b2fe7e053cdc09bde1c47128d5740983642878c023ab8af1eb9fd77a6860bfcd"
+    },
+    {
+      "id": "save.pausing",
+      "source": "Pausing at a completed update before saving…",
+      "value": "Pausando en una actualización completada antes de guardar…",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9553af6a4f2a5b564c9583afb6a9847419b941a27e6b7fd1e756c3b9f8e6f815"
+    },
+    {
+      "id": "save.pausing_status",
+      "source": "Pausing at an update boundary before saving.",
+      "value": "Pausando en un límite de actualización antes de guardar.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "030de74fda4a0351f8c09852cf7355cc82874596993c02683823674834ddcc7f"
+    },
+    {
+      "id": "save.paused_required",
+      "source": "Save is available at a paused update boundary.",
+      "value": "Guardar está disponible en un límite de actualización pausado.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b9ad37d0c36c3b84b655066af69912073c121b2702fce78bca6c6c0a13ca6383"
+    },
+    {
+      "id": "save.success",
+      "source": "Experiment, notes, and run history downloaded as JSON.",
+      "value": "Experimento, notas e historial de ejecución descargados como JSON.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "13a5092429b5432ce5d77f04b1fb65f4f52481dd389b14070718bed77a533ca2"
+    },
+    {
+      "id": "open.invalid_file",
+      "source": "This experiment file is invalid or incompatible. Your current work is unchanged.",
+      "value": "Este archivo de experimento es inválido o incompatible. Su trabajo actual no ha cambiado.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "8bf83d450e7f3e705b20683bdc6e98e98033e706a241b126ade6ec2983729fc4"
+    },
+    {
+      "id": "open.pause_status",
+      "source": "Pausing at an update boundary before opening the experiment.",
+      "value": "Pausando en un límite de actualización antes de abrir el experimento.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d2e8aaee8b109ea3bc9c9f85d5589db7f38eb3761c94731e067ff3b893af52d7"
+    },
+    {
+      "id": "open.success",
+      "source": "Experiment and validated checkpoint opened.",
+      "value": "Experimento y punto de control validado abiertos.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "cb8124e6e538f7f1e2483981f372b1602a2e63fdc36dc2d6a1a301a1783f364d"
+    },
+    {
+      "id": "open.failure_prefix",
+      "source": "Experiment not loaded: {reason}",
+      "value": "Experimento no cargado: {reason}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "reason"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "4b2096767c20df53d69859c9e2e9bafccc5f3f9a677ce7a2883fa09709599546"
+    },
+    {
+      "id": "export.data",
+      "source": "Export completed data CSV",
+      "value": "Exportar datos completados CSV",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "dc79aa7e65a751cf5b977cca23ca6b68a91431ac0950b221f970a43e82595545"
+    },
+    {
+      "id": "export.success",
+      "source": "Completed run samples downloaded as CSV.",
+      "value": "Las muestras de la ejecución completada se descargaron como CSV.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "8b28d7b90f5d93983191fdc326323e1e7d4f5f000cb4901fc91d797734cc98e8"
+    },
+    {
+      "id": "errors.mutation.range",
+      "source": "Enter a per-site mutation setting from {minimum}% to {maximum}%.",
+      "value": "Ingrese una probabilidad de mutación por sitio desde {minimum}% hasta {maximum}%.",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "maximum",
+        "minimum"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "44c8a0954e567b4419e0f7b72b5468945f8d2d067ea90a594a37fcd209e430e4"
+    },
+    {
+      "id": "errors.run.failed",
+      "source": "The run could not continue: {reason}",
+      "value": "La ejecución no pudo continuar: {reason}",
+      "source_state": "planned",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "reason"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "10417f9a11cb32603e77555be9f9575ac38ea09aa09dcd3340dfd0ab00a1b93a"
+    },
+    {
+      "id": "glossary.update",
+      "source": "update",
+      "value": "actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "2c1ba5eb015aab34ed3412f9ec87a302508db3af7409673806226b62bf3c5ce1"
+    },
+    {
+      "id": "glossary.generation",
+      "source": "generation",
+      "value": "generación",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "dbcd7cceb19c45cf3748cea15e93cd5287e42c3cf7ac4c7ac3bb76e978569f47"
+    },
+    {
+      "id": "glossary.sequence_richness",
+      "source": "sequence richness",
+      "value": "riqueza de secuencias",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "5aaca40b321c8085997589d6cbc9d8983b3b711acd7c1494f010bf565f96e51a"
+    },
+    {
+      "id": "glossary.ancestor_sequence",
+      "source": "ancestor sequence",
+      "value": "secuencia del ancestro",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "aaa42edfdae44a43cbbedbab31b33872a995cf561294a49b0be22ada5d87fc3e"
+    },
+    {
+      "id": "glossary.ancestry",
+      "source": "ancestry",
+      "value": "ascendencia",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b57b116a2a131f5e686bb01b33b1ca18dd0f29582b13f3b32620499fd0c78f99"
+    },
+    {
+      "id": "glossary.per_site_mutation",
+      "source": "per-site mutation setting",
+      "value": "probabilidad de mutación por sitio",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "0bb9be6e29647ae547bddc25c5b543c4c2ee97a9b9ed76340260d83af386c996"
+    },
+    {
+      "id": "glossary.fitness",
+      "source": "fitness",
+      "value": "aptitud",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c1442c87af8746c04be7350182ffc5d391a82707f36425ac614ccdc8ad811f74"
+    },
+    {
+      "id": "experiment.mutation.label",
+      "source": "Per-site mutation setting (%)",
+      "value": "Probabilidad de mutación por sitio (%)",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "048ed6a4dcdfd389c893112c1151180e8247cb9e8b45245af388c3db6df57d5a"
+    },
+    {
+      "id": "shell.selected_cell",
+      "source": "Selected cell",
+      "value": "Celda seleccionada",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "3a833c2e0237989fdc792bcdb033bd3add16729f004fed72a6b676064b1c80a9"
+    },
+    {
+      "id": "shell.viewer_chooser",
+      "source": "Viewer chooser",
+      "value": "Selector de vista",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "73463fb6142fb8853ca09e0dd5e1dd74b9dae316925bff1153f5a2493afe3b7b"
+    },
+    {
+      "id": "population.size",
+      "source": "Population size",
+      "value": "Tamaño de la población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "eff37141725ccd81dcb23c676322549d719824ba523c07ce88411d3e03d43161"
+    },
+    {
+      "id": "shell.save",
+      "source": "Save",
+      "value": "Guardar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "c0b8a254ff4fdbe00cb0a4b2fecbe13107eaffba252bddf95ab4b457a0f3cc7b"
+    },
+    {
+      "id": "shell.open",
+      "source": "Open",
+      "value": "Abrir",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "49b2b55ff9d71fa4969af042614d81e4f8a7ac906406a7a43241ce85a75fe08b"
+    },
+    {
+      "id": "shell.export",
+      "source": "Export",
+      "value": "Exportar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted editorial suggestion; pending competent human review",
+      "source_contract_sha256": "d39c1106df8221ed8c9f6537452ab25f9095266f443f3c05e57e0eb832ab84ac"
+    },
+    {
+      "id": "organism.toolbar.rewind.aria",
+      "source": "Rewind organism execution",
+      "value": "Rebobinar la ejecución del organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "2347b930d2c46f01996a1636c48f9420f3002b66dad72f377f9f20b1ab543d38"
+    },
+    {
+      "id": "organism.toolbar.step.aria",
+      "source": "Execute one organism instruction",
+      "value": "Ejecutar una instrucción del organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6a5ef1b85195aba511c3d1171bc9d18d05bb7417225af281ddce55f88cf64424"
+    },
+    {
+      "id": "organism.toolbar.play.aria",
+      "source": "Play at two instructions per second",
+      "value": "Ejecutar a dos instrucciones por segundo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7b0c42645c0a870c00c2717c02a65431686b58332c52d5053bf24c8633e15981"
+    },
+    {
+      "id": "organism.toolbar.pause.aria",
+      "source": "Pause organism execution",
+      "value": "Pausar la ejecución del organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7a5316a81b574d53e8dbbc273aaab6d4bf5796ec83931c04e18c64cb18ebe868"
+    },
+    {
+      "id": "organism.toolbar.fast_forward.aria",
+      "source": "Fast-forward at twenty instructions per second",
+      "value": "Avance rápido a veinte instrucciones por segundo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "49b4702711640de2847ce8a15fb5d055cab16813d62723db1294646b6644b23f"
+    },
+    {
+      "id": "organism.toolbar.rewind.title",
+      "source": "Rewind",
+      "value": "Rebobinar",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "786d39f7a6d875142ccc520bbb0bb8ae5b939bce5c54a6553677fb3ebdca29a9"
+    },
+    {
+      "id": "organism.toolbar.step.title",
+      "source": "Step (Space)",
+      "value": "Paso (Espacio)",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c4f60b6bb3190720f1e6faff66af793fcf212b95dde86af340fdfabf4e7d90c9"
+    },
+    {
+      "id": "organism.toolbar.play.title",
+      "source": "Play (2 instructions per second)",
+      "value": "Reproducir (2 instrucciones por segundo)",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "7924cf9571c1af511588525aa51803a80564a3a815589f00b4c7f5313522f8cd"
+    },
+    {
+      "id": "organism.toolbar.fast_forward.title",
+      "source": "Fast-forward (20 instructions per second)",
+      "value": "Avance rápido (20 instrucciones por segundo)",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "b5c14daabe6278327f9367fbf4625b55957fbee6d871cf6fcbdc21b003b4cf29"
+    },
+    {
+      "id": "organism.toolbar.view_offspring",
+      "source": "View offspring →",
+      "value": "Ver descendencia →",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "8af79519548652a2b566d64ad827815b73bba3f603be1d76e4fc6dc62b87240e"
+    },
+    {
+      "id": "organism.freezer.label",
+      "source": "Organism",
+      "value": "Organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "03f75fd644c713537545863b06691aa2f949af0f989c95720a069275369f1db5"
+    },
+    {
+      "id": "organism.freezer.placeholder",
+      "source": "Choose from freezer…",
+      "value": "Elegir del almacén…",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "8825fbcc2b820dcbf022b7420e3f0a69374a5090ce0cab61a384acd6c8031126"
+    },
+    {
+      "id": "organism.freezer.accessible",
+      "source": "Choose an organism from the freezer",
+      "value": "Elige un organismo del almacén",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "10f260c1fa10878d0bf45d8f17ba64557e7a7bb015039a578ee49aaa3ba2b1b4"
+    },
+    {
+      "id": "organism.timeline.label",
+      "source": "Execution position",
+      "value": "Posición de ejecución",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "e5d04556de944671044957cc7507a8651afd726affb491174dd418b451df0da3"
+    },
+    {
+      "id": "organism.timeline.accessible",
+      "source": "Organism execution position",
+      "value": "Posición de ejecución del organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "260502142166445d29fa4eea8f3f542a70a163215d4e024a4f7e945baadfdd02"
+    },
+    {
+      "id": "population.color_mode.accessible",
+      "source": "Population color mode",
+      "value": "Modo de color de la población",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a7a5173bb878faaf8082678b19ccbdebbaf1cca6cfbe7f81f3e3a81b27274b9c"
+    },
+    {
+      "id": "population.color_mode.title",
+      "source": "Color organisms by",
+      "value": "Colorear organismos por",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "cb054f8e76ea3a502b78d0f4f7cd46fbfef25da6edd25eaae909499f26b059dc"
+    },
+    {
+      "id": "organism.empty.heading",
+      "source": "Select an organism first",
+      "value": "Seleccione un organismo primero",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9654362995fe0f349a93fff8b8a8773c923294c8f0dd63400b11a717fae03b94"
+    },
+    {
+      "id": "organism.empty.help",
+      "source": "Select an organism from the freezer (above) or return to Population mode and select an occupied cell.",
+      "value": "Seleccione un organismo del almacén (arriba) o regrese al modo Población y seleccione una celda ocupada.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "24c2379613845c33bd3f1ed3031e0abd5bcb7b80a47443f90977e739c632c8e2"
+    },
+    {
+      "id": "organism.cycle.heading",
+      "source": "Single life cycle",
+      "value": "Ciclo de vida único",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "1486b87a446884c3097efad900407f18ae6da42a4d41a233b243971a8e6857ee"
+    },
+    {
+      "id": "organism.cycle.instructions_executed",
+      "source": "instructions executed",
+      "value": "instrucciones ejecutadas",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "fe626cbe7bc3ef4a5ca200856a77b586ecdb962b3fd421c56f3c1735f83b698a"
+    },
+    {
+      "id": "organism.genome.eyebrow",
+      "source": "Execution map",
+      "value": "Mapa de ejecución",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "71be3bdf51ad485f7ba17d467d9e9199712dd65ad23b510dbbd3dcda70b87752"
+    },
+    {
+      "id": "organism.genome.heading",
+      "source": "Genome",
+      "value": "Genoma",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "34376010b33b68c74892124ab0536a85772aa7581b4cabd3d2a00bdf5407cce1"
+    },
+    {
+      "id": "organism.genome.instruction_count",
+      "source": "instructions",
+      "value": "instrucciones",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "c9db0059129d874a5f01243e791576b7acc445635935325ed275794ebb5ea068"
+    },
+    {
+      "id": "organism.genome.end",
+      "source": "end of genome",
+      "value": "fin del genoma",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "2384e77739b6dd3c7df57b50327437e04aaf8450168b07b644b4f680142cebf0"
+    },
+    {
+      "id": "organism.status.complete",
+      "source": "Life cycle complete",
+      "value": "Ciclo de vida completo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "48736772d788d00cd353b6a0cd57068e60768a2ffa3c59166d912133199ca4a5"
+    },
+    {
+      "id": "organism.status.offspring",
+      "source": "Offspring produced · {count} instructions. Use “View offspring” above to start it with fresh hardware.",
+      "value": "Descendencia producida · {count} instrucciones. Use «Ver descendencia» para iniciarla con hardware nuevo.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "ddbbccbdae9ac72b109b5b68e2eda442175631eb77fd2c8c2cca3a147f269c57"
+    },
+    {
+      "id": "organism.status.preview_limit",
+      "source": "Preview limit reached",
+      "value": "Límite de vista previa alcanzado",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "f67aa3a5c2cd462097ef42e93e4e25437e4f68c5c09c7709ea25c8edae3e5fe2"
+    },
+    {
+      "id": "organism.status.continues",
+      "source": "Execution continues",
+      "value": "La ejecución continúa",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "d8ed3b3b4042a60e6f6b7be9cfeb8e0147e2f2d9c1fedbb71d269c8308571623"
+    },
+    {
+      "id": "organism.status.no_offspring",
+      "source": "No offspring was produced in the first {count} instructions.",
+      "value": "No se produjeron descendientes en las primeras {count} instrucciones.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "9df401f54bf535702371ae0a05089c34c88261af1416c58cd7b71e51f56ddbd3"
+    },
+    {
+      "id": "organism.instruction.just_executed_at",
+      "source": "Just executed at {update}",
+      "value": "Ejecutado recientemente en {update}",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "dc8e363a8c3c350cfc4e77e13af01a42e45b449af848942759fadbaec105f469"
+    },
+    {
+      "id": "organism.instruction.just_executed",
+      "source": "Just executed",
+      "value": "Ejecutado recientemente",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "926942ff903f8c46950de843f3341da8ddb2d92bc5689c4b89ea2b3a018a35d4"
+    },
+    {
+      "id": "organism.instruction.nothing_yet",
+      "source": "Nothing yet",
+      "value": "Aún nada",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "bcc1cbd9cf1a8c5bad2d84044e8af098e8c10f1196fae51bb3cb9fd54d0b7d21"
+    },
+    {
+      "id": "organism.instruction.start_help",
+      "source": "Use Step, Play, or Fast-forward to begin this life cycle.",
+      "value": "Use Paso, Reproducir o Avanzar rápido para iniciar este ciclo de vida.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "906f4930b1193313f34ef2a0398f8df6fc29b97cda689469661d319c7cf7b280"
+    },
+    {
+      "id": "organism.instruction.about_to_execute",
+      "source": "About to execute at {update}",
+      "value": "A punto de ejecutar en {update}",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [
+        "update"
+      ],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "6b64c6b5de538a274781fd46aef15c62ca1155fc70f0ebd735a8b843d16c63b4"
+    },
+    {
+      "id": "organism.registers.heading",
+      "source": "Registers",
+      "value": "Registros",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "fbcf5a544c1bc4ca11ae849d4dea65cd73c853063cde7ae8c8e49b0db54b7ee1"
+    },
+    {
+      "id": "organism.stacks.heading",
+      "source": "Stacks",
+      "value": "Pilas",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "2e2cbfe7f20e4c6da11aea8debab24499688169b7c5564465d53b2e9964ba319"
+    },
+    {
+      "id": "organism.stack.label",
+      "source": "Stack",
+      "value": "Pila",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "03835e4b6fa39da307b84faa5ad3817bfd607bbe303b567a67958480c71a54f5"
+    },
+    {
+      "id": "organism.memory.eyebrow",
+      "source": "Working state",
+      "value": "Estado de trabajo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "c7807f46eda3e7fff1152d5fa16fce135bc9e84ffbb7b101e8e1cac25eff2c63"
+    },
+    {
+      "id": "organism.memory.heading",
+      "source": "Memory",
+      "value": "Memoria",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "4710e72b7a3c7a380f3b71fef4eb132374d4d402f862358c9b6ac015df9b03f3"
+    },
+    {
+      "id": "organism.memory.copied",
+      "source": "Copied",
+      "value": "Copiados",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "d61292aa8f69fa3de0d84c5fafe64f69d4e35aee96005813cbcd299d1c14ff73"
+    },
+    {
+      "id": "organism.memory.errors",
+      "source": "Errors",
+      "value": "Errores",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "36cc5180ad0131eae3271b936d5c522a435b0cfb6d02769075ac9bf15190ed50"
+    },
+    {
+      "id": "organism.tasks.eyebrow",
+      "source": "Life-cycle progress",
+      "value": "Progreso del ciclo de vida",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "2c49935744fdc1f46304afdec78d92e65256265cc7eb1823298949b437f037f9"
+    },
+    {
+      "id": "organism.tasks.heading",
+      "source": "Tasks",
+      "value": "Tareas",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "663714b7c523d8aebc7fdbb9c5d6175351efea208d78e6e525c4d8bb96cf2a00"
+    },
+    {
+      "id": "organism.tasks.empty",
+      "source": "No configured reaction tasks are performed in this life cycle.",
+      "value": "No se realizan tareas de reacción configuradas en este ciclo de vida.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "752b23da36c7e240a166b4a5033e0a578c9dfff1a69e93937d5d214bfdb2c47a"
+    },
+    {
+      "id": "organism.traits.eyebrow",
+      "source": "Starting phenotype",
+      "value": "Fenotipo inicial",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "44a8d2d6d193d728596e0bf4b18a2928959717a5c46dcc2cfe4148a4460b04e8"
+    },
+    {
+      "id": "organism.traits.heading",
+      "source": "Organism traits",
+      "value": "Características del organismo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a67b89fba596b114994c02a61028b51ca2b5898f541e98bd59f21548b6171552"
+    },
+    {
+      "id": "organism.traits.empty",
+      "source": "No printable traits.",
+      "value": "No hay rasgos imprimibles.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a15ef76b2b315ad17a7d8838c11facb72f9908d63ab226cd642357bf77efeb34"
+    },
+    {
+      "id": "organism.stats.empty",
+      "source": "Select an occupied population cell to inspect its organism.",
+      "value": "Seleccione una celda de población ocupada para inspeccionar su organismo.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "22e44d53e39188994aabe195432fdf6951f8bb390551edcaa8bd282142ff6aa1"
+    },
+    {
+      "id": "organism.stats.active",
+      "source": "Active organism",
+      "value": "Organismo activo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "a2d8f5971f1c50ffe5e27ef020e1ad2d4ce3b7f8d0cbd8720fcf02a5ad2fd3ea"
+    },
+    {
+      "id": "organism.stats.phenotype",
+      "source": "Phenotype",
+      "value": "Fenotipo",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "8026a0a507e58f806f098f124b06690244d9cc7f451f762b33c1f379a6e5c12f"
+    },
+    {
+      "id": "organism.stats.hardware",
+      "source": "Hardware",
+      "value": "Hardware",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "3b0a40cc5454e8c45c8a4057026d71f89d058a5f0d033f0e01f106c543a2cd7e"
+    },
+    {
+      "id": "organism.stats.executed",
+      "source": "Executed",
+      "value": "Ejecuciones",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "95d37af21c9c2f554ba57873edfd1917269d07bd8ed73b95889a73f88c994b5a"
+    },
+    {
+      "id": "organism.stats.heads",
+      "source": "Heads",
+      "value": "Cabezas",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "3dcc5fc39ef28e1ec2314d71fcd71e0f65dd676cccf058af8288e183f1be08ab"
+    },
+    {
+      "id": "organism.stats.memory",
+      "source": "Nonzero memory",
+      "value": "Memoria con valores distintos de cero",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology consistency correction; pending competent human review",
+      "source_contract_sha256": "bc90e5738bb1b44e220eb97f3c61771091bfb7eea66f41f5239f26e7dcae1a3f"
+    },
+    {
+      "id": "organism.stats.memory.empty",
+      "source": "All locations are zero.",
+      "value": "Todas las ubicaciones son cero.",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
+      "source_contract_sha256": "83582b05845b34602a75675490581ac97f12ac448b61d97e09411b56323ea63a"
+    },
+    {
+      "id": "organism.genome.next",
+      "source": "NEXT",
+      "value": "SIGUIENTE",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted technical-label suggestion; pending competent human review",
+      "source_contract_sha256": "a6a1a86668c89832de47d4a30a011a44eaf4d17e9650e8ac17aee1edcc61aeeb"
+    },
+    {
+      "id": "organism.head.follow",
+      "source": "Follow",
+      "value": "Seguir",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted technical-label suggestion; pending competent human review",
+      "source_contract_sha256": "e103d8174a9947414a1c33fb75d791cd3a9dd9ce463e0696c5cbb2d4a94cd44f"
+    },
+    {
+      "id": "organism.head.stop_following",
+      "source": "Stop following",
+      "value": "Dejar de seguir",
+      "source_state": "present",
+      "status": "awaiting_local_translation",
+      "placeholders": [],
+      "translation_method": "Codex-assisted technical-label suggestion; pending competent human review",
+      "source_contract_sha256": "5c1ec62a6033546b0c9010e082657ad5c71acf88f1b788da2b5d0a25c71354d0"
+    },
+    {
+      "id": "freezer.name.aria",
+      "source": "Name for {name}; double-click to edit",
+      "value": "Nombre: {name}; haga doble clic para editar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "df8cd424464c3c3524b82417052f1fcbb8cb9d0bdb948a6e47cf61fe7355dfcb"
+    },
+    {
+      "id": "freezer.instructions.one",
+      "source": "{count} instruction",
+      "value": "{count} instrucción",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "886e7c45f3de2968b83712020fa7f9c8ab216435f29c7ba1db8e83af8012417e"
+    },
+    {
+      "id": "freezer.instructions.other",
+      "source": "{count} instructions",
+      "value": "{count} instrucciones",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "count"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "b8365c2a3f5fad69420257f70b8b6cd07f8eb24aab1f59ef1fb418f1dcde9297"
+    },
+    {
+      "id": "freezer.organism.download.aria",
+      "source": "Download {name} organism file",
+      "value": "Descargar el archivo del organismo {name}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "8c0eb05dfe176acab5fa6d969aaf5532f8ca4d8654f8bc96e7411f4283550ff6"
+    },
+    {
+      "id": "freezer.organism.download.title",
+      "source": "Download {name} as .org",
+      "value": "Descargar {name} como archivo .org",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "2018a823ca34124c668022b9c650e2a59bba3e7036b9e181cc1b1d29acde22b9"
+    },
+    {
+      "id": "freezer.remove",
+      "source": "Remove {name}",
+      "value": "Quitar {name}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "d6991ae8fbea03caf1dd00e16696ecd8517eabf5493bd1ae5edb5f0f3d557c8f"
+    },
+    {
+      "id": "freezer.configuration.download.aria",
+      "source": "Download {name} configuration file",
+      "value": "Descargar el archivo de configuración {name}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "9e9201bec24f7cfe19627f2802144f5e514c47697a64eac16aca201ea9d7c21d"
+    },
+    {
+      "id": "freezer.configuration.download.title",
+      "source": "Download {name} as .cfg",
+      "value": "Descargar {name} como archivo .cfg",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "name"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "50e6c7760615694197bff5ac3ccdc766530c5f2a4f4729bf2c9e27a3b35f3d0f"
+    },
+    {
+      "id": "freezer.configuration.summary",
+      "source": "Reactions: {reactions}; events: {events}; organisms: {organisms}",
+      "value": "Reacciones: {reactions} · eventos: {events} · organismos: {organisms}",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [
+        "events",
+        "organisms",
+        "reactions"
+      ],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "d8ba166ba82d6b9a307c35cad416d678440997c610b44a2a91e7056a588205fd"
+    },
+    {
+      "id": "configuration.settings.tab",
+      "source": "Settings",
+      "value": "Ajustes",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "13cb0529f9dd56d3ddbb956599febac53f2fb17ab931bf499da3660d6b648998"
+    },
+    {
+      "id": "configuration.environment.tab",
+      "source": "Environment",
+      "value": "Entorno",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "e3dbde376f6cdb827edefcf819ec7a3156c71581aff42771d01dbc62b65b590c"
+    },
+    {
+      "id": "configuration.events.tab",
+      "source": "Events",
+      "value": "Eventos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "ba1326992097a8849710106aacf024f594ead76887a9fa4eb0ecc8c3c8cda161"
+    },
+    {
+      "id": "freezer.name.title",
+      "source": "Double-click to rename",
+      "value": "Haga doble clic para cambiar el nombre",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "30af1cba9d8c60eb9346206da497c33911381c566ad732a4e17711e8e52afd9d"
+    },
+    {
+      "id": "freezer.intro",
+      "source": "Double-click a name to edit it. Drag organisms between this freezer and the grid.",
+      "value": "Haga doble clic en un nombre para editarlo. Arrastre organismos entre el almacén y la cuadrícula.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "18f12ce5a9c54180e50bd0d6845195c683cc3c6f4786bf555da663d45c4a9ec0"
+    },
+    {
+      "id": "freezer.organisms.help",
+      "source": "Genomes that can seed a new dish.",
+      "value": "Genomas que pueden iniciar una población nueva.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology correction; pending competent human review",
+      "source_contract_sha256": "20a588cf0366d951f55e5a750261b2fb16b708b2acb2529afe89baa41d94c9df"
+    },
+    {
+      "id": "freezer.load",
+      "source": "Load",
+      "value": "Cargar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "ede620928dfde8c9c61db66a8924aae3390f7ffbbcf4003b8e93de0e249a5b50"
+    },
+    {
+      "id": "freezer.organisms.empty",
+      "source": "No frozen organisms.",
+      "value": "No hay organismos guardados.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "3b5cb07155b510490b1ffa687f29a72ee74d55a0095d2f4e221b9a20aad7f346"
+    },
+    {
+      "id": "freezer.configurations.help",
+      "source": "Configured dishes before a run.",
+      "value": "Configuraciones de población previas a una ejecución.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology correction; pending competent human review",
+      "source_contract_sha256": "58edc14cabf92d722e791e4b724217ff9551f6a665751a84626c29f1fff70362"
+    },
+    {
+      "id": "freezer.configurations.empty",
+      "source": "No frozen configurations.",
+      "value": "No hay configuraciones guardadas.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "3f797052603d97851c8945aa781ffe706df046733d9df9ad05eed0480dae7f88"
+    },
+    {
+      "id": "freezer.checkpoints.help",
+      "source": "Portable full-population files; not stored in this browser.",
+      "value": "Archivos portátiles con la población completa; no se guardan en este navegador.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "471f93e6bb93f39e1681df2fa5c90da621736d9d3cde1c48a69e3f1e20891dd2"
+    },
+    {
+      "id": "freezer.save.checkpoint",
+      "source": "Save Checkpoint",
+      "value": "Guardar punto",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "5a4f7c17445e0ee5ffda7ffc1aabceaf96789d00898c135fbcbdfb65a5e70a41"
+    },
+    {
+      "id": "freezer.load.checkpoint",
+      "source": "Load checkpoint file",
+      "value": "Cargar archivo de punto de control",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "8b13b1e21f79572586e26c1bd5a95da6695d3ad125e130339ab6f0de184a68cf"
+    },
+    {
+      "id": "freezer.checkpoints.empty",
+      "source": "Choose a checkpoint file to resume a saved run.",
+      "value": "Elija un archivo de punto de control para reanudar una ejecución guardada.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "561ebe43ede9af0c6ebd5ed3cf5ef98c838d17fc76cbbaf6f1715f3fd89220a6"
+    },
+    {
+      "id": "configuration.heading",
+      "source": "Configuration",
+      "value": "Configuración",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "a111157927febe8c91d1112f7dd0f2f49245c09328cb81fead5db6caff0697d7"
+    },
+    {
+      "id": "configuration.advanced.on",
+      "source": "Advanced: On",
+      "value": "Avanzado: sí",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "69ba152fc1fa0ae3d7a75366a61415e41750680d644e029bfa9765c5f60db768"
+    },
+    {
+      "id": "configuration.advanced.off",
+      "source": "Advanced: Off",
+      "value": "Avanzado: no",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "e203bebc647c457cd77c92e6696beda3b9ab3966addf3acd6f66817b371a94e8"
+    },
+    {
+      "id": "configuration.advanced.title",
+      "source": "Show or hide advanced settings",
+      "value": "Mostrar u ocultar los ajustes avanzados",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "4910815982a57678b5cbae34977e9a748b8926680566e5da1b921ebfa70f5abc"
+    },
+    {
+      "id": "configuration.reset",
+      "source": "Reset",
+      "value": "Restablecer",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "a4854a17a218eba1079fe5d4d7330b01941fb41f8c06a59b52f976426e41c7bd"
+    },
+    {
+      "id": "configuration.reset.title",
+      "source": "Reset this configuration tab to its web defaults",
+      "value": "Restablecer los valores iniciales de esta pestaña",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "dd16ae58242f531233ac645bb6efc04d5a6b301759563c1392db4bd2e209b863"
+    },
+    {
+      "id": "configuration.settings.intro",
+      "source": "Settings for the current population.",
+      "value": "Ajustes de la población actual.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "f0542f0cedbe28cd9e2fd7f71215cdc6756717180d6f11bbac56f5baed660e70"
+    },
+    {
+      "id": "freezer.configurations.heading",
+      "source": "Configurations",
+      "value": "Configuraciones",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "9f699b211005c3cc32977ffde7e72bac971b2d2975f7d7492c1f6b15c13e8c71"
+    },
+    {
+      "id": "freezer.save.configuration",
+      "source": "Save Configuration",
+      "value": "Guardar configuración",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "4af3b9a1534389ce545994fe9f46916a41f0b4ead5bf370cbcfa9205b0d0406d"
+    },
+    {
+      "id": "freezer.checkpoints.heading",
+      "source": "Checkpoints",
+      "value": "Puntos de control",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "e299c02b452a6eae529cfdaef9a1fd62ad0dca976120e8675c9b694bfcc86041"
+    },
+    {
+      "id": "shell.sidepanel.configure.accessible",
+      "source": "Configure",
+      "value": "Ajustes",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted concise-control wording; pending competent human review",
+      "source_contract_sha256": "5fbb3fef4564711e6044a9d6159d1883ab1a837627c58d158f292d9c5e56d8bd"
+    },
+    {
+      "id": "freezer.status.saved",
+      "source": "Saved in this browser.",
+      "value": "Guardado en este navegador.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "01b6396ea71d7462487c97f615c22a8a791c3360a624e85629b6bbffea7232cb"
+    },
+    {
+      "id": "freezer.status.session_saved",
+      "source": "Saved for this session; browser storage is unavailable or full.",
+      "value": "Guardado durante esta sesión; el almacenamiento del navegador no está disponible o está lleno.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "80a9cf043884672256f14ba9a93d9a0543ae62ba36eaae67414c28250e1c699d"
+    },
+    {
+      "id": "freezer.status.loaded",
+      "source": "Loaded organisms and configurations from this browser.",
+      "value": "Se cargaron organismos y configuraciones guardados en este navegador.",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "3f119d44b2fa942506c5ec7930f67f94f4449216d4d99a4640076d5838b3138e"
+    },
+    {
+      "id": "population.palette.label",
+      "source": "Continuous color map",
+      "value": "Mapa de colores continuos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "c175ab07fe8f6ff6ca47e64d6fc339ba0bf324cb65fe2e30f9218e5f60546211"
+    },
+    {
+      "id": "population.palette.title",
+      "source": "Choose the numeric color map",
+      "value": "Elija la paleta para valores numéricos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "83ec4e97dd7821673ed66d245f584e065292d8ff7ec4f6a164dd48aa6b8e83b9"
+    },
+    {
+      "id": "population.palette.gnuplot2",
+      "source": "Gnuplot 2",
+      "value": "Gnuplot 2",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "c4ff29416bd5371e4229a0609617a9325223c21ac7847027077417c204f6685a"
+    },
+    {
+      "id": "population.palette.viridis",
+      "source": "Viridis",
+      "value": "Viridis",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "7b085bf15e6aaac3471b867dbb404180ece30f5e993c2477694e09c60c446135"
+    },
+    {
+      "id": "population.palette.cubehelix",
+      "source": "Cubehelix",
+      "value": "Cubehelix",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "34623a0b8dcf2929ba29d7ffeda550afc6c49e6f6d4af0c1f18a4075f24adcc0"
+    },
+    {
+      "id": "results.population_history.title",
+      "source": "Population size over time",
+      "value": "Tamaño de la población a lo largo del tiempo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "ea8377047f10c05eda6c5ee9556dae5d4384a5846a66eda2763eb7dec127321d"
+    },
+    {
+      "id": "results.population_history.axis",
+      "source": "Organisms",
+      "value": "Organismos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "58faca21f10e5675d820018bf3e0eab89583752896c86fb80b52b6c1f085eb37"
+    },
+    {
+      "id": "results.richness_history.title",
+      "source": "Sequence richness over time",
+      "value": "Riqueza de secuencias a lo largo del tiempo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "3338023d1a1499dc653fefeaa511124d50f83ee5abd01244276b96c58d7d2cf8"
+    },
+    {
+      "id": "results.richness_history.axis",
+      "source": "Distinct sequences",
+      "value": "Secuencias distintas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "09331a125c0c49fb4c552f7c3ef407901b824d977b235bee6dce1c651513faee"
+    },
+    {
+      "id": "results.ancestor_history.title",
+      "source": "Ancestor sequence over time",
+      "value": "Secuencia ancestral a lo largo del tiempo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "66b78b8f4388b71e48f0cdc789f00c844347b75fa32e855eb3ff0fecc8215c25"
+    },
+    {
+      "id": "results.ancestor_history.axis",
+      "source": "Percent of population",
+      "value": "Porcentaje de la población",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted UI localization; pending competent human review",
+      "source_contract_sha256": "ac080cb34e8540dbd0baa51d2d9858f31c6af8eaa09492b5b3c16e1ed1540f0c"
+    }
+  ]
+}

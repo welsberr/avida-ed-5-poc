@@ -1,0 +1,3 @@
+[submodule "vendor/Empirical"]
+	path = vendor/Empirical
+	url = https://github.com/devosoft/Empirical.git

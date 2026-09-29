@@ -1,0 +1,9 @@
+.git
+**/.git
+build/
+web/Avida.js
+web/Avida.data
+web/Avida.wasm
+web/Avida.wasm.map
+web/Avida.worker.js
+*.pptx

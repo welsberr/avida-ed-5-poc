@@ -1,0 +1,8 @@
+LEVEL 0: Genome
+         InstSet     (template parameter: Hardware type)
+         PopPosition (template parameter: Population type)
+         Population  (template parameter: Organism type)
+Level 1: HardwareManager : InstSet
+Level 2: Organism        : HardwareManager
+Level 3: [Derived Hardware] (e.g., AvidaVM)  : HardwareManager, InstSet, Organism
+Avida 4: Avida           : AvidaVM, HardwareManager, Population
