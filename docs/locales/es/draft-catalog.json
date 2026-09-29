@@ -11,8 +11,8 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "52b4bb1b7a1cf16baaa815918143e1c7d8a9a4f4",
-    "source_worktree_was_dirty": true,
+    "source_revision": "40e845772558f1487491e5b264178364c41e4369",
+    "source_worktree_was_dirty": false,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
       {
@@ -200,7 +200,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-29T22:12:06Z",
+    "updated_utc": "2026-09-29T22:13:51Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 285,
