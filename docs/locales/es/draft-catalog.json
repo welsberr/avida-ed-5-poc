@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "40e845772558f1487491e5b264178364c41e4369",
+    "source_revision": "2e65ec0c24c77063ef19d4d36deead14438df5b9",
     "source_worktree_was_dirty": false,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -113,7 +113,7 @@
       },
       {
         "path": "web/Avida.html",
-        "sha256_current": "0f6b737dd0bc4ae426d194fc1c2cb0d1134f94250a88c4b2293eb0f8afd5e62e"
+        "sha256_current": "2e54246b770b3d466eeb3309e6c6f383ea47e1a9c1795f343a1c82daa40cd314"
       },
       {
         "path": "web/education-plots.js",
@@ -200,7 +200,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-29T22:13:51Z",
+    "updated_utc": "2026-09-29T22:22:21Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 285,
