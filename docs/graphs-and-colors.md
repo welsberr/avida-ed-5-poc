@@ -2,7 +2,7 @@
 
 ## Plotly in the Avida-ED prototype
 
-The result panel has three live graphs: population size, exact sequence richness, and ancestor-sequence fraction. Avida samples the experiment on the main application workflow; the UI sends the recorded values to a small browser-side adapter, which updates Plotly. A data table remains beneath the charts so exact observations can still be read and copied without relying on graph interaction.
+The result panel has three live graphs: population size, exact sequence richness, and ancestor-sequence fraction. Avida samples the experiment on the main application workflow; the UI sends the recorded values to a small browser-side adapter, which updates Plotly. The graph containers stay mounted while the results table refreshes, and the adapter appends new samples to each existing trace instead of redrawing the complete history. A data table remains available so exact observations can still be read and copied without relying on graph interaction.
 
 The Plotly controls provide hover values, pan/zoom, reset, and PNG export. Scroll-wheel zoom and double-click reset are also enabled. `uirevision` keeps a user's selected view stable as new samples arrive, then resets it for the next run.
 

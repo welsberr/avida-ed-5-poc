@@ -2334,6 +2334,17 @@ select:focus-visible {
   background: rgba(8, 25, 37, 0.55);
 }
 
+.education-app .education-plots {
+  padding: 12px;
+  border: 1px solid rgba(132, 180, 200, 0.16);
+  border-radius: 12px;
+  background: rgba(8, 25, 37, 0.55);
+}
+
+.education-app .education-plots[hidden] {
+  display: none;
+}
+
 .education-app .education-results h2 {
   margin-bottom: 7px;
 }

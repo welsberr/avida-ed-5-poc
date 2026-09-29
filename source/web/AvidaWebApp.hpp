@@ -230,6 +230,7 @@ private:
   UI::Input run_target_input;
   UI::Text education_status_text{"education-status"};
   UI::Text education_results_text{"education-results"};
+  UI::Div education_plots{"education-plots"};
   UI::Text run_history_text{"run-history"};
   UI::TextArea prediction_notes{"prediction-notes"};
   UI::TextArea observation_notes{"observation-notes"};
@@ -395,6 +396,7 @@ private:
   void CommitEducationSamples();
   [[nodiscard]] std::string BuildEducationPlotPayload() const;
   void UpdateEducationPlots() const;
+  [[nodiscard]] emp::String BuildEducationPlotsHTML() const;
   [[nodiscard]] emp::String BuildEducationResultsHTML() const;
   [[nodiscard]] emp::String BuildRunHistoryHTML() const;
   [[nodiscard]] emp::String BuildComparisonHTML() const;

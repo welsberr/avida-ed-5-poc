@@ -9,12 +9,15 @@ const targets = new Map([
   "richness-history-plot",
   "ancestor-history-plot"
 ].map(id => [id, { id }]));
+targets.set("education-plots", { id: "education-plots", hidden: true });
 const rendered = [];
+const extended = [];
 const purged = [];
 const browser = {
   document: { getElementById: id => targets.get(id) || null },
   Plotly: {
-    react: (target, data, layout, config) => rendered.push({ target, data, layout, config }),
+    newPlot: (target, data, layout, config) => rendered.push({ target, data, layout, config }),
+    extendTraces: (target, update, indices) => extended.push({ target, update, indices }),
     purge: target => purged.push(target)
   }
 };
@@ -26,13 +29,13 @@ vm.runInNewContext(
   { filename: "education-plots.js" }
 );
 
-browser.AvidaEducationPlots.update(JSON.stringify({
-  run_id: "run-1",
-  locale: "es",
-  updates: [0, 1],
-  population: [1, 3],
-  richness: [1, 2],
-  ancestor: [100, 66.7],
+const payload = (runId, locale, updates) => ({
+  run_id: runId,
+  locale,
+  updates,
+  population: updates.map(update => update * 2 + 1),
+  richness: updates.map(update => update + 1),
+  ancestor: updates.map(update => 100 - update),
   labels: {
     update: "Update",
     population: "Population",
@@ -45,12 +48,17 @@ browser.AvidaEducationPlots.update(JSON.stringify({
     ancestor_title: "Ancestor sequence over time",
     ancestor_axis: "Percent of population"
   }
-}));
+});
 
+async function main() {
+await browser.AvidaEducationPlots.update(JSON.stringify(payload("run-1", "es", [0, 1])));
+
+assert.equal(targets.get("education-plots").hidden, false);
 assert.equal(rendered.length, 3);
+assert.equal(extended.length, 0);
 assert.deepEqual(
   JSON.parse(JSON.stringify(rendered.map(chart => chart.data[0].y))),
-  [[1, 3], [1, 2], [100, 66.7]]
+  [[1, 3], [1, 2], [100, 99]]
 );
 for (const chart of rendered) {
   assert.equal(chart.layout.uirevision, "run-1");
@@ -62,31 +70,35 @@ for (const chart of rendered) {
   assert.equal(typeof chart.data[0].hovertemplate, "string");
 }
 
-browser.AvidaEducationPlots.update(JSON.stringify({
-  run_id: "run-1",
-  locale: "en",
-  updates: [0],
-  population: [1],
-  richness: [1],
-  ancestor: [100],
-  labels: {
-    update: "Update",
-    population: "Population",
-    population_title: "Population size over time",
-    population_axis: "Organisms",
-    richness: "Sequence richness",
-    richness_title: "Sequence richness over time",
-    richness_axis: "Distinct sequences",
-    ancestor: "Ancestor sequence",
-    ancestor_title: "Ancestor sequence over time",
-    ancestor_axis: "Percent of population"
-  }
-}));
-assert.equal(rendered.length, 6);
-assert.equal(purged.length, 3, "changing language rebuilds plots so modebar tooltips update");
+await browser.AvidaEducationPlots.update(JSON.stringify(payload("run-1", "es", [0, 1, 2, 3])));
+assert.equal(rendered.length, 3, "live samples append without redrawing the graph");
+assert.equal(extended.length, 3);
+assert.deepEqual(
+  JSON.parse(JSON.stringify(extended.map(item => item.update))),
+  [
+    { x: [[2, 3]], y: [[5, 7]] },
+    { x: [[2, 3]], y: [[3, 4]] },
+    { x: [[2, 3]], y: [[98, 97]] }
+  ]
+);
+assert.ok(extended.every(item => item.indices[0] === 0));
+
+await browser.AvidaEducationPlots.update(JSON.stringify(payload("run-1", "en", [0, 1, 2, 3])));
+assert.equal(rendered.length, 6, "a language change recreates modebar tooltips once");
+assert.equal(purged.length, 3);
 assert.equal(rendered[3].config.locale, "en");
 
-rendered.length = 0;
-browser.AvidaEducationPlots.update(JSON.stringify({ updates: [] }));
+await browser.AvidaEducationPlots.update(JSON.stringify(payload("run-2", "en", [0])));
+assert.equal(rendered.length, 9, "a new run starts a fresh graph");
 assert.equal(purged.length, 6);
-console.log("education Plotly adapter: live series, interaction config, export, and empty reset passed");
+
+await browser.AvidaEducationPlots.update(JSON.stringify({ updates: [] }));
+assert.equal(purged.length, 9);
+assert.equal(targets.get("education-plots").hidden, true);
+console.log("education Plotly adapter: persistent streaming charts, locale and run resets, export, and empty reset passed");
+}
+
+main().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});

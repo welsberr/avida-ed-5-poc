@@ -608,6 +608,13 @@ void AvidaWebApp::BuildInterface() {
   education_results_text.Clear();
   education_results_text << UI::Live([this](){ return BuildEducationResultsHTML(); });
   run_inspector << education_results_text;
+  // Keep these Plotly targets outside the redrawable results text so live table updates never
+  // replace the graph nodes under Plotly.
+  education_plots = UI::Div{"education-plots"};
+  education_plots.AddAttr("class", "education-plots");
+  education_plots.SetAttr("hidden", "hidden");
+  education_plots << BuildEducationPlotsHTML();
+  run_inspector << education_plots;
   run_history_text.Clear();
   run_history_text << UI::Live([this](){ return BuildRunHistoryHTML(); });
   run_inspector << run_history_text;

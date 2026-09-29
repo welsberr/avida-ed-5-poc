@@ -187,12 +187,6 @@ emp::String AvidaWebApp::BuildEducationResultsHTML() const {
     "results.sample_context", active_locale, context_args
   );
   out += "<p class='results-context'>" + (context ? context->text : Localized(avida::web::localization::key::RUN).str()) + "</p>";
-  out += "<figure class='result-chart'><figcaption>" + text("Population size (organisms)") + "</figcaption>";
-  out += "<div id='population-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='" + text("Population size by update") + "'></div></figure>";
-  out += "<figure class='result-chart'><figcaption>" + text("Sequence richness (distinct sequences)") + "</figcaption>";
-  out += "<div id='richness-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='" + text("Sequence richness by update") + "'></div></figure>";
-  out += "<figure class='result-chart'><figcaption>" + text("Ancestor sequence (% of population)") + "</figcaption>";
-  out += "<div id='ancestor-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='" + text("Ancestor sequence fraction by update") + "'></div></figure>";
   out += "<div class='results-table-wrap'><table id='results-table' class='results-table'><caption>";
   const std::string count = std::to_string(samples.size());
   const avida::web::localization::NamedArgument row_count{"count", count};
@@ -214,6 +208,29 @@ emp::String AvidaWebApp::BuildEducationResultsHTML() const {
     out += "</td></tr>";
   }
   out += "</tbody></table></div></section>";
+  return emp::String{out};
+}
+
+emp::String AvidaWebApp::BuildEducationPlotsHTML() const {
+  const auto text = [this](std::string_view source) {
+    return emp::MakeWebSafe(PresentationText(source));
+  };
+  std::string out;
+  out += "<figure class='result-chart'><figcaption>";
+  out += text("Population size (organisms)");
+  out += "</figcaption><div id='population-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='";
+  out += text("Population size by update");
+  out += "'></div></figure>";
+  out += "<figure class='result-chart'><figcaption>";
+  out += text("Sequence richness (distinct sequences)");
+  out += "</figcaption><div id='richness-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='";
+  out += text("Sequence richness by update");
+  out += "'></div></figure>";
+  out += "<figure class='result-chart'><figcaption>";
+  out += text("Ancestor sequence (% of population)");
+  out += "</figcaption><div id='ancestor-history-plot' class='result-chart-plot' role='img' aria-describedby='results-table' aria-label='";
+  out += text("Ancestor sequence fraction by update");
+  out += "'></div></figure>";
   return emp::String{out};
 }
 
