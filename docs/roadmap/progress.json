@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T11:21:07Z",
+  "updated_at": "2026-09-30T15:21:50Z",
   "steward": "Wesley R. Elsberry",
   "demo_date": "2026-10-23",
   "milestones": [
@@ -142,9 +142,13 @@
         {
           "text": "Two timed rehearsals and known-limitations record completed",
           "met": false
+        },
+        {
+          "text": "Every UI element described as functional or available in the port assessment receives desktop and narrow-layout visual review; defects are fixed or recorded with evidence. Verify the Organism view selector placement and ensure primary content remains unobscured.",
+          "met": false
         }
       ],
-      "next_action": "Collect build-specific test and review evidence.",
+      "next_action": "Audit the port assessment’s operational UI claims; capture desktop and narrow-layout evidence and repair the highest-impact visual defects.",
       "blockers": [],
       "evidence": []
     },
@@ -372,6 +376,13 @@
       "status": "complete",
       "author": "OpenAI Codex",
       "summary": "Added the shared progress tracker, acceptance criteria, evidence links, dated history, and validated static-page generation. Desktop/mobile rendering and anchor navigation checked. Implementation milestone acceptance remains pending."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-verify",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Added an explicit visual acceptance check for every UI element claimed functional or available in the port assessment, including Organism selector placement and unobscured primary content."
     }
   ]
 }
