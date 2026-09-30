@@ -518,12 +518,14 @@ void AvidaWebApp::BuildInterface() {
   run_target_input = UI::Input{
     [this](std::string value){
       if (value.empty() || SimulationWorkerBusy() || run_mode != RunMode::PAUSED) return;
-      const size_t parsed = emp::String{value}.As<size_t>();
-      if (parsed > Avida().GetUpdate() && parsed <= 10000) {
+      char * end = nullptr;
+      const unsigned long long parsed = std::strtoull(value.c_str(), &end, 10);
+      if (end != value.c_str() && *end == '\0' && parsed > 0 && parsed <= 10000) {
         education_target_update = parsed;
         // Input::DoChange tracks the user value separately from the rendered
         // value. Keep both in sync so disabling/rebuilding the control cannot
-        // restore its previous preset target.
+        // restore its previous preset target. A shorter target remains valid
+        // for the next run after the current population is restarted.
         run_target_input.Value(value);
       }
       RefreshEducationStatus();

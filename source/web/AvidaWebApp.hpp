@@ -336,6 +336,7 @@ private:
   std::optional<AvidaVM> organism_analysis_hardware;
   std::optional<avida_t::genome_t> organism_analysis_offspring;
   emp::String organism_analysis_name;
+  emp::String active_organism_name;
   emp::String organism_last_instruction;
   emp::String organism_last_description;
   emp::String organism_step_notes;

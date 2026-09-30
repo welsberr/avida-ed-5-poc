@@ -206,6 +206,7 @@ void AvidaWebApp::ImportCheckpointFile(const std::string & checkpoint) {
   final_statistic_values.clear();
   final_color_legend_html.clear();
   active_organism = {};
+  active_organism_name.clear();
   active_cell_id = avida_web::EMPTY_CELL;
   CollectPopulationViewOptions();
   freezer_message = emp::MakeString(

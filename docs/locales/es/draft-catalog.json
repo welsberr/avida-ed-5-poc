@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "6e496fceb7328e755c99f6c3d5dc324ce8cfc674",
+    "source_revision": "ab8bc1c44f0abf115958ada2af0221f5791fe884",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -23,12 +23,12 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "51739ba2e8bab711ea8db0063e7036859a354ad171126f046d5794a0d79c12ac"
+        "sha256_current": "56441e1edf20b740a0e4374a3a97d963dd88692c7f6a47c89c3b52b2e9635b9b"
       },
       {
         "path": "source/web/EducationRecording.hpp",
         "sha256_at_draft": "a5956d42c84a19644b494058c41ed370f3d63775a82e352d3b1369a41d751903",
-        "sha256_current": "023cc093b83eb5fc57949abf0511e7302b8200a2c7cc133f8206fa8f2c0eb7ff"
+        "sha256_current": "6d4abe64725138036b07a8d1b8456eb944849e7c85103f535003a48d03829912"
       },
       {
         "path": "source/web/EducationArchive.hpp",
@@ -43,7 +43,7 @@
       {
         "path": "source/web/RunControl.hpp",
         "sha256_at_draft": "81aafa165d9c98c0b686b8e39ba60c1e4a437b39e864e51f22878ab87a6b82b7",
-        "sha256_current": "b2515a6b1a80cd8e037e6f583c8a46fd3b11beb61150bacad31e38d34dbbaa29"
+        "sha256_current": "a1ec7260be126ce2898a08e033769c7c19453bb3d593fe14dffe9fcc28a973b4"
       },
       {
         "path": "source/web/AvidaWebApp.hpp",
@@ -57,7 +57,7 @@
       {
         "path": "source/web/OrganismAnalysis.hpp",
         "sha256_at_draft": "bf89aeff75cd54995f0c6bad69b378f6d91398fee421e9a7c562fb2d53c53ec7",
-        "sha256_current": "961015969d7e523d74c0d1ad9846bf7233753b33b7936a66f50eb876338dafc8"
+        "sha256_current": "d7d8746ec87ef00fad1b8f6972f21c627325328226ca6495595afeabd5b5f8a3"
       },
       {
         "path": "docs/avida-ed5-education-roadmap.md",
@@ -65,11 +65,11 @@
       },
       {
         "path": "source/web/SpanishCatalog.hpp",
-        "sha256_current": "dbbf9a081925430eed91b21e8deb58ebbcdd8e80a56ff31332df86fa5bfc56f4"
+        "sha256_current": "a403314705a3f413e5fd79a599b28951a69ccd386db8fc4053a729f054272681"
       },
       {
         "path": "source/web/LocalizationTests.cpp",
-        "sha256_current": "7c90ac5477fd84883d74837ffd92b748269a3c36a200d3d0efb217d93662f3f9"
+        "sha256_current": "83119ef8562f0368a873f9a2b67937bca5de6e04c511212825c60a5cd866eae1"
       },
       {
         "path": "scripts/localize_es_catalog.py",
@@ -97,7 +97,7 @@
       },
       {
         "path": "web/Avida.css",
-        "sha256_current": "73682bc6cff50172930d3ac89f28fca2512a7da9a74d7ebb2f024fe56829ab96"
+        "sha256_current": "0c9f16a0dfb7820b9902640cfa5d9507699dec69d7d3439a932463dcaa9e86b7"
       },
       {
         "path": "source/web/FreezerPanel.hpp",
@@ -105,7 +105,7 @@
       },
       {
         "path": "source/web/ConfigurationPanels.hpp",
-        "sha256_current": "f626c2af63c7ff693c15b89f52d3000ba4ae829a2cf6df9bd24dc9e4b301c202"
+        "sha256_current": "b51c27d5a75806d62980756b9a12a765c52f947b6c83c2a0f1bab1639c94b2fa"
       },
       {
         "path": "source/web/Ed4ColorPalettes.hpp",
@@ -117,7 +117,7 @@
       },
       {
         "path": "web/education-plots.js",
-        "sha256_current": "6ebb2af59128ed528532670375ff5995f76f01ea83cf5f0c6c31f2e4c0c83425"
+        "sha256_current": "a1bfde3b84ae3977a9dab28862a1c5db640e21b0584cede39a55a0255ac7af35"
       },
       {
         "path": "web/vendor/plotly-1.53.0.min.js",
@@ -141,7 +141,7 @@
     "review_confidence": null,
     "translation_confidence": "machine-generated candidate; not a human language or scientific review",
     "glossary_version": "avida-ed-es-glossary-draft-2",
-    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 337-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
+    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 343-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
     "archive_contract": {
       "save_format": "avida-ed5-education-experiment",
       "save_schema_version": 1,
@@ -204,15 +204,15 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-29T22:45:03Z",
+    "updated_utc": "2026-09-30T03:53:27Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
-    "catalog_entry_count": 337,
+    "catalog_entry_count": 343,
     "model_translated_entry_count": 189,
     "glossary_preserved_entry_count": 7,
     "human_reviewed_entry_count": 0,
     "terminology_lineage": "Relevant general terms follow the TalkOrigins Spanish translation compendium; Avida-specific distinctions are explicit overrides.",
-    "assistant_edit_suggestion_count": 141
+    "assistant_edit_suggestion_count": 147
   },
   "messages": [
     {
@@ -3654,6 +3654,66 @@
       "placeholders": [],
       "translation_method": "Codex-assisted tooltip translation draft; pending competent Spanish review",
       "source_contract_sha256": "6bc2ec3983cf2a4068d9bd73279e5c52024e9d29f14d3b9f122ddb5c03e7fb9c"
+    },
+    {
+      "id": "configuration.reaction.operation.multiply",
+      "source": "Multiply",
+      "value": "Multiplicar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "66262431e6244df819caeee9a19786cb9c11a27fe785f531d9764916e8a76d5e"
+    },
+    {
+      "id": "configuration.reaction.operation.add",
+      "source": "Add",
+      "value": "Sumar",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "70cbce46d6e13e97058e55f0183ae6bd069c71131d65489be7a06b6ff42a6a88"
+    },
+    {
+      "id": "configuration.event.timing.start",
+      "source": "At start",
+      "value": "Al inicio",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "8ff155646f942590e9b39e2d920813066e8f611c9d7cd2a0f3beebeaa3995815"
+    },
+    {
+      "id": "configuration.event.timing.update",
+      "source": "At update",
+      "value": "En la actualización",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "b5443a5553fc89720d38c46d5c766494491aea14a3c080823245973a63cb6665"
+    },
+    {
+      "id": "configuration.event.timing.interval",
+      "source": "At intervals",
+      "value": "A intervalos",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "9f6ddc4dd13df742f2ce487328d4d2691c5c63b3c7ec4b874291ab2929a80e7d"
+    },
+    {
+      "id": "configuration.event.timing.end",
+      "source": "At end",
+      "value": "Al final",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted select-option translation draft; pending competent Spanish review",
+      "source_contract_sha256": "823ff8e981c46b375113e5e174e1422890b858664836944cb0a09dd1cb1dbd6a"
     }
   ]
 }

@@ -7,7 +7,7 @@
 
 namespace avida::web::localization {
 struct SpanishEntry { std::string_view id; std::string_view source; std::string_view value; };
-inline constexpr std::array<SpanishEntry, 337> SPANISH_CANDIDATE{{
+inline constexpr std::array<SpanishEntry, 343> SPANISH_CANDIDATE{{
   {"shell.app_title", "Avida-ED", "Avida-ED"},
   {"shell.lesson_title", "Mutation and genetic variation", "Mutación y variación genética"},
   {"shell.preview_label", "Avida 5 education preview", "Vista previa educativa de Avida 5"},
@@ -345,6 +345,12 @@ inline constexpr std::array<SpanishEntry, 337> SPANISH_CANDIDATE{{
   {"trait.offspring_count.description", "Number of direct offspring produced by this organism", "Número de descendientes directos producidos por este organismo."},
   {"trait.genotype_id.description", "Unique ID for group of identical genomes", "Identificador único del grupo de genomas idénticos."},
   {"trait.hardware.description", "Virtual CPU for this organism", "CPU virtual de este organismo."},
+  {"configuration.reaction.operation.multiply", "Multiply", "Multiplicar"},
+  {"configuration.reaction.operation.add", "Add", "Sumar"},
+  {"configuration.event.timing.start", "At start", "Al inicio"},
+  {"configuration.event.timing.update", "At update", "En la actualización"},
+  {"configuration.event.timing.interval", "At intervals", "A intervalos"},
+  {"configuration.event.timing.end", "At end", "Al final"},
 }};
 
 [[nodiscard]] constexpr const SpanishEntry * FindSpanish(std::string_view id) noexcept {

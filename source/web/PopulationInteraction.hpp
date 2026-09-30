@@ -97,7 +97,10 @@ void AvidaWebApp::RemoveGridCellOrganism(size_t cell_id) {
     if (iterator == placed_organisms.end()) return;
     const emp::String name = iterator->name;
     placed_organisms.erase(iterator);
-    if (active_cell_id == cell_id) active_cell_id = avida_web::EMPTY_CELL;
+    if (active_cell_id == cell_id) {
+      active_cell_id = avida_web::EMPTY_CELL;
+      active_organism_name.clear();
+    }
     freezer_message = emp::MakeString("Removed staged ", name, " from the grid.");
     RequestInterfaceRebuild();
     return;
@@ -111,6 +114,7 @@ void AvidaWebApp::RemoveGridCellOrganism(size_t cell_id) {
   const size_t global_id = Avida().GetOrg(organism_id).GetGlobalID();
   if (active_cell_id == cell_id) {
     active_organism = {};
+    active_organism_name.clear();
     active_cell_id = avida_web::EMPTY_CELL;
   }
   if (!Population().DeleteOrganismAt(cell_id)) return;
@@ -131,6 +135,18 @@ void AvidaWebApp::DropFrozenOrganismOnGrid(size_t freezer_id, size_t cell_id) {
 
   if (run_started) {
     if (!InjectGenomeAtCell(iterator->genome, cell_id)) return;
+    const auto cells = Population().GetCells();
+    if (cell_id < cells.size()) {
+      const size_t organism_id = cells[cell_id];
+      if (organism_id != avida_web::EMPTY_CELL && Avida().IsOccupied(organism_id)) {
+        active_organism = Avida().GetOrgRef(organism_id);
+        active_organism_name = iterator->name;
+        active_cell_id = cell_id;
+        UpdateActiveCellHighlight();
+        org_stats_content.Redraw();
+        UpdateControls();
+      }
+    }
     freezer_message = emp::MakeString(
       "Injected ", iterator->name, " ", Population().DescribeInjection(cell_id),
       " as a new organism."
@@ -153,6 +169,7 @@ void AvidaWebApp::DropFrozenOrganismOnGrid(size_t freezer_id, size_t cell_id) {
   if (existing == placed_organisms.end()) placed_organisms.push_back(std::move(placement));
   else *existing = std::move(placement);
   active_organism = {};
+  active_organism_name.clear();
   active_cell_id = cell_id;
   freezer_message = emp::MakeString(
     "Staged ", iterator->name, " in cell ", cell_id, " for the next run."
@@ -178,6 +195,7 @@ void AvidaWebApp::UpdateActiveCellHighlight() {
     && FindPlacedOrganism(active_cell_id) != placed_organisms.end();
   if (!GetActiveOrganism() && !has_staged_selection) {
     active_organism = {};
+    active_organism_name.clear();
     active_cell_id = avida_web::EMPTY_CELL;
   }
   const int display_cell = active_cell_id == avida_web::EMPTY_CELL
@@ -192,6 +210,7 @@ void AvidaWebApp::SelectPopulationCell(size_t cell_id) {
   if (SimulationWorkerBusy()) return;
   if (!run_started) {
     active_organism = {};
+    active_organism_name.clear();
     active_cell_id = FindPlacedOrganism(cell_id) == placed_organisms.end()
       ? avida_web::EMPTY_CELL
       : cell_id;
@@ -207,9 +226,11 @@ void AvidaWebApp::SelectPopulationCell(size_t cell_id) {
   const size_t org_id = cells[cell_id];
   if (org_id == avida_web::EMPTY_CELL || !Avida().IsOccupied(org_id)) {
     active_organism = {};
+    active_organism_name.clear();
     active_cell_id = avida_web::EMPTY_CELL;
   } else {
     active_organism = Avida().GetOrgRef(org_id);
+    active_organism_name.clear();
     active_cell_id = cell_id;
   }
   UpdateActiveCellHighlight();

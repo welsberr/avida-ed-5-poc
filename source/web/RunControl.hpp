@@ -226,6 +226,7 @@ void AvidaWebApp::CreateConfiguredAvida(
   final_statistic_values.clear();
   final_color_legend_html.clear();
   active_organism = {};
+  active_organism_name.clear();
   active_cell_id = avida_web::EMPTY_CELL;
   CollectPopulationViewOptions();
 }
@@ -410,6 +411,9 @@ void AvidaWebApp::SetEducationSeed(const std::string & seed_text) {
       || parsed > std::numeric_limits<size_t>::max()) return;
   if (parsed != 42 && parsed != 43 && parsed != 44) return;
   education_seed = static_cast<size_t>(parsed);
+  // Input::DoChange only updates the current DOM value. Store accepted edits
+  // on the widget as well, or a later UI rebuild restores its old value.
+  run_seed_input.Value(seed_text);
   Avida().GetSettings().Set("base.random_seed", education_seed);
   UpdateControls();
   RefreshEducationStatus();

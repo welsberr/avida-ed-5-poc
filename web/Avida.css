@@ -3129,6 +3129,95 @@ body {
   overscroll-behavior: contain;
 }
 
+/* The selected-cell inspector uses the light education theme. Give its nested
+   cards solid light surfaces and matching foreground colors as well, rather
+   than leaving dark-theme text and translucent fills in place. */
+.education-app .org-stats-section {
+  border-color: #c1cbd6;
+  background: #fff;
+  color: #26384c;
+}
+
+.education-app .org-stats-section h3,
+.education-app .org-stats-section h4 {
+  color: #334860;
+}
+
+.education-app .org-stats-section h3 span,
+.education-app .org-stats-empty,
+.education-app .trait-row dt,
+.education-app .hardware-list dt,
+.education-app .genome-list {
+  color: #46586c;
+}
+
+.education-app .trait-row,
+.education-app .hardware-list > div {
+  border-color: #e0e6ed;
+}
+
+.education-app .trait-row dd,
+.education-app .hardware-list dd,
+.education-app .genome-list code {
+  color: #26384c;
+}
+
+.education-app .hardware-counters span {
+  background: #edf2f7;
+  color: #46586c;
+}
+
+.education-app .hardware-counters strong {
+  color: #24384f;
+}
+
+.education-app .hardware-memory {
+  color: #46586c;
+}
+
+.education-app .hardware-memory code {
+  color: #176245;
+}
+
+.education-app .organism-mode-placeholder-grid {
+  opacity: 0.82;
+}
+
+.education-app .organism-placeholder-art {
+  min-height: 110px;
+  padding: 10px;
+  display: grid;
+  gap: 7px;
+  border: 1px dashed #c1cbd6;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.education-app .genome-placeholder-art {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-content: start;
+}
+
+.education-app .memory-placeholder-art {
+  min-height: 58px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.education-app .rows-placeholder-art {
+  min-height: 74px;
+  grid-template-columns: 1fr;
+}
+
+.education-app .organism-placeholder-art span {
+  min-height: 18px;
+  border-radius: 3px;
+  background: #e7edf3;
+}
+
+.education-app .rows-placeholder-art span {
+  min-height: 10px;
+}
+
 @media (max-width: 995px) {
   .education-app .main-region {
     grid-template-columns: 166px minmax(0, 1fr);

@@ -51,7 +51,7 @@ void AvidaWebApp::AddConfigurationSetting(UI::Div & scope_panel,
     for (size_t option_id = 0; option_id < options.size(); ++option_id) {
       const emp::String option = options[option_id];
       if (option == raw_value) selected_id = option_id;
-      selector.SetOption(emp::MakeWebSafe(option), [this, setting_name, option]() {
+      selector.SetOption(emp::MakeWebSafe(PresentationText(option).str()), [this, setting_name, option]() {
         SetConfigurationValue(setting_name, option);
       });
     }
@@ -245,10 +245,10 @@ void AvidaWebApp::BuildEnvironmentConfiguration(UI::Div & content) {
     operation_field.AddAttr("class", "structured-configuration-field");
     operation_field << emp::MakeString("<label for='", operation_id, "'>Operation</label>");
     UI::Selector operation_selector{operation_id};
-    operation_selector.SetOption("Multiply", [this, reaction_id](){
+    operation_selector.SetOption(PresentationText("Multiply").str(), [this, reaction_id](){
       UpdateReaction(reaction_id, [](auto & config){ config.operation = "mult"; });
     });
-    operation_selector.SetOption("Add", [this, reaction_id](){
+    operation_selector.SetOption(PresentationText("Add").str(), [this, reaction_id](){
       UpdateReaction(reaction_id, [](auto & config){ config.operation = "add"; });
     });
     operation_selector.SelectID(reaction.operation == "add" ? 1 : 0);
@@ -329,10 +329,10 @@ void AvidaWebApp::BuildEventsConfiguration(UI::Div & content) {
     UI::Selector timing_selector{timing_id};
     using Timing = EventManager<avida_t>::Timing;
     const std::array<std::pair<emp::String, Timing>, 4> timing_options{{
-      {"At start", Timing::START},
-      {"At update", Timing::UPDATE},
-      {"At intervals", Timing::INTERVAL},
-      {"At end", Timing::END}
+      {PresentationText("At start"), Timing::START},
+      {PresentationText("At update"), Timing::UPDATE},
+      {PresentationText("At intervals"), Timing::INTERVAL},
+      {PresentationText("At end"), Timing::END}
     }};
     size_t selected_timing = 0;
     for (size_t id = 0; id < timing_options.size(); ++id) {
@@ -357,7 +357,7 @@ void AvidaWebApp::BuildEventsConfiguration(UI::Div & content) {
     action_field.AddAttr("class", "structured-configuration-field");
     action_field << emp::MakeString("<label for='", action_id, "'>Action</label>");
     UI::Selector action_selector{action_id};
-    action_selector.SetOption("Pause", [this, event_id](){
+    action_selector.SetOption(PresentationText("Pause").str(), [this, event_id](){
       UpdateEvent(event_id, [](auto & config){ config.command = "pause"; });
     });
     action_selector.SelectID(0);

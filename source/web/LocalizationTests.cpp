@@ -3,6 +3,7 @@
 #include <array>
 #include <cassert>
 #include <string_view>
+#include <utility>
 
 using namespace avida::web::localization;
 
@@ -141,6 +142,22 @@ void CheckSpanishTooltips() {
   assert(checked == 54);
 }
 
+void CheckSpanishSelectOptions() {
+  constexpr std::array<std::pair<std::string_view, std::string_view>, 6> options{{
+    {"Multiply", "Multiplicar"},
+    {"Add", "Sumar"},
+    {"At start", "Al inicio"},
+    {"At update", "En la actualización"},
+    {"At intervals", "A intervalos"},
+    {"At end", "Al final"}
+  }};
+  for (const auto & [source, expected] : options) {
+    assert(SpanishText(source) == expected);
+    assert(SpanishText(source) != source);
+  }
+  assert(SpanishText("Pause") == "Pausar");
+}
+
 } // namespace
 
 int main() {
@@ -148,4 +165,5 @@ int main() {
   CheckArguments();
   CheckPseudolocalesAndStableIds();
   CheckSpanishTooltips();
+  CheckSpanishSelectOptions();
 }

@@ -193,7 +193,9 @@ bool AvidaWebApp::PrepareSelectedOrganismAnalysis() {
   if (const auto * organism = GetActiveOrganism()) {
     InitializeOrganismAnalysis(
       organism->GetGenome(),
-      emp::MakeString("Organism #", organism->GetGlobalID()),
+      active_organism_name.size()
+        ? active_organism_name
+        : emp::MakeString("Organism #", organism->GetGlobalID()),
       organism
     );
     return true;
@@ -345,10 +347,34 @@ emp::String AvidaWebApp::BuildOrganismModeHTML() const {
   };
   if (!organism_analysis_hardware) {
     return emp::MakeString(
-      "<div class='organism-mode-empty'><div class='organism-mode-empty-icon'>"
-      "&#x2196;</div><h2>", text("Select an organism first"), "</h2><p>",
+      "<div class='organism-mode-empty-layout'>"
+      "<div class='organism-cycle-status'><div><span class='eyebrow'>",
+      text("Single life cycle"), "</span><h1>", text("Select an organism first"),
+      "</h1><p>",
       text("Select an organism from the freezer (above) or return to Population mode and select an occupied cell."),
-      "</p></div>"
+      "</p></div><div class='cycle-progress'><strong>—</strong><span>",
+      text("instructions executed"), "</span></div></div>"
+      "<div class='organism-mode-grid organism-mode-placeholder-grid'>"
+      "<section class='organism-visual-panel genome-panel'><div class='panel-heading'>"
+      "<div><span class='eyebrow'>", text("Execution map"), "</span><h2>",
+      text("Genome"), "</h2></div><span class='panel-count'>— ",
+      text("instructions"), "</span></div><div class='organism-placeholder-art genome-placeholder-art' aria-hidden='true'>"
+      "<span></span><span></span><span></span><span></span><span></span><span></span>"
+      "<span></span><span></span><span></span><span></span><span></span><span></span>"
+      "</div></section><div class='organism-state-column'>"
+      "<section class='organism-visual-panel'><div class='panel-heading'><div><span class='eyebrow'>",
+      text("Working state"), "</span><h2>", text("Memory"),
+      "</h2></div></div><div class='organism-placeholder-art memory-placeholder-art' aria-hidden='true'>"
+      "<span></span><span></span><span></span><span></span><span></span><span></span>"
+      "<span></span><span></span><span></span><span></span><span></span><span></span>"
+      "</div></section><section class='organism-visual-panel tasks-panel'><div class='panel-heading'>"
+      "<div><span class='eyebrow'>", text("Life-cycle progress"), "</span><h2>",
+      text("Tasks"), "</h2></div></div><div class='organism-placeholder-art rows-placeholder-art' aria-hidden='true'>"
+      "<span></span><span></span><span></span></div></section>"
+      "<section class='organism-visual-panel traits-panel'><div class='panel-heading'>"
+      "<div><span class='eyebrow'>", text("Starting phenotype"), "</span><h2>",
+      text("Organism traits"), "</h2></div></div><div class='organism-placeholder-art rows-placeholder-art' aria-hidden='true'>"
+      "<span></span><span></span><span></span></div></section></div></div></div>"
     );
   }
 
