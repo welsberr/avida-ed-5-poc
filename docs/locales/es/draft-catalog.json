@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "ab8bc1c44f0abf115958ada2af0221f5791fe884",
+    "source_revision": "ec037e08ad493fc58f3bef68e0f6779fc67685e0",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -23,7 +23,7 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "56441e1edf20b740a0e4374a3a97d963dd88692c7f6a47c89c3b52b2e9635b9b"
+        "sha256_current": "5e33eeec0efbb13b5fbaabb3d84b3e01e5656d3c47f77662b491906a81d02879"
       },
       {
         "path": "source/web/EducationRecording.hpp",
@@ -204,7 +204,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-30T03:53:27Z",
+    "updated_utc": "2026-09-30T04:11:54Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 343,

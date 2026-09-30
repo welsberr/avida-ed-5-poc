@@ -452,11 +452,11 @@ void AvidaWebApp::BuildInterface() {
   experiment_field << emp::MakeString("<label for='experiment-preset'>", emp::MakeWebSafe(PresentationText("Experiment preset")), "</label>");
   experiment_preset_selector.SetOption(
     PresentationText("Mutation variation · every update").str(),
-    [this](){ SetEducationPreset("mutation-variation"); }
+    [this](){ SetEducationPreset("mutation-variation"); }, 0
   );
   experiment_preset_selector.SetOption(
     PresentationText("Quick check · every 10 updates").str(),
-    [this](){ SetEducationPreset("mutation-variation-quick"); }
+    [this](){ SetEducationPreset("mutation-variation-quick"); }, 1
   );
   experiment_preset_selector.SelectID(education_uses_quick_preset ? 1 : 0);
   experiment_preset_selector.SetAttr("aria-label", PresentationText("Experiment preset"));
@@ -469,10 +469,10 @@ void AvidaWebApp::BuildInterface() {
     "<label for='run-preset'>", emp::MakeWebSafe(PresentationText("Mutation treatment")), "</label>"
   );
   run_preset_selector.SetOption(
-    PresentationText("0% mutation").str(), [this](){ SetEducationTreatment("no-mutation"); }
+    PresentationText("0% mutation").str(), [this](){ SetEducationTreatment("no-mutation"); }, 0
   );
   run_preset_selector.SetOption(
-    PresentationText("1% mutation").str(), [this](){ SetEducationTreatment("one-percent"); }
+    PresentationText("1% mutation").str(), [this](){ SetEducationTreatment("one-percent"); }, 1
   );
   run_preset_selector.SelectID(
     Avida().GetSettings().Get<double>("mutations.substitution_prob") >= 0.005 ? 1 : 0
