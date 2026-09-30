@@ -451,11 +451,11 @@ void AvidaWebApp::BuildInterface() {
   experiment_field.AddAttr("class", "education-field education-preset-field");
   experiment_field << emp::MakeString("<label for='experiment-preset'>", emp::MakeWebSafe(PresentationText("Experiment preset")), "</label>");
   experiment_preset_selector.SetOption(
-    PresentationText("Mutation variation · every update").str(),
+    Localized("experiment.preset.full").str(),
     [this](){ SetEducationPreset("mutation-variation"); }, 0
   );
   experiment_preset_selector.SetOption(
-    PresentationText("Quick check · every 10 updates").str(),
+    Localized("experiment.preset.quick").str(),
     [this](){ SetEducationPreset("mutation-variation-quick"); }, 1
   );
   experiment_preset_selector.SelectID(education_uses_quick_preset ? 1 : 0);

@@ -78,6 +78,10 @@ void CheckArguments() {
   assert(spanish && spanish->text == "Actualización 17");
   assert(!spanish->pseudolocale);
   assert(Format("shell.sidepanel.run", Locale::SPANISH)->text == "Ejecución");
+  assert(Format("experiment.preset.full", Locale::SPANISH)->text
+    == "Mutación variable · cada actualización");
+  assert(Format("experiment.preset.quick", Locale::SPANISH)->text
+    == "Chequeo · cada 10 actualizaciones");
   assert(TextDirection(Locale::SPANISH) == Direction::LTR);
   const NamedArgument count{"count", "24"};
   const auto offspring = Format("organism.status.offspring", Locale::SPANISH, {&count, 1});

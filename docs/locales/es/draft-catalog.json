@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "ec037e08ad493fc58f3bef68e0f6779fc67685e0",
+    "source_revision": "cc9ac45893720696b169acf9ddd88cbf21d20a6b",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -23,7 +23,7 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "5e33eeec0efbb13b5fbaabb3d84b3e01e5656d3c47f77662b491906a81d02879"
+        "sha256_current": "e2f7c3b1f442bc8d0ebf73a6c10c1141d920a3a557a3ed0d8763396128287cb7"
       },
       {
         "path": "source/web/EducationRecording.hpp",
@@ -69,7 +69,7 @@
       },
       {
         "path": "source/web/LocalizationTests.cpp",
-        "sha256_current": "83119ef8562f0368a873f9a2b67937bca5de6e04c511212825c60a5cd866eae1"
+        "sha256_current": "4902d6b1655ba13c138bcdec61c198a8147fca627bda3c10d81974aa36cb1f91"
       },
       {
         "path": "scripts/localize_es_catalog.py",
@@ -204,7 +204,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-30T04:11:54Z",
+    "updated_utc": "2026-09-30T04:20:47Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 343,
