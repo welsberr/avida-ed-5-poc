@@ -224,9 +224,9 @@ void AvidaWebApp::BuildInterface() {
   legacy_sidebar << modes;
 
   if (!population_active) {
+    main_region << legacy_sidebar;
     if (organism_active) BuildOrganismModeWorkspace(main_region);
     else BuildCompareModeWorkspace(main_region);
-    main_region << legacy_sidebar;
     app << main_region;
     document << app;
     return;

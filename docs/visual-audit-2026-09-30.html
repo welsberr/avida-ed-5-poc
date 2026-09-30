@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Desktop and narrow-width visual audit of the Avida-ED 5 proof-of-concept interface, with findings, fixes, evidence, and remaining review work.">
+  <title>Avida-ED 5 visual audit — 30 September 2026</title>
+  <link rel="stylesheet" href="site-report.css">
+  <style>
+    figure { margin: 1.25rem 0 2rem; }
+    figure img { width: 100%; height: auto; border: 1px solid #c7d1dc; border-radius: .35rem; }
+    figcaption { margin-top: .45rem; color: #46586c; font-size: .92rem; }
+  </style>
+</head>
+<body>
+  <header class="masthead"><div class="wrap">
+    <div class="eyebrow">Avida-ED 5 proof of concept · verification evidence</div>
+    <h1>Visual audit of operational interface claims</h1>
+    <p>Desktop and 390-pixel review completed 30 September 2026.</p>
+  </div></header>
+  <main class="wrap">
+    <nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="port-status.html">Port assessment</a> · <a href="roadmap.html">Roadmap and progress</a></nav>
+    <section class="callout">
+      <h2>Result</h2>
+      <p>The visual pass found and corrected the reported Organism layout failure. It also corrected narrow-screen toolbar overflow, horizontal scrolling in the Freezer, low-contrast text, and pale Analysis captions.</p>
+      <p>This supports the claim that the prototype's currently implemented surfaces are visible and usable at desktop and narrow widths. It does not establish tutorial-level parity with Avida-ED 4, validate scientific wording, or replace instructor and learner review.</p>
+    </section>
+    <section>
+      <h2>Scope and method</h2>
+      <p>The audit used the rebuilt WebAssembly application in a Chromium-based browser. The desktop viewport was 1280 × 720 pixels; the narrow viewport was 390 × 844 pixels.</p>
+      <p>The pass covered every interface area described as functional or available in the <a href="port-status.html">Avida-ED 4 to 5 port assessment</a>: Population navigation and controls, Organism execution and selected-cell inspection, Analysis with two completed 250-update runs, the Freezer, and Configuration.</p>
+      <p>The review checked rendered placement, visibility, horizontal overflow, text contrast, and access to primary content. It exercised the controls needed to reach populated states. It did not perform every import, export, drag-and-drop, keyboard, or error-recovery path.</p>
+      <p>Starting the second Analysis run displayed the expected browser confirmation for replacing the active run. Accepting it allowed the second 250-update run to complete normally; the pause was dialog handling, not evidence of a simulation-performance delay.</p>
+    </section>
+    <section>
+      <h2>Findings and disposition</h2>
+      <div class="scroll-table"><table>
+        <thead><tr><th scope="col">Area</th><th scope="col">Finding</th><th scope="col">Disposition</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Organism desktop layout</th><td>The workspace occupied the 188-pixel sidebar column. Controls overlapped, primary content was obscured, and the view selector moved below the workspace.</td><td>Fixed component order and explicit grid placement.</td></tr>
+          <tr><th scope="row">Organism narrow layout</th><td>The selector and transport controls required horizontal scrolling; desktop placement could create an off-screen implicit column.</td><td>Reset narrow grid placement and wrapped the controls.</td></tr>
+          <tr><th scope="row">Organism contrast</th><td>Sequence-comparison notes inherited dark text while displayed on dark panels.</td><td>Applied an explicit Organism foreground color.</td></tr>
+          <tr><th scope="row">Freezer</th><td>Checkpoint controls and item metadata created a horizontal scrollbar.</td><td>Constrained nested widths and retained vertical scrolling.</td></tr>
+          <tr><th scope="row">Configure</th><td>Descriptions and active tabs had weak contrast on the light education surface.</td><td>Added light card surfaces and education-theme colors.</td></tr>
+          <tr><th scope="row">Selected cell</th><td>Summary text was faint, and the multicolumn genome list flowed into hidden horizontal columns.</td><td>Increased contrast and used one vertically scrollable genome column.</td></tr>
+          <tr><th scope="row">Analysis</th><td>The responsive layout worked, but chart captions were too pale on white. The apparent second-run delay was the expected new-run confirmation awaiting a response.</td><td>Applied the standard education foreground color; accepted the confirmation and verified both 250-update runs completed.</td></tr>
+          <tr><th scope="row">Population</th><td>The desktop and narrow layouts kept controls and the grid in view without page-level horizontal overflow.</td><td>No structural change beyond shared Freezer fixes.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    <section>
+      <h2>Rendered evidence</h2>
+      <figure><img src="evidence/visual-audit-2026-09-30/desktop-population.png" alt="Desktop Population view after the audit"><figcaption>Desktop Population view, 1280 × 720.</figcaption></figure>
+      <figure><img src="evidence/visual-audit-2026-09-30/desktop-organism.png" alt="Desktop Organism view with the ancestor selected"><figcaption>Desktop Organism view. The view selector remains in the left rail and the execution workspace uses the main column.</figcaption></figure>
+      <figure><img src="evidence/visual-audit-2026-09-30/narrow-organism.png" alt="Narrow Organism view with controls wrapped above the content"><figcaption>Narrow Organism view, 390 × 844. The selector and transport controls wrap without horizontal page overflow.</figcaption></figure>
+      <figure><img src="evidence/visual-audit-2026-09-30/desktop-analysis.png" alt="Desktop Analysis view showing two completed runs"><figcaption>Desktop Analysis view with completed 0% and 1% mutation runs.</figcaption></figure>
+      <figure><img src="evidence/visual-audit-2026-09-30/narrow-analysis.png" alt="Narrow Analysis view"><figcaption>Narrow Analysis view with the selector and report in one column.</figcaption></figure>
+      <figure><img src="evidence/visual-audit-2026-09-30/desktop-configure.png" alt="Desktop Configure view with readable light-theme labels and descriptions"><figcaption>Desktop Configure view after the light-theme contrast corrections.</figcaption></figure>
+    </section>
+    <section>
+      <h2>Remaining review work</h2>
+      <ul>
+        <li>Walk representative Avida-ED 4 tutorial videos and record explicit exceptions.</li>
+        <li>Repeat the workflow in a second browser and on the presentation laptop.</li>
+        <li>Complete keyboard-only, import/export, drag-and-drop, and error-recovery checks.</li>
+        <li>Review Spanish wording and scientific terminology with a fluent subject-matter reviewer.</li>
+        <li>Obtain instructor and learner feedback before making classroom-readiness claims.</li>
+      </ul>
+    </section>
+  </main>
+  <footer><div class="wrap">Independent proof of concept. This is verification evidence for a development build, not an Avida-ED team release statement.</div></footer>
+</body>
+</html>

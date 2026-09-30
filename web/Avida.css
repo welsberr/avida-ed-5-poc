@@ -2073,11 +2073,15 @@ select:focus-visible {
 
 
   .organism-mode-toolbar-actions {
-    overflow-x: auto;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow-x: visible;
   }
 
   .organism-transport-buttons {
+    width: 100%;
     margin-left: 0;
+    flex-wrap: wrap;
   }
 
   .organism-toolbar-button {
@@ -2089,7 +2093,12 @@ select:focus-visible {
   }
 
   .organism-freezer-selector {
-    width: 210px;
+    width: 100%;
+  }
+
+  .organism-freezer-picker {
+    width: 100%;
+    min-width: 0;
   }
 
   .organism-timeline {
@@ -2449,7 +2458,7 @@ select:focus-visible {
 
 .education-app .results-context,
 .education-app .result-chart figcaption {
-  color: #b3cad4;
+  color: #46586c;
   font-size: 0.75rem;
   line-height: 1.4;
 }
@@ -2777,6 +2786,8 @@ body {
   min-width: 0;
   min-height: 0;
   display: grid;
+  grid-column: 1;
+  grid-row: 1;
   grid-template-rows: auto minmax(0, 1fr);
   gap: 8px;
 }
@@ -2839,7 +2850,8 @@ body {
   min-height: 0;
   max-height: none;
   padding: 9px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   border: 1px solid #aab4c0;
   border-radius: 3px;
   background: #f8fafc;
@@ -2862,10 +2874,18 @@ body {
 }
 
 .education-app .freezer-section {
+  min-width: 0;
   padding: 7px;
+  overflow: hidden;
   border-color: #c2ccd7;
   border-radius: 3px;
   background: #fff;
+}
+
+.education-app .checkpoint-import-row,
+.education-app .checkpoint-import-row input[type="file"] {
+  width: 100%;
+  min-width: 0;
 }
 
 .education-app .freezer-section-header h3,
@@ -3009,6 +3029,35 @@ body {
   color: #334860;
 }
 
+.education-app .configuration-scope,
+.education-app .structured-configuration-card {
+  border-color: #c1cbd6;
+  background: #fff;
+}
+
+.education-app .configuration-scope h3,
+.education-app .structured-configuration-header h3,
+.education-app .configuration-tab.is-active {
+  border-bottom-color: #277483;
+  color: #1f6875;
+}
+
+.education-app .configuration-tab,
+.education-app .configuration-intro,
+.education-app .configuration-description,
+.education-app .structured-configuration-field label,
+.education-app .configuration-empty {
+  color: #526274;
+}
+
+.education-app .configuration-tab:hover {
+  color: #263a51;
+}
+
+.education-app .configuration-label {
+  color: #334860;
+}
+
 .education-app .lesson-intro,
 .education-app .learning-record,
 .education-app .experiment-controls,
@@ -3120,6 +3169,12 @@ body {
   overscroll-behavior: contain;
 }
 
+.education-app .main-region > .organism-mode-workspace {
+  grid-column: 2;
+  grid-row: 1;
+  color: #e7f3f7;
+}
+
 /* The selected-cell inspector uses the light education theme. Give its nested
    cards solid light surfaces and matching foreground colors as well, rather
    than leaving dark-theme text and translucent fills in place. */
@@ -3140,6 +3195,17 @@ body {
 .education-app .hardware-list dt,
 .education-app .genome-list {
   color: #46586c;
+}
+
+.education-app .org-stats-summary {
+  color: #46586c;
+}
+
+.education-app .genome-list {
+  max-height: 240px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  columns: 1;
 }
 
 .education-app .trait-row,
@@ -3235,10 +3301,14 @@ body {
   .education-app .main-region > .organism-mode-workspace,
   .education-app .main-region > .compare-workspace {
     height: auto;
+    grid-column: 1;
+    grid-row: auto;
     overflow: visible;
   }
 
   .education-app .legacy-sidebar {
+    grid-column: 1;
+    grid-row: auto;
     grid-template-columns: minmax(155px, 0.65fr) minmax(0, 1.35fr);
     grid-template-rows: auto;
     align-items: stretch;

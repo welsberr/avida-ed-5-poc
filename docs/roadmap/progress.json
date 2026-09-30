@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-30T15:21:50Z",
+  "updated_at": "2026-09-30T16:10:16Z",
   "steward": "Wesley R. Elsberry",
   "demo_date": "2026-10-23",
   "milestones": [
@@ -145,12 +145,17 @@
         },
         {
           "text": "Every UI element described as functional or available in the port assessment receives desktop and narrow-layout visual review; defects are fixed or recorded with evidence. Verify the Organism view selector placement and ensure primary content remains unobscured.",
-          "met": false
+          "met": true
         }
       ],
-      "next_action": "Audit the port assessment’s operational UI claims; capture desktop and narrow-layout evidence and repair the highest-impact visual defects.",
+      "next_action": "Complete second-browser, keyboard, localization, error-recovery, and timed-rehearsal checks.",
       "blockers": [],
-      "evidence": []
+      "evidence": [
+        {
+          "label": "Desktop and narrow visual audit, 30 September 2026",
+          "url": "https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/visual-audit-2026-09-30.md"
+        }
+      ]
     },
     {
       "id": "demo-release",
@@ -383,6 +388,13 @@
       "status": "planned",
       "author": "OpenAI Codex",
       "summary": "Added an explicit visual acceptance check for every UI element claimed functional or available in the port assessment, including Organism selector placement and unobscured primary content."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-verify",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Completed the desktop and 390-pixel visual pass for Population, Organism, Analysis, Freezer, selected-cell statistics, and Configure. Corrected grid placement, responsive control wrapping, overflow, and contrast defects; recorded rendered evidence and remaining acceptance work."
     }
   ]
 }

@@ -43,12 +43,20 @@ jobs:
           trap 'docker rm -f "$container_id" >/dev/null 2>&1 || true' EXIT
           docker cp "$container_id:/src/Avida/web/." _site/app/
           cp index.html .nojekyll _site/
-          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/roadmap.html docs/site-report.css _site/
+          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/roadmap.html docs/visual-audit-2026-09-30.html docs/site-report.css _site/
+          cp -r docs/evidence _site/
           test -s _site/index.html
           test -s _site/port-status.html
           test -s _site/codex-collaboration.html
           test -s _site/porting-learning-roadmap.html
           test -s _site/roadmap.html
+          test -s _site/visual-audit-2026-09-30.html
+          test -s _site/evidence/visual-audit-2026-09-30/desktop-population.png
+          test -s _site/evidence/visual-audit-2026-09-30/desktop-organism.png
+          test -s _site/evidence/visual-audit-2026-09-30/narrow-organism.png
+          test -s _site/evidence/visual-audit-2026-09-30/desktop-analysis.png
+          test -s _site/evidence/visual-audit-2026-09-30/narrow-analysis.png
+          test -s _site/evidence/visual-audit-2026-09-30/desktop-configure.png
           test -s _site/site-report.css
           test -s _site/app/Avida.js
           test -s _site/app/Avida.wasm
