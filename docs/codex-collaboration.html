@@ -14,7 +14,7 @@
     <p>This account separates the coding assistant from the codebase, build tools, checks, deployment, and human direction that made this prototype reviewable.</p>
   </div></header>
   <main class="wrap">
-    <nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="port-status.html">Avida-ED 4 to 5 port status</a></nav>
+    <nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="port-status.html">Avida-ED 4 to 5 port status</a> · <a href="porting-learning-roadmap.html">Learning and porting roadmap</a></nav>
     <section class="callout">
       <h2>The demo is about an infrastructure portfolio</h2>
       <p>The question for the BEACON demo is how a coding assistant changes when it can work alongside a set of purpose-built repositories: <a href="https://github.com/welsberr/ClaimWright">ClaimWright</a>, <a href="https://git.cns.fyi/welsberr/GroundRecall">GroundRecall</a>, <a href="https://git.cns.fyi/welsberr/doclift">doclift</a>, <a href="https://git.cns.fyi/welsberr/Didactopus">Didactopus</a>, <a href="https://github.com/welsberr/CiteGeist">CiteGeist</a>, and <a href="https://git.cns.fyi/welsberr/SciSiteForge">SciSiteForge</a>. Most are infrastructure: their value appears in fewer lost decisions, less repeated setup, better evidence trails, and fewer preventable errors across tasks, rather than in one visible feature.</p>
@@ -63,7 +63,7 @@
     </section>
     <section>
       <h2>Human effort and uncertainty</h2>
-      <p>No time log was kept, and Git records commits rather than design discussion, review, waiting, or experimentation. A cautious retrospective estimate for direct maintainer direction and review on this prototype is <strong>several focused sessions, roughly 5–15 hours</strong>, with low confidence. It excludes upstream Avida 5 development, earlier Avida-ED work, the substantial prior effort of creating and maintaining the six infrastructure repositories, unattended build time, and any time spent outside the recorded project history.</p>
+      <p>No time log was kept, and Git records commits rather than design discussion, review, waiting, or experimentation. A reliable numerical estimate of direct maintainer effort cannot be recovered from the available records. The earlier 5–15 hour range was not supported by a time log and should not be used as evidence of productivity. Future work should record direction, review, implementation, automated runtime, and rework separately, while accounting for prior infrastructure development.</p>
       <p>The effort was not just a single prompt followed by acceptance. The maintainer repeatedly made substantive choices about the experiment, UI relationship to v4, use of legacy colors and graphics, Spanish localization, chart behavior, and how to describe limitations. The assistant carried out many implementation and writing iterations; the human decided which problems mattered and whether the changes met the goal.</p>
     </section>
     <section>
@@ -85,7 +85,7 @@
       <h2>How to measure infrastructure value in the next demo</h2>
       <p>Infrastructure effects can be assessed by recording the work they change, not only by counting visible features. A compact evaluation can use the same bounded task with and without one component, keep the human review standard constant, and log elapsed active time, retries, corrections, and completion quality.</p>
       <ul>
-        <li><strong>GroundRecall:</strong> after a simulated or real interruption, measure time to recover task state, missing decisions, repeated questions, and corrections required before safe continuation. Compare retrieval with the session summary and Git alone. This Avida case is a useful mixed result: method-level recovery, no exact task record.</li>
+        <li><strong>GroundRecall:</strong> after a simulated or real interruption, measure time to recover task state, missing decisions, repeated questions, and corrections required before safe continuation. Compare retrieval with the session summary and Git alone. This Avida case is a useful mixed result: method-level recovery; no exact task record surfaced in the bounded searches.</li>
         <li><strong>ClaimWright:</strong> record which checks changed the plan or draft, which gates found a real issue, which were irrelevant, and the review time added. Separate checklist use from an executable policy gate; report both gate catches and false alarms.</li>
         <li><strong>SciSiteForge localization method:</strong> track source-string coverage, terminology consistency, placeholder/catalog errors caught, human edits per string, untranslated controls, visual overflows, and final reviewer acceptance. Compare these with a small manually translated sample under the same review criteria.</li>
         <li><strong>doclift:</strong> on legacy manuals or lesson materials, compare extraction fidelity, table/figure recovery, correction time, and successful downstream use against direct copy-and-paste.</li>

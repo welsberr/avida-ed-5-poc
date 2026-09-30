@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A task-centered porting and learning roadmap for Avida-ED 5, with an October 23 BEACON demonstration milestone.">
+<title>Avida-ED 5: learning and porting roadmap</title><link rel="stylesheet" href="site-report.css"></head>
+<body><header class="masthead"><div class="wrap"><div class="eyebrow">Avida-ED 5 · Proposed delivery plan</div><p>Learning tasks, scientific contracts, and evidence for a faithful port</p></div></header>
+<main class="wrap"><nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="port-status.html">Port status</a> · <a href="codex-collaboration.html">Infrastructure assessment</a></nav>
+<section id="from-a-working-demonstration-to-avida-ed-5" class="level1">
+<h1>From a working demonstration to Avida-ED 5</h1>
+<p><strong>Reassessment and proposed roadmap · 30 September 2026 · Demonstration: 23 October 2026</strong></p>
+<p>The strongest next step is to organize the port around <strong>what learners must be able to do and explain</strong>, with the existing interface map providing the control-level detail. Use a small, reviewed knowledge graph to connect those tasks to scientific definitions, tutorial instructions, implementation, and verification. Keep executable tests and instructor review as the evidence that the connections hold.</p>
+<p>For October 23, finish and demonstrate one dependable mutation-and-variation activity. Show the infrastructure helping resolve an actual problem in that activity. Do not make completion of the entire legacy interface, or integration of every infrastructure repository, a condition of a successful demonstration.</p>
+<p>This is a proposed delivery plan, not a report that the new graph, integrations, or acceptance tests have already been implemented. The baseline is prototype revision <code>3dd5f8c</code>; the earlier <a href="port-status.html">port assessment</a> and <a href="codex-collaboration.html">collaboration assessment</a> remain useful context. This plan extends the first experiment roadmap and narrows the broader upstream web design to educational priorities.</p>
+<section id="what-changes-in-the-assessment" class="level2">
+<h2>What changes in the assessment</h2>
+<p>The conceptual map remains valuable: it captures labels, ranges, choices, and locations that matter to tutorial continuity. It cannot by itself establish behavioral equivalence, scientific equivalence, or successful learning. Maintain those as separate dimensions instead of compressing them into a single percentage of “ported” features.</p>
+<div class="scroll-table" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Acceptance evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Task and interaction continuity</td>
+<td>A learner can follow identified v4 tutorial steps, including transfers between views, with documented exceptions.</td>
+</tr>
+<tr class="even">
+<td>Scientific meaning</td>
+<td>Metric definitions, mutation semantics, units, missing values, and experimental controls are reviewed against engine behavior.</td>
+</tr>
+<tr class="odd">
+<td>Learning opportunity</td>
+<td>The activity asks for a prediction, observations, and an explanation that can reveal specified misconceptions.</td>
+</tr>
+<tr class="even">
+<td>Learning effectiveness</td>
+<td>Learner responses and an appropriate evaluation support a claim about learning; successful clicks alone do not.</td>
+</tr>
+<tr class="odd">
+<td>Operational reliability</td>
+<td>Repeatable browser workflows, saved-data round trips, error handling, and versioned evidence pass.</td>
+</tr>
+<tr class="even">
+<td>Presentation and access</td>
+<td>Familiar desktop layout, usable small-screen adaptations, keyboard access, and reviewed localized controls survive visual checks.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Model-based GUI testing offers a basis for interaction coverage; it does not supply the scientific or educational oracle automatically. Typed requirements relations can improve change-impact analysis, but mere graph reachability should identify <strong>candidates for review</strong>, not prove that a change broke them. These distinctions follow the scope of <a href="https://www.cs.umd.edu/~atif/pubs/MemonSTVR2007-abstract.html">Memon’s event-flow work</a> and <a href="https://doi.org/10.1016/j.infsof.2014.03.002">Goknil and colleagues’ requirements analysis</a>. Applying them here is a design recommendation, not a tested result for Avida-ED.</p>
+<p>Preserve the familiar Population, Organism, and Analysis workspaces, legacy graphics and palettes, and relative control placement. Explicitly distinguish a deliberate redesign from an unfinished port. Do not reproduce a legacy defect merely to match its behavior. Where engine differences prevent equivalence, preserve the learning purpose and explain the difference.</p>
+</section>
+<section id="four-connected-models-with-different-rules" class="level2">
+<h2>Four connected models, with different rules</h2>
+<ol>
+<li><strong>Learning model:</strong> concepts, proposed prerequisites, misconceptions, learning objectives, prompts, and assessment criteria. A strict prerequisite cycle warrants review; mutually reinforcing concepts may instead form a teaching unit. An edge remains an instructor-reviewable hypothesis.</li>
+<li><strong>Interaction model:</strong> states, actions, preconditions, and observable outcomes. Configure → run → pause → inspect → resume is a valid cycle. Include reset, cancellation, failed import, and stale asynchronous responses.</li>
+<li><strong>Traceability model:</strong> objective → task → requirement → implementation → test execution → evidence, plus tutorial and source references. A test definition is different from a passing execution against a named build.</li>
+<li><strong>Software and data model:</strong> engine capabilities, metric definitions, configuration, storage formats, and dependencies. Use this to identify compatibility and migration work without treating dependency counts as educational importance.</li>
+</ol>
+<p>Keep stable IDs and typed relations in small versioned JSON or YAML files. Generate the conceptual map and readable status report from them after the schema stabilizes. No graph database or interactive graph visualization is needed for the first milestone. A short list of actionable findings will be more useful during the demo than a dense network picture.</p>
+<p>Every consequential assertion should have its source locator, source revision or hash, relation type, scope, rationale, author/reviewer, timestamp, confidence, and review status. Use separate fields for implementation status and evidence freshness. Distinguish <strong>unknown</strong>, <strong>not implemented</strong>, <strong>failed</strong>, <strong>passed for this build</strong>, and <strong>deliberately different</strong>. Keep public evidence separate from private memory. A confidence label is a review judgment, not a calibrated probability.</p>
+<section id="what-to-reuse-from-didactopus" class="level3">
+<h3>What to reuse from Didactopus</h3>
+<p>Reuse its learning-pack structure, prerequisite analysis, curriculum-path checks, and review ledger for the learning subgraph. Build a small adapter for software traceability and workflow checks rather than forcing controls and tests into concept-prerequisite edges.</p>
+<p>Inspection of Didactopus revision <code>f0b0e8ac</code> found two integration hazards in <code>src/didactopus/graph_qa.py</code>: failed pack loading can produce zero graph warnings, and the “bottleneck” rule counts direct dependents with a fixed threshold of three. Therefore, require successful pack validation before graph analysis; expose invalid input as an error; label direct degree accurately; and treat flatness, depth, and bottleneck thresholds as advisory heuristics. Their usefulness for this curriculum has not been validated. Centrality alone must not determine port priority.</p>
+<p>For the demo, implement only five useful queries:</p>
+<ul>
+<li>Which selected tutorial tasks lack an implementation or a current passing workflow test?</li>
+<li>Which learning objectives have no observation or explanation prompt?</li>
+<li>Which scientific measurements lack a reviewed definition or a suitable test oracle?</li>
+<li>Which evidence became stale after a relevant source, configuration, or code change?</li>
+<li>Which tasks, strings, help text, and tests need review if a particular contract changes?</li>
+</ul>
+<p>For each finding, show the missing link or the typed path and its source. Test the analyzer with a missing edge, stale revision, invalid pack, and valid interaction loop. A deliberately injected defect must be labeled as a test fixture. Do not present it as a discovered production failure.</p>
+</section>
+</section>
+<section id="the-demonstrations-educational-task" class="level2">
+<h2>The demonstration’s educational task</h2>
+<p>Use the existing population experiment: <strong>How does the mutation setting affect the variation present in a population?</strong> It is related to the introductory topic in the <a href="https://avida-ed.github.io/curriculum/lab-manual/">official lab-manual sequence</a>, but it is not a validated reproduction of that legacy exercise. That sequence also provides the longer-term progression toward selection, fitness, and independent inquiry.</p>
+<p>Keep the bundled ancestor, 10 × 10 world, instruction profile, environment, and scheduling configuration fixed. Compare 0% and 1% per-site mutation settings using seeds 42, 43, and 44, with the same recording policy and target update. Audit whether generic settings controls can silently invalidate the preset. Lock incompatible edits or clearly mark the run as a modified experiment and retain its resolved configuration.</p>
+<div class="scroll-table" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr class="header">
+<th>Learner action</th>
+<th>Evidence of reasoning to elicit</th>
+<th>Software contract</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Predict before running</td>
+<td>Can new sequences appear? Must diversity increase continuously?</td>
+<td>Preserve prediction separately from simulation output.</td>
+</tr>
+<tr class="even">
+<td>Run both treatments and inspect plots</td>
+<td>Distinguish observations from predictions and compare replicate variation.</td>
+<td>Keep treatment, seed, update, metric definitions, and configuration attached to records.</td>
+</tr>
+<tr class="odd">
+<td>Inspect a sampled organism and ancestor</td>
+<td>Explain exact sequence difference without confusing it with lineage or fitness.</td>
+<td>Use exact sequence identity with the appropriate instruction profile, not genotype tracker IDs alone.</td>
+</tr>
+<tr class="even">
+<td>Save, reopen, and compare results</td>
+<td>Another reader can reconstruct what was compared.</td>
+<td>Versioned exports and round trips preserve scientific data and distinguish results from resumable checkpoints.</td>
+</tr>
+<tr class="odd">
+<td>Explain the outcome and limitations</td>
+<td>Richness is neither mutation count nor proof of adaptation; updates are not generations.</td>
+<td>Provide prompts and metric help, not an automatic claim that learning occurred.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Review the mutation implementation carefully: instruction randomization can choose the original instruction, so the setting is not an exact proportion of changed sites. The rewarded-task environment is not neutral evolution. Equal seeds across treatments do not imply paired random histories. Three replicates per treatment support an illustration, not a general effect-size claim. Numerical similarity across Avida versions is not an equivalence criterion unless their semantics and randomization are demonstrably comparable.</p>
+<p>A small instructor-reviewed explanation rubric is enough for this milestone. Later, evaluate misconceptions and transfer to a new scenario with learners. Do not infer durable learning from a successful demonstration or a graph with complete links.</p>
+</section>
+<section id="delivery-plan-to-october-23" class="level2">
+<h2>Delivery plan to October 23</h2>
+<p>The dates below are proposed working windows, not estimates of measured productivity. Implementation can be delegated; the maintainer retains scientific, instructional, and release decisions. Obtain an instructor review and a qualified Spanish-language review where available. If either is unavailable, state the limitation and narrow the release claim.</p>
+<section id="september-30october-3-establish-the-task-contracts" class="level3">
+<h3>September 30–October 3: establish the task contracts</h3>
+<p>Select three workflows: configure/run/inspect; save/reopen/transfer; compare/explain. Identify the relevant legacy tutorial segments and record exact timestamps and version-specific exceptions. Start with about 15–25 reviewable requirements, not a full reverse engineering of the app. Correct guide text that still tells users to open “Compare runs” when the visible workspace is “Analysis.”</p>
+<p>Deliver a scoped task inventory, metric definitions, instructor-review questions, and an evidence register. Record the live baseline before changes. Exit when every selected requirement has an observable expected result and an explicit evidence status. A tutorial not watched is marked unreviewed.</p>
+</section>
+<section id="october-49-make-the-analysis-executable" class="level3">
+<h3>October 4–9: make the analysis executable</h3>
+<p>Implement the typed records, five queries, a small Didactopus learning pack and adapter, and a generated report. Link existing meaningful tests before adding new ones. Run validation before graph QA. Add the malformed-input and stale-evidence checks described above.</p>
+<p>Create a reviewed GroundRecall handoff with the selected task, current revision, invariants, pending decisions, and next verification commands; retrieve it in a fresh context and verify it against Git. The earlier bounded searches did not surface an exact Avida task record, which does not establish that none exists.</p>
+<p>Exit with a reproducible report that identifies at least one real unresolved requirement and explains its evidence. If the graph work exceeds this window, retain the same records as a simple traceability table and finish the learner workflow first.</p>
+</section>
+<section id="october-1015-close-the-chosen-workflow" class="level3">
+<h3>October 10–15: close the chosen workflow</h3>
+<p>Resolve the highest-impact blocker found in those tasks. Verify target-update inputs survive Run, presets preserve their controlled variables, records are not duplicated, selected organisms load correctly, and saved results reopen with their metadata. Keep chart hover, zoom, reset, and export stable during live updates. Limit Analysis work to what this exercise requires; show its remaining v4 differences honestly.</p>
+<p>Exercise the Spanish path using the documented local translation method, stable IDs, glossary, placeholder checks, and provenance. Inspect actual rendered controls, option replacement, tooltips, Freezer, settings, and Analysis in English and Spanish, plus expanded-string and RTL test modes. Do not equate catalog coverage with translation acceptance.</p>
+<p>Exit with the complete activity working from a clean browser session and a portable container build. Freeze feature scope on October 15; do not add a general graph platform or broaden engine capabilities for the demo.</p>
+</section>
+<section id="october-1619-verify-and-rehearse" class="level3">
+<h3>October 16–19: verify and rehearse</h3>
+<p>Run the workflow on the presentation laptop and a second browser. Check desktop and narrow layouts, keyboard navigation, reload, data export/import, and error recovery. Use fixtures for deterministic record checks and scientific invariants; do not demand matching stochastic trajectories across engines. Rehearse the full 20-minute demonstration twice and record actual duration.</p>
+<p>Exit with linked test executions, visual-review evidence, known limitations, a reviewed Spanish sample, and a selected build. If a review is unavailable, retain “development preview” labeling. Any failed core configure/run/save/reopen/compare path blocks the live-app claim.</p>
+</section>
+<section id="october-2023-freeze-prepare-fallbacks-demonstrate" class="level3">
+<h3>October 20–23: freeze, prepare fallbacks, demonstrate</h3>
+<p>On October 20, tag the candidate and archive its image digest, source revisions, configuration, exports, and report. On October 21–22, verify Pages and the local container server; cache the six-run data set and record a short walkthrough. Serve the local fallback over HTTP with the required browser headers. A recording is explicitly labeled as recorded, and cached results as previously generated.</p>
+<p>On October 23, present a bounded engineering case: what worked, what the infrastructure helped expose, and what remains uncertain. Reserve approximately three minutes for context, twenty for the demonstration, and seven for discussion.</p>
+</section>
+</section>
+<section id="a-twenty-minute-demonstration" class="level2">
+<h2>A twenty-minute demonstration</h2>
+<div class="scroll-table" tabindex="0" role="region" aria-label="Scrollable comparison table"><table>
+<thead>
+<tr class="header">
+<th>Minutes</th>
+<th>Show</th>
+<th>Point to establish</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–3</td>
+<td>The educational question, prediction, familiar workspace, and pinned build recipe; use a prebuilt container.</td>
+<td>A concrete teaching task and reproducible environment.</td>
+</tr>
+<tr class="even">
+<td>3–6</td>
+<td>A fresh-context handoff retrieved through GroundRecall, then checked against repository state.</td>
+<td>Decisions can be recovered with sources; memory is not current-state authority.</td>
+</tr>
+<tr class="odd">
+<td>6–10</td>
+<td>The task report, one real gap, its source path, and the reviewed repair and rerun.</td>
+<td>Didactopus and traceability checks can make an omission actionable. Prepare the repair beforehand; no live coding dependency.</td>
+</tr>
+<tr class="even">
+<td>10–17</td>
+<td>Run both mutation settings, inspect an organism, use the live plots, save/reopen, and compare with the archived replicates. Show a checked Spanish workflow.</td>
+<td>The resulting software supports an interpretable activity.</td>
+</tr>
+<tr class="odd">
+<td>17–20</td>
+<td>The ClaimWright-guided review record, remaining gaps, and the next milestone.</td>
+<td>Show exactly which checks changed a claim or action, without overstating enforcement or benefits.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="make-infrastructure-contributions-observable" class="level2">
+<h2>Make infrastructure contributions observable</h2>
+<p>Record <strong>retrieved information → decision changed → artifact changed → verification</strong>, including cases where a tool adds no useful information. This is stronger evidence than listing installed repositories.</p>
+<ul>
+<li><strong>GroundRecall:</strong> compare recovery using the same repository and handoff summary with and without retrieval. Record correct decisions recovered, incorrect/stale suggestions, repeated questions, and review time. A small demonstration is a case study, not a causal productivity experiment; balance order or use independent contexts if making a comparison.</li>
+<li><strong>Didactopus:</strong> show actual pack validation and prerequisite or assessment-gap findings, their disposition, and the adapter’s separate traceability checks. Attribute each finding to the component that produced it.</li>
+<li><strong>ClaimWright:</strong> apply its current public-artifact standards and preserve the review record. If an executable gate is connected, demonstrate a supported check and its result. Otherwise describe checklist use accurately; do not imply automatic enforcement. Log both useful catches and false alarms.</li>
+<li><strong>SciSiteForge/TalkOrigins methods:</strong> document the specific reused source or workflow and the Avida adaptation. Demonstrate a terminology or overflow correction plus visual recheck. Method reuse is distinct from importing a package.</li>
+<li><strong>doclift and CiteGeist:</strong> use them only where a selected source genuinely needs ingestion or citation verification. Record the converted passage or verified reference and its use. They need not appear live, and proposed use must not be reported as past contribution.</li>
+</ul>
+<p>Start a prospective effort log separating maintainer direction/review, implementation work, automated runtime, and rework. There is no reliable historical human-hours measurement or controlled “Codex alone” comparison for this project. The earlier numeric estimate should not be used as evidence of savings. A comparison must give the baseline the same task, repository, and ordinary documentation access.</p>
+</section>
+<section id="after-the-demonstration-a-functional-avida-ed-5" class="level2">
+<h2>After the demonstration: a functional Avida-ED 5</h2>
+<p>These phases have acceptance gates rather than promised dates. Estimate them after the scoped task audit and upstream review. Keep the educational application shell, engine adapter, measurements, storage, localization, and reports separate. The demo task and its tests remain a maintained regression example throughout.</p>
+<section id="phase-1-agree-on-the-release-scope-and-scientific-contracts" class="level3">
+<h3>Phase 1: agree on the release scope and scientific contracts</h3>
+<p>Extend the task inventory across the lab manual and existing tutorial videos. Review priorities with the Avida-ED group; pin supported engine and instruction profiles, metric meanings, mutation behavior, and reproducibility limits. Classify requirements as preserved, redesigned with explanation, deferred, or unsupported. Generate a public gap report with denominators and evidence dates; do not count every graph edge as progress.</p>
+<p><strong>Exit:</strong> a reviewed functional-release scope and scientific oracle for each supported measure. Legacy parity and new lessons are separately identifiable. This scope review can begin before October 23 if it does not displace the demo work.</p>
+</section>
+<section id="phase-2-population-freezer-and-trustworthy-persistence" class="level3">
+<h3>Phase 2: Population, Freezer, and trustworthy persistence</h3>
+<p>Complete the supported dish configuration, ancestor placement, mutation and environment settings, run lifecycle, population measurements, and familiar color modes. Restore tutorial-relevant transfers among configured dishes, organisms, and populated dishes, with keyboard alternatives to drag-and-drop. Test invalid imports without damaging existing work.</p>
+<p>Separate organism artifacts, configurations, recorded results, and resumable checkpoints. Version each format; test migrations, storage limits, download/import, immediate restore, and continuation where deterministic continuation is supported. Data-only results must not masquerade as complete engine checkpoints.</p>
+<p><strong>Exit:</strong> selected population/tutorial workflows survive save, reopen, and cross-browser transfer with scientific metadata intact. This is the foundation for full Analysis.</p>
+</section>
+<section id="phase-3-organism-and-analysis-continuity" class="level3">
+<h3>Phase 3: Organism and Analysis continuity</h3>
+<p>Complete the supported Organism cycle controls and state displays in a recognizable arrangement; validate isolated organism evaluation without changing the live population or its random stream. Map fitness, viability, gestation, and task observations to reviewed definitions rather than substituting similarly named measures.</p>
+<p>Implement the v4-style Analysis workflow for up to three populated dishes, supported left/right measures, trace colors, remove/replace operations, interactive plots, and export. Keep the newer lesson-run comparison as an explicitly identified capability. If a legacy measure cannot be supported, make that gap visible and revise affected lesson guidance.</p>
+<p><strong>Exit:</strong> instructor-selected Organism and Analysis tutorial walkthroughs pass with recorded exceptions; differential tests are used only where old and new semantics are comparable.</p>
+</section>
+<section id="phase-4-curriculum-accessibility-localization-and-classroom-pilot" class="level3">
+<h3>Phase 4: curriculum, accessibility, localization, and classroom pilot</h3>
+<p>Broaden activities from mutation to selection, fitness, and independent experimental design using the reviewed learning graph. Align prompts and rubrics with concepts and misconceptions; check whether the software exposes the necessary evidence. Complete contextual help, reviewed Spanish, visual regression coverage, keyboard/screen-reader checks, and the supported browser/device matrix.</p>
+<p>Pilot the supported curriculum with instructors and learners. Observe task completion, interpretation errors, data loss, and tutorial mismatches separately. Evaluate learning with appropriate consent and study design if making research claims; do not turn routine demo telemetry into learner research data.</p>
+<p><strong>Exit:</strong> no unresolved critical workflow or data-integrity defects within the agreed scope, instructor acceptance, published limitations and support instructions, and an explicit release decision by the responsible maintainers. A functional teaching release does not require every possible engine feature, but it does require complete supported activities and honest compatibility boundaries.</p>
+<p>Alternate CPUs, continuous worlds, knockout experiments, and a general dashboard framework remain separate extensions unless a reviewed learning task makes them necessary. Follow Avida upstream through a pinned compatibility boundary and small reviewable changes; avoid tying the education release to every upstream design proposal.</p>
+</section>
+</section>
+<section id="evidence-stewardship-and-limitations" class="level2">
+<h2>Evidence, stewardship, and limitations</h2>
+<p>Prepared with OpenAI Codex assistance for Wesley R. Elsberry’s review. Proposed project steward: Wesley R. Elsberry; instructional and language reviewers are not yet assigned. No external endorsement or completed instructor review is implied. Evidence inspection: <strong>2026-09-30, approximately 11:01 UTC</strong>. Roadmap dates are planning judgments, not measured effort estimates.</p>
+<ul>
+<li><strong>Current functionality and gaps — high confidence for documented source facts, moderate for tutorial impact.</strong> Baseline <a href="https://github.com/welsberr/avida-ed-5-poc/tree/3dd5f8cb0b36b048c297592265df7947ed964397">prototype revision 3dd5f8c</a>, its <a href="https://github.com/welsberr/avida-ed-5-poc/blob/3dd5f8cb0b36b048c297592265df7947ed964397/docs/avida-ed4-consilience-map.md">control map</a>, experiment guide, and earlier first-experiment roadmap were inspected. This reassessment did not repeat the full application acceptance suite or watch every tutorial.</li>
+<li><strong>Educational sequence — high confidence in the published sequence, learning effectiveness untested here.</strong> <a href="https://avida-ed.github.io/curriculum/lab-manual/">Official lab manual</a> and <a href="https://avida-ed.github.io/help/">tutorial index</a> establish source targets, not completed compatibility checks.</li>
+<li><strong>Didactopus implementation — high confidence in the inspected code behavior.</strong> <a href="https://git.cns.fyi/welsberr/Didactopus">Didactopus</a>, local revision <code>f0b0e8ac55459e05bdf16604ec971ea266278b84</code>; graph QA, prerequisite-analysis, curriculum-path-quality, and review-workflow documentation. The new Avida adapter remains proposed.</li>
+<li><strong>Research rationale — moderate confidence in applicability.</strong> Memon (2007), <em>An event-flow model of GUI-based applications for testing</em>, STVR 17:137–157; Goknil et al. (2014), <em>Change impact analysis for requirements: A metamodeling approach</em>, IST 56:950–972, <a href="https://doi.org/10.1016/j.infsof.2014.03.002">doi:10.1016/j.infsof.2014.03.002</a>. Author/institutional abstracts were consulted; neither establishes this project’s effectiveness.</li>
+<li><strong>Infrastructure impact and schedule — hypotheses to evaluate.</strong> Bounded memory retrieval and repository evidence informed this plan. No quantitative productivity benefit, learning gain, or October completion guarantee has been established.</li>
+</ul>
+<p>Keep future decisions, changes and reasons, test executions, and review dispositions in a versioned work record. Regenerate the public status after meaningful changes rather than allowing an old passing result to certify a new build.</p>
+</section>
+</section>
+</main><footer><div class="wrap">Independent proof of concept. Proposed roadmap; implementation and external review remain pending.</div></footer></body></html>

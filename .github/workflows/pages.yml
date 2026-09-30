@@ -41,10 +41,11 @@ jobs:
           trap 'docker rm -f "$container_id" >/dev/null 2>&1 || true' EXIT
           docker cp "$container_id:/src/Avida/web/." _site/app/
           cp index.html .nojekyll _site/
-          cp docs/port-status.html docs/codex-collaboration.html docs/site-report.css _site/
+          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/site-report.css _site/
           test -s _site/index.html
           test -s _site/port-status.html
           test -s _site/codex-collaboration.html
+          test -s _site/porting-learning-roadmap.html
           test -s _site/site-report.css
           test -s _site/app/Avida.js
           test -s _site/app/Avida.wasm
