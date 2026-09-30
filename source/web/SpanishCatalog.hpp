@@ -7,7 +7,7 @@
 
 namespace avida::web::localization {
 struct SpanishEntry { std::string_view id; std::string_view source; std::string_view value; };
-inline constexpr std::array<SpanishEntry, 343> SPANISH_CANDIDATE{{
+inline constexpr std::array<SpanishEntry, 346> SPANISH_CANDIDATE{{
   {"shell.app_title", "Avida-ED", "Avida-ED"},
   {"shell.lesson_title", "Mutation and genetic variation", "Mutación y variación genética"},
   {"shell.preview_label", "Avida 5 education preview", "Vista previa educativa de Avida 5"},
@@ -15,6 +15,9 @@ inline constexpr std::array<SpanishEntry, 343> SPANISH_CANDIDATE{{
   {"shell.mode.population", "Population", "Población"},
   {"shell.mode.sequences", "Sequences", "Secuencias"},
   {"shell.mode.compare", "Compare runs", "Análisis"},
+  {"shell.view.organism", "Organism", "Organismo"},
+  {"shell.view.analysis", "Analysis", "Análisis"},
+  {"shell.views.label", "Views", "Vistas"},
   {"shell.mode.population.accessible", "Population Mode", "Modo de Población"},
   {"shell.mode.organism.accessible", "Organism Mode", "Modo de Organismo"},
   {"shell.mode.compare.accessible", "Compare saved runs", "Comparar ejecuciones guardadas"},

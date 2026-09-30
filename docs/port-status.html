@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Evidence-based status of conceptual and functional continuity from Avida-ED 4 to the Avida-ED 5 proof of concept.">
+  <title>Avida-ED 4 to 5: port status</title>
+  <link rel="stylesheet" href="site-report.css">
+</head>
+<body>
+  <header class="masthead"><div class="wrap">
+    <div class="eyebrow">Avida-ED 5 proof of concept · BEACON demo notes</div>
+    <h1>How faithfully does the prototype carry Avida-ED 4 forward?</h1>
+    <p>A source-based review of the user tasks that remain recognizable, the places where the prototype differs, and the work still needed before it could claim tutorial-level continuity.</p>
+  </div></header>
+  <main class="wrap">
+    <nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="codex-collaboration.html">Codex and the tool stack</a></nav>
+    <section class="callout">
+      <h2>Assessment</h2>
+      <p>The prototype is a <strong>conceptual port in progress</strong>, not a faithful functional replacement for Avida-ED 4. It now uses the familiar three views—Population, Organism, and Analysis—reuses selected v4 graphics and color choices, and supports recognizable tasks such as running a population, inspecting an organism, saving work, and viewing results. Several major workflows still differ in controls, available values, and behavior.</p>
+      <p>The most consequential gap is Analysis: the prototype compares completed lesson runs, while v4 lets learners place up to three populated dishes into a shared analyzer and choose measured series and axes. Matching the name helps recognition, but does not make these workflows equivalent.</p>
+    </section>
+    <section>
+      <h2>What “faithful” means here</h2>
+      <p>For this review, fidelity means that a returning learner can recognize the same task, find its controls in a familiar area, use comparable values and choices, and obtain a comparable result. Pixel-level matching is not required on a narrow mobile screen, but established tutorial instructions should still map to the new interface without guesswork.</p>
+      <p>The reference is Avida-ED 4 source revision <a href="https://github.com/Avida-ED/Avida-ED4/commit/fcfc5c60e03479c85eadad083ffb5e7d92a95781">fcfc5c6</a> (version 4.0.33), checked 30 September 2026. The detailed control inventory and comparison are in the <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">Avida-ED 4 to 5 interface map</a>.</p>
+    </section>
+    <section>
+      <h2>Current status by user task</h2>
+      <div class="scroll-table"><table>
+        <thead><tr><th scope="col">Task area</th><th scope="col">Status</th><th scope="col">Evidence and impact</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Main navigation</th><td class="status aligned">Aligned at the label level</td><td>Population, Organism, and Analysis use v4 names and selected familiar graphics. Layout is responsive, so some positions change at small widths.</td></tr>
+          <tr><th scope="row">Population setup</th><td class="status partial">Partial, intentionally constrained</td><td>The first lesson offers two mutation treatments, three fixed seeds, and a fixed 10 × 10 world with a bundled ancestor and environment. V4 exposes a configurable dish, ancestor placement, offspring placement, and broader mutation values.</td></tr>
+          <tr><th scope="row">Run controls and live observations</th><td class="status partial">Same broad purpose, different workflow</td><td>The prototype can reset, step, play, pause, fast-forward, and run to a target; it records and plots population, sequence richness, and ancestor sequence share. V4 uses a different Run/Pause/Forward/New arrangement and broader population statistics.</td></tr>
+          <tr><th scope="row">Population coloring</th><td class="status partial">Selected concepts carried over</td><td>Fitness, gestation cost, metabolic rate, phenotype, and genotype coloring are available, with retained legacy palette choices. V4 also offers ancestor and environment-dependent task/resource views that are not all represented.</td></tr>
+          <tr><th scope="row">Organism inspection</th><td class="status partial">Functional, with a changed presentation</td><td>Organisms can be loaded and inspected while stepping through execution, including genome and state panels. The v4 cycle controls, settings, and visual arrangement are not reproduced one-for-one.</td></tr>
+          <tr><th scope="row">Analysis</th><td class="status gap">Major functional difference</td><td>The current view overlays completed runs. The v4 analyzer accepts up to three populated dishes and lets users choose left and right measures, remove traces, and set colors. A v4-style analyzer remains a high-priority parity item.</td></tr>
+          <tr><th scope="row">Freezer and saved work</th><td class="status partial">Purpose carried over, interaction differs</td><td>The prototype saves and imports organisms, configurations, and checkpoints. Item groupings and drag-and-drop paths still need direct comparison with the v4 tutorial workflows.</td></tr>
+          <tr><th scope="row">Settings and environment</th><td class="status partial">Subset available</td><td>Metadata-driven settings and environment controls are functional, including options and numeric bounds. The exposed subset and task-configuration path have not been walked through against each tutorial.</td></tr>
+          <tr><th scope="row">Tutorial continuity</th><td class="status partial">Not yet validated end-to-end</td><td>The source map is detailed, but there has not yet been a representative video-by-video acceptance walkthrough or a complete desktop/mobile visual comparison.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    <section>
+      <h2>Interpretation</h2>
+      <p>The strongest continuity today is the <em>shape</em> of the workspace and several familiar tasks; it is not full equivalence of scientific controls or tutorial outcomes. The narrow lesson is useful for a first demo because it gives the new interface a concrete experiment, reproducible seeds, live evidence, and save/export paths. Those additions should be described as a new lesson workflow, rather than presented as if the old tutorials already describe it.</p>
+      <p>A sensible porting sequence is to compare tutorial tasks against the control map, then decide for each one whether to preserve the v4 interaction, expose it as an additional mode, or clearly label a deliberate redesign. Prioritize the populated-dish Analysis workflow and Freezer transfers because those affect how learners move results between views. Keep new constrained lesson presets available as a separate path.</p>
+    </section>
+    <aside>
+      <h2>Evidence and limits</h2>
+      <p>Control labels, options, and ranges were checked in the v4 and POC source. That supports high confidence in the source-level comparison. The rating of tutorial impact is a reasoned assessment; it needs validation with instructors, learners, and the exact tutorial videos. The older v3 manual is supporting context only, not the authority for v4 behavior.</p>
+      <p>Primary references: <a href="https://github.com/Avida-ED/Avida-ED4">Avida-ED 4 repository</a>, <a href="https://avida-ed.github.io/help/">Avida-ED help and tutorial videos</a>, <a href="https://github.com/welsberr/avida-ed-5-poc">this prototype repository</a>, and its <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">detailed interface map</a>. Status reflects the source inspected on 30 September 2026.</p>
+    </aside>
+  </main>
+  <footer><div class="wrap">Independent proof of concept. This page is a working assessment, not an Avida-ED team release statement.</div></footer>
+</body>
+</html>

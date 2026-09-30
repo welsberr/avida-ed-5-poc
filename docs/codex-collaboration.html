@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A project-grounded account of Codex, the Avida-ED 5 prototype tool stack, its timeline, and the human role in the collaboration.">
+  <title>Codex and the Avida-ED 5 project stack</title>
+  <link rel="stylesheet" href="site-report.css">
+</head>
+<body>
+  <header class="masthead"><div class="wrap">
+    <div class="eyebrow">Avida-ED 5 proof of concept · BEACON demo notes</div>
+    <h1>What changed when Codex worked with the project stack?</h1>
+    <p>This account separates the coding assistant from the codebase, build tools, checks, deployment, and human direction that made this prototype reviewable.</p>
+  </div></header>
+  <main class="wrap">
+    <nav aria-label="Page navigation"><a href="index.html">Project home</a> · <a href="port-status.html">Avida-ED 4 to 5 port status</a></nav>
+    <section class="callout">
+      <h2>The contribution was collaborative</h2>
+      <p>Codex helped inspect and change code, connect interface behavior to Avida 5, write documentation, and respond to test failures. It did not choose the educational goal or decide what counts as a useful continuation of Avida-ED 4. The human maintainer supplied the project direction, corrected mismatches with the tutorials, reviewed behavior, set release boundaries, and accepted or redirected proposed changes.</p>
+      <p>The additional software made it possible to build and check a concrete application in this repository. It did not turn Codex into an independent Avida-ED product owner, and the result is still a proof of concept.</p>
+    </section>
+    <section>
+      <h2>What each component contributed</h2>
+      <div class="scroll-table"><table>
+        <thead><tr><th scope="col">Component</th><th scope="col">Role in this effort</th><th scope="col">What it made possible</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Human project maintainer</th><td>Set goals and constraints; chose an approachable mutation-and-variation experiment; emphasized tutorial continuity, mobile use, graphics, localization, and evidence; tested the preview and gave concrete corrections.</td><td>Kept implementation tied to learner tasks and Avida-ED history. Human review remained the acceptance gate.</td></tr>
+          <tr><th scope="row">OpenAI Codex</th><td>Worked across repository files, implemented changes, interpreted build/test feedback, drafted technical material, and linked changes to the interface map.</td><td>Reduced the amount of routine code and documentation work required per iteration. Its outputs still required project context, execution, and review.</td></tr>
+          <tr><th scope="row">Avida 5</th><td>Supplies the digital-evolution engine, organisms, instruction execution, population behavior, and settings.</td><td>Made the prototype a working Avida 5 experiment rather than a static mock-up.</td></tr>
+          <tr><th scope="row">Empirical + Emscripten</th><td>Empirical supplies the C++ web-interface and browser bridge; the pinned Emscripten toolchain compiles the application to WebAssembly.</td><td>Provided the route from the Avida code to a browser-hosted simulation, with compiler versions fixed for repeatable builds.</td></tr>
+          <tr><th scope="row">Docker and Compose</th><td>Package the compiler and build environment; local Compose serving supplies the cross-origin isolation headers required by threaded WebAssembly.</td><td>Made the setup more portable and reproducible than relying on an unrecorded local compiler installation.</td></tr>
+          <tr><th scope="row">Plotly plus the project adapter</th><td>Plotly draws live population, sequence-richness, and ancestor-share series. A small JavaScript adapter updates persistent charts from measurements recorded by C++.</td><td>Supports hover values, zoom/reset, and PNG export. The adapter keeps chart rendering separate from the simulation’s measurement logic.</td></tr>
+          <tr><th scope="row">Localization catalog and checks</th><td>Stable message IDs connect English text with a Spanish draft; generator and validator scripts check catalog structure, placeholders, and recorded provenance.</td><td>Allows UI text to be swapped rather than appended, and catches structural mistakes. Automated checks cannot certify Spanish quality or visual fit; qualified review remains outstanding.</td></tr>
+          <tr><th scope="row">Git, tests, and GitHub Actions</th><td>Version history records changes; targeted tests check education and chart behavior; the Pages workflow builds the app and publishes the landing page and report pages.</td><td>Leaves a reviewable trail and a repeatable release check. A passing build does not establish classroom usability, scientific validity, accessibility, or visual parity.</td></tr>
+        </tbody>
+      </table></div>
+      <p class="small">This list covers tools evidenced in this repository’s implementation and deployment. Other personal-workbench projects—such as ClaimWright, CiteGeist, Didactopus, GroundRecall, and GenieHive—were not implementation dependencies for this prototype. GroundRecall was queried for prior-work context while preparing this assessment, but returned no useful Avida-ED-specific project record.</p>
+    </section>
+    <section>
+      <h2>Timeline visible in the project record</h2>
+      <ol>
+        <li><strong>5 August–10 September 2026 — Avida 5 web foundation (upstream history).</strong> The Avida repository history shows work on a browser interface, continuous population coloring, settings, organism selection, Freezer functions, checkpointing, and modular web code. These commits establish the engine capabilities this prototype could build on. They are upstream project history and should not be counted as Codex/human effort in this collaboration.</li>
+        <li><strong>29 September 2026 — educational POC assembled and published.</strong> This repository records the POC, a data-driven lesson preset, localization catalog groundwork, a Spanish workspace, a v4-inspired layout, and its first GitHub Pages publication. The site deployed a compiled app rather than a visual-only mock-up.</li>
+        <li><strong>29–30 September 2026 — iteration against concrete use.</strong> Follow-up commits address localized tooltip and selector strings, stable localized preset labels, and Plotly chart updates that remain mounted during live runs. The maintainer’s review also corrected view naming, selection behavior, text legibility, and tutorial-consistency priorities.</li>
+        <li><strong>30 September 2026 — conformance review and demo framing.</strong> A source-grounded Avida-ED 4 interface map was prepared, then used to assess which tasks align, partially align, or remain different in the POC. This page records the boundaries of the collaboration and the evidence behind the comparison.</li>
+      </ol>
+      <p class="small">Dates above come from the project’s first-parent Git history and checked source. The upstream Avida timeline is deliberately separated from the collaboration timeline so the prototype does not claim credit for engine work that predates it.</p>
+    </section>
+    <section>
+      <h2>Human effort and uncertainty</h2>
+      <p>No time log was kept, and Git records commits rather than design discussion, review, waiting, or experimentation. A cautious retrospective estimate for direct maintainer direction and review on this prototype is <strong>several focused sessions, roughly 5–15 hours</strong>, with low confidence. It excludes upstream Avida 5 development, earlier Avida-ED work, unattended build time, and any time spent outside the recorded project history.</p>
+      <p>The effort was not just a single prompt followed by acceptance. The maintainer repeatedly made substantive choices about the experiment, UI relationship to v4, use of legacy colors and graphics, Spanish localization, chart behavior, and how to describe limitations. The assistant carried out many implementation and writing iterations; the human decided which problems mattered and whether the changes met the goal.</p>
+    </section>
+    <section>
+      <h2>Codex alone versus Codex with the working stack</h2>
+      <p>This is a reasoned comparison, not a controlled benchmark. “Codex alone” here means an assistant given a broad request without this repository’s source, pinned build environment, tests, localization catalog, deployment workflow, or ongoing expert review. We cannot measure how long that hypothetical path would take, and we should not claim a quantified productivity gain.</p>
+      <div class="scroll-table"><table>
+        <thead><tr><th scope="col">Without the surrounding project stack</th><th scope="col">With the actual stack and human collaboration</th></tr></thead>
+        <tbody>
+          <tr><td>Could sketch a proposed interface or generate sample code, but could not establish from a prompt alone that the browser app compiled against the selected Avida revision.</td><td>Repository access, pinned Avida/Empirical/Emscripten inputs, Docker, and the Pages build produced a concrete WebAssembly app that could be tested and deployed.</td></tr>
+          <tr><td>Would have weaker evidence for whether labels, controls, and options match the interface taught by v4 tutorials.</td><td>The checked v4 source, the consilience map, and maintainer corrections made naming and parity differences explicit.</td></tr>
+          <tr><td>Could propose Spanish text, but would lack stable catalog IDs and repeatable structural checks across the actual selectors and tooltips.</td><td>The localization catalog and validator caught replacement/provenance issues; human Spanish and layout review is still needed.</td></tr>
+          <tr><td>Could describe a chart, but would not know whether it remained responsive during live runs or supported the expected interactions.</td><td>The adapter, chart tests, browser experiment, and follow-up fixes addressed persistent updates and retained hover, zoom/reset, and image-export affordances.</td></tr>
+          <tr><td>Would tend to leave a one-off answer or source fragment whose status and limitations were difficult to reproduce.</td><td>Git history, targeted checks, and GitHub Pages provide a reviewable artifact and release trail, while leaving known parity and usability work visible.</td></tr>
+        </tbody>
+      </table></div>
+      <p>The stack’s clearest demonstrated value is <strong>conversion of suggestions into an inspectable, repeatable artifact</strong>. It supplied context, a runtime, and checks; the maintainer supplied domain judgment. That combination is a plausible way to improve the speed and quality of software work, but this project alone does not measure the size of either effect.</p>
+    </section>
+    <aside>
+      <h2>Sources and limits</h2>
+      <ul>
+        <li><a href="https://github.com/welsberr/avida-ed-5-poc/commits/main/">Project commit history</a> and <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/development.md">pinned build and deployment notes</a>.</li>
+        <li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/researcher-overview.md">Researcher overview</a>, <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/graphs-and-colors.md">graph and color notes</a>, and <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">Avida-ED 4 to 5 interface map</a>.</li>
+        <li><a href="https://github.com/mercere99/Avida">Avida 5 source repository</a> and <a href="https://github.com/devosoft/Empirical">Empirical source repository</a>.</li>
+      </ul>
+      <p class="small">The counterfactual comparison and human-hour estimate are explicitly interpretive. They are suitable as a transparent demo account, not as experimental evidence or a general productivity study.</p>
+    </aside>
+  </main>
+  <footer><div class="wrap">OpenAI Codex assisted with implementation and documentation. The project maintainer directed and reviewed the work and remains responsible for the project decisions.</div></footer>
+</body>
+</html>

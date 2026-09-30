@@ -34,8 +34,7 @@ void AvidaWebApp::SetSidePanel(SidePanel panel) {
 
   run_inspector.SetCSS("display", show_population ? "block" : "none");
   org_stats_inspector.SetCSS("display", show_organism ? "block" : "none");
-  // The Freezer follows the legacy Avida-ED workspace: it stays below the
-  // Viewer Chooser in the left rail while the Lab Bench remains visible.
+  // The Freezer stays in the left rail while the Lab Bench remains visible.
   freezer_inspector.SetCSS("display", "block");
   configuration_inspector.SetCSS("display", show_configuration ? "block" : "none");
   pop_stats_mode.SetAttr(
@@ -106,27 +105,22 @@ void AvidaWebApp::BuildInterface() {
 
   UI::Div modes{"mode_buttons"};
   modes.AddAttr("class", "mode-buttons");
-  modes << emp::MakeString(
-    "<h2 class='viewer-chooser-heading'>",
-    emp::MakeWebSafe(PresentationText("Viewer chooser")),
-    "</h2>"
-  );
   UI::Button population_mode{
     [this](){ SetApplicationMode(ApplicationMode::POPULATION); },
     emp::MakeString("<img src='assets/legacy-ed4/Avida-ED-population-icon.png' alt=''><span>",
-      emp::MakeWebSafe(PresentationText("Population")), "</span>"),
+      emp::MakeWebSafe(Localized(avida::web::localization::key::MODE_POPULATION)), "</span>"),
     "population-mode"
   };
   UI::Button organism_mode{
     [this](){ SetApplicationMode(ApplicationMode::ORGANISM); },
     emp::MakeString("<img src='assets/legacy-ed4/Avida-ED-organism-icon.png' alt=''><span>",
-      emp::MakeWebSafe(Localized(avida::web::localization::key::MODE_SEQUENCES)), "</span>"),
+      emp::MakeWebSafe(Localized("shell.view.organism")), "</span>"),
     "organism_mode"
   };
   UI::Button analyze_mode{
     [this](){ SetApplicationMode(ApplicationMode::COMPARE); },
     emp::MakeString("<img src='assets/legacy-ed4/Avida-ED-analysis-icon.png' alt=''><span>",
-      emp::MakeWebSafe(Localized(avida::web::localization::key::MODE_COMPARE)), "</span>"),
+      emp::MakeWebSafe(Localized("shell.view.analysis")), "</span>"),
     "compare-mode"
   };
   const bool population_active = active_application_mode == ApplicationMode::POPULATION;
@@ -139,14 +133,14 @@ void AvidaWebApp::BuildInterface() {
     completed_education_runs.begin(), completed_education_runs.end(),
     [](const auto & run){ return run.status == "complete"; }
   ) < 2);
-  population_mode.SetAttr("aria-label", PresentationText("Population Mode"));
-  organism_mode.SetAttr("aria-label", PresentationText("Organism Mode"));
-  analyze_mode.SetAttr("aria-label", PresentationText("Compare saved runs"));
+  population_mode.SetAttr("aria-label", Localized(avida::web::localization::key::MODE_POPULATION));
+  organism_mode.SetAttr("aria-label", Localized("shell.view.organism"));
+  analyze_mode.SetAttr("aria-label", Localized("shell.view.analysis"));
   population_mode.SetAttr("aria-pressed", population_active ? "true" : "false");
   organism_mode.SetAttr("aria-pressed", organism_active ? "true" : "false");
   analyze_mode.SetAttr("aria-pressed", compare_active ? "true" : "false");
-  population_mode.SetTitle(PresentationText("Population Mode"));
-  organism_mode.SetTitle(PresentationText("Organism Mode"));
+  population_mode.SetTitle(Localized(avida::web::localization::key::MODE_POPULATION));
+  organism_mode.SetTitle(Localized("shell.view.organism"));
   analyze_mode.SetTitle(completed_education_runs.size() < 2
     ? PresentationText("Complete two runs to compare them.")
     : PresentationText("Compare the completed runs."));
@@ -226,7 +220,7 @@ void AvidaWebApp::BuildInterface() {
   main_region.AddAttr("class", "main-region");
   UI::Div legacy_sidebar{"legacy_sidebar"};
   legacy_sidebar.AddAttr("class", "legacy-sidebar");
-  modes.SetAttr("aria-label", PresentationText("Viewer chooser"));
+  modes.SetAttr("aria-label", Localized("shell.views.label"));
   legacy_sidebar << modes;
 
   if (!population_active) {
@@ -694,7 +688,7 @@ void AvidaWebApp::BuildCompareModeWorkspace(UI::Div & app) {
   UI::Div workspace{"compare-workspace"};
   workspace.AddAttr("class", "compare-workspace");
   workspace << emp::MakeString(
-    "<section class='lesson-intro'><h1>", emp::MakeWebSafe(PresentationText("Compare completed runs")),
+    "<section class='lesson-intro'><h1>", emp::MakeWebSafe(Localized("shell.view.analysis")),
     "</h1><p>", emp::MakeWebSafe(PresentationText("Each line is an independent stochastic trajectory. The three seeds are reused across treatments as starting values; they do not guarantee paired random histories.")),
     "</p><p>", emp::MakeWebSafe(PresentationText("Compare population size and exact sequence richness. An endpoint table reports the final sample of every completed run.")),
     "</p></section>"

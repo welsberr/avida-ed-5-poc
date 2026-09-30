@@ -78,6 +78,9 @@ void CheckArguments() {
   assert(spanish && spanish->text == "Actualización 17");
   assert(!spanish->pseudolocale);
   assert(Format("shell.sidepanel.run", Locale::SPANISH)->text == "Ejecución");
+  assert(Format("shell.view.organism", Locale::SPANISH)->text == "Organismo");
+  assert(Format("shell.view.analysis", Locale::SPANISH)->text == "Análisis");
+  assert(Format("shell.views.label", Locale::SPANISH)->text == "Vistas");
   assert(Format("experiment.preset.full", Locale::SPANISH)->text
     == "Mutación variable · cada actualización");
   assert(Format("experiment.preset.quick", Locale::SPANISH)->text

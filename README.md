@@ -39,6 +39,9 @@ Then open <http://127.0.0.1:18505/Avida.html>. The web build needs a server that
 - [Experiment guide](docs/experiment-guide.md) — what the controls and measurements mean.
 - [Researcher overview](docs/researcher-overview.md) — scope, design intent, and current limitations.
 - [Graph and color choices](docs/graphs-and-colors.md) — Plotly behavior, v4 palette provenance, and the Empirical integration seam.
+- [Avida-ED 4 to 5 interface map](docs/avida-ed4-consilience-map.md) — legacy control labels, options, constraints, and the current POC conformance review.
+- [Faithful port status](docs/port-status.html) — what currently carries across from Avida-ED 4, what differs, and what remains to port.
+- [Codex and the project tool stack](docs/codex-collaboration.html) — the roles of the tools, a dated work timeline, and a bounded estimate of human effort.
 - [Development notes](docs/development.md) — dependencies, reproducible builds, and checks.
 
 ## Acknowledgement

@@ -2644,8 +2644,8 @@ select:focus-visible {
   }
 }
 
-/* Avida-ED 5 keeps the Viewer Chooser, Freezer, and Lab Bench landmarks of
-   Avida-ED 3/4 so existing walkthroughs still map onto the new workspace. */
+/* Avida-ED 5 keeps the Freezer and Lab Bench landmarks of Avida-ED 3/4 so
+   existing walkthroughs still map onto the new workspace. */
 :root {
   color-scheme: light;
   font-family: Arial, Helvetica, sans-serif;
@@ -2792,15 +2792,6 @@ body {
   border: 1px solid #aab4c0;
   border-radius: 3px;
   background: #f7f9fb;
-}
-
-.education-app .viewer-chooser-heading {
-  margin: 0;
-  padding: 4px 7px 6px;
-  border-bottom: 1px solid #c3ccd6;
-  color: #334860;
-  font-size: 0.74rem;
-  font-weight: 700;
 }
 
 .education-app #mode_buttons .mode-button {
@@ -3308,10 +3299,6 @@ body {
 
   .education-app .legacy-sidebar {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .education-app .viewer-chooser-heading {
-    grid-column: 1;
   }
 
   .education-app #mode_buttons {

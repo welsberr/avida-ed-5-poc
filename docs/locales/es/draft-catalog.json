@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "cc9ac45893720696b169acf9ddd88cbf21d20a6b",
+    "source_revision": "59c8d0506f076128deae573a54f9f0c8d383bd57",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -23,7 +23,7 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "e2f7c3b1f442bc8d0ebf73a6c10c1141d920a3a557a3ed0d8763396128287cb7"
+        "sha256_current": "c2453e8c1999f7bab9f1ff9ff57a5bd16f5320e9ccdc1fbc7c4046b6dda4b605"
       },
       {
         "path": "source/web/EducationRecording.hpp",
@@ -65,11 +65,11 @@
       },
       {
         "path": "source/web/SpanishCatalog.hpp",
-        "sha256_current": "a403314705a3f413e5fd79a599b28951a69ccd386db8fc4053a729f054272681"
+        "sha256_current": "c0fb8f2582802854dbbd95d6540ea62508239f1d8f849ffd6c3d81c79b8f5bd4"
       },
       {
         "path": "source/web/LocalizationTests.cpp",
-        "sha256_current": "4902d6b1655ba13c138bcdec61c198a8147fca627bda3c10d81974aa36cb1f91"
+        "sha256_current": "c8b35a04b6da3d3b585bc9202ba76edbbf1fb20723ad76f495131476b37b8497"
       },
       {
         "path": "scripts/localize_es_catalog.py",
@@ -97,7 +97,7 @@
       },
       {
         "path": "web/Avida.css",
-        "sha256_current": "0c9f16a0dfb7820b9902640cfa5d9507699dec69d7d3439a932463dcaa9e86b7"
+        "sha256_current": "80961485408b96f3cb7a3ac202c1117fe92f3e18966d1f84c13a2d30f5288c94"
       },
       {
         "path": "source/web/FreezerPanel.hpp",
@@ -141,7 +141,7 @@
     "review_confidence": null,
     "translation_confidence": "machine-generated candidate; not a human language or scientific review",
     "glossary_version": "avida-ed-es-glossary-draft-2",
-    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 343-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
+    "coverage_note": "189 entries were translated locally; 7 glossary entries were preserved, and the 346-entry candidate covers current stable messages and inventoried Avida-ED controls. Codex-assisted wording suggestions remain pending competent review. A full visible-string inventory and qualified Spanish scientific-language review remain open.",
     "archive_contract": {
       "save_format": "avida-ed5-education-experiment",
       "save_schema_version": 1,
@@ -204,15 +204,15 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-30T04:20:47Z",
+    "updated_utc": "2026-09-30T09:21:46Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
-    "catalog_entry_count": 343,
+    "catalog_entry_count": 346,
     "model_translated_entry_count": 189,
     "glossary_preserved_entry_count": 7,
     "human_reviewed_entry_count": 0,
     "terminology_lineage": "Relevant general terms follow the TalkOrigins Spanish translation compendium; Avida-specific distinctions are explicit overrides.",
-    "assistant_edit_suggestion_count": 147
+    "assistant_edit_suggestion_count": 150
   },
   "messages": [
     {
@@ -284,6 +284,36 @@
       "placeholders": [],
       "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
       "source_contract_sha256": "38fa4a780208ecf978a716bfaf6d900164b1e7aac254713e465d3611c7cced8e"
+    },
+    {
+      "id": "shell.view.organism",
+      "source": "Organism",
+      "value": "Organismo",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology alignment with Avida-ED 4; pending competent human review",
+      "source_contract_sha256": "0c810390e14612302bb02702f1529b83b5a764b205b50baa238267c6a6fbd824"
+    },
+    {
+      "id": "shell.view.analysis",
+      "source": "Analysis",
+      "value": "Análisis",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology alignment with Avida-ED 4; pending competent human review",
+      "source_contract_sha256": "78c01e14bdbb82be751551d3a01b7b6cbddd212c626e16330ed4a6a10cc4a28a"
+    },
+    {
+      "id": "shell.views.label",
+      "source": "Views",
+      "value": "Vistas",
+      "source_state": "present",
+      "status": "draft_unreviewed",
+      "placeholders": [],
+      "translation_method": "Codex-assisted terminology alignment with Avida-ED 4; pending competent human review",
+      "source_contract_sha256": "a896e2ecff83c8491864d0268fd4e49e7fac25f99908ec3472a6d4bdfa40de11"
     },
     {
       "id": "shell.mode.population.accessible",
