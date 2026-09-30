@@ -40,6 +40,7 @@ Then open <http://127.0.0.1:18505/Avida.html>. The web build needs a server that
 - [Researcher overview](docs/researcher-overview.md) — scope, design intent, and current limitations.
 - [Graph and color choices](docs/graphs-and-colors.md) — Plotly behavior, v4 palette provenance, and the Empirical integration seam.
 - [Avida-ED 4 to 5 interface map](docs/avida-ed4-consilience-map.md) — legacy control labels, options, constraints, and the current POC conformance review.
+- [Roadmap and project progress](https://welsberr.github.io/avida-ed-5-poc/roadmap.html) — shared milestone status, acceptance criteria, and evidence. [How to record progress](docs/roadmap/README.md).
 - [Learning and porting roadmap](docs/porting-learning-roadmap.md) — October 23 demo scope, knowledge-graph safeguards, and the path to a functional educational release.
 - [Faithful port status](docs/port-status.html) — what currently carries across from Avida-ED 4, what differs, and what remains to port.
 - [Codex and the project tool stack](docs/codex-collaboration.html) — the roles of the tools, a dated work timeline, and a bounded estimate of human effort.

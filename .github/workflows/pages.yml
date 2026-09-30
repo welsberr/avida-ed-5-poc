@@ -35,17 +35,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python3 scripts/render_roadmap.py
+          python3 scripts/render_roadmap.py --check
           docker build --platform linux/amd64 --target web-build -t avida-ed-5-pages .
           mkdir -p _site/app
           container_id="$(docker create avida-ed-5-pages)"
           trap 'docker rm -f "$container_id" >/dev/null 2>&1 || true' EXIT
           docker cp "$container_id:/src/Avida/web/." _site/app/
           cp index.html .nojekyll _site/
-          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/site-report.css _site/
+          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/roadmap.html docs/site-report.css _site/
           test -s _site/index.html
           test -s _site/port-status.html
           test -s _site/codex-collaboration.html
           test -s _site/porting-learning-roadmap.html
+          test -s _site/roadmap.html
           test -s _site/site-report.css
           test -s _site/app/Avida.js
           test -s _site/app/Avida.wasm

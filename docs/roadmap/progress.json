@@ -1,0 +1,377 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-30T11:21:07Z",
+  "steward": "Wesley R. Elsberry",
+  "demo_date": "2026-10-23",
+  "milestones": [
+    {
+      "id": "plan",
+      "title": "Published roadmap",
+      "phase": "Foundation",
+      "start": "2026-09-30",
+      "target": "2026-09-30",
+      "status": "complete",
+      "owner": "Wesley R. Elsberry",
+      "dependencies": [],
+      "criteria": [
+        {
+          "text": "Reassessment and staged roadmap published",
+          "met": true
+        },
+        {
+          "text": "Demo scope and longer-term acceptance gates documented",
+          "met": true
+        }
+      ],
+      "next_action": "Review task contracts and assign implementation owners.",
+      "blockers": [],
+      "evidence": [
+        {
+          "label": "Published reassessment and roadmap, commit 6796c71",
+          "url": "https://github.com/welsberr/avida-ed-5-poc/commit/6796c710759542df43395864b217d4017cfa7cb9"
+        }
+      ]
+    },
+    {
+      "id": "demo-contracts",
+      "title": "Task contracts and baseline",
+      "phase": "October 23 demo",
+      "start": "2026-09-30",
+      "target": "2026-10-03",
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "plan"
+      ],
+      "criteria": [
+        {
+          "text": "Three workflows linked to versioned tutorial segments",
+          "met": false
+        },
+        {
+          "text": "Approximately 15–25 requirements have observable expected results",
+          "met": false
+        },
+        {
+          "text": "Scientific definitions and baseline evidence reviewed",
+          "met": false
+        }
+      ],
+      "next_action": "Audit configure/run/inspect, save/reopen/transfer, and compare/explain.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "demo-analysis",
+      "title": "Executable analysis and durable handoff",
+      "phase": "October 23 demo",
+      "start": "2026-10-04",
+      "target": "2026-10-09",
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "demo-contracts"
+      ],
+      "criteria": [
+        {
+          "text": "Typed records and five traceability queries produce reproducible findings",
+          "met": false
+        },
+        {
+          "text": "Didactopus pack validates before graph QA; invalid and stale inputs tested",
+          "met": false
+        },
+        {
+          "text": "GroundRecall handoff retrieved in a fresh context and checked against Git",
+          "met": false
+        }
+      ],
+      "next_action": "Implement the smallest useful graph adapter and report.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "demo-workflow",
+      "title": "Complete demonstration workflow",
+      "phase": "October 23 demo",
+      "start": "2026-10-10",
+      "target": "2026-10-15",
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "demo-analysis"
+      ],
+      "criteria": [
+        {
+          "text": "Configure, run, inspect, save, reopen, and compare work from a clean session",
+          "met": false
+        },
+        {
+          "text": "Preset controls, update target, records, and plots pass focused checks",
+          "met": false
+        },
+        {
+          "text": "English and Spanish visual checks recorded; review limitations explicit",
+          "met": false
+        }
+      ],
+      "next_action": "Repair the highest-impact demonstrated gap; freeze feature scope October 15.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "demo-verify",
+      "title": "Verification and rehearsal",
+      "phase": "October 23 demo",
+      "start": "2026-10-16",
+      "target": "2026-10-19",
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "demo-workflow"
+      ],
+      "criteria": [
+        {
+          "text": "Presentation laptop and second browser workflow checks recorded",
+          "met": false
+        },
+        {
+          "text": "Desktop, narrow layout, keyboard, localization, and error recovery reviewed",
+          "met": false
+        },
+        {
+          "text": "Two timed rehearsals and known-limitations record completed",
+          "met": false
+        }
+      ],
+      "next_action": "Collect build-specific test and review evidence.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "demo-release",
+      "title": "Candidate freeze and BEACON demonstration",
+      "phase": "October 23 demo",
+      "start": "2026-10-20",
+      "target": "2026-10-23",
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "demo-verify"
+      ],
+      "criteria": [
+        {
+          "text": "Candidate tagged with source revisions, image digest, and exports",
+          "met": false
+        },
+        {
+          "text": "Pages and local server checked; cached data and labeled recording ready",
+          "met": false
+        },
+        {
+          "text": "October 23 demonstration delivered and follow-up observations recorded",
+          "met": false
+        }
+      ],
+      "next_action": "Freeze October 20; rehearse October 21–22; demonstrate October 23.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "release-contracts",
+      "title": "Release scope and scientific contracts",
+      "phase": "Functional Avida-ED 5",
+      "start": null,
+      "target": null,
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "demo-contracts"
+      ],
+      "criteria": [
+        {
+          "text": "Supported curriculum and tutorial task inventory reviewed with instructors",
+          "met": false
+        },
+        {
+          "text": "Metrics, engine profiles, and reproducibility boundaries agreed",
+          "met": false
+        },
+        {
+          "text": "Preserved, redesigned, deferred, and unsupported requirements recorded",
+          "met": false
+        }
+      ],
+      "next_action": "Expand scope after the demo; review may begin earlier without displacing it.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "release-population",
+      "title": "Population, Freezer, and persistence",
+      "phase": "Functional Avida-ED 5",
+      "start": null,
+      "target": null,
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "release-contracts",
+        "demo-workflow"
+      ],
+      "criteria": [
+        {
+          "text": "Supported population settings, controls, measurements, and colors verified",
+          "met": false
+        },
+        {
+          "text": "Tutorial-relevant transfers and keyboard alternatives work",
+          "met": false
+        },
+        {
+          "text": "Versioned artifact, result, and checkpoint round trips preserve metadata",
+          "met": false
+        }
+      ],
+      "next_action": "Complete the population and data foundation before full Analysis.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "release-views",
+      "title": "Organism and Analysis continuity",
+      "phase": "Functional Avida-ED 5",
+      "start": null,
+      "target": null,
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "release-population"
+      ],
+      "criteria": [
+        {
+          "text": "Organism execution and isolated evaluation meet reviewed contracts",
+          "met": false
+        },
+        {
+          "text": "Up to three populated dishes and supported axes, colors, and exports work in Analysis",
+          "met": false
+        },
+        {
+          "text": "Selected tutorial walkthroughs pass with explicit exceptions",
+          "met": false
+        }
+      ],
+      "next_action": "Restore supported legacy workflows while retaining the separate lesson comparison.",
+      "blockers": [],
+      "evidence": []
+    },
+    {
+      "id": "release-pilot",
+      "title": "Curriculum, access, localization, and pilot",
+      "phase": "Functional Avida-ED 5",
+      "start": null,
+      "target": null,
+      "status": "planned",
+      "owner": "Unassigned",
+      "dependencies": [
+        "release-views"
+      ],
+      "criteria": [
+        {
+          "text": "Supported activities, prompts, rubrics, and contextual help reviewed",
+          "met": false
+        },
+        {
+          "text": "Spanish, accessibility, and browser/device acceptance completed",
+          "met": false
+        },
+        {
+          "text": "Classroom pilot resolves critical defects; maintainers record release decision",
+          "met": false
+        }
+      ],
+      "next_action": "Pilot complete supported activities; distinguish usability evidence from learning claims.",
+      "blockers": [],
+      "evidence": []
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-09-30",
+      "milestone": "plan",
+      "status": "complete",
+      "author": "OpenAI Codex",
+      "summary": "Recorded published planning deliverable; implementation acceptance remains separate."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-contracts",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-analysis",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-workflow",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-verify",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "demo-release",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "release-contracts",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "release-population",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "release-views",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "release-pilot",
+      "status": "planned",
+      "author": "OpenAI Codex",
+      "summary": "Initialized from the published roadmap; no completion evidence recorded yet."
+    },
+    {
+      "date": "2026-09-30",
+      "milestone": "plan",
+      "status": "complete",
+      "author": "OpenAI Codex",
+      "summary": "Added the shared progress tracker, acceptance criteria, evidence links, dated history, and validated static-page generation. Desktop/mobile rendering and anchor navigation checked. Implementation milestone acceptance remains pending."
+    }
+  ]
+}
