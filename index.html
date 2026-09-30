@@ -29,11 +29,15 @@
     a { color: #075b86; }
     .note { color: #435565; font-size: .94rem; }
     ul { padding-left: 1.2rem; line-height: 1.7; }
+    .architecture { margin-top: 1.25rem; }
+    .architecture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1.5rem; }
+    .architecture-grid li { padding-left: .15rem; }
     footer { padding: 1.25rem; border-top: 1px solid #d8e0e6; color: #435565; font-size: .9rem; }
     @media (max-width: 760px) {
       header { padding: 2.5rem 1rem 3rem; }
       main { padding: 1rem 1rem 2.5rem; }
       .content { grid-template-columns: 1fr; }
+      .architecture-grid { grid-template-columns: 1fr; }
       section, aside { padding: 1.2rem; }
     }
   </style>
@@ -68,6 +72,18 @@
         </ul>
       </aside>
     </div>
+    <section class="architecture" aria-labelledby="architecture-heading">
+      <h2 id="architecture-heading">Architecture at a Glance</h2>
+      <p>The prototype connects an Avida 5 simulation to a browser-based Avida-ED workspace, with each part responsible for a distinct job:</p>
+      <ul class="architecture-grid">
+        <li><strong>Avida 5</strong> runs digital organisms, instruction execution, and experiment settings.</li>
+        <li><strong>Empirical and Emscripten</strong> provide the C++ browser interface and its bridge to the simulation.</li>
+        <li><strong>Plotly.js</strong> draws live measurements; the app records the data and a small JavaScript adapter updates the graphs.</li>
+        <li><strong>The browser Freezer</strong> keeps saved items locally, with export and import files for moving them between browsers.</li>
+        <li><strong>Localization</strong> is built into the interface, with English and a Spanish development-preview catalog.</li>
+      </ul>
+      <p class="note">The prototype is still under development; the Spanish catalog needs language and scientific terminology review. See the <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/researcher-overview.md">researcher overview</a> for implementation details and current limits.</p>
+    </section>
   </main>
   <footer>
     <div class="wrap">Avida-ED 5 proof of concept · Michigan State University and Avida-ED are not implied to endorse this independent prototype.</div>
