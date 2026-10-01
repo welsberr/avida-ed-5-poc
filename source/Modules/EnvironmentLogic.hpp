@@ -233,15 +233,14 @@ public:
 
   void OnConfigWrite(std::ostream & os) {
     std::print(os,
-      "Reaction ECHO     metabolic_mult mult 2.0 1\n"
       "Reaction NOT      metabolic_mult mult 2.0 1\n"
       "Reaction NAND     metabolic_mult mult 2.0 1\n"
-      "Reaction AND      metabolic_mult mult 2.0 1\n"
-      "Reaction OR_NOT   metabolic_mult mult 2.0 1\n"
-      "Reaction OR       metabolic_mult mult 2.0 1\n"
-      "Reaction AND_NOT  metabolic_mult mult 2.0 1\n"
-      "Reaction NOR      metabolic_mult mult 2.0 1\n"
-      "Reaction XOR      metabolic_mult mult 2.0 1\n"
-      "Reaction EQU      metabolic_mult mult 2.0 1\n");
+      "Reaction AND      metabolic_mult mult 4.0 1\n"
+      "Reaction OR_NOT   metabolic_mult mult 4.0 1\n"
+      "Reaction OR       metabolic_mult mult 8.0 1\n"
+      "Reaction AND_NOT  metabolic_mult mult 8.0 1\n"
+      "Reaction NOR      metabolic_mult mult 16.0 1\n"
+      "Reaction XOR      metabolic_mult mult 16.0 1\n"
+      "Reaction EQU      metabolic_mult mult 32.0 1\n");
   }
 };

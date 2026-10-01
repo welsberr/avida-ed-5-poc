@@ -11,7 +11,7 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "59c8d0506f076128deae573a54f9f0c8d383bd57",
+    "source_revision": "d893ecc724d3ede547ef2fc91f717e73f0933d35",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
@@ -23,7 +23,7 @@
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "c2453e8c1999f7bab9f1ff9ff57a5bd16f5320e9ccdc1fbc7c4046b6dda4b605"
+        "sha256_current": "11723b535d05ab63d298ff287f0755e404b6c24406e1bafc2a926b74e04bbeae"
       },
       {
         "path": "source/web/EducationRecording.hpp",
@@ -65,7 +65,7 @@
       },
       {
         "path": "source/web/SpanishCatalog.hpp",
-        "sha256_current": "c0fb8f2582802854dbbd95d6540ea62508239f1d8f849ffd6c3d81c79b8f5bd4"
+        "sha256_current": "cc9aa8e8d44fb7b0e297f75764fc4c16ab416d81de2edd32e7375f29bd89246f"
       },
       {
         "path": "source/web/LocalizationTests.cpp",
@@ -97,7 +97,7 @@
       },
       {
         "path": "web/Avida.css",
-        "sha256_current": "80961485408b96f3cb7a3ac202c1117fe92f3e18966d1f84c13a2d30f5288c94"
+        "sha256_current": "8d9279de60ccc81f318449f0f2346990e4aeeb71f210a1ee8f6938349b0c171f"
       },
       {
         "path": "source/web/FreezerPanel.hpp",
@@ -204,7 +204,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-09-30T09:21:46Z",
+    "updated_utc": "2026-10-01T09:35:36Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 346,
@@ -705,13 +705,13 @@
     },
     {
       "id": "lesson.fixed_conditions",
-      "source": "The bundled ancestor, CPU and instruction set, grid, and ten logic-task rewards stay fixed. This is selection-active evolution, not neutral evolution.",
-      "value": "El ancestro incluido, el conjunto de instrucciones, la cuadrícula y las diez recompensas de tareas lógicas permanecen fijos. Esta es evolución activa por selección, no evolución neutral.",
+      "source": "The bundled ancestor, CPU and instruction set, grid, and nine Avida-ED 4-aligned logic-task reward strengths stay fixed. The POC applies them through metabolic multipliers. This is selection-active evolution, not neutral evolution.",
+      "value": "El ancestro incluido, el conjunto de instrucciones, la cuadrícula y las nueve intensidades de recompensa de tareas lógicas, alineadas con Avida-ED 4, permanecen fijos. El prototipo las aplica mediante multiplicadores metabólicos. Esta es evolución activa por selección, no evolución neutral.",
       "source_state": "present",
       "status": "draft_unreviewed",
       "placeholders": [],
       "translation_method": "local Qwen3.5-9B; TalkOrigins glossary/protection workflow",
-      "source_contract_sha256": "35e6d4043a95bf07910da18f1638c6a1a5bebac4880f5993447e4808cf37cf0d"
+      "source_contract_sha256": "ee7ea9f68b345bdf2bfb1b4b95d2fccba089a970ec1433d935082c1fb8ed17b2"
     },
     {
       "id": "lesson.richness_limit",

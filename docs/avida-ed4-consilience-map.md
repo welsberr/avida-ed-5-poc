@@ -50,6 +50,10 @@ The labels and option lists below come from the v4 app source. Limits and defaul
 
 The embedded Environment/Test Setup editor has a broader configuration surface than this compact crosswalk: it can define task rewards and spatial resources. Use the app’s `helpEnvironment.html` and a named tutorial fixture when comparing those advanced controls; do not infer all of their valid ranges from the short table above.
 
+## Default task-reward profile
+
+The checked-in Avida-ED 4 default workspace at the pinned revision stores its environment in `default.avidaWs.zip` at `default.avidaWs_production/c0/environment.cfg`. It rewards nine tasks: **NOT 2×, NAND 2×, AND 4×, ORN 4×, OR 8×, ANDN 8×, NOR 16×, XOR 16×, and EQU 32×**. There is no ECHO reaction in that default. In the POC, ORN and ANDN map to the corresponding `OR_NOT` and `AND_NOT` tasks, and these same numerical strengths are applied through `metabolic_mult`. This aligns the configured factors, while preserving the distinction between Avida-ED 4's energy-reward mechanism and the POC's metabolic-rate mechanism.
+
 ## Avida-ED 5 POC functional-control map
 
 Only controls with an implemented action or data path are listed. Disabled placeholders and decorative labels are excluded. Source paths point into this repository.
@@ -62,7 +66,7 @@ Only controls with an implemented action or data path are listed. Disabled place
 | Population · experiment | Mutation treatment | 0% mutation / 1% mutation. | Two controlled alternatives, versus v4’s numeric 0–100% range. The displayed per-site percentage is read-only and follows the selected treatment. |
 | Population · experiment | Random seed | 42, 43, or 44; default 42. Step 1; the callback rejects values outside these three seeds. | New reproducibility scaffold. This is narrower than arbitrary v4 run variation by design. |
 | Population · experiment | Stop at update | Positive integer, 1–10,000; default 250 for the full preset and 100 for Quick Check. | POC run-length control. It does not correspond to v4’s dish-size or environment controls. |
-| Population · surface | Population grid | Fixed 10 × 10 grid; fixed bundled ancestor and environment. | Same spatial population task, but the grid, ancestor, CPU/instruction set, and ten task rewards are held constant in this lesson. |
+| Population · surface | Population grid | Fixed 10 × 10 grid; fixed bundled ancestor and environment. | Same spatial population task, but the grid, ancestor, CPU/instruction set, and nine Avida-ED 4-aligned task reward strengths are held constant in this lesson. The POC applies these strengths as metabolic multipliers, not the v4 energy-reward mechanism. |
 | Population · transport | Reset / Step / Play / Fast-forward / Pause / Run to target | Step is one population update; Play runs up to 10 updates/s; Fast-forward batches updates; Run to target stops at the configured update. Controls lock according to run state. | Similar transport roles; labels, layout, and batch behavior differ from v4’s Run/Pause/Forward/New row. |
 | Population · display | Color by | Blank; module-provided categorical modes (Phenotype, Genotype); continuous modes (Gestation Cost, Metabolic Rate, Fitness). Continuous palettes: Gnuplot 2, Viridis, Cubehelix. | Fitness/cost/rate map to familiar concepts. v4’s task-resource and ancestor choices are not all present as equivalent display modes. |
 | Population · evidence | Population, Sequence Richness, Ancestor Sequence (%) charts and observation table | Sample cadence follows the selected preset. Sequence richness is distinct ordered sequences present at that update; ancestor sequence is exact sequence identity. | New explicit lesson evidence set. v4’s population statistics and graph series are broader and use different terminology. |

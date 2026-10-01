@@ -170,6 +170,7 @@ EDUCATION_TESTS := $(addprefix $(BUILD_DIR)/test_,education_experiment education
 
 test-education: $(EDUCATION_TESTS)
 	@set -e; for test in $^; do $$test; done
+	python3 tests/environment_defaults_test.py
 
 $(BUILD_DIR)/test_%: tests/%_test.cpp Makefile $(KEY_HEADERS) $(EMP_HEADERS) | $(BUILD_DIR)
 	$(CXX) $(FLAGS_DEBUG) -O1 -fno-exceptions $< -o $@

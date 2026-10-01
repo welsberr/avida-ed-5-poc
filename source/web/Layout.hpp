@@ -430,7 +430,7 @@ void AvidaWebApp::BuildInterface() {
     )),
     "</p><p class='lesson-note'>",
     emp::MakeWebSafe(PresentationText(
-      "The bundled ancestor, CPU and instruction set, grid, and ten logic-task rewards stay fixed. This is selection-active evolution, not neutral evolution."
+      "The bundled ancestor, CPU and instruction set, grid, and nine Avida-ED 4-aligned logic-task reward strengths stay fixed. The POC applies them through metabolic multipliers. This is selection-active evolution, not neutral evolution."
     )),
     "</p><p class='lesson-note'>",
     emp::MakeWebSafe(PresentationText(

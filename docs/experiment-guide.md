@@ -4,7 +4,7 @@
 
 Avida represents living systems with digital organisms: short instruction sequences that run on a virtual computer. In this prototype, organisms occupy cells in a 10 by 10 world, use a shared instruction set, and reproduce. Mutation can change an instruction when an offspring is made. The organisms also compete under the configured resource and task rules.
 
-The lesson changes one setting: the probability of a substitution mutation. It compares 0% and 1%. The packaged experiment keeps the ancestor, computer, instruction set, world, task rewards, and other configuration fixed. This makes the comparison easier to follow, while still leaving the usual stochastic variation between runs.
+The lesson changes one setting: the probability of a substitution mutation. It compares 0% and 1%. The packaged experiment keeps the ancestor, computer, instruction set, world, task rewards, and other configuration fixed. Its nine rewarded logic tasks and reward-strength tiers match the Avida-ED 4 default workspace; the POC applies those factors to metabolic rate rather than using v4's energy-reward mechanism. This makes the comparison easier to follow, while still leaving the usual stochastic variation between runs.
 
 ## A suggested first run
 
