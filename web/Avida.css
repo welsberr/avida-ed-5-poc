@@ -3388,3 +3388,40 @@ body {
     max-height: 260px;
   }
 }
+
+/* The dish is a square inside the grid row allocated to the population panel.
+   Size containment lets its height, not the canvas bitmap, bound the square. */
+.education-app .population-card {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.education-app .transport {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.education-app .transport-buttons {
+  min-width: max-content;
+}
+
+.education-app .canvas-frame {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: auto;
+  container-type: size;
+}
+
+.education-app .population-grid-surface {
+  width: min(100%, 100cqh);
+  height: auto;
+  aspect-ratio: 1;
+}
+
+/* Stacked layouts have no height-constrained workspace row. */
+@media (max-width: 760px) {
+  .education-app .canvas-frame {
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
