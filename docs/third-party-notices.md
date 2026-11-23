@@ -12,7 +12,7 @@ The web interface uses [Empirical](https://github.com/devosoft/Empirical), inclu
 
 `web/vendor/plotly-1.53.0.min.js` is Plotly.js v1.53.0, Copyright 2012–2020 Plotly, Inc., distributed under the MIT license. The upstream license header is retained in the file.
 
-`web/vendor/plotly-locale-es-1.53.0.js` is Plotly.js's Spanish locale bundle for v1.53.0 and is distributed under the same MIT license.
+The `web/vendor/plotly-locale-*-1.53.0.js` files are Plotly.js's Spanish, French, German, and Brazilian Portuguese locale bundles for v1.53.0 and are distributed under the same MIT license.
 
 ## coi-serviceworker
 

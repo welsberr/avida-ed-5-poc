@@ -10,7 +10,7 @@ An early, working web prototype for exploring Avida 5 through an educational int
 - Repeat runs with seeds 42, 43, and 44, then compare the results.
 - Watch population size, distinct genome sequences, and the original ancestor’s share change in live Plotly graphs. Hover for values, zoom and reset the view, and save a graph as a PNG.
 - Inspect organisms and their instruction sequences, place and save organisms, and save configurations or checkpoints in the browser’s Freezer.
-- Switch between English and a Spanish preview. The Spanish catalog is still a draft and needs qualified language review.
+- Switch among English and draft Spanish, French, German, and Portuguese previews. The translated catalogs need qualified language and scientific terminology review.
 
 The included lesson asks: **How does the mutation setting affect genetic variation?** Mutation can introduce differences; selection and the rest of the environment also shape which organisms remain. The graphs show observations from individual runs. They do not, by themselves, establish a general result.
 

@@ -1,0 +1,1756 @@
+{
+  "metadata": {
+    "language": "Brazilian Portuguese",
+    "locale": "pt",
+    "status": "machine_translated_pending_human_review",
+    "reviewed": false,
+    "model": "qwen3:30b",
+    "compendium_sha256": "7bf5a492f42e2faf25b2bc0b2d9d08ad66ee55854f8efde8ad5357ad4e287227",
+    "avida_glossary": {
+      "simulation run": "execução de simulação",
+      "random seed": "semente aleatória",
+      "update (simulation step)": "atualização",
+      "freezer (storage)": "congelador",
+      "sequence richness": "riqueza de sequências",
+      "ancestor sequence": "sequência ancestral",
+      "fitness (biology)": "aptidão"
+    },
+    "terminology_source": "TalkOrigins translation compendium",
+    "updated_utc": "2026-11-23T17:14:06.984476+00:00",
+    "note": "Local model draft; scientific terminology and visible layout require human review."
+  },
+  "messages": [
+    {
+      "id": "shell.app_title",
+      "source": "Avida-ED",
+      "value": "Avida-ED"
+    },
+    {
+      "id": "shell.lesson_title",
+      "source": "Mutation and genetic variation",
+      "value": "Mutação e variação genética"
+    },
+    {
+      "id": "shell.preview_label",
+      "source": "Avida 5 education preview",
+      "value": "Pré-visualização da educação Avida 5"
+    },
+    {
+      "id": "shell.language.label",
+      "source": "Language",
+      "value": "Idioma"
+    },
+    {
+      "id": "shell.mode.population",
+      "source": "Population",
+      "value": "População"
+    },
+    {
+      "id": "shell.mode.sequences",
+      "source": "Sequences",
+      "value": "Sequências"
+    },
+    {
+      "id": "shell.mode.compare",
+      "source": "Compare runs",
+      "value": "Comparar execuções"
+    },
+    {
+      "id": "shell.view.organism",
+      "source": "Organism",
+      "value": "Organismo"
+    },
+    {
+      "id": "shell.view.analysis",
+      "source": "Analysis",
+      "value": "Análise"
+    },
+    {
+      "id": "shell.views.label",
+      "source": "Views",
+      "value": "Visões"
+    },
+    {
+      "id": "shell.mode.population.accessible",
+      "source": "Population Mode",
+      "value": "Modo População"
+    },
+    {
+      "id": "shell.mode.organism.accessible",
+      "source": "Organism Mode",
+      "value": "Modo Organismo"
+    },
+    {
+      "id": "shell.mode.compare.accessible",
+      "source": "Compare saved runs",
+      "value": "Comparar execuções salvas"
+    },
+    {
+      "id": "shell.mode.compare.disabled_help",
+      "source": "Complete two runs to compare them.",
+      "value": "Complete duas execuções para compará-las."
+    },
+    {
+      "id": "shell.mode.compare.help",
+      "source": "Compare the completed runs.",
+      "value": "Compare as execuções concluídas."
+    },
+    {
+      "id": "shell.sidepanel.run",
+      "source": "Run",
+      "value": "Execução"
+    },
+    {
+      "id": "shell.sidepanel.cell",
+      "source": "Cell",
+      "value": "Célula"
+    },
+    {
+      "id": "shell.sidepanel.saved_organisms",
+      "source": "Freezer",
+      "value": "Congelador"
+    },
+    {
+      "id": "shell.sidepanel.setup",
+      "source": "Setup",
+      "value": "Configuração"
+    },
+    {
+      "id": "shell.sidepanel.population_stats.accessible",
+      "source": "Population Statistics",
+      "value": "Estatísticas da População"
+    },
+    {
+      "id": "shell.sidepanel.organism_stats.accessible",
+      "source": "Organism Statistics",
+      "value": "Estatísticas do Organismo"
+    },
+    {
+      "id": "shell.sidepanel.freezer.accessible",
+      "source": "Freezer",
+      "value": "Congelador"
+    },
+    {
+      "id": "shell.sidepanel.setup.help",
+      "source": "The lesson holds other settings fixed; see Experiment setup for the controlled values.",
+      "value": "A lição mantém outros ajustes fixos; consulte Configuração do Experimento para os valores controlados."
+    },
+    {
+      "id": "shell.grid.accessible",
+      "source": "Spatial grid population",
+      "value": "População de grade espacial"
+    },
+    {
+      "id": "shell.grid.placement_help",
+      "source": "Drag organisms between the grid and freezer. Right-click an occupied cell for actions.",
+      "value": "Arraste organismos entre a grade e o congelador. Clique com o botão direito em uma célula ocupada para ações."
+    },
+    {
+      "id": "shell.run",
+      "source": "Run",
+      "value": "Executar"
+    },
+    {
+      "id": "shell.status.update",
+      "source": "Update {update}",
+      "value": "Atualização {update}"
+    },
+    {
+      "id": "shell.status.paused",
+      "source": "Paused at update {update}",
+      "value": "Pausado na atualização {update}"
+    },
+    {
+      "id": "shell.pause",
+      "source": "Pause",
+      "value": "Pausar"
+    },
+    {
+      "id": "shell.step",
+      "source": "Step",
+      "value": "Passo"
+    },
+    {
+      "id": "shell.reset",
+      "source": "Start a new run",
+      "value": "Iniciar uma nova execução"
+    },
+    {
+      "id": "shell.step.accessible",
+      "source": "Advance one population update",
+      "value": "Avançar uma atualização da população"
+    },
+    {
+      "id": "shell.play.accessible",
+      "source": "Play at up to ten updates per second",
+      "value": "Reproduzir a até dez atualizações por segundo"
+    },
+    {
+      "id": "shell.pause.accessible",
+      "source": "Pause evolution",
+      "value": "Pausar a evolução"
+    },
+    {
+      "id": "shell.fast_forward",
+      "source": "Fast-forward",
+      "value": "Avanço rápido"
+    },
+    {
+      "id": "shell.restart.help",
+      "source": "Start a new run; keep recorded results on the run shelf.",
+      "value": "Iniciar uma nova execução; manter resultados registrados na prateleira de execuções."
+    },
+    {
+      "id": "shell.organism_actions",
+      "source": "Organism actions",
+      "value": "Ações do Organismo"
+    },
+    {
+      "id": "shell.save_organism",
+      "source": "Save Organism",
+      "value": "Salvar Organismo"
+    },
+    {
+      "id": "shell.remove_organism",
+      "source": "Remove Organism",
+      "value": "Remover Organismo"
+    },
+    {
+      "id": "shell.staged_organisms.one",
+      "source": "{count} organism staged",
+      "value": "{count} organismo aguardando"
+    },
+    {
+      "id": "shell.staged_organisms.other",
+      "source": "{count} organisms staged",
+      "value": "{count} organismos em estágio"
+    },
+    {
+      "id": "shell.locale.pseudo_expanded",
+      "source": "Pseudo: expanded strings",
+      "value": "Pseudo: strings expandidas"
+    },
+    {
+      "id": "shell.locale.pseudo_rtl",
+      "source": "Pseudo: right-to-left layout",
+      "value": "Pseudo: layout da direita para a esquerda"
+    },
+    {
+      "id": "lessons.mutation_variation.title",
+      "source": "Mutation and genetic variation",
+      "value": "Mutação e variação genética"
+    },
+    {
+      "id": "lessons.mutation_variation.question",
+      "source": "How does the mutation setting affect genetic variation over time?",
+      "value": "Como a configuração de mutação afeta a variação genética ao longo do tempo?"
+    },
+    {
+      "id": "lessons.mutation_variation.richness",
+      "source": "Sequence richness is the number of distinct genome sequences present.",
+      "value": "Riqueza de sequências é o número de sequências genômicas distintas presentes."
+    },
+    {
+      "id": "lessons.mutation_variation.interpretation",
+      "source": "Compare runs as observations; one run does not establish a general outcome.",
+      "value": "Compare execuções como observações; uma única execução não estabelece um resultado geral."
+    },
+    {
+      "id": "lesson.procedure",
+      "source": "Run the same 10 × 10 world with three fixed seeds. Compare observations; a single run is not a general result.",
+      "value": "Execute o mesmo mundo 10 × 10 com três sementes fixas. Compare observações; uma única execução não é um resultado geral."
+    },
+    {
+      "id": "lesson.fixed_conditions",
+      "source": "The bundled ancestor, CPU and instruction set, grid, and nine Avida-ED 4-aligned logic-task reward strengths stay fixed. The POC applies them through metabolic multipliers. This is selection-active evolution, not neutral evolution.",
+      "value": "A sequência ancestral, CPU e conjunto de instruções, grade e nove forças de recompensa de tarefas lógicas alinhadas com Avida-ED 4 permanecem fixas. O POC as aplica através de multiplicadores metabólicos. Isso é evolução ativa por seleção, não evolução neutra."
+    },
+    {
+      "id": "lesson.richness_limit",
+      "source": "Sequence richness counts distinct ordered sequences present now. It is not a mutation count or every sequence ever seen. More sequences do not establish greater fitness or adaptation. Treat each run as an observation, not a universal outcome.",
+      "value": "Riqueza de sequências conta sequências ordenadas distintas presentes agora. Não é uma contagem de mutações ou todas as sequências vistas anteriormente. Mais sequências não estabelecem maior aptidão ou adaptação. Trate cada execução como uma observação, não como um resultado universal."
+    },
+    {
+      "id": "lessons.mutation_variation.prediction",
+      "source": "Record your prediction",
+      "value": "Registre sua previsão"
+    },
+    {
+      "id": "lesson.prediction.new_sequences",
+      "source": "Will new sequences appear at 0% mutation? At 1% mutation?",
+      "value": "Novas sequências aparecerão a 0% de mutação? A 1% de mutação?"
+    },
+    {
+      "id": "lesson.prediction.richness",
+      "source": "Must sequence richness rise at every update?",
+      "value": "A riqueza de sequências deve aumentar em cada atualização?"
+    },
+    {
+      "id": "lesson.prediction.seeds",
+      "source": "Will runs that start with the same seed follow the same path?",
+      "value": "Execuções que começam com a mesma semente seguirão o mesmo caminho?"
+    },
+    {
+      "id": "lesson.learning_record.heading",
+      "source": "Learning record",
+      "value": "Registro de aprendizado"
+    },
+    {
+      "id": "lesson.learning_record.help",
+      "source": "Write a prediction before running, then record what you observed. These notes travel with the saved experiment.",
+      "value": "Escreva uma previsão antes de executar, depois registre o que observou. Essas notas viajam com a experiência salva."
+    },
+    {
+      "id": "lesson.prediction.label",
+      "source": "Prediction",
+      "value": "Previsão"
+    },
+    {
+      "id": "lesson.prediction.accessible",
+      "source": "Prediction before running",
+      "value": "Previsão antes da execução"
+    },
+    {
+      "id": "lesson.prediction.placeholder",
+      "source": "What do you expect to happen?",
+      "value": "O que você espera que aconteça?"
+    },
+    {
+      "id": "lesson.observations.label",
+      "source": "Observations",
+      "value": "Observações"
+    },
+    {
+      "id": "lesson.observations.accessible",
+      "source": "Observation after running",
+      "value": "Observação após a execução"
+    },
+    {
+      "id": "lesson.observations.placeholder",
+      "source": "What did the recorded runs show?",
+      "value": "O que as execuções registradas mostraram?"
+    },
+    {
+      "id": "experiment.setup.heading",
+      "source": "Experiment setup",
+      "value": "Configuração do experimento"
+    },
+    {
+      "id": "experiment.preset.label",
+      "source": "Experiment preset",
+      "value": "Predefinição do experimento"
+    },
+    {
+      "id": "experiment.preset.full",
+      "source": "Mutation variation · every update",
+      "value": "Variação de mutação · a cada atualização"
+    },
+    {
+      "id": "experiment.preset.quick",
+      "source": "Quick check · every 10 updates",
+      "value": "Verificação rápida · a cada 10 atualizações"
+    },
+    {
+      "id": "experiment.treatment.label",
+      "source": "Mutation treatment",
+      "value": "Tratamento de mutação"
+    },
+    {
+      "id": "experiment.preset.zero_mutation",
+      "source": "0% mutation",
+      "value": "0% de mutação"
+    },
+    {
+      "id": "experiment.preset.one_percent",
+      "source": "1% mutation",
+      "value": "1% de mutação"
+    },
+    {
+      "id": "experiment.mutation.setting",
+      "source": "Per-site mutation setting ({percent}%)",
+      "value": "Configuração de mutação por local ({percent}%)"
+    },
+    {
+      "id": "experiment.mutation.help",
+      "source": "At reproduction, each copied genome site has the stated chance of being selected for instruction randomization. The replacement instruction can match the instruction that was already there.",
+      "value": "Na reprodução, cada local da sequência genômica copiada tem a chance declarada de ser selecionado para randomização de instrução. A instrução de substituição pode coincidir com a instrução que já estava lá."
+    },
+    {
+      "id": "experiment.mutation.help.short",
+      "source": "The setting is the chance of mutation at each copied genome site.",
+      "value": "A configuração é a chance de mutação em cada local da sequência genômica copiada."
+    },
+    {
+      "id": "experiment.seed.label",
+      "source": "Random seed",
+      "value": "Semente aleatória"
+    },
+    {
+      "id": "experiment.target.label",
+      "source": "Stop at update",
+      "value": "Parar na atualização"
+    },
+    {
+      "id": "experiment.run_to_target",
+      "source": "Run to target",
+      "value": "Executar até o alvo"
+    },
+    {
+      "id": "status.paused",
+      "source": "Paused at update {update}",
+      "value": "Pausado na atualização {update}"
+    },
+    {
+      "id": "status.update",
+      "source": "Update {update} of {target}",
+      "value": "Atualização {update} de {target}"
+    },
+    {
+      "id": "status.pausing",
+      "source": "Pausing after update {update}",
+      "value": "Pausar após a atualização {update}"
+    },
+    {
+      "id": "status.finished",
+      "source": "Finished at target: update {update}",
+      "value": "Concluído no alvo: atualização {update}"
+    },
+    {
+      "id": "population.heading",
+      "source": "Current population",
+      "value": "População atual"
+    },
+    {
+      "id": "metrics.population.organisms",
+      "source": "Organisms",
+      "value": "Organismos"
+    },
+    {
+      "id": "metrics.population_count.description",
+      "source": "Number of living organisms.",
+      "value": "Número de organismos vivos."
+    },
+    {
+      "id": "metrics.sequence.richness",
+      "source": "Distinct sequences",
+      "value": "Sequências distintas"
+    },
+    {
+      "id": "metrics.mutation.per_site_rate",
+      "source": "Per-site mutation setting",
+      "value": "Configuração de mutação por local"
+    },
+    {
+      "id": "metrics.population_count.label",
+      "source": "Population size (organisms)",
+      "value": "Tamanho da população (organismos)"
+    },
+    {
+      "id": "metrics.population_count.definition",
+      "source": "Number of occupied cells in the same snapshot.",
+      "value": "Número de células ocupadas no mesmo instantâneo."
+    },
+    {
+      "id": "metrics.sequence_richness.label",
+      "source": "Sequence richness (distinct sequences)",
+      "value": "Riqueza de sequências (sequências distintas)"
+    },
+    {
+      "id": "metrics.sequence_richness.definition",
+      "source": "Number of distinct ordered genome sequences present at this update.",
+      "value": "Número de sequências genômicas distintas e ordenadas presentes nesta atualização."
+    },
+    {
+      "id": "metrics.ancestor_sequence_fraction.label",
+      "source": "Ancestor sequence (% of population)",
+      "value": "Sequência ancestral (% da população)"
+    },
+    {
+      "id": "metrics.ancestor_sequence_fraction.definition",
+      "source": "Share of organisms whose current sequence exactly matches the original ancestor; this is not ancestry.",
+      "value": "Parte dos organismos cuja sequência atual corresponde exatamente à sequência ancestral original; isso não é ancestralidade."
+    },
+    {
+      "id": "results.heading",
+      "source": "Recorded observations",
+      "value": "Observações registradas"
+    },
+    {
+      "id": "results.empty",
+      "source": "Start the population to record update 0 and each completed update.",
+      "value": "Iniciar a população para registrar a atualização 0 e cada atualização concluída."
+    },
+    {
+      "id": "results.sample_context",
+      "source": "Run {treatment} per-site mutation · seed {seed} · sample every {interval} update(s). Values are captured at completed update boundaries.",
+      "value": "Execução com {treatment} de mutação por sítio · semente aleatória {seed} · amostragem a cada {interval} atualização(ões). Os valores são registrados ao final das atualizações concluídas.",
+      "translation_method": "assistant-corrected machine draft; pending human review"
+    },
+    {
+      "id": "results.rows.one",
+      "source": "{count} recorded update row",
+      "value": "{count} linha de atualização registrada"
+    },
+    {
+      "id": "results.rows.other",
+      "source": "{count} recorded update rows",
+      "value": "{count} linhas de atualização registradas"
+    },
+    {
+      "id": "results.table.update",
+      "source": "Update",
+      "value": "Atualização"
+    },
+    {
+      "id": "results.table.population",
+      "source": "Population (N)",
+      "value": "População (N)"
+    },
+    {
+      "id": "results.table.richness",
+      "source": "Sequence richness (S)",
+      "value": "Riqueza de sequências (S)"
+    },
+    {
+      "id": "results.table.ancestor_fraction",
+      "source": "Ancestor sequence (%)",
+      "value": "Sequência ancestral (%)"
+    },
+    {
+      "id": "results.chart.population.aria",
+      "source": "Population size by update",
+      "value": "Tamanho da população por atualização"
+    },
+    {
+      "id": "results.chart.richness.aria",
+      "source": "Sequence richness by update",
+      "value": "Riqueza de sequências por atualização"
+    },
+    {
+      "id": "results.chart.ancestor_fraction.aria",
+      "source": "Ancestor sequence fraction by update",
+      "value": "Fração da sequência ancestral por atualização"
+    },
+    {
+      "id": "results.chart.color_scale.aria",
+      "source": "Color scale from low to high",
+      "value": "Escala de cores de baixo para alto"
+    },
+    {
+      "id": "results.color_legend.heading",
+      "source": "Population colors",
+      "value": "Cores da população"
+    },
+    {
+      "id": "results.color_legend.blank",
+      "source": "Blank",
+      "value": "Em branco"
+    },
+    {
+      "id": "results.color_legend.no_colors",
+      "source": "No organism colors are displayed.",
+      "value": "Nenhuma cor de organismo é exibida."
+    },
+    {
+      "id": "results.color_legend.no_scale",
+      "source": "Start the population to establish the scale.",
+      "value": "Inicie a população para estabelecer a escala."
+    },
+    {
+      "id": "results.color_legend.empty",
+      "source": "No organisms are currently in the population.",
+      "value": "Atualmente não há organismos na população."
+    },
+    {
+      "id": "results.color_legend.staged",
+      "source": "Staged organisms",
+      "value": "Organismos estagiados"
+    },
+    {
+      "id": "results.color_legend.other",
+      "source": "Other genotypes",
+      "value": "Outros genótipos"
+    },
+    {
+      "id": "results.color_legend.no_tasks",
+      "source": "No tasks performed",
+      "value": "Nenhuma tarefa realizada"
+    },
+    {
+      "id": "results.color_legend.more_groups",
+      "source": "{count} more groups ({organisms} organisms)",
+      "value": "{count} grupos adicionais ({organisms} organismos)"
+    },
+    {
+      "id": "results.color_mode.blank",
+      "source": "Blank",
+      "value": "Em branco"
+    },
+    {
+      "id": "results.color_mode.genotype",
+      "source": "Genotype",
+      "value": "Genótipo"
+    },
+    {
+      "id": "results.color_mode.phenotype",
+      "source": "Phenotype",
+      "value": "Fenótipo"
+    },
+    {
+      "id": "results.color_mode.gestation_cost",
+      "source": "Gestation Cost",
+      "value": "Custo de gestação"
+    },
+    {
+      "id": "results.color_mode.metabolic_rate",
+      "source": "Metabolic Rate",
+      "value": "Taxa metabólica"
+    },
+    {
+      "id": "results.color_mode.fitness",
+      "source": "Fitness",
+      "value": "Aptidão"
+    },
+    {
+      "id": "results.color_mode.description.gestation",
+      "source": "Color organisms by the CPU cycles required to produce their offspring.",
+      "value": "Colorir organismos com base nos ciclos de CPU necessários para produzir sua descendência."
+    },
+    {
+      "id": "results.color_mode.description.metabolism",
+      "source": "Color organisms by metabolic base multiplied by metabolic multiplier.",
+      "value": "Colorir organismos com base na taxa metabólica base multiplicada pelo multiplicador metabólico."
+    },
+    {
+      "id": "results.color_mode.description.fitness",
+      "source": "Color organisms by current metabolic rate divided by gestation cost.",
+      "value": "Colorir os organismos pela taxa metabólica atual dividida pelo custo de gestação."
+    },
+    {
+      "id": "results.color_mode.description.genotype",
+      "source": "Color abundant organisms by identical genome.",
+      "value": "Colorir os organismos abundantes pela sequência genômica idêntica."
+    },
+    {
+      "id": "results.color_mode.description.phenotype",
+      "source": "Color organisms by the combination of reactions their parent performed.",
+      "value": "Colorir os organismos pela combinação de reações que o pai realizou."
+    },
+    {
+      "id": "run_shelf.heading",
+      "source": "Run shelf",
+      "value": "Executar prateleira"
+    },
+    {
+      "id": "run_shelf.description",
+      "source": "Completed observations remain here when you start another run. A completed run is result-only.",
+      "value": "Observações concluídas permanecem aqui quando você inicia outra execução. Uma execução concluída é apenas de resultado."
+    },
+    {
+      "id": "run_shelf.empty",
+      "source": "No completed runs yet. Use the three listed seeds in both mutation treatments.",
+      "value": "Nenhuma execução concluída ainda. Use as três sementes listadas em ambos os tratamentos de mutação."
+    },
+    {
+      "id": "run_shelf.planned_guidance",
+      "source": "Complete seeds 42, 43, and 44 at both 0% and 1%. The same seed does not pair later random trajectories.",
+      "value": "Conclua as sementes 42, 43 e 44 em ambos os 0% e 1%. A mesma semente não emparelha trajetórias aleatórias posteriores."
+    },
+    {
+      "id": "compare.heading",
+      "source": "Compare completed runs",
+      "value": "Comparar execuções concluídas"
+    },
+    {
+      "id": "compare.independence",
+      "source": "Each line is an independent stochastic trajectory. The three seeds are reused across treatments as starting values; they do not guarantee paired random histories.",
+      "value": "Cada linha é uma trajetória estocástica independente. As três sementes são reutilizadas entre tratamentos como valores iniciais; elas não garantem histórias aleatórias emparelhadas."
+    },
+    {
+      "id": "compare.metrics",
+      "source": "Compare population size and exact sequence richness. An endpoint table reports the final sample of every completed run.",
+      "value": "Comparar tamanho populacional e riqueza de sequências exata. Uma tabela de ponto final relata a amostra final de cada execução concluída."
+    },
+    {
+      "id": "compare.incomplete",
+      "source": "Complete at least two target runs before comparing.",
+      "value": "Conclua pelo menos duas execuções-alvo antes de comparar."
+    },
+    {
+      "id": "compare.only_completed",
+      "source": "Only completed runs are overlaid; colors identify treatment. Each line is a single stochastic trajectory.",
+      "value": "Apenas execuções concluídas são sobrepostas; as cores identificam o tratamento. Cada linha é uma única trajetória estocástica."
+    },
+    {
+      "id": "compare.endpoints.heading",
+      "source": "Completed run endpoints",
+      "value": "Pontos finais de execuções concluídas"
+    },
+    {
+      "id": "compare.table.run",
+      "source": "Run",
+      "value": "Execução"
+    },
+    {
+      "id": "compare.table.treatment",
+      "source": "Treatment",
+      "value": "Tratamento"
+    },
+    {
+      "id": "compare.table.seed",
+      "source": "Seed",
+      "value": "Semente"
+    },
+    {
+      "id": "compare.table.update",
+      "source": "Update",
+      "value": "Atualização"
+    },
+    {
+      "id": "compare.back",
+      "source": "Back to population and run setup",
+      "value": "Voltar para população e configuração de execução"
+    },
+    {
+      "id": "sequence.heading",
+      "source": "Selected sequence and ancestor",
+      "value": "Sequência e ancestral selecionados"
+    },
+    {
+      "id": "sequence.eyebrow",
+      "source": "Genome comparison",
+      "value": "Comparação genômica"
+    },
+    {
+      "id": "sequence.position_note",
+      "source": "Positions are compared directly; this is not sequence alignment. An insertion or deletion can shift later positions.",
+      "value": "As posições são comparadas diretamente; isso não é alinhamento de sequência. Uma inserção ou deleção pode deslocar posições posteriores."
+    },
+    {
+      "id": "sequence.ancestor_unavailable",
+      "source": "The lesson reference ancestor is unavailable for this run.",
+      "value": "O ancestral de referência da lição não está disponível para esta execução."
+    },
+    {
+      "id": "sequence.same_instruction",
+      "source": "Same instruction",
+      "value": "Mesma instrução"
+    },
+    {
+      "id": "sequence.different_instruction",
+      "source": "Different instruction",
+      "value": "Instrução diferente"
+    },
+    {
+      "id": "sequence.only_selected",
+      "source": "Only in selected",
+      "value": "Apenas selecionado"
+    },
+    {
+      "id": "sequence.only_ancestor",
+      "source": "Only in ancestor",
+      "value": "Apenas ancestral"
+    },
+    {
+      "id": "sequence.position",
+      "source": "Position",
+      "value": "Posição"
+    },
+    {
+      "id": "sequence.ancestor",
+      "source": "Ancestor",
+      "value": "Ancestral"
+    },
+    {
+      "id": "sequence.selected",
+      "source": "Selected",
+      "value": "Selecionado"
+    },
+    {
+      "id": "sequence.difference",
+      "source": "Difference",
+      "value": "Diferença"
+    },
+    {
+      "id": "sequence.not_present",
+      "source": "Not present",
+      "value": "Não presente"
+    },
+    {
+      "id": "sequence.showing_first",
+      "source": "Showing the first {shown} of {total} positions. Counts above include both complete sequences.",
+      "value": "Mostrando as primeiras {shown} de {total} posições. Contagens acima incluem ambas as sequências completas."
+    },
+    {
+      "id": "sequence.length",
+      "source": "Sequence length: {count} instructions",
+      "value": "Comprimento da sequência: {count} instruções"
+    },
+    {
+      "id": "save.experiment",
+      "source": "Save experiment JSON",
+      "value": "Salvar JSON do experimento"
+    },
+    {
+      "id": "open.experiment",
+      "source": "Open experiment JSON",
+      "value": "Abrir JSON do experimento"
+    },
+    {
+      "id": "save.pausing",
+      "source": "Pausing at a completed update before saving…",
+      "value": "Pausando em uma atualização concluída antes de salvar…"
+    },
+    {
+      "id": "save.pausing_status",
+      "source": "Pausing at an update boundary before saving.",
+      "value": "Pausando em um limite de atualização antes de salvar."
+    },
+    {
+      "id": "save.paused_required",
+      "source": "Save is available at a paused update boundary.",
+      "value": "O salvamento está disponível em um limite de atualização pausado."
+    },
+    {
+      "id": "save.success",
+      "source": "Experiment, notes, and run history downloaded as JSON.",
+      "value": "Experimento, notas e histórico de execução baixados como JSON."
+    },
+    {
+      "id": "open.invalid_file",
+      "source": "This experiment file is invalid or incompatible. Your current work is unchanged.",
+      "value": "Este arquivo de experimento é inválido ou incompatível. Seu trabalho atual permanece inalterado."
+    },
+    {
+      "id": "open.pause_status",
+      "source": "Pausing at an update boundary before opening the experiment.",
+      "value": "Pausando na fronteira de atualização antes de abrir o experimento."
+    },
+    {
+      "id": "open.success",
+      "source": "Experiment and validated checkpoint opened.",
+      "value": "Experimento e ponto de verificação validado abertos."
+    },
+    {
+      "id": "open.failure_prefix",
+      "source": "Experiment not loaded: {reason}",
+      "value": "Experimento não carregado: {reason}"
+    },
+    {
+      "id": "export.data",
+      "source": "Export completed data CSV",
+      "value": "Exportação concluída do CSV de dados"
+    },
+    {
+      "id": "export.success",
+      "source": "Completed run samples downloaded as CSV.",
+      "value": "Amostras de execução concluídas baixadas como CSV."
+    },
+    {
+      "id": "errors.mutation.range",
+      "source": "Enter a per-site mutation setting from {minimum}% to {maximum}%.",
+      "value": "Insira uma configuração de mutação por local de {minimum}% a {maximum}%."
+    },
+    {
+      "id": "errors.run.failed",
+      "source": "The run could not continue: {reason}",
+      "value": "A execução não pôde continuar: {reason}"
+    },
+    {
+      "id": "glossary.update",
+      "source": "update",
+      "value": "atualização"
+    },
+    {
+      "id": "glossary.generation",
+      "source": "generation",
+      "value": "geração"
+    },
+    {
+      "id": "glossary.sequence_richness",
+      "source": "sequence richness",
+      "value": "riqueza de sequências"
+    },
+    {
+      "id": "glossary.ancestor_sequence",
+      "source": "ancestor sequence",
+      "value": "sequência ancestral"
+    },
+    {
+      "id": "glossary.ancestry",
+      "source": "ancestry",
+      "value": "ancestrais"
+    },
+    {
+      "id": "glossary.per_site_mutation",
+      "source": "per-site mutation setting",
+      "value": "configuração de mutação por local"
+    },
+    {
+      "id": "glossary.fitness",
+      "source": "fitness",
+      "value": "aptidão"
+    },
+    {
+      "id": "experiment.mutation.label",
+      "source": "Per-site mutation setting (%)",
+      "value": "Configuração de mutação por local (%)"
+    },
+    {
+      "id": "shell.selected_cell",
+      "source": "Selected cell",
+      "value": "Célula selecionada"
+    },
+    {
+      "id": "shell.viewer_chooser",
+      "source": "Viewer chooser",
+      "value": "Escolhedor de visualizador"
+    },
+    {
+      "id": "population.size",
+      "source": "Population size",
+      "value": "Tamanho da população"
+    },
+    {
+      "id": "shell.save",
+      "source": "Save",
+      "value": "Salvar"
+    },
+    {
+      "id": "shell.open",
+      "source": "Open",
+      "value": "Abrir"
+    },
+    {
+      "id": "shell.export",
+      "source": "Export",
+      "value": "Exportar"
+    },
+    {
+      "id": "organism.toolbar.rewind.aria",
+      "source": "Rewind organism execution",
+      "value": "Rebobinar execução do organismo"
+    },
+    {
+      "id": "organism.toolbar.step.aria",
+      "source": "Execute one organism instruction",
+      "value": "Executar uma instrução do organismo"
+    },
+    {
+      "id": "organism.toolbar.play.aria",
+      "source": "Play at two instructions per second",
+      "value": "Reproduzir a 2 instruções por segundo"
+    },
+    {
+      "id": "organism.toolbar.pause.aria",
+      "source": "Pause organism execution",
+      "value": "Pausar execução do organismo"
+    },
+    {
+      "id": "organism.toolbar.fast_forward.aria",
+      "source": "Fast-forward at twenty instructions per second",
+      "value": "Avançar rápido a 20 instruções por segundo"
+    },
+    {
+      "id": "organism.toolbar.rewind.title",
+      "source": "Rewind",
+      "value": "Rebobinar"
+    },
+    {
+      "id": "organism.toolbar.step.title",
+      "source": "Step (Space)",
+      "value": "Passo (Espaço)"
+    },
+    {
+      "id": "organism.toolbar.play.title",
+      "source": "Play (2 instructions per second)",
+      "value": "Reproduzir (2 instruções por segundo)"
+    },
+    {
+      "id": "organism.toolbar.fast_forward.title",
+      "source": "Fast-forward (20 instructions per second)",
+      "value": "Avançar rápido (20 instruções por segundo)"
+    },
+    {
+      "id": "organism.toolbar.view_offspring",
+      "source": "View offspring →",
+      "value": "Ver descendentes →"
+    },
+    {
+      "id": "organism.freezer.label",
+      "source": "Organism",
+      "value": "Organismo"
+    },
+    {
+      "id": "organism.freezer.placeholder",
+      "source": "Choose from freezer…",
+      "value": "Escolher do congelador…"
+    },
+    {
+      "id": "organism.freezer.accessible",
+      "source": "Choose an organism from the freezer",
+      "value": "Escolha um organismo do congelador"
+    },
+    {
+      "id": "organism.timeline.label",
+      "source": "Execution position",
+      "value": "Posição de execução"
+    },
+    {
+      "id": "organism.timeline.accessible",
+      "source": "Organism execution position",
+      "value": "Posição de execução do organismo"
+    },
+    {
+      "id": "population.color_mode.accessible",
+      "source": "Population color mode",
+      "value": "Modo de cor da população"
+    },
+    {
+      "id": "population.color_mode.title",
+      "source": "Color organisms by",
+      "value": "Colorir organismos por"
+    },
+    {
+      "id": "organism.empty.heading",
+      "source": "Select an organism first",
+      "value": "Selecione um organismo primeiro"
+    },
+    {
+      "id": "organism.empty.help",
+      "source": "Select an organism from the freezer (above) or return to Population mode and select an occupied cell.",
+      "value": "Selecione um organismo do congelador (acima) ou retorne ao modo População e selecione uma célula ocupada."
+    },
+    {
+      "id": "organism.cycle.heading",
+      "source": "Single life cycle",
+      "value": "Ciclo de vida único"
+    },
+    {
+      "id": "organism.cycle.instructions_executed",
+      "source": "instructions executed",
+      "value": "instruções executadas"
+    },
+    {
+      "id": "organism.genome.eyebrow",
+      "source": "Execution map",
+      "value": "Mapa de execução"
+    },
+    {
+      "id": "organism.genome.heading",
+      "source": "Genome",
+      "value": "Genoma"
+    },
+    {
+      "id": "organism.genome.instruction_count",
+      "source": "instructions",
+      "value": "instruções"
+    },
+    {
+      "id": "organism.genome.end",
+      "source": "end of genome",
+      "value": "fim do genoma"
+    },
+    {
+      "id": "organism.status.complete",
+      "source": "Life cycle complete",
+      "value": "Ciclo de vida concluído"
+    },
+    {
+      "id": "organism.status.offspring",
+      "source": "Offspring produced · {count} instructions. Use “View offspring” above to start it with fresh hardware.",
+      "value": "Descendentes produzidos · {count} instruções. Use \"Ver descendentes\" acima para iniciar com hardware novo."
+    },
+    {
+      "id": "organism.status.preview_limit",
+      "source": "Preview limit reached",
+      "value": "Limite de visualização atingido"
+    },
+    {
+      "id": "organism.status.continues",
+      "source": "Execution continues",
+      "value": "Execução continua"
+    },
+    {
+      "id": "organism.status.no_offspring",
+      "source": "No offspring was produced in the first {count} instructions.",
+      "value": "Nenhum descendente foi produzido nas primeiras {count} instruções."
+    },
+    {
+      "id": "organism.instruction.just_executed_at",
+      "source": "Just executed at {update}",
+      "value": "Acabou de executar em {update}"
+    },
+    {
+      "id": "organism.instruction.just_executed",
+      "source": "Just executed",
+      "value": "Acabou de executar"
+    },
+    {
+      "id": "organism.instruction.nothing_yet",
+      "source": "Nothing yet",
+      "value": "Nada ainda"
+    },
+    {
+      "id": "organism.instruction.start_help",
+      "source": "Use Step, Play, or Fast-forward to begin this life cycle.",
+      "value": "Use Passo, Reproduzir ou Avanço rápido para iniciar este ciclo de vida."
+    },
+    {
+      "id": "organism.instruction.about_to_execute",
+      "source": "About to execute at {update}",
+      "value": "Pronto para executar em {update}"
+    },
+    {
+      "id": "organism.registers.heading",
+      "source": "Registers",
+      "value": "Registradores"
+    },
+    {
+      "id": "organism.stacks.heading",
+      "source": "Stacks",
+      "value": "Pilhas"
+    },
+    {
+      "id": "organism.stack.label",
+      "source": "Stack",
+      "value": "Pilha"
+    },
+    {
+      "id": "organism.memory.eyebrow",
+      "source": "Working state",
+      "value": "Estado de trabalho"
+    },
+    {
+      "id": "organism.memory.heading",
+      "source": "Memory",
+      "value": "Memória"
+    },
+    {
+      "id": "organism.memory.copied",
+      "source": "Copied",
+      "value": "Copiado"
+    },
+    {
+      "id": "organism.memory.errors",
+      "source": "Errors",
+      "value": "Erros"
+    },
+    {
+      "id": "organism.tasks.eyebrow",
+      "source": "Life-cycle progress",
+      "value": "Progresso do ciclo de vida"
+    },
+    {
+      "id": "organism.tasks.heading",
+      "source": "Tasks",
+      "value": "Tarefas"
+    },
+    {
+      "id": "organism.tasks.empty",
+      "source": "No configured reaction tasks are performed in this life cycle.",
+      "value": "Nenhuma tarefa de reação configurada é executada neste ciclo de vida."
+    },
+    {
+      "id": "organism.traits.eyebrow",
+      "source": "Starting phenotype",
+      "value": "Fenótipo inicial"
+    },
+    {
+      "id": "organism.traits.heading",
+      "source": "Organism traits",
+      "value": "Características do organismo"
+    },
+    {
+      "id": "organism.traits.empty",
+      "source": "No printable traits.",
+      "value": "Nenhuma característica impressível."
+    },
+    {
+      "id": "organism.stats.empty",
+      "source": "Select an occupied population cell to inspect its organism.",
+      "value": "Selecione uma célula populacional ocupada para inspecionar seu organismo."
+    },
+    {
+      "id": "organism.stats.active",
+      "source": "Active organism",
+      "value": "Organismo ativo"
+    },
+    {
+      "id": "organism.stats.phenotype",
+      "source": "Phenotype",
+      "value": "Fenótipo"
+    },
+    {
+      "id": "organism.stats.hardware",
+      "source": "Hardware",
+      "value": "Hardware"
+    },
+    {
+      "id": "organism.stats.executed",
+      "source": "Executed",
+      "value": "Executado"
+    },
+    {
+      "id": "organism.stats.heads",
+      "source": "Heads",
+      "value": "Cabeças"
+    },
+    {
+      "id": "organism.stats.memory",
+      "source": "Nonzero memory",
+      "value": "Memória não nula"
+    },
+    {
+      "id": "organism.stats.memory.empty",
+      "source": "All locations are zero.",
+      "value": "Todas as localizações são zero."
+    },
+    {
+      "id": "organism.genome.next",
+      "source": "NEXT",
+      "value": "PRÓXIMO"
+    },
+    {
+      "id": "organism.head.follow",
+      "source": "Follow",
+      "value": "Seguir"
+    },
+    {
+      "id": "organism.head.stop_following",
+      "source": "Stop following",
+      "value": "Parar de seguir"
+    },
+    {
+      "id": "freezer.name.aria",
+      "source": "Name for {name}; double-click to edit",
+      "value": "Nome para {name}; clique duas vezes para editar"
+    },
+    {
+      "id": "freezer.instructions.one",
+      "source": "{count} instruction",
+      "value": "{count} instrução"
+    },
+    {
+      "id": "freezer.instructions.other",
+      "source": "{count} instructions",
+      "value": "{count} instruções"
+    },
+    {
+      "id": "freezer.organism.download.aria",
+      "source": "Download {name} organism file",
+      "value": "Baixar arquivo de organismo {name}"
+    },
+    {
+      "id": "freezer.organism.download.title",
+      "source": "Download {name} as .org",
+      "value": "Baixar {name} como .org"
+    },
+    {
+      "id": "freezer.remove",
+      "source": "Remove {name}",
+      "value": "Remover {name}"
+    },
+    {
+      "id": "freezer.configuration.download.aria",
+      "source": "Download {name} configuration file",
+      "value": "Baixar arquivo de configuração {name}"
+    },
+    {
+      "id": "freezer.configuration.download.title",
+      "source": "Download {name} as .cfg",
+      "value": "Baixar {name} como .cfg"
+    },
+    {
+      "id": "freezer.configuration.summary",
+      "source": "Reactions: {reactions}; events: {events}; organisms: {organisms}",
+      "value": "Reações: {reactions}; eventos: {events}; organismos: {organisms}"
+    },
+    {
+      "id": "configuration.settings.tab",
+      "source": "Settings",
+      "value": "Configurações"
+    },
+    {
+      "id": "configuration.environment.tab",
+      "source": "Environment",
+      "value": "Ambiente"
+    },
+    {
+      "id": "configuration.events.tab",
+      "source": "Events",
+      "value": "Eventos"
+    },
+    {
+      "id": "freezer.name.title",
+      "source": "Double-click to rename",
+      "value": "Clique duas vezes para renomear"
+    },
+    {
+      "id": "freezer.intro",
+      "source": "Double-click a name to edit it. Drag organisms between this freezer and the grid.",
+      "value": "Clique duas vezes em um nome para editá-lo. Arraste organismos entre este congelador e a grade."
+    },
+    {
+      "id": "freezer.organisms.help",
+      "source": "Genomes that can seed a new dish.",
+      "value": "Genomas que podem iniciar uma nova placa de Petri.",
+      "translation_method": "assistant-corrected machine draft; pending human review"
+    },
+    {
+      "id": "freezer.load",
+      "source": "Load",
+      "value": "Carregar"
+    },
+    {
+      "id": "freezer.organisms.empty",
+      "source": "No frozen organisms.",
+      "value": "Nenhum organismo congelado."
+    },
+    {
+      "id": "freezer.configurations.help",
+      "source": "Configured dishes before a run.",
+      "value": "Pratos configurados antes de uma execução."
+    },
+    {
+      "id": "freezer.configurations.empty",
+      "source": "No frozen configurations.",
+      "value": "Nenhuma configuração congelada."
+    },
+    {
+      "id": "freezer.checkpoints.help",
+      "source": "Portable full-population files; not stored in this browser.",
+      "value": "Arquivos completos de população portáteis; não armazenados neste navegador."
+    },
+    {
+      "id": "freezer.save.checkpoint",
+      "source": "Save Checkpoint",
+      "value": "Salvar Ponto de Verificação"
+    },
+    {
+      "id": "freezer.load.checkpoint",
+      "source": "Load checkpoint file",
+      "value": "Carregar arquivo de ponto de verificação"
+    },
+    {
+      "id": "freezer.checkpoints.empty",
+      "source": "Choose a checkpoint file to resume a saved run.",
+      "value": "Escolha um arquivo de ponto de verificação para retomar uma execução salva."
+    },
+    {
+      "id": "configuration.heading",
+      "source": "Configuration",
+      "value": "Configuração"
+    },
+    {
+      "id": "configuration.advanced.on",
+      "source": "Advanced: On",
+      "value": "Avançado: Ligado"
+    },
+    {
+      "id": "configuration.advanced.off",
+      "source": "Advanced: Off",
+      "value": "Avançado: Desligado"
+    },
+    {
+      "id": "configuration.advanced.title",
+      "source": "Show or hide advanced settings",
+      "value": "Mostrar ou ocultar configurações avançadas"
+    },
+    {
+      "id": "configuration.reset",
+      "source": "Reset",
+      "value": "Redefinir"
+    },
+    {
+      "id": "configuration.reset.title",
+      "source": "Reset this configuration tab to its web defaults",
+      "value": "Redefinir esta guia de configuração para seus padrões da web"
+    },
+    {
+      "id": "configuration.settings.intro",
+      "source": "Settings for the current population.",
+      "value": "Configurações para a população atual."
+    },
+    {
+      "id": "freezer.configurations.heading",
+      "source": "Configurations",
+      "value": "Configurações"
+    },
+    {
+      "id": "freezer.save.configuration",
+      "source": "Save Configuration",
+      "value": "Salvar Configuração"
+    },
+    {
+      "id": "freezer.checkpoints.heading",
+      "source": "Checkpoints",
+      "value": "Pontos de Verificação"
+    },
+    {
+      "id": "shell.sidepanel.configure.accessible",
+      "source": "Configure",
+      "value": "Configurar"
+    },
+    {
+      "id": "freezer.status.saved",
+      "source": "Saved in this browser.",
+      "value": "Salvo neste navegador."
+    },
+    {
+      "id": "freezer.status.session_saved",
+      "source": "Saved for this session; browser storage is unavailable or full.",
+      "value": "Salvo para esta sessão; armazenamento do navegador indisponível ou cheio."
+    },
+    {
+      "id": "freezer.status.loaded",
+      "source": "Loaded organisms and configurations from this browser.",
+      "value": "Organismos e configurações carregados deste navegador."
+    },
+    {
+      "id": "population.palette.label",
+      "source": "Continuous color map",
+      "value": "Mapa de cores contínuo"
+    },
+    {
+      "id": "population.palette.title",
+      "source": "Choose the numeric color map",
+      "value": "Escolha o mapa de cores numérico"
+    },
+    {
+      "id": "population.palette.gnuplot2",
+      "source": "Gnuplot 2",
+      "value": "Gnuplot 2"
+    },
+    {
+      "id": "population.palette.viridis",
+      "source": "Viridis",
+      "value": "Viridis"
+    },
+    {
+      "id": "population.palette.cubehelix",
+      "source": "Cubehelix",
+      "value": "Cubehelix"
+    },
+    {
+      "id": "results.population_history.title",
+      "source": "Population size over time",
+      "value": "Tamanho da população ao longo do tempo"
+    },
+    {
+      "id": "results.population_history.axis",
+      "source": "Organisms",
+      "value": "Organismos"
+    },
+    {
+      "id": "results.richness_history.title",
+      "source": "Sequence richness over time",
+      "value": "Riqueza de sequências ao longo do tempo"
+    },
+    {
+      "id": "results.richness_history.axis",
+      "source": "Distinct sequences",
+      "value": "Sequências distintas"
+    },
+    {
+      "id": "results.ancestor_history.title",
+      "source": "Ancestor sequence over time",
+      "value": "Sequência ancestral ao longo do tempo"
+    },
+    {
+      "id": "results.ancestor_history.axis",
+      "source": "Percent of population",
+      "value": "Percentual da população"
+    },
+    {
+      "id": "configuration.setting_locked.title",
+      "source": "This setting is locked after a run starts.",
+      "value": "Esta configuração está bloqueada após o início de uma execução."
+    },
+    {
+      "id": "configuration.reaction_triggers.zero_help.title",
+      "source": "Zero allows unlimited triggers per gestation.",
+      "value": "Zero permite gatilhos ilimitados por gestação."
+    },
+    {
+      "id": "shell.well_mixed.placement_help",
+      "source": "Select any organism to inspect it. Drag from the freezer to add organisms. Display slots have no effect on placement or reproduction.",
+      "value": "Selecione qualquer organismo para inspecioná-lo. Arraste do congelador para adicionar organismos. Os slots de exibição não afetam a colocação ou reprodução."
+    },
+    {
+      "id": "instruction.nop_a.description",
+      "source": "No operation; selects component A as an argument.",
+      "value": "Nenhuma operação; seleciona o componente A como argumento."
+    },
+    {
+      "id": "instruction.nop_b.description",
+      "source": "No operation; selects component B as an argument.",
+      "value": "Nenhuma operação; seleciona o componente B como argumento."
+    },
+    {
+      "id": "instruction.nop_c.description",
+      "source": "No operation; selects component C as an argument.",
+      "value": "Nenhuma operação; seleciona o componente C como argumento."
+    },
+    {
+      "id": "instruction.nop_d.description",
+      "source": "No operation; selects component D as an argument.",
+      "value": "Nenhuma operação; seleciona o componente D como argumento."
+    },
+    {
+      "id": "instruction.nop_e.description",
+      "source": "No operation; selects component E as an argument.",
+      "value": "Nenhuma operação; seleciona o componente E como argumento."
+    },
+    {
+      "id": "instruction.nop_f.description",
+      "source": "No operation; selects component F as an argument.",
+      "value": "Nenhuma operação; seleciona o componente F como argumento."
+    },
+    {
+      "id": "instruction.const.description",
+      "source": "Push a selected constant onto a selected stack.",
+      "value": "Empurre uma constante selecionada para uma pilha selecionada."
+    },
+    {
+      "id": "instruction.offset.description",
+      "source": "Add a selected constant to a popped stack value.",
+      "value": "Adicione uma constante selecionada ao valor de uma pilha removida."
+    },
+    {
+      "id": "instruction.not.description",
+      "source": "Apply logical NOT to a popped stack value.",
+      "value": "Aplicar NOT lógico a um valor de pilha removido."
+    },
+    {
+      "id": "instruction.shift.description",
+      "source": "Left-shift one popped value by another.",
+      "value": "Desloque à esquerda um valor removido por outro."
+    },
+    {
+      "id": "instruction.add.description",
+      "source": "Add two popped stack values.",
+      "value": "Adicione dois valores removidos da pilha."
+    },
+    {
+      "id": "instruction.sub.description",
+      "source": "Subtract one popped stack value from another.",
+      "value": "Subtraia um valor removido da pilha de outro."
+    },
+    {
+      "id": "instruction.mult.description",
+      "source": "Multiply two popped stack values.",
+      "value": "Multiplique dois valores removidos da pilha."
+    },
+    {
+      "id": "instruction.div.description",
+      "source": "Divide two popped stack values; division by zero is an error.",
+      "value": "Divida dois valores removidos da pilha; divisão por zero é um erro."
+    },
+    {
+      "id": "instruction.mod.description",
+      "source": "Calculate the remainder of two popped values.",
+      "value": "Calcule o resto de dois valores removidos."
+    },
+    {
+      "id": "instruction.exp.description",
+      "source": "Raise one popped stack value to the power of another.",
+      "value": "Eleve um valor removido da pilha à potência de outro."
+    },
+    {
+      "id": "instruction.sort.description",
+      "source": "Sort the top values of two selected stacks.",
+      "value": "Ordene os valores superiores de duas pilhas selecionadas."
+    },
+    {
+      "id": "instruction.test_less.description",
+      "source": "Test whether one popped value is less than another.",
+      "value": "Teste se um valor removido é menor que outro."
+    },
+    {
+      "id": "instruction.test_equ.description",
+      "source": "Test whether two popped stack values are equal.",
+      "value": "Teste se dois valores removidos da pilha são iguais."
+    },
+    {
+      "id": "instruction.nand.description",
+      "source": "Apply bitwise NAND to two popped stack values.",
+      "value": "Aplique a operação NAND bit a bit a dois valores removidos da pilha."
+    },
+    {
+      "id": "instruction.if.description",
+      "source": "Skip the next instruction when the selected value is zero.",
+      "value": "Pule a próxima instrução quando o valor selecionado for zero."
+    },
+    {
+      "id": "instruction.if_not.description",
+      "source": "Skip the next instruction when the selected value is nonzero.",
+      "value": "Pule a próxima instrução quando o valor selecionado for diferente de zero."
+    },
+    {
+      "id": "instruction.scope.description",
+      "source": "Mark a scope boundary identified by following Nops.",
+      "value": "Marque um limite de escopo identificado por Nops seguintes."
+    },
+    {
+      "id": "instruction.continue.description",
+      "source": "Jump backward to the selected scope boundary.",
+      "value": "Pule para trás até o limite de escopo selecionado."
+    },
+    {
+      "id": "instruction.break.description",
+      "source": "Jump forward to the selected scope boundary.",
+      "value": "Pule para frente até o limite de escopo selecionado."
+    },
+    {
+      "id": "instruction.stack_pop.description",
+      "source": "Discard the top value of a selected stack.",
+      "value": "Descarte o valor superior de uma pilha selecionada."
+    },
+    {
+      "id": "instruction.stack_dup.description",
+      "source": "Copy the top value of one stack onto another.",
+      "value": "Copie o valor superior de uma pilha para outra."
+    },
+    {
+      "id": "instruction.stack_swap.description",
+      "source": "Exchange the top values of two selected stacks.",
+      "value": "Troque os valores superiores de duas pilhas selecionadas."
+    },
+    {
+      "id": "instruction.stack_move.description",
+      "source": "Move the top value from one stack to another.",
+      "value": "Mova o valor superior de uma pilha para outra."
+    },
+    {
+      "id": "instruction.copy_inst.description",
+      "source": "Copy an instruction between selected genome heads.",
+      "value": "Copie uma instrução entre as cabeças do genoma selecionadas."
+    },
+    {
+      "id": "instruction.load.description",
+      "source": "Load a memory value onto a selected stack.",
+      "value": "Carregue um valor de memória em uma pilha selecionada."
+    },
+    {
+      "id": "instruction.store.description",
+      "source": "Store a popped stack value in memory.",
+      "value": "Armazene um valor de pilha removido na memória."
+    },
+    {
+      "id": "instruction.head_pos.description",
+      "source": "Push a selected head's position onto a stack.",
+      "value": "Empurre a posição de uma cabeça selecionada para uma pilha."
+    },
+    {
+      "id": "instruction.set_head.description",
+      "source": "Set a selected head from a popped stack value.",
+      "value": "Defina uma cabeça selecionada a partir de um valor removido da pilha."
+    },
+    {
+      "id": "instruction.jump_head.description",
+      "source": "Move one selected head to another head's position.",
+      "value": "Mova uma cabeça selecionada para a posição de outra cabeça."
+    },
+    {
+      "id": "instruction.offset_head.description",
+      "source": "Move a selected head by a popped offset.",
+      "value": "Mova uma cabeça selecionada por um deslocamento removido."
+    },
+    {
+      "id": "trait.metabolic_base.description",
+      "source": "Relative base speed of the virtual CPU for this organism.",
+      "value": "Velocidade base relativa da CPU virtual para este organismo."
+    },
+    {
+      "id": "trait.metabolic_mult.description",
+      "source": "Bonus speed multiple from tasks.",
+      "value": "Múltiplo de velocidade bônus de tarefas."
+    },
+    {
+      "id": "trait.parent_bonus.description",
+      "source": "Bonus received while producing this offspring.",
+      "value": "Bônus recebido ao produzir esta prole."
+    },
+    {
+      "id": "trait.gestation_cost.description",
+      "source": "How many CPU cycles to produce an offspring?",
+      "value": "Quantos ciclos de CPU para produzir uma prole?"
+    },
+    {
+      "id": "trait.generation.description",
+      "source": "Number of offspring in chain since inject",
+      "value": "Número de prole na cadeia desde a injeção"
+    },
+    {
+      "id": "trait.pop_pos.description",
+      "source": "Position in the grid population of this organism.",
+      "value": "Posição na população de grade deste organismo."
+    },
+    {
+      "id": "trait.task_counts.description",
+      "source": "Times organism performed each task this gestation.",
+      "value": "Vezes que o organismo realizou cada tarefa nesta gestação."
+    },
+    {
+      "id": "trait.parent_task_counts.description",
+      "source": "Times organism's parent performed each task (its gestation).",
+      "value": "Vezes que o pai do organismo realizou cada tarefa (sua gestação)."
+    },
+    {
+      "id": "trait.inputs.description",
+      "source": "Input values provided to this organism.",
+      "value": "Valores de entrada fornecidos a este organismo."
+    },
+    {
+      "id": "trait.logic_counts.description",
+      "source": "Number of times each logic task was performed.",
+      "value": "Número de vezes que cada tarefa lógica foi realizada."
+    },
+    {
+      "id": "trait.offspring_count.description",
+      "source": "Number of direct offspring produced by this organism",
+      "value": "Número de prole direta produzida por este organismo"
+    },
+    {
+      "id": "trait.genotype_id.description",
+      "source": "Unique ID for group of identical genomes",
+      "value": "ID exclusivo para grupo de genomas idênticos"
+    },
+    {
+      "id": "trait.hardware.description",
+      "source": "Virtual CPU for this organism",
+      "value": "CPU virtual para este organismo"
+    },
+    {
+      "id": "configuration.reaction.operation.multiply",
+      "source": "Multiply",
+      "value": "Multiplicar"
+    },
+    {
+      "id": "configuration.reaction.operation.add",
+      "source": "Add",
+      "value": "Adicionar"
+    },
+    {
+      "id": "configuration.event.timing.start",
+      "source": "At start",
+      "value": "No início"
+    },
+    {
+      "id": "configuration.event.timing.update",
+      "source": "At update",
+      "value": "Na atualização"
+    },
+    {
+      "id": "configuration.event.timing.interval",
+      "source": "At intervals",
+      "value": "Em intervalos"
+    },
+    {
+      "id": "configuration.event.timing.end",
+      "source": "At end",
+      "value": "No final"
+    }
+  ]
+}

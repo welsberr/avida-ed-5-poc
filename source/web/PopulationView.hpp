@@ -188,10 +188,7 @@ emp::String AvidaWebApp::FormatColorScaleValue(double value) {
 }
 
 emp::String AvidaWebApp::FormatLegendCount(size_t count) const {
-  if (active_locale == avida::web::localization::Locale::SPANISH) {
-    return emp::MakeString(count, count == 1 ? " organismo" : " organismos");
-  }
-  return emp::MakeString(count, count == 1 ? " org" : " orgs");
+  return emp::MakeString(count, " ", PresentationText(count == 1 ? "Organism" : "Organisms"));
 }
 
 emp::String AvidaWebApp::GetCategoricalLegendLabel(

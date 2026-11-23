@@ -20,14 +20,14 @@ Avida-ED 3 and 4 aimed to preserve the interface structure of Avida-ED 2. Avida-
 - **Empirical** supplies the C++ web interface and its Emscripten bridge to browser controls.
 - **Plotly.js** renders the three live, sampled time series in the browser. The C++ recorder owns the measurements; a small JavaScript adapter sends those values to Plotly.
 - **The browser Freezer** stores saved items locally. Export/import files support transfer between browsers.
-- **Localization** has English and a Spanish development-preview catalog. Spanish text is not release-reviewed yet.
+- **Localization** offers English and Spanish, French, German, and Brazilian Portuguese development-preview catalogs. Translated text is not release-reviewed yet.
 
 Plotly is integrated at the Avida-ED layer rather than added to Empirical itself. This keeps the initial change focused on an actual learning application. The adapter is isolated so its boundary can be assessed for reuse in Empirical. See [graphs and colors](graphs-and-colors.md).
 
 ## Current limits and review needs
 
 - The application is a prototype and has not passed a formal accessibility or classroom usability review.
-- The Spanish catalog is a draft pending competent Spanish-language and scientific terminology review.
+- The translated catalogs are drafts pending competent language and scientific terminology review.
 - Plotly is currently pinned to the copy already used by Avida-ED 4. A future update should review the Plotly version, image-export behavior, supported browser targets, and bundle size.
 - The current experiment is a teaching demonstration. It is not intended to support broad claims about mutation, evolution, or model outcomes.
 - UI position and control styling should continue to be compared with Avida-ED 4 and its tutorial videos as the work advances.

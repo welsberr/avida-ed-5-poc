@@ -11,29 +11,29 @@
     "release_blocked_pending_review": true,
     "ui_validation_status": "pending_browser_visual_layout_checks",
     "source_locale": "en",
-    "source_revision": "d893ecc724d3ede547ef2fc91f717e73f0933d35",
+    "source_revision": "6b226b4a1b061ab3d0a5b060e80e28ac2d743767",
     "source_worktree_was_dirty": true,
     "region_variant": "Region-neutral Spanish draft; regional usage has not been reviewed.",
     "source_files": [
       {
         "path": "source/web/Localization.hpp",
         "sha256_at_draft": "0d9a1af54363d20aa46cfb95cf58e8f1c8c0ced406f86d4ab748d4967540eef0",
-        "sha256_current": "34c363882e32715e6df4164ce16e9a90f609c370f1e3b503904a2928d6a71c75"
+        "sha256_current": "8f3cba74d876fd6ad290244e42bfa1999a989cd35ad5c04edb5ac706cea63375"
       },
       {
         "path": "source/web/Layout.hpp",
         "sha256_at_draft": "25c948519feefc25d8908c9480869bfef72ad587c483dfc5cfc74f5487c725bd",
-        "sha256_current": "11723b535d05ab63d298ff287f0755e404b6c24406e1bafc2a926b74e04bbeae"
+        "sha256_current": "a1fb03b33c1572451dbeb89ebca1312d91b463325080f377b38b6041f52f6878"
       },
       {
         "path": "source/web/EducationRecording.hpp",
         "sha256_at_draft": "a5956d42c84a19644b494058c41ed370f3d63775a82e352d3b1369a41d751903",
-        "sha256_current": "6d4abe64725138036b07a8d1b8456eb944849e7c85103f535003a48d03829912"
+        "sha256_current": "736abdaad8bde7489901752aa1c5896e9fb58b80f871e7b7881d9d7f3502e17e"
       },
       {
         "path": "source/web/EducationArchive.hpp",
         "sha256_at_draft": "0812a484f9548541019fe9652361eeeaf693201886f11b69e89f805fdb0a847c",
-        "sha256_current": "6a32a130808d2536668e04326dcd3ef8f227aa2bca8a6ba6ef2662fc531bd680"
+        "sha256_current": "600d735675245439ea5302c5b618ab4952f809f9c8f4727ea897ee6f1b5528dc"
       },
       {
         "path": "source/web/SequenceComparison.hpp",
@@ -43,7 +43,7 @@
       {
         "path": "source/web/RunControl.hpp",
         "sha256_at_draft": "81aafa165d9c98c0b686b8e39ba60c1e4a437b39e864e51f22878ab87a6b82b7",
-        "sha256_current": "a1ec7260be126ce2898a08e033769c7c19453bb3d593fe14dffe9fcc28a973b4"
+        "sha256_current": "873a63719ef014c2df65772096048af38502da8778214c43c152cf8f3fbe15e3"
       },
       {
         "path": "source/web/AvidaWebApp.hpp",
@@ -52,7 +52,7 @@
       {
         "path": "source/web/PopulationView.hpp",
         "sha256_at_draft": "e0e7943d4411f9f82b2875934c03ba6363b33f03ed665e5f370e57217fb4f45d",
-        "sha256_current": "81e84c07f452dc42b6bf396a90314f6e55d483eab7d72c738f59b574ba02f6d3"
+        "sha256_current": "6fcc3b470e8a9cf10b8048f324cdc3d07b3ac0680dc28933d36d929aeffee334"
       },
       {
         "path": "source/web/OrganismAnalysis.hpp",
@@ -69,7 +69,7 @@
       },
       {
         "path": "source/web/LocalizationTests.cpp",
-        "sha256_current": "c8b35a04b6da3d3b585bc9202ba76edbbf1fb20723ad76f495131476b37b8497"
+        "sha256_current": "d0925a7666ffc25aa7b535c75dd13397010f923ea4df81a4af4ce8c1a6af1327"
       },
       {
         "path": "scripts/localize_es_catalog.py",
@@ -97,7 +97,7 @@
       },
       {
         "path": "web/Avida.css",
-        "sha256_current": "8d9279de60ccc81f318449f0f2346990e4aeeb71f210a1ee8f6938349b0c171f"
+        "sha256_current": "17249c01050cdc8ffbaa031f47382740f603e65d7faad12adfb14516b4e16168"
       },
       {
         "path": "source/web/FreezerPanel.hpp",
@@ -113,11 +113,11 @@
       },
       {
         "path": "web/Avida.html",
-        "sha256_current": "2e0c8aeca76479b7a498e5ad527660c4c0a23e014b653b38a910f646829cb7d2"
+        "sha256_current": "bd4accfc184b1576927f8b706d50d2cbc5aa90115dff38637fbe03d90d4c26e6"
       },
       {
         "path": "web/education-plots.js",
-        "sha256_current": "a1bfde3b84ae3977a9dab28862a1c5db640e21b0584cede39a55a0255ac7af35"
+        "sha256_current": "10b859fcf84ab91fa2a68d9896171c47ce80a599fbe861adcd621236169a7bf2"
       },
       {
         "path": "web/vendor/plotly-1.53.0.min.js",
@@ -204,7 +204,7 @@
       "metabolic rate and gestation cost"
     ],
     "rendering_rule": "All values are plain text. Insert with a text API, never innerHTML.",
-    "updated_utc": "2026-10-01T09:35:36Z",
+    "updated_utc": "2026-11-23T17:14:36Z",
     "translation_model": "Qwen3.5-9B-Q5_K_M.gguf via local llama.cpp endpoint",
     "translation_method": "Bounded batch translation with TalkOrigins glossary, exact-ID preservation, and placeholder checks.",
     "catalog_entry_count": 346,

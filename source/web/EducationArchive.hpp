@@ -115,9 +115,7 @@ std::string AvidaWebApp::WriteEducationExperiment() {
     + std::string{",\"metric_definition_version\":1,\"checkpoint_base64\":"}
     + avida_web::education::json::Escape(EducationBase64Encode(checkpoint))
     + ",\"locale\":" + avida_web::education::json::Escape(
-      active_locale == avida::web::localization::Locale::ENGLISH ? "en"
-        : active_locale == avida::web::localization::Locale::SPANISH ? "es"
-          : active_locale == avida::web::localization::Locale::PSEUDO_EXPANDED ? "qps-ploc" : "qps-plocm")
+      avida::web::localization::LocaleTag(active_locale))
     + ",\"prediction_note\":" + avida_web::education::json::Escape(prediction_note)
     + ",\"observation_note\":" + avida_web::education::json::Escape(observation_note)
     + ",\"ancestor_sequence\":[";
@@ -217,7 +215,8 @@ void AvidaWebApp::ImportEducationExperiment(const std::string & contents) {
   const Value * runs_value = Field(*root, "runs");
   const Value * ancestor_value = Field(*root, "ancestor_sequence");
   if (!format || *format != "avida-ed5-education-experiment" || !version || *version != 1
-      || !checkpoint_encoded || !locale || (*locale != "en" && *locale != "es" && *locale != "qps-ploc" && *locale != "qps-plocm")
+      || !checkpoint_encoded || !locale || (*locale != "en" && *locale != "es" && *locale != "fr"
+          && *locale != "de" && *locale != "pt" && *locale != "qps-ploc" && *locale != "qps-plocm")
       || !prediction || !observation || prediction->size() > 100000
       || observation->size() > 100000 || !runs_value || runs_value->type != Value::Type::ARRAY
       || runs_value->array.size() > 50 || !ancestor_value || ancestor_value->type != Value::Type::ARRAY
@@ -310,13 +309,7 @@ void AvidaWebApp::ImportEducationExperiment(const std::string & contents) {
   education_ancestor_sequence = std::move(ancestor);
   prediction_note = std::move(*prediction);
   observation_note = std::move(*observation);
-  active_locale = *locale == "es"
-    ? avida::web::localization::Locale::SPANISH
-    : *locale == "qps-ploc"
-    ? avida::web::localization::Locale::PSEUDO_EXPANDED
-    : *locale == "qps-plocm"
-      ? avida::web::localization::Locale::PSEUDO_RTL
-      : avida::web::localization::Locale::ENGLISH;
+  active_locale = avida::web::localization::LocaleFromTag(*locale);
   published_education_update.store(Avida().GetUpdate(), std::memory_order_release);
   pending_education_import.reset();
   education_archive_status = "Experiment and validated checkpoint opened.";

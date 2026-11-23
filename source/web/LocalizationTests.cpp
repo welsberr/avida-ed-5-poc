@@ -9,9 +9,12 @@ using namespace avida::web::localization;
 
 namespace {
 
-constexpr std::array<Locale, 4> locales{
+constexpr std::array<Locale, 7> locales{
   Locale::ENGLISH,
   Locale::SPANISH,
+  Locale::FRENCH,
+  Locale::GERMAN,
+  Locale::PORTUGUESE,
   Locale::PSEUDO_EXPANDED,
   Locale::PSEUDO_RTL
 };
@@ -64,7 +67,8 @@ void CheckCatalog() {
     assert(coverage.Complete());
     assert(coverage.inventory == entries.size());
     assert(coverage.translated == 0);
-    assert(coverage.machine_assisted == (locale == Locale::SPANISH ? entries.size() : 0));
+    assert(coverage.machine_assisted == (locale == Locale::SPANISH || locale == Locale::FRENCH
+      || locale == Locale::GERMAN || locale == Locale::PORTUGUESE ? entries.size() : 0));
     assert(coverage.generated == (locale == Locale::PSEUDO_EXPANDED || locale == Locale::PSEUDO_RTL ? entries.size() : 0));
     assert(coverage.source == (locale == Locale::ENGLISH ? entries.size() : 0));
   }
@@ -91,6 +95,13 @@ void CheckArguments() {
   assert(offspring && offspring->text.find("24 instrucciones") != std::string::npos);
   assert(SpanishText("Execution map") == "Mapa de ejecución");
   assert(SpanishText("Ancestor") == "Ancestro");
+  for (const auto locale : {Locale::FRENCH, Locale::GERMAN, Locale::PORTUGUESE}) {
+    assert(LocaleFromTag(LocaleTag(locale)) == locale);
+    const auto translated = Format(key::STATUS_UPDATE, locale, {&update, 1});
+    assert(translated && translated->text.find("17") != std::string::npos);
+    assert(!translated->pseudolocale);
+    assert(Format(key::LANGUAGE_LABEL, locale)->text != "Language");
+  }
 
   const auto missing = Format(key::STATUS_UPDATE, Locale::ENGLISH);
   assert(!missing && missing.error().code == FormatErrorCode::MISSING_ARGUMENT);
@@ -110,6 +121,14 @@ void CheckArguments() {
 }
 
 void CheckPseudolocalesAndStableIds() {
+  assert(SelectorLocaleCount(false) == 5);
+  assert(SelectorLocaleCount(true) == 7);
+  constexpr std::array<std::string_view, 7> expected_tags{"en", "es", "fr", "de", "pt", "qps-ploc", "qps-plocm"};
+  for (size_t index = 0; index < expected_tags.size(); ++index) {
+    assert(LocaleTag(SELECTOR_LOCALES[index]) == expected_tags[index]);
+    assert(LocaleFromTag(expected_tags[index]) == SELECTOR_LOCALES[index]);
+    assert(SelectorLocaleIndex(SELECTOR_LOCALES[index]) == index);
+  }
   const NamedArgument update{"update", "42"};
   const auto expanded = Format(key::STATUS_UPDATE, Locale::PSEUDO_EXPANDED, {&update, 1});
   assert(expanded && expanded->text.find("{update}") == std::string::npos);

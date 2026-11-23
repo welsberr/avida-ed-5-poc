@@ -106,7 +106,7 @@ std::string AvidaWebApp::BuildEducationPlotPayload() const {
   const auto samples = education_run_recorder.Samples();
   std::string out = "{\"run_id\":" + EducationJSONQuote(active_education_run.id)
     + ",\"locale\":"
-    + EducationJSONQuote(active_locale == avida::web::localization::Locale::SPANISH ? "es" : "en")
+    + EducationJSONQuote(avida::web::localization::LocaleTag(active_locale))
     + ",\"updates\":[";
   for (size_t index = 0; index < samples.size(); ++index) {
     if (index) out += ',';

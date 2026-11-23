@@ -95,6 +95,10 @@ assert.equal(purged.length, 6);
 await browser.AvidaEducationPlots.update(JSON.stringify({ updates: [] }));
 assert.equal(purged.length, 9);
 assert.equal(targets.get("education-plots").hidden, true);
+for (const [language, expected] of [["fr", "fr"], ["de", "de"], ["pt", "pt-BR"]]) {
+  await browser.AvidaEducationPlots.update(JSON.stringify(payload("run-3", language, [0])));
+  assert.ok(rendered.slice(-3).every(chart => chart.config.locale === expected));
+}
 console.log("education Plotly adapter: persistent streaming charts, locale and run resets, export, and empty reset passed");
 }
 

@@ -55,7 +55,7 @@
       return;
     }
 
-    const locale = payload.locale === "es" ? "es" : "en";
+    const locale = ({ es: "es", fr: "fr", de: "de", pt: "pt-BR" })[payload.locale] || "en";
     const runId = payload.run_id || "education-run";
     const data = [{
       x: payload.updates,

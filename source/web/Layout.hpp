@@ -76,22 +76,23 @@ void AvidaWebApp::BuildInterface() {
   logo.Alt("Avida-ED").AddAttr("class", "brand-logo");
   brand << logo;
 
-  // This selector is a persistent widget member while the interface is rebuilt. Use fixed option
-  // IDs so each build replaces the four labels and callbacks instead of appending duplicates.
-  language_selector.SetOption(PresentationText("English").str(), [this](){ SetLocale("en"); }, 0);
-  language_selector.SetOption(PresentationText("Español").str(), [this](){ SetLocale("es"); }, 1);
-  language_selector.SetOption(
-    PresentationText("Pseudo: expanded strings").str(), [this](){ SetLocale("qps-ploc"); }, 2
-  );
-  language_selector.SetOption(
-    PresentationText("Pseudo: right-to-left layout").str(),
-    [this](){ SetLocale("qps-plocm"); }, 3
-  );
-  language_selector.SelectID(
-    active_locale == avida::web::localization::Locale::ENGLISH ? 0
-      : active_locale == avida::web::localization::Locale::SPANISH ? 1
-        : active_locale == avida::web::localization::Locale::PSEUDO_EXPANDED ? 2 : 3
-  );
+  // Recreate the selector on rebuild so diagnostic options cannot linger after a locale change.
+  // Pseudolocales are layout tools, exposed only when explicitly requested or when a saved
+  // session using one is restored (so the user can see and change the current selection).
+  language_selector = UI::Selector{"language-selector"};
+  const bool show_pseudolocales = EM_ASM_INT({
+    return new URLSearchParams(window.location.search).get("pseudolocales") === "1";
+  }) || active_locale == avida::web::localization::Locale::PSEUDO_EXPANDED
+     || active_locale == avida::web::localization::Locale::PSEUDO_RTL;
+  using namespace avida::web::localization;
+  for (size_t index = 0; index < SelectorLocaleCount(show_pseudolocales); ++index) {
+    const Locale locale = SELECTOR_LOCALES[index];
+    const std::string tag{LocaleTag(locale)};
+    const std::string name = index < 5 ? std::string{LocaleLabel(locale)}
+      : PresentationText(LocaleLabel(locale)).str();
+    language_selector.SetOption(name, [this, tag](){ SetLocale(tag); }, index);
+  }
+  language_selector.SelectID(SelectorLocaleIndex(active_locale));
   language_selector.SetAttr("aria-label", Localized(avida::web::localization::key::LANGUAGE_LABEL));
   language_selector.AddAttr("class", "language-selector");
 
@@ -730,8 +731,11 @@ void AvidaWebApp::RebuildInterface() {
     if (language) {
       if (language.options[0]) language.options[0].value = "en";
       if (language.options[1]) language.options[1].value = "es";
-      if (language.options[2]) language.options[2].value = "qps-ploc";
-      if (language.options[3]) language.options[3].value = "qps-plocm";
+      if (language.options[2]) language.options[2].value = "fr";
+      if (language.options[3]) language.options[3].value = "de";
+      if (language.options[4]) language.options[4].value = "pt";
+      if (language.options[5]) language.options[5].value = "qps-ploc";
+      if (language.options[6]) language.options[6].value = "qps-plocm";
     }
     const preset = document.getElementById("run-preset");
     if (preset) {
@@ -745,8 +749,6 @@ void AvidaWebApp::RebuildInterface() {
     }
     document.documentElement.lang = UTF8ToString($0);
     document.documentElement.dir = $1 ? "rtl" : "ltr";
-  }, active_locale == avida::web::localization::Locale::ENGLISH ? "en"
-       : active_locale == avida::web::localization::Locale::SPANISH ? "es"
-         : active_locale == avida::web::localization::Locale::PSEUDO_EXPANDED ? "qps-ploc" : "qps-plocm",
+  }, avida::web::localization::LocaleTag(active_locale).data(),
      active_locale == avida::web::localization::Locale::PSEUDO_RTL);
 }

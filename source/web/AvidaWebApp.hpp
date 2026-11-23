@@ -376,6 +376,11 @@ private:
     if (active_locale == avida::web::localization::Locale::SPANISH) {
       return emp::String{avida::web::localization::SpanishText(source)};
     }
+    if (active_locale == avida::web::localization::Locale::FRENCH
+        || active_locale == avida::web::localization::Locale::GERMAN
+        || active_locale == avida::web::localization::Locale::PORTUGUESE) {
+      return emp::String{avida::web::localization::AdditionalText(source, active_locale)};
+    }
     if (active_locale == avida::web::localization::Locale::PSEUDO_EXPANDED) {
       return emp::String{avida::web::localization::PseudoExpand(source)};
     }

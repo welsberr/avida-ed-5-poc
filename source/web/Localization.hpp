@@ -15,12 +15,13 @@
 #include <utility>
 
 #include "SpanishCatalog.hpp"
+#include "AdditionalCatalogs.hpp"
 
 // Localization data is plain text. Callers must insert formatted messages as text, never HTML.
 // Numeric/date arguments are formatted by the browser Intl bridge before being passed here.
 namespace avida::web::localization {
 
-enum class Locale { ENGLISH, SPANISH, PSEUDO_EXPANDED, PSEUDO_RTL };
+enum class Locale { ENGLISH, SPANISH, FRENCH, GERMAN, PORTUGUESE, PSEUDO_EXPANDED, PSEUDO_RTL };
 enum class Direction { LTR, RTL };
 enum class Domain { SHELL, POPULATION, EXPERIMENT, LESSON, ERROR, METRIC };
 
@@ -172,6 +173,9 @@ struct CoverageReport {
   switch (locale) {
     case Locale::ENGLISH: return "English";
     case Locale::SPANISH: return "Español";
+    case Locale::FRENCH: return "Français";
+    case Locale::GERMAN: return "Deutsch";
+    case Locale::PORTUGUESE: return "Português";
     case Locale::PSEUDO_EXPANDED: return "Pseudo: expanded strings";
     case Locale::PSEUDO_RTL: return "Pseudo: right-to-left layout";
   }
@@ -182,10 +186,56 @@ struct CoverageReport {
   switch (locale) {
     case Locale::ENGLISH: return "en";
     case Locale::SPANISH: return "es";
+    case Locale::FRENCH: return "fr";
+    case Locale::GERMAN: return "de";
+    case Locale::PORTUGUESE: return "pt";
     case Locale::PSEUDO_EXPANDED: return "qps-ploc";
     case Locale::PSEUDO_RTL: return "qps-plocm";
   }
   return "und";
+}
+
+[[nodiscard]] constexpr Locale LocaleFromTag(std::string_view tag) noexcept {
+  if (tag == "es") return Locale::SPANISH;
+  if (tag == "fr") return Locale::FRENCH;
+  if (tag == "de") return Locale::GERMAN;
+  if (tag == "pt") return Locale::PORTUGUESE;
+  if (tag == "qps-ploc") return Locale::PSEUDO_EXPANDED;
+  if (tag == "qps-plocm") return Locale::PSEUDO_RTL;
+  return Locale::ENGLISH;
+}
+
+inline constexpr std::array<Locale, 7> SELECTOR_LOCALES{
+  Locale::ENGLISH, Locale::SPANISH, Locale::FRENCH, Locale::GERMAN, Locale::PORTUGUESE,
+  Locale::PSEUDO_EXPANDED, Locale::PSEUDO_RTL
+};
+[[nodiscard]] constexpr size_t SelectorLocaleCount(bool show_diagnostics) noexcept {
+  return show_diagnostics ? SELECTOR_LOCALES.size() : 5;
+}
+[[nodiscard]] constexpr size_t SelectorLocaleIndex(Locale locale) noexcept {
+  for (size_t index = 0; index < SELECTOR_LOCALES.size(); ++index) {
+    if (SELECTOR_LOCALES[index] == locale) return index;
+  }
+  return 0;
+}
+
+[[nodiscard]] constexpr std::string_view AdditionalValue(const AdditionalEntry & entry, Locale locale) noexcept {
+  switch (locale) {
+    case Locale::FRENCH: return entry.fr;
+    case Locale::GERMAN: return entry.de;
+    case Locale::PORTUGUESE: return entry.pt;
+    default: return entry.source;
+  }
+}
+
+[[nodiscard]] constexpr std::string_view AdditionalText(std::string_view source, Locale locale) noexcept {
+  const AdditionalEntry * match = nullptr;
+  for (const auto & entry : ADDITIONAL_CANDIDATES) {
+    if (entry.source != source || entry.id.starts_with("glossary.")) continue;
+    if (!match) match = &entry;
+    else if (AdditionalValue(*match, locale) != AdditionalValue(entry, locale)) return source;
+  }
+  return match ? AdditionalValue(*match, locale) : source;
 }
 
 [[nodiscard]] constexpr const Entry * Find(std::string_view id) noexcept {
@@ -239,6 +289,9 @@ struct CoverageReport {
       else if (locale == Locale::SPANISH) {
         if (FindSpanish(entry.id)) ++report.machine_assisted;
         else ++report.fallback;
+      } else if (locale == Locale::FRENCH || locale == Locale::GERMAN || locale == Locale::PORTUGUESE) {
+        if (FindAdditional(entry.id)) ++report.machine_assisted;
+        else ++report.fallback;
       } else ++report.generated;
     }
     if (!HasWellFormedPlaceholders(entry.english)) ++report.malformed;
@@ -291,6 +344,9 @@ struct CoverageReport {
   std::string source{entry ? entry->english : candidate->source};
   if (locale == Locale::SPANISH) {
     if (candidate) source = candidate->value;
+  }
+  if (locale == Locale::FRENCH || locale == Locale::GERMAN || locale == Locale::PORTUGUESE) {
+    if (const auto * translated = FindAdditional(id)) source = AdditionalValue(*translated, locale);
   }
   if (locale == Locale::PSEUDO_EXPANDED) source = PseudoExpand(source);
   if (locale == Locale::PSEUDO_RTL) source = PseudoRtl(source);

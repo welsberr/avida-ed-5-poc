@@ -363,15 +363,7 @@ void AvidaWebApp::RefreshEducationStatus() {
 }
 
 void AvidaWebApp::SetLocale(const std::string & locale_id) {
-  if (locale_id == "es") {
-    active_locale = avida::web::localization::Locale::SPANISH;
-  } else if (locale_id == "qps-ploc") {
-    active_locale = avida::web::localization::Locale::PSEUDO_EXPANDED;
-  } else if (locale_id == "qps-plocm") {
-    active_locale = avida::web::localization::Locale::PSEUDO_RTL;
-  } else {
-    active_locale = avida::web::localization::Locale::ENGLISH;
-  }
+  active_locale = avida::web::localization::LocaleFromTag(locale_id);
   EM_ASM({
     document.documentElement.dir = $0 ? "rtl" : "ltr";
     document.documentElement.lang = UTF8ToString($1);
