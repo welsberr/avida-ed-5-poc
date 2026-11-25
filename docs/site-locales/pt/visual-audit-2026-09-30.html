@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Áudio visual de mesa e de largura estreita da interface de prova de conceito Avida-ED 5, com descobertas, correções, evidências e trabalho de revisão restante." name="description"/>
+<title>Auditoria visual Avida-ED 5 — 30 setembro 2026</title>
+<link href="../site-report.css" rel="stylesheet"/>
+<style>
+    figure { margin: 1.25rem 0 2rem; }
+    figure img { width: 100%; height: auto; border: 1px solid #c7d1dc; border-radius: .35rem; }
+    figcaption { margin-top: .45rem; color: #46586c; font-size: .92rem; }
+  </style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 conceito de prova · evidência de verificação</div>
+<h1>Auditoria visual das afirmações da interface operacional</h1>
+<p>Revisão de desktop e de 390-pixel concluída em 30 de setembro de 2026.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Navegação de página"><a href="index.html">Página inicial do projeto</a> · <a href="port-status.html">Avaliação de portfólio</a> · <a href="roadmap.html">Estratégia e progresso</a></nav>
+<section class="callout">
+<h2>Resultado</h2>
+<p>A verificação visual identificou e corrigiu a falha relatada no layout do Organismo. Também corrigiu o transbordamento da barra de ferramentas em telas estreitas, rolagem horizontal no Congelador, texto de baixo contraste e legendas de Análise pálidas.</p>
+<p>Isso apoia a afirmação de que as superfícies atualmente implementadas do protótipo são visíveis e utilizáveis em larguras de desktop e estreitas. Não estabelece paridade de nível de tutorial com Avida-ED 4, valida a redação científica ou substitui a revisão por instrutores e alunos.</p>
+</section>
+<section>
+<h2>Escopo e método</h2>
+<p>A auditoria utilizou o aplicativo reconstruído WebAssembly em um navegador baseado no Chromium. A visualização de desktop tinha 1280 × 720 pixels; a visualização estreita tinha 390 × 844 pixels.</p>
+<p>O arquivo de capturas de tela arquiva a versão de setembro 30. Seu texto visível "dez recompensas de tarefas lógicas" e a contagem de reações antecipam a correção de outubro 1 no perfil padrão de recompensa de tarefas; os valores corrigidos e a diferença restante no nível do motor estão documentados no <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md#default-task-reward-profile">mapa da interface</a>.</p>
+<p>A revisão abrangeu todas as áreas da interface descritas como funcionais ou disponíveis na <a href="port-status.html">Avida-ED 4 à 5 avaliação de portabilidade</a>: Navegação e controles da população, Execução de organismos e inspeção de células selecionadas, Análise com duas execuções de simulação de 250 atualizações, o Congelador e Configuração.</p>
+<p>A revisão verificou o posicionamento renderizado, visibilidade, overflow horizontal, contraste de texto e acesso ao conteúdo principal. Ela testou os controles necessários para alcançar estados populados. Não realizou todas as rotas de importação, exportação, arrastar-e-soltar, teclado ou recuperação de erros.</p>
+<p>Iniciar a segunda execução de Análise exibiu a confirmação do navegador esperada para substituir a execução ativa. Aceitá-la permitiu que a segunda execução de 250 atualizações concluísse normalmente; a pausa foi tratamento de diálogo, não evidência de atraso no desempenho da simulação.</p>
+</section>
+<section>
+<h2>Descobertas e disposição</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Área</th><th scope="col">Procurar</th><th scope="col">Disposição</th></tr></thead>
+<tbody>
+<tr><th scope="row">Layout da área de trabalho do Organismo</th><td>O espaço de trabalho ocupava a coluna lateral de 188 pixels. Os controles se sobrepunham, o conteúdo principal ficava obscurecido e o seletor de visualização movia-se abaixo do espaço de trabalho.</td><td>Corrigiu a ordem dos componentes e posicionamento explícito na grade.</td></tr>
+<tr><th scope="row">Layout estreito do Organismo</th><td>O seletor e os controles de transporte exigiam rolagem horizontal; o posicionamento na área de trabalho podia criar uma coluna implícita fora da tela.</td><td>Redefiniu o posicionamento da grade estreita e envolveu os controles.</td></tr>
+<tr><th scope="row">Contraste de Organismos</th><td>Notas de comparação de sequência herdaram texto escuro enquanto exibido em painéis escuros.</td><td>Aplicou-se uma cor de primeiro plano de Organismo explícita.</td></tr>
+<tr><th scope="row">Congelador</th><td>Controles de ponto de verificação e metadados de item criaram uma barra de rolagem horizontal.</td><td>Restringiu larguras aninhadas e manteve rolagem vertical.</td></tr>
+<tr><th scope="row">Configurar</th><td>Descrições e guias ativos tinham baixo contraste na superfície educacional clara.</td><td>Superfícies de cartão de luz adicionadas e cores de tema educacional aplicadas.</td></tr>
+<tr><th scope="row">Célula selecionada</th><td>O texto de resumo estava fraco e a lista de genomas em múltiplas colunas fluía para colunas horizontais ocultas.</td><td>Aumentou-se o contraste e foi utilizada uma única coluna de genoma com rolagem vertical.</td></tr>
+<tr><th scope="row">Análise</th><td>O layout responsivo funcionou, mas as legendas dos gráficos estavam muito pálidas sobre branco. O atraso aparente na segunda execução foi a confirmação esperada de nova execução aguardando uma resposta.</td><td>Aplicou-se a cor de primeiro plano padrão para educação; aceitou-se a confirmação e verificou-se que ambas as execuções de atualização 250 foram concluídas.</td></tr>
+<tr><th scope="row">População</th><td>Os layouts de desktop e estreito mantiveram os controles e a grade visíveis sem overflow horizontal em nível de página.</td><td>Sem alteração estrutural além das correções compartilhadas no Congelador.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Evidência renderizada</h2>
+<figure><img alt="Visualização da População no Desktop após a auditoria" src="../evidence/visual-audit-2026-09-30/desktop-population.png"/><figcaption>Visualização da População Desktop, 1280 × 720.</figcaption></figure>
+<figure><img alt="Visualização de Organismo no Desktop com o ancestral selecionado" src="../evidence/visual-audit-2026-09-30/desktop-organism.png"/><figcaption>Visualização do Organismo Desktop. O seletor de visualização permanece na barra lateral esquerda e o workspace de execução usa a coluna principal.</figcaption></figure>
+<figure><img alt="Visualização de Organismo estreita com controles embalados acima do conteúdo" src="../evidence/visual-audit-2026-09-30/narrow-organism.png"/><figcaption>Visualização Estreita do Organismo, 390 × 844. O seletor e os controles de transporte se envolvem sem ultrapassar a página horizontalmente.</figcaption></figure>
+<figure><img alt="Visualização de Análise no Desktop mostrando duas execuções de simulação concluídas" src="../evidence/visual-audit-2026-09-30/desktop-analysis.png"/><figcaption>Visualização de Análise Desktop com execuções de mutação concluídas 0%  e 1% .</figcaption></figure>
+<figure><img alt="Visualização de Análise estreita" src="../evidence/visual-audit-2026-09-30/narrow-analysis.png"/><figcaption>Visualização Estreita de Análise com o seletor e o relatório em uma coluna.</figcaption></figure>
+<figure><img alt="Visualização de Configuração no Desktop com rótulos e descrições de tema claro legíveis" src="../evidence/visual-audit-2026-09-30/desktop-configure.png"/><figcaption>Visualização Configure Desktop após as correções de contraste do tema claro.</figcaption></figure>
+</section>
+<section>
+<h2>Trabalho de revisão restante</h2>
+<ul>
+<li>Assista aos vídeos tutoriais representativos de Avida-ED 4 e registre exceções explícitas.</li>
+<li>Repita o fluxo de trabalho em um segundo navegador e no laptop de apresentação.</li>
+<li>Conclua as verificações de teclado único, importação/exportação, arrastar e soltar e recuperação de erros.</li>
+<li>Revise a terminologia científica e a redação em espanhol com um revisor fluente em matéria de conteúdo.</li>
+<li>Obtenha feedback de instrutores e alunos antes de fazer afirmações sobre prontidão para sala de aula.</li>
+</ul>
+</section>
+</main>
+<footer><div class="wrap">Prova de conceito independente. Esta é evidência de verificação para uma versão de desenvolvimento, não uma declaração de lançamento da equipe Avida-ED.</div></footer>
+</body>
+</html>

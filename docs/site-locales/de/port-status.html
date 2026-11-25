@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Beweisbasierte Statusangabe für konzeptionelle und funktionale Kontinuität von Avida-ED 4 zum Avida-ED 5-Proof of Concept." name="description"/>
+<title>Avida-ED 4 zu 5: Port-Status</title>
+<link href="../site-report.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 Proof of Concept · BEACON Demo-Notizen</div>
+<h1>Wie treu trägt der Prototyp Avida-ED 4 voran?</h1>
+<p>Eine quellenbasierte Überprüfung der verbleibenden Benutzer-Aufgaben, die noch erkennbar sind, die Stellen, an denen der Prototyp abweicht, und die Arbeit, die noch vor der Behauptung einer Tutorial-Ebenen-Kontinuität benötigt wird.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Seitennavigation"><a href="index.html">Projektstartseite</a> · <a href="codex-collaboration.html">Codex und das Tool-Stack</a> · <a href="porting-learning-roadmap.html">Lern- und Portierungsroadmap</a> · <a href="roadmap.html">Roadmap und Fortschritt</a></nav>
+<section class="callout">
+<h2>Bewertung</h2>
+<p>Der Prototyp ist ein <strong>konzeptioneller Port in Entwicklung</strong>, kein treuer funktionaler Ersatz für Avida-ED 4. Er verwendet nun die vertrauten drei Ansichten—Population, Organismus und Analyse—reutzt ausgewählte v4-Grafiken und Farbwahl und unterstützt erkennbare Aufgaben wie das Ausführen einer Population, Inspektion eines Organismus, Speichern der Arbeit und Anzeigen der Ergebnisse. Mehrere wichtige Arbeitsabläufe unterscheiden sich weiterhin in Steuerung, verfügbaren Werten und Verhalten.</p>
+<p>Die entscheidendste Lücke ist die Analyse: Der Prototyp vergleicht abgeschlossene Lernläufe, während v4 Lernenden ermöglicht, bis zu drei befüllte Schalen in einen gemeinsamen Analysegerät zu platzieren und gemessene Serien und Achsen auszuwählen. Die Übereinstimmung des Namens hilft bei der Erkennung, macht diese Workflows jedoch nicht gleichwertig.</p>
+</section>
+<section>
+<h2>Was „treu“ hier bedeutet</h2>
+<p>Für diese Überprüfung bedeutet Treue, dass ein zurückkehrender Lerner die gleiche Aufgabe erkennen kann, ihre Steuerelemente in einem vertrauten Bereich finden, vergleichbare Werte und Auswahlmöglichkeiten verwenden und ein vergleichbares Ergebnis erzielen kann. Pixelgenaue Übereinstimmung ist auf einem schmalen Mobilbildschirm nicht erforderlich, aber etablierte Tutorialanweisungen sollten dennoch ohne Raten auf die neue Benutzeroberfläche übertragen werden können.</p>
+<p>Die Referenz ist die Quellrevision Avida-ED 4 <a href="https://github.com/Avida-ED/Avida-ED4/commit/fcfc5c60e03479c85eadad083ffb5e7d92a95781">fcfc5c6</a> (Version 4.0.33), geprüft 30. September 2026. Die detaillierte Kontrollinventar und Vergleich sind im <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">Avida-ED 4 zu 5-Interface-Map </a>.</p>
+</section>
+<section>
+<h2>Aktueller Status nach Benutzeraufgabe</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Aufgabenbereich</th><th scope="col">Status</th><th scope="col">Beweis und Auswirkung</th></tr></thead>
+<tbody>
+<tr><th scope="row">Hauptnavigation</th><td class="status aligned">Ausgerichtet auf der Etiketten-Ebene</td><td>Bevölkerung, Organismus und Analyse verwenden v4-Namen und ausgewählte vertraute Grafiken. Die Layout ist responsiv, sodass einige Positionen bei kleinen Breiten ändern.</td></tr>
+<tr><th scope="row">Bevölkerungseinstellungen</th><td class="status partial">Teilweise, absichtlich eingeschränkt</td><td>Die erste Lektion bietet zwei Mutationsbehandlungen, drei feste Zufallsstartwerte und einen festen 10 × 10-Welt mit einem gebündelten Vorfahren und Umgebung. Ihre neun Standard-Aufgaben-Belohnungsstärken stimmen nun numerisch mit dem Avida-ED 4-Profil überein, verwenden aber den POC-Mechanismus für den metabolischen Multiplikator. V4 zeigt eine konfigurierbare Schüssel, Vorfahrenplatzierung, Nachkommenplatzierung und breitere Mutationswerte.</td></tr>
+<tr><th scope="row">Laufsteuerung und Live-Beobachtungen</th><td class="status partial">Gleiche allgemeine Zweck, aber anderer Workflow</td><td>Der Prototyp kann zurückgesetzt, Schritt für Schritt ausgeführt, abgespielt, angehalten, beschleunigt und bis zu einem Ziel ausgeführt werden; er protokolliert und plottet Population, Sequenzvielfalt und Anteil der Vorfahrensequenz. V4 verwendet eine andere Anordnung von Start/Pause/Vorwärts/Neu und umfassendere Populationsstatistiken.</td></tr>
+<tr><th scope="row">Bevölkerungsfarben</th><td class="status partial">Ausgewählte Konzepte übernommen</td><td>Farbierungen für Fitness, Geburtskosten, Stoffwechselrate, Phänotyp und Genotyp sind verfügbar, mit beibehaltenen alten Farbpalette-Wahlen. V4 bietet auch auf Vorfahren und Umgebung abgestimmte Aufgaben/Ressourcenansichten, die nicht alle dargestellt sind.</td></tr>
+<tr><th scope="row">Organismusinspektion</th><td class="status partial">Funktional, mit geänderter Darstellung</td><td>Organismen können geladen und während der Schritt-für-Schritt-Ausführung inspiziert werden, einschließlich Genom- und Zustandspanels. Die V4-Zyklussteuerungen, Einstellungen und visuelle Anordnung werden nicht eins zu eins wiedergegeben.</td></tr>
+<tr><th scope="row">Analyse</th><td class="status gap">Hauptfunktionaler Unterschied</td><td>Die aktuelle Ansicht überlagert abgeschlossene Laufzeiten. Der v4-Analyser akzeptiert bis zu drei belegte Schalen und ermöglicht Benutzern, linke und rechte Maße auszuwählen, Spuren zu entfernen und Farben festzulegen. Ein v4-stiliger Analyser bleibt ein hochprioritärer Paritätselement.</td></tr>
+<tr><th scope="row">Gefrierfach und gespeicherte Arbeit</th><td class="status partial">Zweck übernommen, Interaktion unterscheidet sich</td><td>Der Prototyp speichert und importiert Organismen, Konfigurationen und Checkpoints. Die Gruppierung von Elementen und Drag-and-Drop-Pfade müssen weiterhin direkter Vergleich mit den v4-Tutorial-Workflows unterzogen werden.</td></tr>
+<tr><th scope="row">Einstellungen und Umgebung</th><td class="status partial">Teilmenge verfügbar</td><td>Metadatengetriebene Einstellungen und Umgebungskontrollen sind funktional, einschließlich Optionen und numerischer Grenzen. Die exponierte Teilmenge und der Task-Konfigurationspfad wurden noch nicht gegen das Tutorial durchlaufen.</td></tr>
+<tr><th scope="row">Tutorialkontinuität</th><td class="status partial">Noch nicht vollständig validiert</td><td>Die Quellkarte ist detailliert, aber es gab bisher noch keine repräsentative Video-für-Video-Akzeptanzüberprüfung oder einen vollständigen Desktop/Mobil-Visualvergleich.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Interpretation</h2>
+<p>Die stärkste Kontinuität heute ist die <em>Form</em> des Arbeitsbereichs und mehrere vertraute Aufgaben; es handelt sich nicht um eine vollständige Äquivalenz wissenschaftlicher Kontrollen oder Tutorial-Ergebnisse. Der enge Lernschritt ist nützlich für eine erste Demo, da er der neuen Oberfläche ein konkretes Experiment, reproduzierbare Startwerte, Live-Beweise und Speicher-/Exportpfade bietet. Diese Ergänzungen sollten als neue Lernschritt-Workflow beschrieben werden, anstatt als ob die alten Tutorials bereits dies beschreiben würden.</p>
+<p>Ein sinnvoller Portierungssequenz ist es, die Tutorial-Aufgaben mit der Kontrollkarte zu vergleichen, dann für jede Aufgabe zu entscheiden, ob die v4-Interaktion beibehalten, als zusätzlicher Modus freigelegt oder eindeutig als bewusste Neugestaltung gekennzeichnet werden soll. Priorisieren Sie den belegten Schüssel-Analyse-Workflow und die Gefrierfach-Übertragungen, da diese beeinflussen, wie Lernende Ergebnisse zwischen Ansichten verschieben. Halten Sie neue eingeschränkte Lernschritt-Voreinstellungen als separaten Pfad verfügbar.</p>
+</section>
+<aside>
+<h2>Beweise und Grenzen</h2>
+<p>Kontrollbezeichnungen, Optionen und Bereiche wurden in v4 und POC-Quelle überprüft. Dies unterstützt ein hohes Vertrauen bei der Quellenebene Vergleich. Die Bewertung des Tutorial-Einflusses ist eine begründete Einschätzung; sie benötigt Validierung mit Dozenten, Lernenden und den genauen Tutorial-Videos. Das ältere v3-Manual ist nur unterstützender Kontext, nicht die Autorität für v4-Verhalten.</p>
+<p>Ein Desktop- und schmalbreitiger <a href="visual-audit-2026-09-30.html">visueller Audit</a> überprüfte die auf dieser Seite als funktional beschriebenen Schnittstellenbereiche. Er korrigierte das defekte Organismus-Layout und damit verbundene Überlauf- und Kontrastfehler. Dieser Audit bestätigt die gerenderte Sichtbarkeit und Platzierung; er stellt keine Tutorial-Parität oder Klassenzimmerbereitschaft fest.</p>
+<p>Primäre Referenzen: <a href="https://github.com/Avida-ED/Avida-ED4">Avida-ED 4 Repository</a>, <a href="https://avida-ed.github.io/help/">Avida-ED Hilfe- und Tutorial-Videos</a>, <a href="https://github.com/welsberr/avida-ed-5-poc">dieses Prototyp-Repository</a> sowie seine <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">detaillierte Schnittstellenkarte</a>. Der Status spiegelt den überprüften Quellcode vom 30. September 2026 wider.</p>
+</aside>
+</main>
+<footer><div class="wrap">Unabhängiger Proof of Concept. Diese Seite ist eine funktionierende Bewertung, keine Avida-ED-Team-Veröffentlichungserklärung.</div></footer>
+</body>
+</html>

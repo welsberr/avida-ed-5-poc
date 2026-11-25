@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0c1e2e" name="theme-color"/>
+<title>Avida-ED 5 — Évolution numérique</title>
+<style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #172b3b;
+      background: #f3f6f8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    header { padding: 3.5rem 1.25rem 4rem; color: white; background: #0c1e2e; }
+    .wrap { width: min(100%, 70rem); margin: 0 auto; }
+    .eyebrow { color: #a8d7ee; font-size: .82rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    h1 { max-width: 15ch; margin: .65rem 0 1rem; font-size: clamp(2.4rem, 7vw, 4.7rem); line-height: 1.02; }
+    header p { max-width: 43rem; margin: 0; color: #d8e4ec; font-size: 1.15rem; line-height: 1.65; }
+    main { padding: 2rem 1.25rem 4rem; }
+    .content { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(16rem, .8fr); gap: 1.25rem; align-items: start; }
+    section, aside { padding: 1.5rem; border: 1px solid #d8e0e6; border-radius: .8rem; background: white; box-shadow: 0 .5rem 1.8rem #0c1e2e0d; }
+    h2 { margin: 0 0 .8rem; font-size: 1.35rem; }
+    p { line-height: 1.65; }
+    .launch { display: inline-flex; min-height: 3rem; align-items: center; justify-content: center; margin: .5rem 0 .25rem; padding: .7rem 1.1rem; border-radius: .4rem; color: white; background: #075b86; font-weight: 700; text-decoration: none; }
+    .launch:hover, .launch:focus-visible { background: #064669; text-decoration: underline; }
+    a { color: #075b86; }
+    .note { color: #435565; font-size: .94rem; }
+    ul { padding-left: 1.2rem; line-height: 1.7; }
+    .architecture { margin-top: 1.25rem; }
+    .architecture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem 1.5rem; }
+    .architecture-grid li { padding-left: .15rem; }
+    footer { padding: 1.25rem; border-top: 1px solid #d8e0e6; color: #435565; font-size: .9rem; }
+    @media (max-width: 760px) {
+      header { padding: 2.5rem 1rem 3rem; }
+      main { padding: 1rem 1rem 2.5rem; }
+      .content { grid-template-columns: 1fr; }
+      .architecture-grid { grid-template-columns: 1fr; }
+      section, aside { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="eyebrow">Avida-ED 5 preuve de concept</div>
+<h1>Explorer l'évolution numérique</h1>
+<p>Exécuter une petite expérience Avida, observer les organismes numériques au fil des générations et comparer comment la mutation modifie la variation dans une population.</p>
+</div>
+</header>
+<main class="wrap">
+<div class="content">
+<section aria-labelledby="try-heading">
+<h2 id="try-heading">Essayer le prototype interactif</h2>
+<p>L'application fournit un espace de travail Avida-ED familier pour configurer une population, exécuter l'expérience et examiner les résultats. Les graphiques en direct montrent la taille de la population, la diversité des séquences et la part de l'ancêtre.</p>
+<a class="launch" href="../app/Avida.html?lang=fr">Lancer l'application Avida 5</a>
+<p class="note">L'application peut se recharger une fois lors de la première utilisation tout en activant la mémoire WebAssembly partagée nécessaire pour la simulation en arrière-plan. Utilisez un navigateur moderne avec JavaScript, WebAssembly et les workers de service activés.</p>
+</section>
+<aside aria-labelledby="about-heading">
+<h2 id="about-heading">À propos de ce projet</h2>
+<p>Il s’agit d’un prototype préliminaire de recherche et d’enseignement basé sur Avida 5. Il ne remplace pas Avida-ED 4 dans une salle de classe et n’est pas encore prêt pour cet usage ; l’expérience proposée est une illustration, et non une preuve d’une conclusion scientifique générale.</p>
+<ul>
+<li><a href="https://github.com/welsberr/avida-ed-5-poc">Sources du projet et notes de construction</a></li>
+<li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/experiment-guide.md">Comment lire l'expérience</a></li>
+<li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/researcher-overview.md">Aperçu du chercheur</a></li>
+<li><a href="roadmap.html">Feuille de route et progression du projet</a></li>
+<li><a href="porting-learning-roadmap.html">Plan détaillé pour la démonstration du 23 octobre et pour Avida-ED 5</a></li>
+<li><a href="port-status.html">État de la migration de Avida-ED 4 à 5</a></li>
+<li><a href="codex-collaboration.html">Comment la pile logicielle a contribué</a></li>
+</ul>
+</aside>
+</div>
+<section aria-labelledby="architecture-heading" class="architecture">
+<h2 id="architecture-heading">Architecture d'ensemble</h2>
+<p>Le prototype relie une exécution de simulation Avida 5 à un espace de travail Avida-ED basé sur le navigateur, chaque partie étant responsable d'une tâche distincte :</p>
+<ul class="architecture-grid">
+<li><strong>Avida 5</strong> exécute les organismes numériques et leurs instructions et gère les paramètres de l’expérience.</li>
+<li><strong>Empirical et Emscripten</strong> fournissent l’interface C++ pour navigateur et son lien avec la simulation.</li>
+<li>L'interface <strong>Plotly.js</strong> affiche des mesures en direct ; l'application enregistre les données et un petit adaptateur JavaScript met à jour les graphiques.</li>
+<li><strong>Le congélateur du navigateur</strong> conserve les éléments localement ; les fichiers d’exportation et d’importation permettent de les déplacer entre navigateurs.</li>
+<li>La <strong>Localisation</strong> est intégrée à l'interface, avec des catalogues en anglais, en espagnol (brouillon), en français, en allemand et en portugais brésilien.</li>
+</ul>
+<p class="note">Le prototype est encore en développement ; les versions d’aperçu en espagnol, français, allemand et portugais nécessitent une révision linguistique et de la terminologie scientifique. Consultez l’<a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/researcher-overview.md">aperçu destiné aux chercheurs</a> pour les détails d’implémentation et les limites actuelles.</p>
+</section>
+</main>
+<footer>
+<div class="wrap">Preuve de concept Avida-ED 5 · Rien n’indique que Michigan State University ou Avida-ED approuve ce prototype indépendant.</div>
+</footer>
+</body>
+</html>

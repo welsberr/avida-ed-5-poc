@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Audit visuel de bureau et à largeur réduite de l'interface de preuve de concept Avida-ED 5, avec conclusions, corrections, preuves et travaux de révision restants." name="description"/>
+<title>Audit visuel Avida-ED 5 — 30 septembre 2026</title>
+<link href="../site-report.css" rel="stylesheet"/>
+<style>
+    figure { margin: 1.25rem 0 2rem; }
+    figure img { width: 100%; height: auto; border: 1px solid #c7d1dc; border-radius: .35rem; }
+    figcaption { margin-top: .45rem; color: #46586c; font-size: .92rem; }
+  </style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 preuve de concept · preuves de vérification</div>
+<h1>Audit visuel des affirmations relatives à l'interface opérationnelle</h1>
+<p>Examen sur bureau et à 390 pixels terminé le 30 septembre 2026.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Navigation de la page"><a href="index.html">Accueil du projet</a> · <a href="port-status.html">Évaluation du port</a> · <a href="roadmap.html">Feuille de route et progression</a></nav>
+<section class="callout">
+<h2>Résultat</h2>
+<p>Le passage visuel a identifié et corrigé l'échec de mise en page des Organismes signalé. Il a également corrigé le débordement de la barre d'outils sur les écrans étroits, le défilement horizontal dans le Congélateur, le texte à faible contraste et les légendes d'Analyse pâles.</p>
+<p>Ceci soutient l'affirmation selon laquelle les surfaces actuellement implémentées du prototype sont visibles et utilisables sur les écrans de bureau et étroits. Cela ne démontre pas une parité au niveau des tutoriels avec Avida-ED 4, ne valide pas la formulation scientifique, ni ne remplace l'examen par les instructeurs et les apprenants.</p>
+</section>
+<section>
+<h2>Portée et méthode</h2>
+<p>L'audit a utilisé l'application WebAssembly reconstruite dans un navigateur basé sur Chromium. La vue d'aperçu de bureau était de 1280 × 720 pixels ; la vue d'aperçu étroite était de 390 × 844 pixels.</p>
+<p>Les captures d'écran archivent la version de septembre 30. Leur texte visible « dix récompenses de tâches logiques » et le compteur de réactions datent de la correction du profil de récompense des tâches par défaut du 1 octobre ; les valeurs corrigées et la différence restante au niveau du moteur sont documentées dans la carte d'interface <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md#default-task-reward-profile">interface map</a>.</p>
+<p>Le passage a couvert chaque zone d'interface décrite comme fonctionnelle ou disponible dans l'évaluation de portage <a href="port-status.html">Avida-ED 4 à 5 </a> : navigation et contrôles de la population, exécution des organismes et inspection de la cellule sélectionnée, analyse avec deux exécutions de simulation de 250-mise à jour, le Congélateur et la Configuration.</p>
+<p>La revue a vérifié l'emplacement rendu, la visibilité, le débordement horizontal, le contraste du texte et l'accès au contenu principal. Elle a exercé les contrôles nécessaires pour atteindre des états peuplés. Elle n'a pas effectué tous les chemins d'importation, d'exportation, de glisser-déposer, de clavier ou de récupération d'erreur.</p>
+<p>Le démarrage de la deuxième exécution d'analyse a affiché la confirmation d'attente du navigateur pour remplacer l'exécution active. L'acceptation a permis à la deuxième exécution de simulation de 250-mise à jour de se terminer normalement ; la pause était due à la gestion de la boîte de dialogue, et non à un délai de performance de la simulation.</p>
+</section>
+<section>
+<h2>Constatations et disposition</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Zone</th><th scope="col">Recherche</th><th scope="col">Disposition</th></tr></thead>
+<tbody>
+<tr><th scope="row">Mise en page du bureau des organismes</th><td>L'espace de travail occupait la colonne latérale de 188 pixels. Les contrôles se chevauchaient, le contenu principal était obscurci et le sélecteur de vue était déplacé en dessous de l'espace de travail.</td><td>Ordre des composants fixe et placement explicite sur grille.</td></tr>
+<tr><th scope="row">Mise en page étroite des organismes</th><td>Le sélecteur et les contrôles de transport nécessitaient un défilement horizontal ; le placement sur le bureau pouvait créer une colonne implicite hors écran.</td><td>Réinitialisation du placement sur grille étroite et enroulement des contrôles.</td></tr>
+<tr><th scope="row">Contraste des organismes</th><td>Les notes de comparaison de séquences héritent du texte sombre tout en étant affichées sur des panneaux sombres.</td><td>Application d'une couleur de premier plan explicite pour l'organisme.</td></tr>
+<tr><th scope="row">Congélateur</th><td>Les contrôles de point de contrôle et les métadonnées des éléments ont créé une barre de défilement horizontale.</td><td>Les largeurs imbriquées ont été contraintes et le défilement vertical a été conservé.</td></tr>
+<tr><th scope="row">Configurer</th><td>Les descriptions et les onglets actifs présentaient un faible contraste sur la surface d'éducation claire.</td><td>Ajout des surfaces de cartes lumineuses et des couleurs du thème éducatif.</td></tr>
+<tr><th scope="row">Cellule sélectionnée</th><td>Le texte de résumé était pâle et la liste du génome multicolonne s'écoulait dans des colonnes horizontales cachées.</td><td>Contraste accru et utilisation d'une seule colonne de génome défilante verticalement.</td></tr>
+<tr><th scope="row">Analyse</th><td>La mise en page réactive fonctionnait, mais les légendes des graphiques étaient trop pâles sur fond blanc. Le délai apparent de la deuxième exécution était le délai d'attente de confirmation de nouvelle exécution en attente d'une réponse.</td><td>Application de la couleur de premier plan éducatif standard ; acceptation de la confirmation et vérification de l'achèvement des deux exécutions de mise à jour 250.</td></tr>
+<tr><th scope="row">Population</th><td>Les mises en page bureau et étroite maintenaient les contrôles et la grille en vue sans débordement horizontal au niveau de la page.</td><td>Aucun changement structurel au-delà des corrections partagées du Congélateur.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Preuves rendues</h2>
+<figure><img alt="Vue Population sur bureau après l'audit" src="../evidence/visual-audit-2026-09-30/desktop-population.png"/><figcaption>Vue Population de bureau, 1280 × 720.</figcaption></figure>
+<figure><img alt="Vue Organisme sur bureau avec l'ancêtre sélectionné" src="../evidence/visual-audit-2026-09-30/desktop-organism.png"/><figcaption>Vue Organisme de bureau. Le sélecteur de vue reste dans la barre latérale gauche et l'espace de travail d'exécution utilise la colonne principale.</figcaption></figure>
+<figure><img alt="Vue Organisme à largeur réduite avec les contrôles regroupés au-dessus du contenu" src="../evidence/visual-audit-2026-09-30/narrow-organism.png"/><figcaption>Vue Organisme étroite, 390 × 844. Le sélecteur et les contrôles de transport s'enroulent sans débordement horizontal de page.</figcaption></figure>
+<figure><img alt="Vue Analyse sur bureau montrant deux exécutions de simulation terminées" src="../evidence/visual-audit-2026-09-30/desktop-analysis.png"/><figcaption>Vue Analyse de bureau avec les exécutions de simulation de mutation 0%  et 1%  terminées.</figcaption></figure>
+<figure><img alt="Vue Analyse à largeur réduite" src="../evidence/visual-audit-2026-09-30/narrow-analysis.png"/><figcaption>Vue Analyse étroite avec le sélecteur et le rapport dans une seule colonne.</figcaption></figure>
+<figure><img alt="Vue Configuration sur bureau avec des étiquettes et descriptions lisibles en thème clair" src="../evidence/visual-audit-2026-09-30/desktop-configure.png"/><figcaption>Vue Configuration de bureau après les corrections de contraste du thème clair.</figcaption></figure>
+</section>
+<section>
+<h2>Travaux restants de révision</h2>
+<ul>
+<li>Parcourir les tutoriels représentatifs Avida-ED 4 et noter les exceptions explicites.</li>
+<li>Répéter le flux de travail dans un second navigateur et sur l'ordinateur de présentation.</li>
+<li>Finaliser les vérifications sans clavier, d'importation/exportation, de glisser-déposer et de récupération d'erreurs.</li>
+<li>Réviser la formulation en espagnol et la terminologie scientifique avec un réviseur expert du domaine.</li>
+<li>Obtenir les retours des instructeurs et des apprenants avant d'émettre des affirmations de préparation à la salle de classe.</li>
+</ul>
+</section>
+</main>
+<footer><div class="wrap">Preuve de concept indépendante. Il s'agit d'une preuve de vérification pour une version de développement, et non d'une déclaration de release de l'équipe Avida-ED.</div></footer>
+</body>
+</html>

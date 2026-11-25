@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="de"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Ein auf Aufgaben ausgerichteter Portierungs- und Lernpfad für Avida-ED 5 mit einem Oktober 23 BEACON-Demonstrationsmeilenstein." name="description"/>
+<title>Avida-ED 5: Lern- und Portierungsroadmap</title><link href="../site-report.css" rel="stylesheet"/></head>
+<body><header class="masthead"><div class="wrap"><div class="eyebrow">Avida-ED 5 · Vorgeschlagener Lieferplan</div><p>Lernaufgaben, wissenschaftliche Verträge und Beweise für eine treue Portierung</p></div></header>
+<main class="wrap"><nav aria-label="Seitennavigation"><a href="index.html">Projektstartseite</a> · <a href="port-status.html">Portierungsstatus</a> · <a href="codex-collaboration.html">Infrastrukturbeurteilung</a> · <a href="roadmap.html">Roadmap und Fortschritt</a></nav>
+<section class="level1" id="from-a-working-demonstration-to-avida-ed-5">
+<h1>Von einer funktionierenden Demonstration zu Avida-ED 5</h1>
+<p><strong>Neubewertung und vorgeschlagene Roadmap · 30 September 2026 · Demonstration: 23 Oktober 2026</strong></p>
+<p>Der stärkste nächste Schritt ist, die Portierung um <strong>das zu organisieren, was Lernende können und erklären müssen</strong>, wobei die bestehende Schnittstellenkarte die Steuerungsebene detailliert beschreibt. Verwenden Sie ein kleines, überprüftes Wissensgraphen, um diese Aufgaben mit wissenschaftlichen Definitionen, Tutorialanweisungen, Implementierung und Überprüfung zu verbinden. Halten Sie ausführbare Tests und die Überprüfung durch den Dozenten als Beweis, dass die Verbindungen bestehen.</p>
+<p>Für Oktober 23, beenden und demonstrieren Sie eine zuverlässige Mutations- und Variationsaktivität. Zeigen Sie, wie die Infrastruktur bei der Lösung eines tatsächlichen Problems in dieser Aktivität hilft. Machen Sie nicht den Abschluss der gesamten Legacy-Schnittstelle oder die Integration jedes Infrastruktur-Repositorys zum Bedingung für einen erfolgreichen Demonstration.</p>
+<p>Dies ist ein vorgeschlagener Lieferplan, kein Bericht darüber, dass das neue Diagramm, die Integrationen oder die Akzeptanztests bereits implementiert wurden. Die Baseline ist die Prototypenüberarbeitung <code>3dd5f8c</code>; die früheren <a href="port-status.html">Port-Beurteilung</a> und <a href="codex-collaboration.html">Kollaborationsbeurteilung</a> bleiben als nützlicher Kontext erhalten. Dieser Plan erweitert den ersten Experimentierpfad und schränkt das breitere upstream-Webdesign auf pädagogische Prioritäten ein.</p>
+<section class="level2" id="what-changes-in-the-assessment">
+<h2>Was ändert sich in der Beurteilung</h2>
+<p>Die konzeptionelle Karte bleibt wertvoll: Sie fasst Labels, Bereiche, Auswahlmöglichkeiten und Standorte zusammen, die für die Kontinuität der Anleitung wichtig sind. Sie kann allein nicht Verhaltensäquivalenz, wissenschaftliche Äquivalenz oder erfolgreiches Lernen feststellen. Behalte diese als separate Dimensionen bei, anstatt sie in einen einzigen Prozentsatz von „portierten“ Funktionen zu komprimieren.</p>
+<div aria-label="Scrollbare Vergleichstabelle" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Dimension</th>
+<th>Akzeptanznachweise</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aufgaben- und Interaktionskontinuität</td>
+<td>Ein Lerner kann die identifizierten v4-Anleitungsschritte, einschließlich Übertragungen zwischen Ansichten, mit dokumentierten Ausnahmen verfolgen.</td>
+</tr>
+<tr class="even">
+<td>Wissenschaftlicher Sinn</td>
+<td>Metrische Definitionen, Mutationssemantik, Einheiten, fehlende Werte und experimentelle Kontrollen werden gegen das Verhalten des Engines überprüft.</td>
+</tr>
+<tr class="odd">
+<td>Lernchance</td>
+<td>Die Aktivität verlangt eine Vorhersage, Beobachtungen und eine Erklärung, die bestimmte Missverständnisse aufdecken können.</td>
+</tr>
+<tr class="even">
+<td>Lernwirksamkeit</td>
+<td>Lernender Antworten und eine angemessene Bewertung unterstützen einen Anspruch über das Lernen; erfolgreiche Klicks allein reichen nicht aus.</td>
+</tr>
+<tr class="odd">
+<td>Operative Zuverlässigkeit</td>
+<td>Wiederholbare Browser-Workflows, gespeicherte Daten-Rundreisen, Fehlerbehandlung und versionierte Beweise bestehen.</td>
+</tr>
+<tr class="even">
+<td>Präsentation und Zugriff</td>
+<td>Vertraute Desktop-Layout, nutzbare Anpassungen für kleine Bildschirme, Tastaturzugriff und überprüfte lokalisierte Steuerelemente überstehen visuelle Prüfungen.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Modellbasiertes GUI-Testen bietet eine Grundlage für die Abdeckung von Interaktionen; es liefert nicht automatisch das wissenschaftliche oder pädagogische Orakel. Typisierte Anforderungsbeziehungen können die Änderungsfolgenanalyse verbessern, aber reine Graph-Erreichbarkeit sollte <strong>Kandidaten für die Überprüfung</strong> identifizieren, nicht beweisen, dass eine Änderung sie gebrochen hat. Diese Unterscheidungen folgen dem Umfang von <a href="https://www.cs.umd.edu/~atif/pubs/MemonSTVR2007-abstract.html">Memon’s Ereignisflussarbeit</a> und <a href="https://doi.org/10.1016/j.infsof.2014.03.002">Goknil und Kollegen’s Anforderungsanalyse</a>. Ihre Anwendung hier ist eine Designempfehlung, keine getestete Ergebnis für Avida-ED.</p>
+<p>Behalten Sie die vertrauten Arbeitsbereiche Population, Organismus und Analyse, veraltete Grafiken und Farbpaletten sowie die relative Steuerelementplatzierung bei. Unterscheiden Sie explizit eine bewusste Neugestaltung von einem unvollendeten Port. Reproduzieren Sie keine veraltete Fehler nur, um ihr Verhalten nachzuahmen. Wo Engine-Unterschiede die Äquivalenz verhindern, bewahren Sie den Lernzweck und erklären Sie den Unterschied.</p>
+</section>
+<section class="level2" id="four-connected-models-with-different-rules">
+<h2>Vier verbundene Modelle mit unterschiedlichen Regeln</h2>
+<ol>
+<li><strong>Lernmodell:</strong> Konzepte, vorgeschlagene Voraussetzungen, Missverständnisse, Lernziele, Prompts und Bewertungskriterien. Ein strenger Voraussetzungszyklus erfordert eine Überprüfung; sich gegenseitig verstärkende Konzepte können stattdessen eine Unterrichtseinheit bilden. Eine Kante bleibt eine hypothesenbasierte Überprüfung durch den Lehrer.</li>
+<li><strong>Interaktionsmodell:</strong> Zustände, Aktionen, Voraussetzungen und beobachtbare Ergebnisse. Konfigurieren → Ausführen → Pause → Inspektion → Fortsetzen ist ein gültiger Zyklus. Schließen Sie Zurücksetzen, Abbruch, fehlgeschlagene Importe und veraltete asynchrone Antworten ein.</li>
+<li><strong>Nachvollziehbarkeitsmodell:</strong> Ziel → Aufgabe → Anforderung → Implementierung → Testdurchführung → Nachweis, plus Tutorial und Quellenangaben. Eine Testdefinition unterscheidet sich von einer erfolgreichen Ausführung gegen eine benannte Build-Version.</li>
+<li><strong>Software und Datenmodell:</strong> Engine-Funktionen, Metrikdefinitionen, Konfiguration, Speicherformate und Abhängigkeiten. Verwenden Sie dies, um Kompatibilität und Migration zu identifizieren, ohne Abhängigkeitszahlen als pädagogische Bedeutung zu behandeln.</li>
+</ol>
+<p>Behalten Sie stabile IDs und typisierte Beziehungen in kleinen versionierten JSON- oder YAML-Dateien bei. Generieren Sie aus ihnen nach Stabilisierung des Schemas die konzeptionelle Karte und einen verständlichen Statusbericht. Für das erste Meilenstein ist kein Graphen-Datenbank oder interaktive Graphenvisualisierung erforderlich. Eine kurze Liste von handlungsorientierten Erkenntnissen wird während der Demo nützlicher sein als ein dichtes Netzwerkbild.</p>
+<p>Jede konsequente Aussage sollte ihren Quellenlocator, Quellrevision oder Hash, Beziehungstyp, Umfang, Begründung, Autor/Reviewer, Zeitstempel, Vertrauenswürdigkeit und Überprüfungsstatus haben. Verwenden Sie separate Felder für Implementierungsstatus und Aktualität des Nachweises. Unterscheiden Sie <strong>unbekannt</strong>, <strong>nicht implementiert</strong>, <strong>fehlgeschlagen</strong>, <strong>erfolgreich für diese Build-Version</strong>, und <strong>bewusst anders</strong>. Halten Sie öffentliche Nachweise getrennt von privatem Gedächtnis. Ein Vertrauenswürdigkeitslabel ist eine Überprüfungsentscheidung, keine kalibrierte Wahrscheinlichkeit.</p>
+<section class="level3" id="what-to-reuse-from-didactopus">
+<h3>Wiederverwendung aus Didactopus</h3>
+<p>Wiederverwenden Sie seine Lernpaketstruktur, Voraussetzungsanalyse, Curriculum-Pfad-Checks und Überprüfungsledger für das Lernuntergraph. Erstellen Sie einen kleinen Adapter für Software-Traceability und Workflow-Checks, anstatt Kontrollen und Tests in Konzept-Voraussetzungs-Kanten zu zwingen.</p>
+<p>Inspektion von Didactopus-Revisions <code>f0b0e8ac</code> fand zwei Integrationsrisiken in <code>src/didactopus/graph_qa.py</code>: Fehlerhafte Paketladung kann zu null Graph-Warnungen führen, und die „Engpass“-Regel zählt direkte Abhängige mit einem festen Schwellwert von drei. Daher erfordern Sie eine erfolgreiche Paketvalidierung vor der Graphanalyse; zeigen Sie ungültige Eingaben als Fehler an; kennzeichnen Sie direkte Gradgenauigkeit; und behandeln Sie Flachheit, Tiefe und Engpass-Schwellwerte als beratende Heuristiken. Ihre Nützlichkeit für dieses Curriculum wurde nicht validiert. Zentralität allein darf nicht die Portpriorität bestimmen.</p>
+<p>Für die Demo implementieren Sie nur fünf nützliche Abfragen:</p>
+<ul>
+<li>Welche ausgewählten Tutorial-Aufgaben fehlen eine Implementierung oder einen aktuellen erfolgreichen Workflow-Test?</li>
+<li>Welche Lernziele haben kein Beobachtungs- oder Erklärungs-Prompt?</li>
+<li>Welche wissenschaftlichen Messungen fehlen eine überprüfte Definition oder einen geeigneten Test-Oracle?</li>
+<li>Welche Beweise wurden nach einer relevanten Quelle, Konfiguration oder Codeänderung veraltet?</li>
+<li>Welche Aufgaben, Zeichenketten, Hilfetexte und Tests benötigen eine Überprüfung, wenn ein bestimmter Vertrag geändert wird?</li>
+</ul>
+<p>Zeigen Sie für jeden Befund den fehlenden Link oder den getippten Pfad und seine Quelle an. Testen Sie den Analyse mit einem fehlenden Edge, veralteten Revision, ungültigem Pack und gültigem Interaktions-Loop. Ein absichtlich injizierter Defekt muss als Test-Fixture gekennzeichnet werden. Stellen Sie ihn nicht als entdeckten Produktionsfehler dar.</p>
+</section>
+</section>
+<section class="level2" id="the-demonstrations-educational-task">
+<h2>Die pädagogische Aufgabe der Demonstration</h2>
+<p>Verwenden Sie das bestehende Populations-Experiment: <strong>Wie beeinflusst die Mutations-Einstellung die Variation in einer Population?</strong> Es ist mit dem Einführungsthema im <a href="https://avida-ed.github.io/curriculum/lab-manual/">offiziellen Labormanual-Verlauf</a> verbunden, aber es ist keine validierte Wiedergabe dieses veralteten Experiments. Diese Sequenz bietet auch die langfristige Fortschrittsentwicklung hin zu Auswahl, Fitness und unabhängiger Untersuchung.</p>
+<p>Behalten Sie den gebündelten Vorfahren, 10 × 10 Welt, Anweisungsprofil, Umgebung und Zeitplan-Konfiguration fest. Vergleichen Sie 0%  und 1%  Mutations-Einstellungen pro Standort unter Verwendung von Zufallsstartwerten 42, 43 und 44, mit derselben Aufzeichnungsrichtlinie und Ziel-Update. Überprüfen Sie, ob generische Einstellungen Kontrollen stillschweigend ungültig machen. Sperrung inkompatibler Änderungen oder kennzeichnen Sie den Lauf als modifiziertes Experiment und behalten Sie seine gelöste Konfiguration bei.</p>
+<div aria-label="Scrollbare Vergleichstabelle" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Aktion des Lerners</th>
+<th>Beweis der Schlussfolgerung zur Auslösung</th>
+<th>Softwarevertrag</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Vor dem Ausführen vorhersagen</td>
+<td>Können neue Sequenzen auftreten? Muss die Vielfalt kontinuierlich zunehmen?</td>
+<td>Behalte die Vorhersage separat von der Simulationsausgabe.</td>
+</tr>
+<tr class="even">
+<td>Führe beide Behandlungen durch und untersuche die Diagramme</td>
+<td>Unterscheide Beobachtungen von Vorhersagen und vergleiche die Variation zwischen Replicaten.</td>
+<td>Halte Behandlung, Zufallsstartwert, Update, Metrikdefinitionen und Konfiguration an Aufzeichnungen angehängt.</td>
+</tr>
+<tr class="odd">
+<td>Untersuche ein abgetastetes Organismus und seinen Vorfahren</td>
+<td>Erkläre den exakten Sequenzunterschied, ohne ihn mit der Linie oder Fitness zu verwechseln.</td>
+<td>Verwende die exakte Sequenzidentität mit dem entsprechenden Anweisungsprofil, nicht nur mit Genotyp-Tracker-IDs.</td>
+</tr>
+<tr class="even">
+<td>Speichere, öffne erneut und vergleiche die Ergebnisse</td>
+<td>Ein anderer Leser kann rekonstruieren, was verglichen wurde.</td>
+<td>Versionierte Exporte und Round-Trips bewahren wissenschaftliche Daten und unterscheiden Ergebnisse von wiederaufnehmbaren Checkpoints.</td>
+</tr>
+<tr class="odd">
+<td>Erkläre das Ergebnis und die Einschränkungen</td>
+<td>Reichtum ist weder Mutationsanzahl noch Beweis für Anpassung; Updates sind keine Generationen.</td>
+<td>Bieten Sie Anleitungen und Metrik-Hilfe an, nicht einen automatischen Anspruch darauf, dass Lernen stattgefunden hat.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Überprüfen Sie die Implementierung der Mutation sorgfältig: Die Zufallsauswahl der Anweisung kann die ursprüngliche Anweisung wählen, daher ist die Einstellung keine exakte Proportion veränderter Stellen. Umgebung mit Belohnungsaufgabe ist keine neutrale Evolution. Gleiche Zufallsstartwerte in den Behandlungen implizieren keine gepaarten zufälligen Geschichten. Drei Replicates pro Behandlung unterstützen eine Illustration, nicht einen allgemeinen Effektgrößenanspruch. Numerische Ähnlichkeit zwischen Avida-Versionen ist keine Äquivalenzkriterium, es sei denn, ihre Semantik und Zufallsauswahl sind nachweisbar vergleichbar.</p>
+<p>Ein kleines, von einem Lehrer überprüftes Erklärungs-Rubrik genügt für dieses Meilenstein. Später, bewerten Sie Missverständnisse und Transfer zu einer neuen Szene mit Lernenden. Schließen Sie keine dauerhafte Lern aus einem erfolgreichen Demonstration oder einem Graphen mit vollständigen Verbindungen.</p>
+</section>
+<section class="level2" id="delivery-plan-to-october-23">
+<h2>Lieferplan bis Oktober 23</h2>
+<p>Die untenstehenden Daten sind vorgeschlagene Arbeitsfenster, nicht Schätzungen der gemessenen Produktivität. Die Implementierung kann delegiert werden; der Maintainer behält wissenschaftliche, instruktionelle und Release-Entscheidungen. Beschaffen Sie eine Lehrer-Überprüfung und eine qualifizierte spanischsprachige Überprüfung, wo verfügbar. Wenn eine davon nicht verfügbar ist, geben Sie die Einschränkung an und begrenzen Sie den Release-Anspruch.</p>
+<section class="level3" id="september-30october-3-establish-the-task-contracts">
+<h3>September 30–Oktober 3: etabliere die Aufgabenverträge</h3>
+<p>Wählen Sie drei Workflows: konfigurieren/ausführen/inspektion; speichern/wiederherstellen/übertragen; vergleichen/erklären. Identifizieren Sie die relevanten Legacy-Tutorial-Segmente und notieren Sie genaue Zeitstempel und versionspezifische Ausnahmen. Beginnen Sie mit etwa 15–25 überprüfbaren Anforderungen, nicht mit einer vollständigen Rückwärtsingenieurarbeit der App. Korrigieren Sie Anleitungs-Text, der Benutzer immer noch anweist, „Vergleiche Runs“ zu öffnen, wenn das sichtbare Arbeitsfeld „Analyse“ ist.</p>
+<p>Liefere einen begrenzten Aufgabeninventar, Metrikdefinitionen, Lehrer-Überprüfungsfragen und einen Beweisregister. Notieren Sie die Live-Baseline vor Änderungen. Beende, wenn jede ausgewählte Anforderung ein beobachtbares erwartetes Ergebnis und einen expliziten Beweisstatus hat. Ein Tutorial, das nicht angesehen wurde, wird als nicht überprüft markiert.</p>
+</section>
+<section class="level3" id="october-49-make-the-analysis-executable">
+<h3>Oktober 4–9: analysierbare Ausführung erstellen</h3>
+<p>Implementieren Sie die typisierten Datensätze, fünf Abfragen, einen kleinen Didactopus-Lernpaket und Adapter sowie einen generierten Bericht. Verknüpfen Sie vorhandene sinnvolle Tests, bevor neue hinzugefügt werden. Führen Sie die Validierung vor der Graph-QA durch. Fügen Sie die beschriebenen Fehler-Eingabe- und veraltete-Evidenz-Checks hinzu.</p>
+<p>Erstellen Sie einen überprüften GroundRecall-Übergabe mit der ausgewählten Aufgabe, der aktuellen Revision, Invarianten, ausstehenden Entscheidungen und nächsten Überprüfungs-Befehlen; rufen Sie sie in einem frischen Kontext ab und überprüfen Sie sie gegen Git. Die früheren begrenzten Suchen haben kein exaktes Avida-Aufgabenprotokoll gefunden, was nicht bedeutet, dass keines existiert.</p>
+<p>Beenden Sie mit einem reproduzierbaren Bericht, der mindestens eine echte ungelöste Anforderung identifiziert und ihre Beweise erklärt. Wenn die Graphenarbeit diesen Zeitraum überschreitet, behalten Sie dieselben Aufzeichnungen als einfache Traceability-Tabelle bei und beenden Sie zuerst den Lernworkflow.</p>
+</section>
+<section class="level3" id="october-1015-close-the-chosen-workflow">
+<h3>Oktober 10–15: den gewählten Workflow abschließen</h3>
+<p>Lösen Sie den hochwirksamen Blocker, der in diesen Aufgaben gefunden wurde. Überprüfen Sie, ob Ziel-Update-Eingaben bei Run erhalten bleiben, Voreinstellungen ihre kontrollierten Variablen bewahren, Aufzeichnungen nicht dupliziert werden, ausgewählte Organismen korrekt geladen werden und gespeicherte Ergebnisse mit ihren Metadaten wieder geöffnet werden können. Behalten Sie die Chart-Hover-, Zoom-, Reset- und Export-Funktionen während Live-Updates stabil. Beschränken Sie die Analysearbeit auf das, was diese Übung erfordert; zeigen Sie ihre verbleibenden v4-Differenzen ehrlich.</p>
+<p>Testen Sie den spanischen Pfad mit der dokumentierten lokalen Übersetzungsmethode, stabilen IDs, Glossar, Platzhalter-Checks und Provenienz. Untersuchen Sie tatsächliche gerenderte Steuerelemente, Optionen-ersetzung, Tooltips, Gefrierfach, Einstellungen und Analysis in Englisch und Spanisch, sowie erweiterte Zeichenfolgen- und RTL-Testmodi. Gleichsetzen Sie nicht die Katalogabdeckung mit der Übersetzungsakzeptanz.</p>
+<p>Beenden Sie die Aktivität mit einem vollständig funktionierenden System, ausgehend von einer sauberen Browser-Sitzung und einem tragbaren Container-Build. Begrenzen Sie das Funktionsumfang auf Oktober 15; fügen Sie keine allgemeine Graph-Plattform hinzu oder erweitern Sie die Engine-Fähigkeiten für die Demo.</p>
+</section>
+<section class="level3" id="october-1619-verify-and-rehearse">
+<h3>Oktober 16–19: Überprüfung und Übung</h3>
+<p>Führen Sie den Workflow auf dem Präsentationslaptop und einem zweiten Browser aus. Überprüfen Sie Desktop- und schmale Layouts, Tastaturnavigation, Neuladen, Datenexport/Import und Fehlerwiederherstellung. Verwenden Sie Fixtures für deterministische Aufzeichnungsprüfungen und wissenschaftliche Invarianten; verlangen Sie keine übereinstimmenden stochastischen Trajektorien über verschiedene Engines. Üben Sie die vollständige 20-minütige Demonstration zweimal und protokollieren Sie die tatsächliche Dauer.</p>
+<p>Beenden Sie mit verknüpften Testausführungen, visueller Überprüfungsbelegen, bekannten Einschränkungen, einer überprüften spanischen Probe und einer ausgewählten Build-Version. Falls eine Überprüfung nicht verfügbar ist, behalten Sie die Kennzeichnung „Entwicklungsvorschau“. Ein gescheiterter Kernpfad für Konfigurieren/Laufen/Speichern/Wiederöffnen/Vergleichen blockiert den Live-App-Claim.</p>
+</section>
+<section class="level3" id="october-2023-freeze-prepare-fallbacks-demonstrate">
+<h3>Oktober 20–23: Sperren, Vorbereiten von Fallbacks, Demonstration</h3>
+<p>Am 20. Oktober kennzeichne den Kandidaten und archiviere seinen Bild-Digest, Quellversionen, Konfiguration, Exporte und Bericht. Am 21.–22. Oktober überprüfe Seiten und den lokalen Container-Server; cache das sechsläufige Datenset und erstelle eine kurze Anleitung. Stelle den lokalen Fallback über HTTP mit den erforderlichen Browser-Headern bereit. Eine Aufnahme wird explizit als aufgenommen gekennzeichnet, und zwischengespeicherte Ergebnisse als zuvor generiert.</p>
+<p>Am 23 präsentieren Sie einen begrenzten Ingenieurfall: Was hat funktioniert, was hat die Infrastruktur offenbart, und was bleibt ungewiss. Reservieren Sie etwa drei Minuten für den Kontext, zwanzig für die Demonstration und sieben für die Diskussion.</p>
+</section>
+</section>
+<section class="level2" id="a-twenty-minute-demonstration">
+<h2>Eine zwanzigminütige Demonstration</h2>
+<div aria-label="Scrollbare Vergleichstabelle" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Minuten</th>
+<th>Zeigen</th>
+<th>Zeigen Sie, um zu etablieren</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–3</td>
+<td>Die pädagogische Frage, Vorhersage, vertraute Arbeitsumgebung und gepinnte Build-Rezept; verwenden Sie einen vorgefertigten Container.</td>
+<td>Eine konkrete Lehraufgabe und reproduzierbare Umgebung.</td>
+</tr>
+<tr class="even">
+<td>3–6</td>
+<td>Ein frischer Kontext-Übergabe, abgerufen durch GroundRecall, dann gegen den Repository-Zustand überprüft.</td>
+<td>Entscheidungen können mit Quellen wiederhergestellt werden; Gedächtnis ist nicht die aktuelle Zustandsautorität.</td>
+</tr>
+<tr class="odd">
+<td>6–10</td>
+<td>Der Task-Bericht, eine echte Lücke, ihr Quellpfad und die überprüfte Reparatur und Neustart.</td>
+<td>Didactopus und Traceability-Checks können eine Auslassung handhabbar machen. Bereiten Sie die Reparatur im Voraus vor; keine Abhängigkeit von Live-Coding.</td>
+</tr>
+<tr class="even">
+<td>10–17</td>
+<td>Führen Sie beide Mutations-Einstellungen aus, untersuchen Sie einen Organismus, verwenden Sie die Live-Plots, speichern/Schließen Sie und vergleichen Sie mit den archivierten Replikaten. Zeigen Sie einen überprüften spanischen Workflow an.</td>
+<td>Die resultierende Software unterstützt eine interpretierbare Aktivität.</td>
+</tr>
+<tr class="odd">
+<td>17–20</td>
+<td>Der ClaimWright-gesteuerte Überprüfungsprotokoll, verbleibende Lücken und das nächste Meilenstein.</td>
+<td>Zeigen Sie genau, welche Überprüfungen eine Behauptung oder Aktion geändert haben, ohne die Durchsetzung oder Vorteile zu überbetonen.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="level2" id="make-infrastructure-contributions-observable">
+<h2>Machen Sie Infrastrukturbeiträge sichtbar</h2>
+<p>Protokollieren Sie <strong>abgerufene Informationen → Entscheidung geändert → Artefakt geändert → Überprüfung</strong>, einschließlich Fälle, in denen ein Tool keine nützlichen Informationen hinzufügt. Dies ist stärkerer Beweis als die Liste installierter Repositorien.</p>
+<ul>
+<li><strong>GroundRecall:</strong> Vergleichen Sie die Wiederherstellung mit dem gleichen Repository und Handoff-Zusammenfassung mit und ohne Abruf. Protokollieren Sie korrekte Entscheidungen, die wiederhergestellt wurden, falsche/stale Vorschläge, wiederholte Fragen und Überprüfungszeit. Eine kleine Demonstration ist ein Fallstudie, keine kausale Produktivitäts-Experiment; balancieren Sie die Reihenfolge oder verwenden Sie unabhängige Kontexte, wenn eine Vergleichung erstellt wird.</li>
+<li><strong>Didactopus:</strong> Zeigen Sie die tatsächliche Paketüberprüfung und Vorbedingungs- oder Bewertungslücken-Entdeckungen, ihre Behandlung und die separate Nachvollziehbarkeitsüberprüfungen des Adapters an. Weisen Sie jede Entdeckung dem Komponente zu, die sie produziert hat.</li>
+<li><strong>Behauptung Wright: </strong> wende seine aktuellen öffentlichen-Artikel-Standards an und bewahre das Überprüfungsprotokoll. Wenn ein ausführbarer Gate verbunden ist, demonstriere eine unterstützte Überprüfung und ihr Ergebnis. Andernfalls beschreibe die Verwendung des Checklists genau; impliziere nicht automatische Durchsetzung. Logge sowohl nützliche Funde als auch Falschalarme.</li>
+<li><strong>SciSiteForge/TalkOrigins Methoden:</strong> dokumentieren die spezifische wiederverwendete Quelle oder Workflow und die Avida-Anpassung. Zeigen Sie eine Terminologiekorrektur oder Overflow-Korrektur plus visuelle Überprüfung. Methodenwiederverwendung unterscheidet sich von dem Import eines Pakets.</li>
+<li><strong>doclift und CiteGeist:</strong> verwenden sie nur dort, wo eine ausgewählte Quelle tatsächlich eine Aufnahme oder Zitierverifizierung benötigt. Notieren Sie den umgewandelten Textabschnitt oder die verifizierte Referenz und ihre Verwendung. Sie müssen nicht live angezeigt werden, und der vorgeschlagene Einsatz darf nicht als vergangene Beiträge gemeldet werden.</li>
+</ul>
+<p>Beginne einen zukünftigen Einsatzprotokoll, das Wartungsführung/Überprüfung, Implementierungsarbeit, automatisierte Laufzeit und Nacharbeit trennt. Es gibt keine zuverlässige historische Messung von Mensch-Stunden oder kontrollierte „Codex allein“-Vergleiche für dieses Projekt. Die frühere numerische Schätzung sollte nicht als Beweis für Einsparungen verwendet werden. Ein Vergleich muss dem Baseline dieselbe Aufgabe, denselben Repository und gewöhnlichen Dokumentationszugriff geben.</p>
+</section>
+<section class="level2" id="after-the-demonstration-a-functional-avida-ed-5">
+<h2>Nach der Demonstration: ein funktionales Avida-ED 5</h2>
+<p>Diese Phasen haben Akzeptanzgates statt versprochener Termine. Schätze sie nach der abgestimmten Aufgabenüberprüfung und upstream-Überprüfung. Halte die Bildungsanwendungshülle, Engine-Adapter, Messungen, Speicher, Lokalisierung und Berichte getrennt. Die Demo-Aufgabe und ihre Tests bleiben während des gesamten Prozesses ein gewartetes Regressionstestbeispiel.</p>
+<section class="level3" id="phase-1-agree-on-the-release-scope-and-scientific-contracts">
+<h3>Phase 1: Einigung über den Releaseumfang und wissenschaftliche Verträge</h3>
+<p>Erweitere das Aufgabeninventar über das Laborhandbuch und bestehende Tutorial-Videos. Überprüfe Prioritäten mit der Avida-ED-Gruppe; fixiere unterstützte Engine- und Anweisungsprofile, Bedeutungen der Metriken, Mutationsverhalten und Reproduzierbarkeitsgrenzen. Klassifiziere Anforderungen als bewahrt, neu entworfen mit Erklärung, verschoben oder nicht unterstützt. Generiere einen öffentlichen Lückenbericht mit Nennern und Beweisdaten; zähle nicht jedes Graphenkante als Fortschritt.</p>
+<p><strong>Beenden:</strong> eine überprüfte Funktionsfreigabe und wissenschaftliche Oracle für jede unterstützte Maßnahme. Legacy-Parität und neue Lektionen sind separat identifizierbar. Diese Scope-Überprüfung kann bereits vor Oktober 23 beginnen, wenn sie die Demo-Arbeit nicht beeinträchtigt.</p>
+</section>
+<section class="level3" id="phase-2-population-freezer-and-trustworthy-persistence">
+<h3>Phase 2: Population, Gefrierfach und vertrauenswürdige Persistenz</h3>
+<p>Vervollständigen Sie die unterstützte Schüsselkonfiguration, Vorfahrenplatzierung, Mutation- und Umgebungseinstellungen, Laufzyklus, Populationsmessungen und vertraute Farbmodi. Stellen Sie die tutorial-relevante Übertragung zwischen konfigurierten Schüsseln, Organismen und bevölkerten Schüsseln wieder her, mit Tastaturalternativen zu Drag-and-Drop. Testen Sie ungültige Importe, ohne bestehende Arbeit zu beschädigen.</p>
+<p>Trennen Sie Organismus-Artifakte, Konfigurationen, aufgezeichnete Ergebnisse und fortsetzbare Checkpoints. Versionieren Sie jedes Format; testen Sie Migrationen, Speicherbegrenzungen, Download/Import, sofortige Wiederherstellung und Fortsetzung, wo deterministische Fortsetzung unterstützt wird. Daten-only-Ergebnisse dürfen keine vollständigen Engine-Checkpoints vortäuschen.</p>
+<p><strong>Beenden:</strong> ausgewählte Populationen/Anleitungen überleben Speichern, Wiederherstellen und Querbrowser-Transfer mit intakten wissenschaftlichen Metadaten. Dies ist die Grundlage für die vollständige Analyse.</p>
+</section>
+<section class="level3" id="phase-3-organism-and-analysis-continuity">
+<h3>Phase 3: Organismus- und Analyse-Kontinuität</h3>
+<p>Vervollständigen Sie die unterstützten Organismus-Zyklussteuerungen und Zustandsanzeige in einer erkennbaren Anordnung; validieren Sie isolierte Organismus-Evaluation, ohne die laufende Population oder ihren Zufallsstrom zu ändern. Weisen Sie Fitness, Lebensfähigkeit, Tragzeit und Aufgabenbeobachtungen den überprüften Definitionen zu, anstatt ähnlich benannte Maße zu substituieren.</p>
+<p>Implementieren Sie den v4-Stil Analyse-Workflow für bis zu drei bevölkerte Schüsseln, unterstützte linke/rechte Maße, Spurenfarben, Entfernen/Ersatz-Operationen, interaktive Diagramme und Export. Behalten Sie die neuere Lesson-Run-Vergleich als explizit identifizierbare Fähigkeit bei. Wenn eine Legacy-Messung nicht unterstützt werden kann, machen Sie diese Lücke sichtbar und überarbeiten Sie betroffene Lektionsanweisungen.</p>
+<p><strong>Beenden:</strong> Dozentenausgewählte Organismus- und Analyse-Tutorial-Durchläufe werden mit aufgezeichneten Ausnahmen abgeschlossen; differenzielle Tests werden nur dort verwendet, wo alte und neue Semantik vergleichbar sind.</p>
+</section>
+<section class="level3" id="phase-4-curriculum-accessibility-localization-and-classroom-pilot">
+<h3>Phase 4: Lehrplan, Zugänglichkeit, Lokalisierung und Klassenzimmer-Testphase</h3>
+<p>Erweitere Aktivitäten von Mutationen zu Selektion, Fitness und unabhängiger experimenteller Gestaltung unter Verwendung des überprüften Lerngraphen. Richte Anleitungen und Bewertungskriterien auf Konzepte und Missverständnisse aus; überprüfe, ob die Software die notwendigen Beweise offenbart. Vervollständige Kontexthilfe, überprüfte spanische Übersetzung, visuelle Regressionabdeckung, Tastatur-/Screen-Reader-Überprüfungen und die unterstützte Browser-/Geräte-Matrix.</p>
+<p>Teste das unterstützte Curriculum mit Lehrkräften und Lernenden. Beobachte Aufgabenabwicklung, Interpretationsfehler, Datenverlust und Tutorial-Abweichungen getrennt. Bewerte das Lernen mit angemessenem Einverständnis und Studiendesign, wenn Forschungsbehauptungen aufgestellt werden; verwandle keine routinemäßigen Demo-Telemetriedaten in Lernendendaten.</p>
+<p><strong>Beenden:</strong> keine ungelösten kritischen Workflow- oder Datenintegritätsdefekte innerhalb des vereinbarten Umfangs, Zustimmung des Lehrers, veröffentlichten Einschränkungen und Supportanweisungen, sowie einer expliziten Freigabebeschluss durch die verantwortlichen Maintainer. Eine funktionale Lehrfreigabe erfordert nicht jedes mögliche Engine-Feature, aber sie erfordert vollständige unterstützte Aktivitäten und ehrliche Kompatibilitätsgrenzen.</p>
+<p>Alternierende CPUs, kontinuierliche Welten, Knockout-Experimente und ein allgemeines Dashboard-Frame bleiben getrennte Erweiterungen, es sei denn, eine überprüfte Lernaufgabe macht sie notwendig. Folge Avida upstream durch eine festgelegte Kompatibilitätsgrenze und kleine überprüfbare Änderungen; vermeide es, die Bildungsveröffentlichung mit jedem upstream-Designvorschlag zu verknüpfen.</p>
+</section>
+</section>
+<section class="level2" id="evidence-stewardship-and-limitations">
+<h2>Beweise, Stewardship und Einschränkungen</h2>
+<p>Vorbereitet mit OpenAI Codex Unterstützung für Wesley R. Elsberry’s Überprüfung. Vorgeschlagener Projektbetreuer: Wesley R. Elsberry; Lehr- und Sprachüberprüfer sind noch nicht zugewiesen. Keine externe Empfehlung oder abgeschlossene Lehrerüberprüfung wird impliziert. Beweisüberprüfung: <strong>2026-09-30, etwa 11:01 UTC</strong>. Roadmap-Daten sind Planungsentscheidungen, nicht gemessene Aufwandsschätzungen.</p>
+<ul>
+<li><strong>Aktuelle Funktionalität und Lücken — hohe Sicherheit für dokumentierte Quellfakten, moderate für Tutorial-Einfluss.</strong> Baseline <a href="https://github.com/welsberr/avida-ed-5-poc/tree/3dd5f8cb0b36b048c297592265df7947ed964397">Prototypenrevision 3dd5f8c</a>, seine <a href="https://github.com/welsberr/avida-ed-5-poc/blob/3dd5f8cb0b36b048c297592265df7947ed964397/docs/avida-ed4-consilience-map.md">Kontrollkarte</a>, Experimentanleitung und frühere Erst-Experiment-Roadmap wurden überprüft. Diese Überarbeitung wiederholte nicht das vollständige Anwendungsbewertungssuite oder beobachtete jedes Tutorial.</li>
+<li><strong>Bildungssequenz — hohe Sicherheit in der veröffentlichten Sequenz, Lernwirksamkeit hier nicht getestet.</strong> <a href="https://avida-ed.github.io/curriculum/lab-manual/">Offizielle Laboranleitung</a> und <a href="https://avida-ed.github.io/help/">Tutorial-Index</a> legen Quellziele fest, nicht abgeschlossene Kompatibilitätsprüfungen.</li>
+<li><strong>Didactopus-Implementierung — hohe Sicherheit im überprüften Codeverhalten.</strong> <a href="https://git.cns.fyi/welsberr/Didactopus">Didactopus</a>, lokale Überarbeitung <code>f0b0e8ac55459e05bdf16604ec971ea266278b84</code>; Graph-QA, Voraussetzungsanalyse, Curriculum-Pfad-Qualität und Review-Workflow-Dokumentation. Der neue Avida-Adapter bleibt vorgeschlagen.</li>
+<li><strong>Forschungsrationale — moderate Sicherheit in der Anwendbarkeit.</strong> Memon (2007), <em>Ein Ereignisflussmodell für GUI-basierte Anwendungen zum Testen</em>, STVR 17:137–157; Goknil et al. (2014), <em>Änderungseinflussanalyse für Anforderungen: Ein Metamodellierungsansatz</em>, IST 56:950–972, <a href="https://doi.org/10.1016/j.infsof.2014.03.002">doi:10.1016/j.infsof.2014.03.002</a>. Autoren-/Institutionen-Abstracts wurden konsultiert; keiner etabliert die Effektivität dieses Projekts.</li>
+<li><strong>Infrastruktur-Einfluss und Zeitplan — Hypothesen zur Bewertung.</strong> Begrenzte Speicherabfrage und Repository-Evidenz informierten diesen Plan. Kein quantitativer Produktivitätsvorteil, Lernzuwachs oder Oktober-Fertigstellungsgarantie wurde etabliert.</li>
+</ul>
+<p>Halten Sie zukünftige Entscheidungen, Änderungen und Gründe, Testausführungen und Review-Entscheidungen in einem versionierten Arbeitsprotokoll. Regenerieren Sie den öffentlichen Status nach bedeutsamen Änderungen, anstatt einem alten erfolgreichen Ergebnis eine neue Build-Version zu bescheinigen.</p>
+</section>
+</section>
+</main><footer><div class="wrap">Unabhängiger Proof of Concept. Vorgeschlagene Roadmap; Implementierung und externe Überprüfung bleiben ausstehend.</div></footer></body></html>

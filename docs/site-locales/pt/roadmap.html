@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Avida-ED 5 marcos, critérios de aceitação, evidências e progresso projetado datado em direção à demonstração de outubro 23 e um lançamento funcional de ensino." name="description"/>
+<title>Avida-ED 5 roadmap e progresso</title><link href="../site-report.css" rel="stylesheet"/>
+<style>
+.skip-link { position:absolute; left:1rem; top:-5rem; background:white; padding:.5rem; z-index:1; } .skip-link:focus { top:1rem; }
+.summary-counts { display:flex; flex-wrap:wrap; gap:.75rem; }
+.summary-counts span { padding:.6rem .9rem; background:#edf3f6; border-radius:.4rem; }
+.badge { display:inline-block; padding:.15rem .65rem; border-radius:.35rem; background:#e8edf1; font-weight:700; }
+.complete { background:#dcf3e4; color:#185132; } .blocked { background:#fbe4e4; color:#802727; }
+.review, .in_progress { background:#fff0ce; color:#6e4800; }
+.milestone h3 { font-size:1.35rem; margin-top:.3rem; } h4 { margin:1rem 0 .3rem; }
+dl { display:grid; grid-template-columns:9rem minmax(0,1fr); gap:.3rem .8rem; } dt { font-weight:650; } dd { margin:0; }
+main a, dd { overflow-wrap:anywhere; } .history li { margin-bottom:1rem; }
+@media(max-width:550px) { dl { grid-template-columns:1fr; } dd { margin-bottom:.5rem; } }
+</style></head><body>
+<a class="skip-link" href="#main">Pular para o roteiro</a>
+<header class="masthead"><div class="wrap"><div class="eyebrow">Avida-ED 5 prova de conceito</div>
+<h1>Roteiro e progresso</h1><p>Uma demonstração completa para outubro de 23, 2026, seguida por um lançamento educacional funcional.</p></div></header>
+<main class="wrap" id="main"><nav aria-label="Navegação do projeto"><a href="index.html">Página inicial do projeto</a> · <a href="porting-learning-roadmap.html">Plano detalhado e justificativa</a> · <a href="port-status.html">Avaliação da portagem</a> · <a href="codex-collaboration.html">Avaliação da infraestrutura</a></nav>
+<section class="callout"><h2>Status registrado atual</h2>
+<p>Cada marco registra sua própria implementação e aceitação de revisão. A funcionalidade do protótipo existente é descrita na <a href="port-status.html">avaliação da portagem</a>; os marcos pendentes não significam que o protótipo não possui recursos funcionais.</p>
+<div class="summary-counts"><span><strong>1</strong> completo</span><span><strong>0</strong> em andamento</span><span><strong>0</strong> aguardando revisão</span><span><strong>0</strong> bloqueado</span><span><strong>9</strong> planejado</span><span><strong>0</strong> diferido</span></div>
+<p class="small">Contagens descrevem marcos, não porcentagem do software concluído; os marcos diferem em escopo. Datas são metas de planejamento, não alterações automáticas de status.</p>
+<p><strong>Próximo:</strong> Auditoria configurar/executar/inspecionar, salvar/reabrir/transferir e comparar/explicar. Prazo para recursos: outubro 15. Congelamento de candidatos: outubro 20.</p>
+<p class="small">Última atualização do registro: <time datetime="2026-09-30T16:10:16Z">2026-09-30T16:10:16Z</time>. Responsável pelo projeto: Wesley R. Elsberry.</p></section>
+<section><h2>Marcos</h2><ol><li><a href="#plan">Roteiro publicado</a> — Concluído</li><li><a href="#demo-contracts">Contratos de tarefas e baseline</a> — Planejado</li><li><a href="#demo-analysis">Análise executável e transferência durável</a> — Planejado</li><li><a href="#demo-workflow">Fluxo de trabalho de demonstração completa</a> — Planejado</li><li><a href="#demo-verify">Verificação e ensaio</a> — Planejado</li><li><a href="#demo-release">Congelamento do candidato e BEACON demonstração</a> — Planejado</li><li><a href="#release-contracts">Escopo de lançamento e contratos científicos</a> — Planejado</li><li><a href="#release-population">População, Congelador e persistência</a> — Planejado</li><li><a href="#release-views">Continuidade de Organismo e Análise</a> — Planejado</li><li><a href="#release-pilot">Currículo, acesso, localização e piloto</a> — Planejado</li></ol><p>Planejado → Em andamento → Aguardando revisão → Concluído. Bloqueado requer uma razão registrada; trabalho adiado requer uma decisão datada. O registro de conclusão indica aceitação, não apenas a presença de código.</p></section>
+<section class="milestone" id="plan">
+<p class="small">Fundação · plano</p>
+<h3>Roadmap publicado</h3><p><span class="badge complete">Completo</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-09-30 a 2026-09-30</dd><dt>Proprietário</dt><dd>Wesley R. Elsberry</dd>
+<dt>Depende de</dt><dd>Nenhum</dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Cumprido:</strong> Reavaliação e roadmap em estágios publicados</li><li><strong>Cumprido:</strong> Escopo da demonstração e portões de aceitação de longo prazo documentados</li></ul>
+<p><strong>Próxima ação:</strong> Revisar contratos de tarefas e atribuir proprietários de implementação.</p>
+<h4>Evidência</h4><ul><li><a href="https://github.com/welsberr/avida-ed-5-poc/commit/6796c710759542df43395864b217d4017cfa7cb9">Reavaliação e rota planejada publicadas, commit 6796c71</a></li></ul></section><section class="milestone" id="demo-contracts">
+<p class="small">October 23 demo · demo-contracts</p>
+<h3>Contratos de tarefas e baseline</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-09-30 a 2026-10-03</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#plan">planejado</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Três fluxos de trabalho vinculados a segmentos de tutoriais versão</li><li><strong>Pendente:</strong> Aproximadamente 15–25 requisitos têm resultados esperados observáveis</li><li><strong>Pendente:</strong> Definições científicas e evidência de base revisadas</li></ul>
+<p><strong>Próxima ação:</strong> Auditoria de configurar/executar/inspecionar, salvar/reabrir/transferir e comparar/explicar.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="demo-analysis">
+<p class="small">October 23 demo · demo-analysis</p>
+<h3>Análise executável e transferência duradoura</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-10-04 a 2026-10-09</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#demo-contracts">demo-contracts</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Registros tipados e cinco consultas de rastreabilidade produzem resultados reprodutíveis</li><li><strong>Pendente:</strong> O pacote Didactopus é validado antes da QA do gráfico; entradas inválidas e obsoletas são testadas</li><li><strong>Pendente:</strong> A transferência GroundRecall é recuperada em um contexto fresco e verificada contra o Git</li></ul>
+<p><strong>Próxima ação:</strong> Implemente o adaptador de gráfico mais pequeno útil e relate.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="demo-workflow">
+<p class="small">October 23 demo · demo-workflow</p>
+<h3>Fluxo de trabalho de demonstração completa</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-10-10 a 2026-10-15</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#demo-analysis">demo-analysis</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Configure, execute, inspecione, salve, reabra e compare trabalhos de uma sessão limpa</li><li><strong>Pendente:</strong> Controles pré-configurados, atualize o alvo, registros e gráficos passam verificações focadas</li><li><strong>Pendente:</strong> Verificações visuais em inglês e espanhol registradas; revisão das limitações explícitas</li></ul>
+<p><strong>Próxima ação:</strong> Repare a lacuna demonstrada de maior impacto; congele o escopo de recursos em outubro 15.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="demo-verify">
+<p class="small">October 23 demo · demo-verify</p>
+<h3>Verificação e ensaio</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-10-16 a 2026-10-19</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#demo-workflow">demo-workflow</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Verificação de fluxo de trabalho com laptop de apresentação e segundo navegador registrada</li><li><strong>Pendente:</strong> Revisão de desktop, layout estreito, teclado, localização e recuperação de erros</li><li><strong>Pendente:</strong> Duas revisões agendadas e registro de limitações conhecidas concluídas</li><li><strong>Cumprido:</strong> Cada elemento da interface descrito como funcional ou disponível na avaliação de portabilidade recebe revisão visual para desktop e layout estreito; defeitos são corrigidos ou registrados com evidência. Verifique a posição do seletor de visualização de Organismo e assegure que o conteúdo principal permaneça não obscurecido.</li></ul>
+<p><strong>Próxima ação:</strong> Concluir verificações de segundo navegador, teclado, localização, recuperação de erros e revisões agendadas.</p>
+<h4>Evidência</h4><ul><li><a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/visual-audit-2026-09-30.md">Auditoria visual para desktop e layout estreito, 30 setembro 2026</a></li></ul></section><section class="milestone" id="demo-release">
+<p class="small">October 23 demo · demo-release</p>
+<h3>Demonstração de congelamento candidato e BEACON</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>2026-10-20 a 2026-10-23</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#demo-verify">demo-verify</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Candidato marcado com revisões de origem, digest de imagem e exportações</li><li><strong>Pendente:</strong> Páginas e servidor local verificados; dados em cache e gravação rotulada prontos</li><li><strong>Pendente:</strong> Demonstração de outubro 23 realizada e observações de acompanhamento registradas</li></ul>
+<p><strong>Próxima ação:</strong> Congelar outubro 20; ensaiar outubro 21–22; demonstrar outubro 23.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="release-contracts">
+<p class="small">Functional Avida-ED 5 · release-contracts</p>
+<h3>Escopo de lançamento e contratos científicos</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>Ainda não agendado; aceitação condicionada</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#demo-contracts">demo-contracts</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Inventário de tarefas de currículo e tutorial revisado com instrutores</li><li><strong>Pendente:</strong> Métricas, perfis de motor e limites de reprodutibilidade acordados</li><li><strong>Pendente:</strong> Requisitos preservados, redesenhados, adiados e não suportados registrados</li></ul>
+<p><strong>Próxima ação:</strong> Expanda o escopo após o demonstrativo; a revisão pode começar mais cedo sem deslocá-lo.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="release-population">
+<p class="small">Functional Avida-ED 5 · release-population</p>
+<h3>População, Congelador e persistência</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>Ainda não agendado; aceitação condicionada</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#release-contracts">release-contracts</a>, <a href="#demo-workflow">demo-workflow</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Configurações de população, controles, medições e cores suportadas verificadas</li><li><strong>Pendente:</strong> Transferências relevantes para o tutorial e alternativas de teclado funcionam</li><li><strong>Pendente:</strong> Artefato versão, resultado e checkpoint round trips preservam metadados</li></ul>
+<p><strong>Próxima ação:</strong> Complete a fundação da população e dados antes da análise completa.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="release-views">
+<p class="small">Functional Avida-ED 5 · release-views</p>
+<h3>Continuidade de Organismo e Análise</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>Ainda não agendado; aceitação condicionada</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#release-population">release-population</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Execução de organismo e avaliação isolada atendem aos contratos revisados</li><li><strong>Pendente:</strong> Até três pratos populados e eixos, cores e exportações suportados funcionam na Análise</li><li><strong>Pendente:</strong> Guias de tutorial selecionados passam com exceções explícitas</li></ul>
+<p><strong>Próxima ação:</strong> Restaurar fluxos de trabalho legados suportados enquanto mantém a comparação separada de lições.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section><section class="milestone" id="release-pilot">
+<p class="small">Functional Avida-ED 5 · release-pilot</p>
+<h3>Currículo, acesso, localização e piloto</h3><p><span class="badge planned">Planejado</span></p>
+<dl><dt>Janela de trabalho</dt><dd>Ainda não agendado; aceitação condicionada</dd><dt>Proprietário</dt><dd>Não atribuído</dd>
+<dt>Depende de</dt><dd><a href="#release-views">release-views</a></dd><dt>Bloqueadores</dt><dd>Nenhum registrado</dd></dl>
+<h4>Critérios de aceitação</h4><ul><li><strong>Pendente:</strong> Atividades, prompts, rúbricas e ajuda contextual revisados</li><li><strong>Pendente:</strong> Espanhol, acessibilidade e aceitação de navegador/dispositivo concluídos</li><li><strong>Pendente:</strong> O piloto em sala de aula resolve defeitos críticos; mantenedores registram decisão de lançamento</li></ul>
+<p><strong>Próxima ação:</strong> Piloto concluído com atividades apoiadas; distinguir evidências de usabilidade de afirmações de aprendizado.</p>
+<h4>Evidência</h4><p>Nenhuma evidência de aceitação registrada ainda.</p></section>
+<section id="progress-log"><h2>Log de progresso</h2><p>Registros datados são mantidos quando um status muda ou nova evidência é adicionada. Reabrir um marco deve explicar o que invalidou sua aceitação anterior.</p><ol class="history"><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-verify">demo-verify</a> · Planejado<br/>Concluído o visual de desktop e 390-passagem visual de pixel para População, Organismo, Análise, Congelador, estatísticas de célula selecionada e Configurar. Corrigidos posicionamento de grade, envolvimento de controle responsivo, excesso de overflow e defeitos de contraste; registrado evidência renderizada e trabalho de aceitação restante. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-verify">demo-verify</a> · Planejado<br/>Adicionado uma verificação visual explícita para cada elemento de interface considerado funcional ou disponível na avaliação de portabilidade, incluindo a posição do seletor de Organismo e o conteúdo primário não obstruído. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#plan">plan</a> · Concluído<br/>Adicionado o rastreador de progresso compartilhado, critérios de aceitação, links de evidência, histórico datado e geração validada de página estática. Renderização desktop/móvel e navegação por âncora verificadas. A aceitação do marco de implementação permanece pendente. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#release-pilot">release-pilot</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#release-views">release-views</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#release-population">release-population</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#release-contracts">release-contracts</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-release">demo-release</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-verify">demo-verify</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-workflow">demo-workflow</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-analysis">demo-analysis</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#demo-contracts">demo-contracts</a> · Planejado<br/>Inicializado a partir da roadmap publicada; nenhum registro de conclusão ainda registrado. <span class="small">Registrado por OpenAI Codex.</span></li><li><time datetime="2026-09-30">2026-09-30</time> · <a href="#plan">plan</a> · Complete<br/>Registro de entregável de planejamento publicado; aceitação da implementação permanece separada. <span class="small">Registrado por OpenAI Codex.</span></li></ol></section>
+<section id="record-progress"><h2>Registre o progresso do projeto</h2>
+<p>Este é um registro compartilhado e controlado por versão. Atualize o marco em <a href="https://github.com/welsberr/avida-ed-5-poc/edit/main/docs/roadmap/progress.json">progress.json em GitHub</a> ou em uma cópia local, adicione uma entrada de progresso com data e inclua evidências públicas, como um commit, relatório de teste ou revisão. É necessário acesso de gravação no repositório ou uma solicitação de pull.</p>
+<p>Execute <code>python3 scripts/render_roadmap.py</code>, commit os dados e a página gerada, e faça o push. GitHub As páginas são reconstruídas a partir do registro. A validação rejeita histórico de status inconsistente e conclusão sem critérios aceitos e evidências. Leia as instruções de <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/roadmap/README.md">atualização</a>.</p>
+<p>Nenhuma caixa de seleção local no navegador ou submissão de visitante altera o registro compartilhado do projeto. O histórico de origem preserva quem o modificou e por quê.</p></section>
+</main><footer><div class="wrap">Prova de conceito independente. Registro inicial preparado com assistência de OpenAI Codex; aceitação científica, instrucional e de lançamento permanece com os revisores responsáveis.</div></footer></body></html>

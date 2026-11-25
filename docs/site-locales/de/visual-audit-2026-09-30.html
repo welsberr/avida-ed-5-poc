@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Desktop- und schmalbreitige visuelle Überprüfung der Avida-ED 5-Beweis des Konzepts-Schnittstelle, mit Befunden, Korrekturen, Beweisen und verbleibender Überprüfungsarbeit." name="description"/>
+<title>Avida-ED 5-Visuelle Überprüfung — 30 September 2026</title>
+<link href="../site-report.css" rel="stylesheet"/>
+<style>
+    figure { margin: 1.25rem 0 2rem; }
+    figure img { width: 100%; height: auto; border: 1px solid #c7d1dc; border-radius: .35rem; }
+    figcaption { margin-top: .45rem; color: #46586c; font-size: .92rem; }
+  </style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 Proof-of-Concept · Verifizierungsnachweise</div>
+<h1>Visuelle Überprüfung der operativen Schnittstellenbehauptungen</h1>
+<p>Desktop- und 390-Pixel-Überprüfung abgeschlossen 30 September 2026.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Seitennavigation"><a href="index.html">Projektstartseite</a> · <a href="port-status.html">Portbewertung</a> · <a href="roadmap.html">Roadmap und Fortschritt</a></nav>
+<section class="callout">
+<h2>Ergebnis</h2>
+<p>Der visuelle Check fand und korrigierte den gemeldeten Organismus-Layoutfehler. Er korrigierte auch die schmale Bildschirmleiste, horizontales Scrollen im Gefrierfach, geringen Kontrast des Textes und blasser Analysebeschriftungen.</p>
+<p>Dies unterstützt die Behauptung, dass die derzeit implementierten Oberflächen des Prototyps sowohl auf Desktop- als auch auf schmalen Breiten sichtbar und nutzbar sind. Es stellt keine Tutorial-Parität mit Avida-ED 4 her, validiert wissenschaftliche Formulierungen oder ersetzt die Überprüfung durch Dozenten und Lernende.</p>
+</section>
+<section>
+<h2>Umfang und Methode</h2>
+<p>Die Audits nutzten die neu erstellte WebAssembly-Anwendung in einem Chromium-basierten Browser. Die Desktop-Ansicht hatte eine Breite von 1280 × 720 Pixeln; die schmale Ansicht war 390 × 844 Pixel breit.</p>
+<p>Das Screenshot-Archiv enthält den 30-September-Build. Der sichtbare Text "zehn Logik-Aufgaben-Belohnungen" und die Reaktionsanzahl stammen aus einer Zeit vor der 1-Oktober-Korrektur des Standard-Aufgaben-Belohnungsprofils; die korrigierten Werte und der verbleibende engine-übergreifende Unterschied sind im <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md#default-task-reward-profile">Interface-Map</a> dokumentiert.</p>
+<p>Der Test umfasste alle Schnittstellenbereiche, die als funktional oder verfügbar in der <a href="port-status.html">Avida-ED 4-bis-5-Port-Bewertung</a> beschrieben wurden: Populationen-Navigation und -Steuerung, Organismus-Ausführung und Auswahlzellen-Inspektion, Analyse mit zwei abgeschlossenen 250-Update-Läufen, dem Gefrierfach und der Konfiguration.</p>
+<p>Die Überprüfung prüfte gerenderte Platzierung, Sichtbarkeit, horizontales Überlauf, Textkontrast und Zugang zum Hauptinhalt. Sie testete die Steuerungen, die benötigt wurden, um belegte Zustände zu erreichen. Sie führte nicht alle Import-, Export-, Drag-and-Drop-, Tastatur- oder Fehlerwiederherstellungspfade aus.</p>
+<p>Beim Starten des zweiten Analyse-Laufs wurde die erwartete Browser-Bestätigung für das Ersetzen des aktiven Laufs angezeigt. Die Annahme ermöglichte den normalen Abschluss des zweiten 250-Update-Laufs; die Pause war Dialoghandhabung, nicht Beweis für eine Simulation-Leistungsverzögerung.</p>
+</section>
+<section>
+<h2>Ergebnisse und Bewertung</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Bereich</th><th scope="col">Auffinden</th><th scope="col">Umgang mit dem Befund</th></tr></thead>
+<tbody>
+<tr><th scope="row">Organismus-Desktop-Layout</th><td>Der Arbeitsbereich nahm die 188-Pixel breite Seitenleiste ein. Die Steuerelemente überlappten sich, der Hauptinhalt war verdeckt, und der Ansichtsauswahler bewegte sich unter den Arbeitsbereich.</td><td>Komponentenreihenfolge und explizite Gitterplatzierung korrigiert.</td></tr>
+<tr><th scope="row">Organismus-Schmal-Layout</th><td>Der Auswahler und die Transportsteuerelemente erforderten horizontales Scrollen; die Desktop-Platzierung konnte eine unsichtbare implizite Spalte erzeugen.</td><td>Schmal-Gitterplatzierung zurückgesetzt und Steuerelemente umgebrochen.</td></tr>
+<tr><th scope="row">Organismenkontrast</th><td>Sequenzvergleichsnotizen werden in dunkler Schrift angezeigt, wenn sie auf dunklen Panels angezeigt werden.</td><td>Ein expliziter Organismus-Vordergrundfarbe angewendet.</td></tr>
+<tr><th scope="row">Gefrierfach</th><td>Checkpoint-Steuerungen und Elementmetadaten haben einen horizontalen Bildlauf erzeugt.</td><td>Eingeschränkte verschachtelte Breiten und vertikales Scrollen beibehalten.</td></tr>
+<tr><th scope="row">Konfigurieren</th><td>Beschreibungen und aktive Registerkarten hatten geringen Kontrast auf der hellen Bildungsoberfläche.</td><td>Hinzugefügte Lichtkartenoberflächen und farbliche Themen für den Unterricht.</td></tr>
+<tr><th scope="row">Ausgewählte Zelle</th><td>Der Zusammenfassungstext war schwach, und die mehrspaltige Genomliste floss in versteckte horizontale Spalten.</td><td>Erhöhte Kontrast und Verwendung einer vertikal scrollbaren Genomspalte.</td></tr>
+<tr><th scope="row">Analyse</th><td>Die responsive Layout funktionierte, aber die Diagrammbezeichnungen waren zu blass auf weiß. Die scheinbare Verzögerung beim zweiten Lauf war die erwartete Bestätigung für einen neuen Lauf, die auf eine Bestätigung wartete.</td><td>Angewandte Standardfarbe für den Unterrichts-Vordergrund; Bestätigung akzeptiert und beide 250-Update-Läufe abgeschlossen überprüft.</td></tr>
+<tr><th scope="row">Population</th><td>Die Desktop- und schmale Layouts hielten Steuerelemente und das Raster sichtbar, ohne horizontale Überlauf auf Seiten-Ebene.</td><td>Keine strukturelle Änderung außer gemeinsamen Gefrierfach-Fixes.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Dargestellte Beweise</h2>
+<figure><img alt="Desktop-Bevölkerungsansicht nach der Überprüfung" src="../evidence/visual-audit-2026-09-30/desktop-population.png"/><figcaption>Desktop-Bevölkerungsansicht, 1280 × 720.</figcaption></figure>
+<figure><img alt="Desktop-Organismusansicht mit dem Vorfahren ausgewählt" src="../evidence/visual-audit-2026-09-30/desktop-organism.png"/><figcaption>Desktop-Organismusansicht. Der Ansichtsauswahler bleibt in der linken Leiste und der Ausführungsarbeitsbereich verwendet die Hauptspalte.</figcaption></figure>
+<figure><img alt="Schmalbreit-Organismusansicht mit Steuerelementen über dem Inhalt" src="../evidence/visual-audit-2026-09-30/narrow-organism.png"/><figcaption>Schmale Organismusansicht, 390 × 844. Die Auswahler und Transportsteuerungen umschließen sich ohne horizontale Seitenüberlauf.</figcaption></figure>
+<figure><img alt="Desktop-Analyseansicht mit zwei abgeschlossenen Simulationsläufen" src="../evidence/visual-audit-2026-09-30/desktop-analysis.png"/><figcaption>Desktop-Analyseansicht mit abgeschlossenen 0% - und 1% -Mutationsläufen.</figcaption></figure>
+<figure><img alt="Schmalbreit-Analyseansicht" src="../evidence/visual-audit-2026-09-30/narrow-analysis.png"/><figcaption>Schmale Analyseansicht mit Auswahler und Bericht in einer Spalte.</figcaption></figure>
+<figure><img alt="Desktop-Konfigurationsansicht mit lesbaren Light-Theme-Etiketten und Beschreibungen" src="../evidence/visual-audit-2026-09-30/desktop-configure.png"/><figcaption>Desktop-Konfigurationsansicht nach den Korrekturen für den hellen Farbkontrast.</figcaption></figure>
+</section>
+<section>
+<h2>Verbleibende Überarbeitungsarbeit</h2>
+<ul>
+<li>Gehen Sie die repräsentativen Avida-ED 4-Tutorial-Videos durch und notieren Sie explizite Ausnahmen.</li>
+<li>Wiederholen Sie den Workflow in einem zweiten Browser und auf dem Präsentationslaptop.</li>
+<li>Vervollständigen Sie die Überprüfungen für Tastatursteuerung, Import/Export, Drag-and-Drop und Fehlerwiederherstellung.</li>
+<li>Überprüfen Sie die spanische Wortwahl und wissenschaftliche Terminologie mit einem fließend sprechenden Sachverständigen.</li>
+<li>Holen Sie Feedback von Dozenten und Lernenden ein, bevor Sie Aussagen zur Klassenzimmerbereitschaft machen.</li>
+</ul>
+</section>
+</main>
+<footer><div class="wrap">Unabhängiger Proof of Concept. Dies ist Nachweismaterial für eine Entwicklungsversion, nicht für eine Avida-ED-Team-Releaseerklärung.</div></footer>
+</body>
+</html>

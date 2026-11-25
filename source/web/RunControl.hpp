@@ -412,6 +412,14 @@ void AvidaWebApp::SetEducationSeed(const std::string & seed_text) {
 }
 
 void AvidaWebApp::Initialize() {
+  // Static translated pages pass their language to the app in the launch URL.
+  const int requested_language = EM_ASM_INT({
+    const language = new URLSearchParams(window.location.search).get("lang");
+    return ({en: 0, es: 1, fr: 2, de: 3, pt: 4})[language] ?? 0;
+  });
+  if (requested_language >= 0 && requested_language < 5) {
+    active_locale = avida::web::localization::SELECTOR_LOCALES[requested_language];
+  }
   InstallCheckpointWarningCapture();
   CreateConfiguredAvida();
   StartSimulationWorker();

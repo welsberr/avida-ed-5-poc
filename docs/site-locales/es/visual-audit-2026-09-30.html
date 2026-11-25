@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Auditoría visual de escritorio y de ancho estrecho de la interfaz de concepto demostrado Avida-ED 5, con hallazgos, correcciones, evidencia y trabajo de revisión pendiente." name="description"/>
+<title> Avida-ED 5 auditoría visual — 30 septiembre 2026</title>
+<link href="../site-report.css" rel="stylesheet"/>
+<style>
+    figure { margin: 1.25rem 0 2rem; }
+    figure img { width: 100%; height: auto; border: 1px solid #c7d1dc; border-radius: .35rem; }
+    figcaption { margin-top: .45rem; color: #46586c; font-size: .92rem; }
+  </style>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 concepto de prueba · evidencia de verificación</div>
+<h1>Revisión visual de las afirmaciones de la interfaz operativa</h1>
+<p>Escritorio y revisión de 390 píxeles completada 30 de septiembre 2026.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Navegación de página"><a href="index.html">Página principal del proyecto</a> · <a href="port-status.html">Evaluación del puerto</a> · <a href="roadmap.html">Mapa de ruta y progreso</a></nav>
+<section class="callout">
+<h2>Resultado</h2>
+<p>La visualización pasó y corrigió el fallo reportado en el diseño de Organismos. También corrigió el desbordamiento de la barra de herramientas en pantallas estrechas, el desplazamiento horizontal en el Almacén, el texto de bajo contraste y las leyendas de Análisis pálidas.</p>
+<p>Esto respalda la afirmación de que las superficies actualmente implementadas del prototipo son visibles y utilizables en anchos de escritorio y estrechos. No establece paridad de nivel tutorial con Avida-ED 4, valida el lenguaje científico ni reemplaza la revisión por parte del instructor y del aprendiz.</p>
+</section>
+<section>
+<h2>Alcance y método</h2>
+<p>La auditoría utilizó la aplicación reconstruida WebAssembly en un navegador basado en Chromium. La vista de escritorio tenía 1280 × 720 píxeles; la vista estrecha tenía 390 × 844 píxeles.</p>
+<p>Las capturas muestran la compilación del 30 de septiembre. El texto visible «diez recompensas de tareas lógicas» y el número de reacciones son anteriores a la corrección del 1 de octubre del perfil predeterminado de recompensas; los valores corregidos y la diferencia que persiste en el motor se documentan en el <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md#default-task-reward-profile">mapa de la interfaz</a>.</p>
+<p>La pasada cubrió cada área de interfaz descrita como funcional o disponible en el <a href="port-status.html">Avida-ED 4 a 5 evaluación de puerto</a>Navegación y controles de población, Ejecución de organismo e inspección de celda seleccionada, Análisis con dos completados 250-ejecuciones de actualización, el Almacén y la Configuración.</p>
+<p>La revisión verificó el posicionamiento renderizado, visibilidad, desbordamiento horizontal, contraste de texto y acceso al contenido principal. Ejercitó los controles necesarios para alcanzar estados poblados. No realizó cada ruta de importación, exportación, arrastrar y soltar, teclado o recuperación de errores.</p>
+<p>Iniciar la segunda ejecución de Análisis mostró la confirmación del navegador esperada para reemplazar la ejecución activa. Aceptarla permitió que la segunda ejecución 250-actualización se completara normalmente; la pausa fue el manejo del diálogo, no evidencia de un retraso en el rendimiento de la simulación.</p>
+</section>
+<section>
+<h2>Hallazgos y disposición</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Área</th><th scope="col">Hallazgo</th><th scope="col">Disposición</th></tr></thead>
+<tbody>
+<tr><th scope="row">Diseño de escritorio del organismo</th><td>La zona de trabajo ocupaba la columna lateral de 188 píxeles. Los controles se superponían, el contenido principal quedaba oculto y el selector de vista se movía debajo del workspace.</td><td>Se corrigió el orden de los componentes y se colocó explícitamente en la cuadrícula.</td></tr>
+<tr><th scope="row">Diseño estrecho del organismo</th><td>El selector y los controles de transporte requerían desplazamiento horizontal; la colocación en escritorio podía crear una columna implícita fuera de pantalla.</td><td>Se reinició la colocación de la cuadrícula estrecha y se envolvió los controles.</td></tr>
+<tr><th scope="row">Contraste del organismo</th><td>Las notas de comparación de secuencias heredaban texto oscuro mientras se mostraban en paneles oscuros.</td><td>Se aplicó un color de fondo explícito para el Organismo.</td></tr>
+<tr><th scope="row">Almacén</th><td>Los controles de punto de verificación y los metadatos de los elementos crearon una barra de desplazamiento horizontal.</td><td>Se restringieron anchos anidados y se mantuvo el desplazamiento vertical.</td></tr>
+<tr><th scope="row">Configurar</th><td>Las descripciones y pestañas activas tenían un contraste débil en la superficie educativa clara.</td><td>Se agregaron superficies de tarjetas claras y colores de tema educativo.</td></tr>
+<tr><th scope="row">Celda seleccionada</th><td>El texto de resumen era tenue y la lista de genomas de múltiples columnas fluía hacia columnas horizontales ocultas.</td><td>Aumenté el contraste y utilicé una sola columna de genomas desplazable verticalmente.</td></tr>
+<tr><th scope="row">Análisis</th><td>El diseño adaptable funcionó, pero las leyendas de los gráficos eran demasiado pálidas sobre blanco. El retraso aparente de la segunda ejecución fue la confirmación esperada de una nueva ejecución a la espera de una respuesta.</td><td>Aplicó el color de primer plano estándar de educación; aceptó la confirmación y verificó que ambas ejecuciones de 250-actualización se completaron.</td></tr>
+<tr><th scope="row">Población</th><td>Los diseños para escritorio y estrechos mantuvieron los controles y la cuadrícula en vista sin desbordamiento horizontal a nivel de página.</td><td>Sin cambios estructurales más allá de las correcciones compartidas del Almacén.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Evidencia renderizada</h2>
+<figure><img alt="Vista de población de escritorio después de la auditoría" src="../evidence/visual-audit-2026-09-30/desktop-population.png"/><figcaption>Vista de Población de Escritorio, 1280 × 720.</figcaption></figure>
+<figure><img alt="Vista de Organismo de Escritorio con el ancestro seleccionado" src="../evidence/visual-audit-2026-09-30/desktop-organism.png"/><figcaption>Vista de Organismo de Escritorio. El selector de vista permanece en la barra izquierda y el espacio de trabajo de ejecución utiliza la columna principal.</figcaption></figure>
+<figure><img alt="Vista de Organismo Estrecha con controles envueltos arriba del contenido" src="../evidence/visual-audit-2026-09-30/narrow-organism.png"/><figcaption>Vista de Organismo Estrecha, 390 × 844. El selector y los controles de transporte se ajustan sin desbordamiento horizontal de página.</figcaption></figure>
+<figure><img alt="Vista de Análisis de Escritorio que muestra dos ejecuciones completadas" src="../evidence/visual-audit-2026-09-30/desktop-analysis.png"/><figcaption>Vista de Análisis de Escritorio con ejecuciones completadas de 0%  y 1%  mutación.</figcaption></figure>
+<figure><img alt="Vista de Análisis Estrecha" src="../evidence/visual-audit-2026-09-30/narrow-analysis.png"/><figcaption>Vista de Análisis Estrecha con el selector y el informe en una sola columna.</figcaption></figure>
+<figure><img alt="Vista de Configuración de Escritorio con etiquetas y descripciones de tema claro legibles" src="../evidence/visual-audit-2026-09-30/desktop-configure.png"/><figcaption>Vista de Configurar de Escritorio después de las correcciones de contraste del tema claro.</figcaption></figure>
+</section>
+<section>
+<h2>Trabajo de revisión restante</h2>
+<ul>
+<li>Reproducir videos tutoriales representativos Avida-ED 4 y registrar excepciones explícitas.</li>
+<li>Repite el flujo de trabajo en un segundo navegador y en el portátil de presentación.</li>
+<li>Completa las comprobaciones de teclado solo, importación/exportación, arrastrar y soltar y recuperación de errores.</li>
+<li>Revisa la redacción en español y la terminología científica con un revisor experto en el tema.</li>
+<li>Obtén comentarios de instructores y estudiantes antes de hacer afirmaciones sobre la preparación para el aula.</li>
+</ul>
+</section>
+</main>
+<footer><div class="wrap">Prueba de concepto independiente. Esta es evidencia de verificación de una versión de desarrollo, no una declaración de lanzamiento del equipo Avida-ED.</div></footer>
+</body>
+</html>

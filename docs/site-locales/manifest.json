@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "source_sha256": {
+    "index.html": "59071a20789d2b63d1eb313d84333627eae9b1c80a9de928bff0dbac8280dff5",
+    "port-status.html": "d6e73a286fd57c6cf7a70adcec4b440f20deca44a49422b781a9713f51e63103",
+    "codex-collaboration.html": "2b9bf217512a0410ec550d6eeeef361589a3568400b481ea1c1fc183eb447621",
+    "porting-learning-roadmap.html": "539132473ea32c3a24ab5098833cfcdc829fe38ed5514c942af4db86f662694b",
+    "roadmap.html": "7a0dca5ca9d1d09e01dfe2a4d077cd7ebac91689d5c33fe3061d8ce3a7108273",
+    "visual-audit-2026-09-30.html": "b073b9b349418ffdb63e7db06b303aea9abed008e8920112e1aac7a9018ea9cf"
+  },
+  "page_sha256": {
+    "es": {
+      "index.html": "e4842a91e2386a605460b0caddae3016bd18733ef1f8b62e3ed7196408efee9d",
+      "port-status.html": "7c47a24d092851802d21e346543f9dcd6546ef366fa628b1fc05559371dd9258",
+      "codex-collaboration.html": "c0dd7ee3ffd996d795416031886155cca528d41d6e963908716e72018fb1ec97",
+      "porting-learning-roadmap.html": "73a71dfdd7fc561ecbda81a88500c2ab80748c2d3a6ca2c60313a1a1f8cc756d",
+      "roadmap.html": "c4868b5f0b0127cf8d5778826141c06794fd7a16cb772781d7d0638b1990eaf3",
+      "visual-audit-2026-09-30.html": "dc4f897546ca4a34dfe619f95475ff8015fe35e7f61bd8ab081100891c9b75df"
+    },
+    "fr": {
+      "index.html": "e930302584dd5d5019ee23213a705bdc001591824eff84e03e283c25e3194787",
+      "port-status.html": "1051e6c487bb14641bfe8a9a232cea5174b6f5bdbbc793519b931f0862834ec6",
+      "codex-collaboration.html": "6266284d7d40515978b44131bb7016884ec2fdb4df4cf8c7dc432ccd3e0daa5f",
+      "porting-learning-roadmap.html": "b1cadf93c31c1c0539c2f9fec6e6907d7f9ea99c52e254d8c0202dde8bf693ea",
+      "roadmap.html": "fa943f582fff9987346f19a33ad8c80918a4f48d0531c51b9982018ce16a5a4e",
+      "visual-audit-2026-09-30.html": "aa649f3d021b852de6e13a9149725ca6c059c40b98e06cbb579a86d80d0064a2"
+    },
+    "de": {
+      "index.html": "c9810ef34005d78db66c7d588d6ee754bba012064f6352c8a8d828c5e51e0bd6",
+      "port-status.html": "c4728244ffa0e7d1b340c9d4df03d90dd83833f77b5004c5860f9e3bc5d4be21",
+      "codex-collaboration.html": "9b0fc18b2249e38b14940d1ec983e8896734085792c9b4003fe36cf21ad36562",
+      "porting-learning-roadmap.html": "a108be5be8aff8d0d216b2467b99d504873b54f0fd69918fefb855e9731da2ab",
+      "roadmap.html": "c35c39890bd00e5ad8f6b4be2b3e9249a5dc98297db497997d4914a93292584b",
+      "visual-audit-2026-09-30.html": "856295fd55d232577fd0c6ee6624535042f973a4ddfe664a612f368404e27707"
+    },
+    "pt": {
+      "index.html": "d450d32462443a6458b3891f37ce7d56e31b12cf1b886e8e7f18e9f067873afa",
+      "port-status.html": "49a3ebdba3aa3dc11cd630b709241b2d70394e81ec00fb10334be310de41d517",
+      "codex-collaboration.html": "f3db8e1103159b8400f7ab73bcf2164180b7ff6e2c77e11baf65d4262aeea59c",
+      "porting-learning-roadmap.html": "94b3de5e88047670d7e0cd51f7bd65946caed62b43fe4ab7ea5aa8095221ce75",
+      "roadmap.html": "98dc59872989b280d4c313c772bfff0323f42c2fd1a426b753a0195c5f418a3b",
+      "visual-audit-2026-09-30.html": "ed620b56ab289238fef408e018680d2ebf75d3356c2a9e0d761fc95d66a432eb"
+    }
+  },
+  "catalog_sha256": {
+    "es": "c3e9b3065e563dbca0cf13c4c1a2b3cdcffa72090d5b1fe3fa7679438d86d7cd",
+    "fr": "2ea983f4ea69193db1cd4ecb84207348b297973eed3d2ebfdcdaa53cf38998aa",
+    "de": "430407c80ecb08933a60907d90441283803a14ff4e26155d6f981eadddbf948e",
+    "pt": "52fdff6a2ccf347cbb7f8d99b08600b4a159e86ef29e33d1e1595d936e585a3e"
+  }
+}

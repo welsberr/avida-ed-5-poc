@@ -42,8 +42,9 @@ jobs:
           container_id="$(docker create avida-ed-5-pages)"
           trap 'docker rm -f "$container_id" >/dev/null 2>&1 || true' EXIT
           docker cp "$container_id:/src/Avida/web/." _site/app/
-          cp index.html .nojekyll _site/
-          cp docs/port-status.html docs/codex-collaboration.html docs/porting-learning-roadmap.html docs/roadmap.html docs/visual-audit-2026-09-30.html docs/site-report.css _site/
+          cp .nojekyll _site/
+          python3 tests/site_localizations_test.py
+          python3 scripts/assemble_localized_site.py --output _site
           cp -r docs/evidence _site/
           test -s _site/index.html
           test -s _site/port-status.html
@@ -51,6 +52,10 @@ jobs:
           test -s _site/porting-learning-roadmap.html
           test -s _site/roadmap.html
           test -s _site/visual-audit-2026-09-30.html
+          for lang in es fr de pt; do
+            test -s "_site/$lang/index.html"
+            test -s "_site/$lang/roadmap.html"
+          done
           test -s _site/evidence/visual-audit-2026-09-30/desktop-population.png
           test -s _site/evidence/visual-audit-2026-09-30/desktop-organism.png
           test -s _site/evidence/visual-audit-2026-09-30/narrow-organism.png

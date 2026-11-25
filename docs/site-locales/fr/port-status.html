@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="État fondé sur des preuves de la continuité conceptuelle et fonctionnelle de Avida-ED 4 au Avida-ED 5 preuve de concept." name="description"/>
+<title>Avida-ED 4 à 5 : état du portage</title>
+<link href="../site-report.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 preuve de concept · notes de démonstration de BEACON</div>
+<h1>Dans quelle mesure le prototype transmet-il fidèlement Avida-ED 4 ?</h1>
+<p>Une évaluation basée sur les tâches utilisateur qui restent reconnaissables, les endroits où le prototype diffère, et le travail encore nécessaire avant qu'il ne puisse revendiquer une continuité au niveau des tutoriels.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Navigation de la page"><a href="index.html">Accueil du projet</a> · <a href="codex-collaboration.html">Codex et la pile d'outils</a> · <a href="porting-learning-roadmap.html">Feuille de route d'apprentissage et de portage</a> · <a href="roadmap.html">Feuille de route et progression</a></nav>
+<section class="callout">
+<h2>Évaluation</h2>
+<p>Le prototype est un <strong>port conceptuel en cours</strong>, pas un remplacement fonctionnel fidèle de Avida-ED 4. Il utilise désormais les trois vues familières—Population, Organisme et Analyse—réutilise certains graphismes et choix de couleurs de la version 4, et prend en charge des tâches reconnaissables telles que l'exécution d'une simulation, l'inspection d'un organisme, la sauvegarde du travail et la visualisation des résultats. Plusieurs flux de travail majeurs diffèrent encore en termes de contrôles, de valeurs disponibles et de comportement.</p>
+<p>Le fossé le plus important est l'analyse : le prototype compare les exécutions de leçons terminées, tandis que la version 4 permet aux apprenants de placer jusqu'à trois assiettes peuplées dans un analyseur partagé et de choisir des séries et des axes de mesure. L'adaptation du nom favorise la reconnaissance, mais ne rend pas ces flux de travail équivalents.</p>
+</section>
+<section>
+<h2>Ce que signifie « fidèle » ici</h2>
+<p>Pour cette revue, la fidélité signifie qu'un apprenant revenant peut reconnaître la même tâche, trouver ses commandes dans une zone familière, utiliser des valeurs et des choix comparables, et obtenir un résultat comparable. Un appariement au niveau des pixels n'est pas requis sur un écran mobile étroit, mais les instructions de tutoriel établies doivent toujours correspondre à la nouvelle interface sans nécessiter de devinettes.</p>
+<p>La référence est la révision de source Avida-ED 4 <a href="https://github.com/Avida-ED/Avida-ED4/commit/fcfc5c60e03479c85eadad083ffb5e7d92a95781">fcfc5c6</a> (version 4.0.33), vérifiée le 30 septembre 2026. L'inventaire de contrôle détaillé et la comparaison se trouvent dans la carte d'interface <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">Avida-ED 4 vers 5</a>.</p>
+</section>
+<section>
+<h2>État actuel par tâche utilisateur</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Zone de tâche</th><th scope="col">État</th><th scope="col">Preuves et impact</th></tr></thead>
+<tbody>
+<tr><th scope="row">Navigation principale</th><td class="status aligned">Aligné au niveau de l'étiquette</td><td>Population, Organisme et Analyse utilisent les noms v4 et des graphiques familiers. La mise en page est réactive, donc certaines positions changent à de petites largeurs.</td></tr>
+<tr><th scope="row">Configuration de la population</th><td class="status partial">Partielle, intentionnellement contrainte</td><td>La première leçon offre deux traitements de mutation, trois graines fixes et un monde 10 × 10 fixe avec un ancêtre et un environnement intégrés. Ses neuf forces de récompense de tâche par défaut correspondent maintenant numériquement au profil Avida-ED 4, mais utilisent le mécanisme de multiplicateur métabolique du POC. La v4 expose un plateau configurable, un placement d'ancêtre, un placement de descendance et des valeurs de mutation plus larges.</td></tr>
+<tr><th scope="row">Contrôles d'exécution et observations en direct</th><td class="status partial">Même objectif général, flux de travail différent</td><td>Le prototype permet de réinitialiser, avancer pas à pas, lancer, mettre en pause, accélérer et exécuter jusqu'à une cible ; il enregistre et trace la population, la richesse des séquences et la proportion de la séquence ancestrale. La version V4 utilise une disposition différente des commandes Exécuter/Pause/Avancer/Nouveau et fournit des statistiques de population plus étendues.</td></tr>
+<tr><th scope="row">Coloration de la population</th><td class="status partial">Concepts conservés</td><td>La coloration de l'adaptation, du coût de gestation, du taux métabolique, du phénotype et du génotype est disponible, avec les choix de palette hérités. La version V4 offre également des vues de tâches et de ressources dépendantes de l'ancêtre et de l'environnement, qui ne sont pas toutes représentées.</td></tr>
+<tr><th scope="row">Inspection des organismes</th><td class="status partial">Fonctionnel, avec une présentation modifiée</td><td>Les organismes peuvent être chargés et inspectés pendant l'exécution, y compris les panneaux de génome et d'état. Les contrôles de cycle, les paramètres et l'agencement visuel de la version V4 ne sont pas reproduits un pour un.</td></tr>
+<tr><th scope="row">Analyse</th><td class="status gap">Différence fonctionnelle majeure</td><td>La vue actuelle superpose des exécutions terminées. L'analyseur v4 accepte jusqu'à trois assiettes remplies et permet aux utilisateurs de choisir les mesures gauche et droite, de supprimer les traces et de définir les couleurs. Un analyseur de style v4 reste une priorité élevée en matière de parité.</td></tr>
+<tr><th scope="row">Congélateur et travail sauvegardé</th><td class="status partial">Le but est conservé, mais l'interaction diffère</td><td>Le prototype sauvegarde et importe des organismes, des configurations et des points de contrôle. Les regroupements d'éléments et les chemins de glisser-déposer doivent encore être comparés directement aux flux de travail du tutoriel v4.</td></tr>
+<tr><th scope="row">Paramètres et environnement</th><td class="status partial">Sous-ensemble disponible</td><td>Les paramètres et contrôles de l'environnement pilotés par des métadonnées sont fonctionnels, y compris les options et les bornes numériques. Le sous-ensemble exposé et le chemin de configuration des tâches n'ont pas encore été parcourus en comparaison avec chaque tutoriel.</td></tr>
+<tr><th scope="row">Continuité du tutoriel</th><td class="status partial">Pas encore validé de bout en bout</td><td>La carte source est détaillée, mais il n'y a pas encore eu de parcours d'acceptation vidéo par vidéo représentatif ni de comparaison visuelle complète entre bureau et mobile.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Interprétation</h2>
+<p>La continuité la plus forte aujourd'hui est la <em>forme</em> de l'espace de travail et plusieurs tâches familières ; il ne s'agit pas d'une équivalence complète des contrôles scientifiques ou des résultats des tutoriels. La leçon étroite est utile pour une première démonstration car elle donne à la nouvelle interface une expérience concrète, des graines reproductibles, des preuves en direct et des chemins d'enregistrement/exportation. Ces ajouts devraient être décrits comme un nouveau flux de leçon, plutôt que de les présenter comme si les anciens tutoriels les décrivaient déjà.</p>
+<p>Une séquence de portage raisonnable consiste à comparer les tâches du tutoriel contre la carte de contrôle, puis à décider pour chacune si l'on doit préserver l'interaction v4, l'exposer comme un mode supplémentaire, ou clairement étiqueter une refonte délibérée. Priorisez le flux de travail d'analyse du plat peuplé et les transferts vers le congélateur car ceux-ci affectent la manière dont les apprenants déplacent les résultats entre les vues. Gardez les nouveaux présets de leçon contraints disponibles comme un chemin séparé.</p>
+</section>
+<aside>
+<h2>Preuves et limites</h2>
+<p>Les étiquettes de contrôle, les options et les gammes ont été vérifiées dans la source v4 et POC. Cela soutient une confiance élevée dans la comparaison au niveau source. L'évaluation de l'impact du tutoriel est une estimation raisonnée ; elle nécessite une validation avec les instructeurs, les apprenants et les vidéos exactes du tutoriel. Le manuel v3 plus ancien est un contexte de soutien uniquement, pas l'autorité pour le comportement v4.</p>
+<p>Une vérification visuelle de bureau et à largeur réduite <a href="visual-audit-2026-09-30.html">audit</a> a examiné les zones d'interface décrites comme fonctionnelles sur cette page. Elle a corrigé la mise en page des organismes défectueuse ainsi que les défauts de débordement et de contraste associés. Cette vérification confirme la visibilité et le positionnement rendus ; elle ne détermine pas la parité avec le tutoriel ni la préparation à la salle de classe.</p>
+<p>Références principales : <a href="https://github.com/Avida-ED/Avida-ED4">Avida-ED 4 dépôt</a>, <a href="https://avida-ed.github.io/help/">Avida-ED vidéos d'aide et tutoriels</a>, <a href="https://github.com/welsberr/avida-ed-5-poc">ce dépôt de prototype</a> et sa <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">carte d'interface détaillée</a>. L'état reflète la source inspectée le 30 septembre 2026.</p>
+</aside>
+</main>
+<footer><div class="wrap">Preuve de concept indépendante. Cette page est une évaluation fonctionnelle, et non une Avida-ED déclaration de libération par l'équipe.</div></footer>
+</body>
+</html>

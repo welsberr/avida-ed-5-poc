@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Um plano de aprendizado e roteiro de portagem centrado na tarefa para Avida-ED 5, com um marco de demonstração em outubro de 23, BEACON." name="description"/>
+<title>Avida-ED 5: rota de aprendizado e portabilidade</title><link href="../site-report.css" rel="stylesheet"/></head>
+<body><header class="masthead"><div class="wrap"><div class="eyebrow">Avida-ED 5 · Plano de entrega proposto</div><p>Tarefas de aprendizagem, contratos científicos e evidências para uma portagem fiel</p></div></header>
+<main class="wrap"><nav aria-label="Navegação de página"><a href="index.html">Página inicial do projeto</a> · <a href="port-status.html">Status da portagem</a> · <a href="codex-collaboration.html">Avaliação da infraestrutura</a> · <a href="roadmap.html">Caminho a seguir e progresso</a></nav>
+<section class="level1" id="from-a-working-demonstration-to-avida-ed-5">
+<h1>De uma demonstração funcional para Avida-ED 5</h1>
+<p><strong>Reavaliação e caminho a seguir proposto · 30 Setembro 2026 · Demonstração: 23 Outubro 2026</strong></p>
+<p>O próximo passo mais forte é organizar a portagem em torno de <strong>o que os alunos devem ser capazes de fazer e explicar</strong>, com o mapa de interface existente fornecendo os detalhes de nível de controle. Use um pequeno grafo de conhecimento revisado para conectar essas tarefas às definições científicas, instruções de tutorial, implementação e verificação. Mantenha testes executáveis e revisão do instrutor como evidência de que as conexões são válidas.</p>
+<p>Para outubro 23, conclua e demonstre uma atividade confiável de mutação e variação. Mostre a infraestrutura ajudando a resolver um problema real nessa atividade. Não faça a conclusão da interface legada completa, ou a integração de todos os repositórios de infraestrutura, uma condição para uma demonstração bem-sucedida.</p>
+<p>Esta é uma proposta de plano de entrega, não um relatório de que o novo gráfico, integrações ou testes de aceitação já foram implementados. A base é a revisão do protótipo <code>3dd5f8c</code>; a avaliação anterior <a href="port-status.html">portagem</a> e <a href="codex-collaboration.html">avaliação de colaboração</a> permanecem como contexto útil. Este plano estende o primeiro roteiro de experimento e reduz o design amplo da web upstream para prioridades educacionais.</p>
+<section class="level2" id="what-changes-in-the-assessment">
+<h2>O que muda na avaliação</h2>
+<p>O mapa conceitual permanece valioso: ele captura rótulos, intervalos, escolhas e localizações que importam para a continuidade do tutorial. Ele não pode, por si só, estabelecer equivalência comportamental, equivalência científica ou aprendizado bem-sucedido. Mantenha essas como dimensões separadas em vez de comprimi-las em um único percentual de "funcionalidades portadas".</p>
+<div aria-label="Tabela de comparação deslizante" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Dimensão</th>
+<th>Evidência de aceitação</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Continuidade de tarefas e interações</td>
+<td>Um aluno pode seguir as etapas do tutorial v4 identificadas, incluindo transferências entre visualizações, com exceções documentadas.</td>
+</tr>
+<tr class="even">
+<td>Significado científico</td>
+<td>As definições de métricas, semântica de mutação, unidades, valores ausentes e controles experimentais são revisadas em relação ao comportamento do motor.</td>
+</tr>
+<tr class="odd">
+<td>Oportunidade de aprendizagem</td>
+<td>A atividade pede uma previsão, observações e uma explicação que possam revelar concepções errôneas especificadas.</td>
+</tr>
+<tr class="even">
+<td>Eficácia do aprendizado</td>
+<td>Respostas do aluno e uma avaliação adequada sustentam uma afirmação sobre o aprendizado; cliques bem-sucedidos sozinhos não o fazem.</td>
+</tr>
+<tr class="odd">
+<td>Confiabilidade operacional</td>
+<td>Fluxos de trabalho de navegador repetíveis, viagens de ida e volta de dados salvos, tratamento de erros e evidências versão passam.</td>
+</tr>
+<tr class="even">
+<td>Apresentação e acesso</td>
+<td>Layout de desktop familiar, adaptações usáveis para telas pequenas, acesso por teclado e controles localizados revisados sobrevivem às verificações visuais.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Teste de GUI baseado em modelo oferece uma base para cobertura de interação; não fornece automaticamente o oráculo científico ou educacional. Relações de requisitos tipadas podem melhorar a análise de impacto de mudanças, mas a simples alcançabilidade de grafo deve identificar <strong>candidatos para revisão</strong>, não provar que uma mudança quebrou-os. Essas distinções seguem o escopo do <a href="https://www.cs.umd.edu/~atif/pubs/MemonSTVR2007-abstract.html">trabalho de fluxo de eventos de Memon</a> e do <a href="https://doi.org/10.1016/j.infsof.2014.03.002">análise de requisitos de Goknil e colegas</a>. Aplicá-las aqui é uma recomendação de design, não um resultado testado para Avida-ED.</p>
+<p>Preserve o familiar workspace de Population, Organism e Analysis, gráficos e paletas legados, e posicionamento relativo dos controles. Distinga explicitamente um redesign deliberado de uma porta incompleta. Não reproduza uma deficiência legada apenas para corresponder ao seu comportamento. Quando diferenças de engine impedirem equivalência, preserve o propósito de aprendizado e explique a diferença.</p>
+</section>
+<section class="level2" id="four-connected-models-with-different-rules">
+<h2>Quatro modelos conectados, com regras diferentes</h2>
+<ol>
+<li><strong>Modelo de aprendizagem:</strong> conceitos, pré-requisitos propostos, concepções equivocadas, objetivos de aprendizagem, prompts e critérios de avaliação. Um ciclo estrito de pré-requisitos merece revisão; conceitos mutuamente reforçadores podem formar uma unidade de ensino. Uma aresta permanece uma hipótese revisável por instrutor.</li>
+<li><strong>Modelo de interação:</strong> estados, ações, pré-condições e resultados observáveis. Configure → execute → pause → inspecione → retome é um ciclo válido. Inclua reset, cancelamento, importação falha e respostas assíncronas obsoletas.</li>
+<li><strong>Modelo de rastreabilidade:</strong> objetivo → tarefa → requisito → implementação → execução de teste → evidência, mais referências de tutorial e fonte. Uma definição de teste é diferente de uma execução bem-sucedida contra uma build nomeada.</li>
+<li><strong>Modelo de software e dados:</strong> capacidades do engine, definições de métricas, configuração, formatos de armazenamento e dependências. Use isso para identificar trabalho de compatibilidade e migração sem tratar contagens de dependência como importância educacional.</li>
+</ol>
+<p>Mantenha IDs estáveis e relações tipadas em arquivos JSON ou YAML pequenos e versionados. Gere o mapa conceitual e o relatório de status legível a partir deles após a estabilização do esquema. Não é necessário banco de dados de grafos ou visualização interativa de grafos para o primeiro marco. Uma lista curta de descobertas acionáveis será mais útil durante a demonstração do que uma imagem densa de rede.</p>
+<p>Toda afirmação significativa deve ter seu localizador de fonte, revisão ou hash da fonte, tipo de relação, escopo, racional, autor/revisor, timestamp, confiança e status de revisão. Use campos separados para status de implementação e frescor da evidência. Distinga <strong>desconhecido</strong>, <strong>não implementado</strong>, <strong>falhou</strong>, <strong>passou para esta construção</strong>, e <strong>diferente intencionalmente</strong>. Mantenha a evidência pública separada da memória privada. Uma etiqueta de confiança é uma avaliação de revisão, não uma probabilidade calibrada.</p>
+<section class="level3" id="what-to-reuse-from-didactopus">
+<h3>O que reutilizar do Didactopus</h3>
+<p>Reutilize sua estrutura de learning-pack, análise de pré-requisitos, verificações de caminho de currículo e ledger de revisão para o subgrafo de aprendizagem. Construa um pequeno adaptador para rastreabilidade de software e verificações de fluxo de trabalho em vez de forçar controles e testes nas arestas conceito-pré-requisito.</p>
+<p>Inspeção da revisão do Didactopus <code>f0b0e8ac</code> encontrou dois riscos de integração em <code>src/didactopus/graph_qa.py</code>: o carregamento falho de pacote pode produzir avisos de grafo zero, e a regra "bottleneck" conta dependentes diretos com um limiar fixo de três. Portanto, exija validação bem-sucedida do pacote antes da análise do grafo; exiba entradas inválidas como erro; rotule com precisão o grau direto; e trate planicidade, profundidade e limiares de bottleneck como heurísticas recomendadas. Sua utilidade para este currículo ainda não foi validada. A centralidade sozinha não deve determinar a prioridade da porta.</p>
+<p>Para a demonstração, implemente apenas cinco consultas úteis:</p>
+<ul>
+<li>Quais tarefas de tutorial selecionadas não têm implementação ou um teste de fluxo de trabalho atual passando?</li>
+<li>Quais objetivos de aprendizagem não têm um prompt de observação ou explicação?</li>
+<li>Quais medições científicas carecem de uma definição revisada ou de um oráculo de teste adequado?</li>
+<li>Que evidências ficaram obsoletas após uma alteração relevante em uma fonte, configuração ou código?</li>
+<li>Quais tarefas, strings, texto de ajuda e testes precisam ser revisados se um contrato específico mudar?</li>
+</ul>
+<p>Para cada descoberta, mostre a ligação ausente ou o caminho digitado e sua fonte. Teste o analisador com uma aresta ausente, revisão obsoleta, pacote inválido e loop de interação válido. Uma defeito deliberadamente injetado deve ser marcado como um fixture de teste. Não o apresente como uma falha de produção descoberta.</p>
+</section>
+</section>
+<section class="level2" id="the-demonstrations-educational-task">
+<h2>Tarefa educacional da demonstração</h2>
+<p>Use o experimento de população existente: <strong>Como a configuração de mutação afeta a variação presente em uma população?</strong> Está relacionado ao tópico introdutório na sequência <a href="https://avida-ed.github.io/curriculum/lab-manual/">manual oficial de laboratório</a>, mas não é uma reprodução validada desse exercício legado. Essa sequência também fornece a progressão de longo prazo em direção à seleção, aptidão e investigação independente.</p>
+<p>Mantenha o ancestral embalado, 10 × 10 mundo, perfil de instrução, ambiente e configuração de agendamento fixos. Compare as configurações de mutação por local 0%  e 1%  usando sementes 42, 43 e 44, com a mesma política de gravação e atualização alvo. Audite se as configurações genéricas controlam silenciosamente a configuração pré-definida. Bloqueie edições incompatíveis ou marque claramente a execução como um experimento modificado e mantenha sua configuração resolvida.</p>
+<div aria-label="Tabela de comparação deslizante" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Ação do aluno</th>
+<th>Evidência de raciocínio para eliciar</th>
+<th>Contrato de software</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Predizer antes de executar</td>
+<td>Novas sequências podem aparecer? A diversidade deve aumentar continuamente?</td>
+<td>Mantenha a previsão separada da saída da simulação.</td>
+</tr>
+<tr class="even">
+<td>Execute ambas as tratamentos e inspecione os gráficos</td>
+<td>Distinga observações de previsões e compare a variação de réplicas.</td>
+<td>Mantenha o tratamento, semente, atualização, definições de métrica e configuração anexados aos registros.</td>
+</tr>
+<tr class="odd">
+<td>Inspeccionar um organismo amostrado e seu ancestral</td>
+<td>Explique a diferença exata na sequência sem confundi-la com linhagem ou aptidão.</td>
+<td>Use a identidade exata da sequência com o perfil de instrução apropriado, não apenas IDs do rastreador de genótipo.</td>
+</tr>
+<tr class="even">
+<td>Salve, reabra e compare os resultados</td>
+<td>Outro leitor pode reconstruir o que foi comparado.</td>
+<td>Exportações versionadas e round trips preservam dados científicos e distinguem resultados de pontos de verificação recuperáveis.</td>
+</tr>
+<tr class="odd">
+<td>Explique o resultado e as limitações</td>
+<td>Riqueza não é contagem de mutações nem prova de adaptação; atualizações não são gerações.</td>
+<td>Forneça prompts e ajuda métrica, não uma afirmação automática de que o aprendizado ocorreu.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Revise cuidadosamente a implementação da mutação: a randomização de instruções pode escolher a instrução original, então a configuração não é uma proporção exata de sites alterados. O ambiente de tarefa recompensada não é evolução neutra. Sementes iguais em tratamentos não implicam histórias aleatórias emparelhadas. Três réplicas por tratamento suportam uma ilustração, não uma afirmação geral de tamanho de efeito. Similaridade numérica entre versões Avida não é um critério de equivalência a menos que suas semânticas e randomização sejam demonstravelmente comparáveis.</p>
+<p>Uma pequena rúbrica de explicação revisada por instrutor é suficiente para este marco. Mais tarde, avalie concepções errôneas e transferência para um novo cenário com alunos. Não infira aprendizado duradouro a partir de uma demonstração bem-sucedida ou de um gráfico com links completos.</p>
+</section>
+<section class="level2" id="delivery-plan-to-october-23">
+<h2>Plano de entrega até outubro 23</h2>
+<p>As datas abaixo são janelas de trabalho propostas, não estimativas de produtividade medida. A implementação pode ser delegada; o mantenedor retém decisões científicas, instrucionais e de lançamento. Obtenha uma revisão de instrutor e uma revisão em espanhol qualificada, se disponível. Se qualquer uma não estiver disponível, declare a limitação e restrinja a afirmação de lançamento.</p>
+<section class="level3" id="september-30october-3-establish-the-task-contracts">
+<h3>Setembro 30–outubro 3: estabelecer os contratos de tarefa</h3>
+<p>Selecione três fluxos de trabalho: configurar/executar/inspecionar; salvar/reabrir/transferir; comparar/explicar. Identifique os segmentos relevantes dos tutoriais legados e registre horários exatos e exceções específicas da versão. Comece com cerca de 15–25 requisitos revisáveis, não com uma engenharia reversa completa do aplicativo. Corrija o texto de guia que ainda diz aos usuários para abrir "Comparar execuções" quando o workspace visível é "Análise".</p>
+<p>Entregue um inventário de tarefas escopo, definições de métricas, perguntas de revisão de instrutor e um registro de evidências. Registre a base viva antes das mudanças. Saia quando cada requisito selecionado tiver um resultado esperado observável e um status explícito de evidência. Um tutorial não assistido é marcado como não revisado.</p>
+</section>
+<section class="level3" id="october-49-make-the-analysis-executable">
+<h3>Outubro 4–9: tornar a análise executável</h3>
+<p>Implemente os registros tipados, cinco consultas, um pequeno pacote de aprendizado Didactopus e adaptador, e um relatório gerado. Link existentes testes significativos antes de adicionar novos. Execute validação antes da QA de gráfico. Adicione verificações de entrada malformada e evidência obsoleta descritas acima.</p>
+<p>Crie uma transferência GroundRecall revisada com a tarefa selecionada, revisão atual, invariantes, decisões pendentes e comandos de verificação seguintes; recupere-a em um contexto fresco e verifique-a contra o Git. As buscas limitadas anteriores não revelaram um registro exato de tarefa Avida, o que não estabelece que nenhum existe.</p>
+<p>Sair com um relatório reproduzível que identifique pelo menos um requisito não resolvido real e explique sua evidência. Se o trabalho gráfico exceder este período, mantenha os mesmos registros como uma tabela simples de rastreabilidade e conclua primeiro o fluxo de trabalho do aprendiz.</p>
+</section>
+<section class="level3" id="october-1015-close-the-chosen-workflow">
+<h3>Outubro 10–15: fechar o fluxo de trabalho escolhido</h3>
+<p>Resolva o bloqueador de maior impacto encontrado nessas tarefas. Verifique se as entradas de atualização-alvo sobrevivem à Execução, os presets preservam suas variáveis controladas, os registros não são duplicados, os organismos selecionados carregam corretamente e os resultados salvos reabrem com seus metadados. Mantenha o hover, zoom, reinicialização e exportação do gráfico estáveis durante atualizações em tempo real. Limite o trabalho de Análise ao que este exercício requer; mostre honestamente suas diferenças restantes v4.</p>
+<p>Exercite o caminho em espanhol usando o método de tradução local documentado, IDs estáveis, glossário, verificações de placeholders e proveniência. Inspeccione os controles renderizados reais, substituição de opções, tooltips, Congelador, configurações e Análise em inglês e espanhol, além dos modos de teste de string expandida e RTL. Não equate cobertura de catálogo com aceitação de tradução.</p>
+<p>Sair com a atividade completa funcionando a partir de uma sessão de navegador limpa e uma construção de contêiner portátil. Congele o escopo de recursos em Outubro 15; não adicione uma plataforma gráfica geral ou amplie capacidades do motor para o demo.</p>
+</section>
+<section class="level3" id="october-1619-verify-and-rehearse">
+<h3>Outubro 16–19: verificar e ensaiar</h3>
+<p>Execute o fluxo de trabalho no laptop de apresentação e em um segundo navegador. Verifique layouts de desktop e estreitos, navegação por teclado, recarregamento, exportação/importação de dados e recuperação de erros. Use fixtures para verificações determinísticas de registros e invariâncias científicas; não exija trajetórias estocásticas idênticas entre motores. Ensaiar a demonstração completa de 20 minutos duas vezes e registrar a duração real.</p>
+<p>Sair com execuções de testes vinculadas, evidências de revisão visual, limitações conhecidas, uma amostra revisada em espanhol e uma versão selecionada. Se uma revisão não estiver disponível, mantenha a marcação "pré-visualização de desenvolvimento". Qualquer caminho crítico falho em configurar/executar/salvar/reabrir/comparar bloqueia a afirmação de aplicativo ao vivo.</p>
+</section>
+<section class="level3" id="october-2023-freeze-prepare-fallbacks-demonstrate">
+<h3>Outubro 20–23: congelar, preparar fallbacks, demonstrar</h3>
+<p>Em outubro 20, marque o candidato e arquive seu resumo de imagem, revisões de origem, configuração, exportações e relatório. Em outubro 21–22, verifique Páginas e o servidor local do contêiner; cache o conjunto de dados de seis execuções e registre uma breve demonstração. Forneça o fallback local por HTTP com os cabeçalhos do navegador necessários. Uma gravação é explicitamente marcada como gravada, e resultados em cache como anteriormente gerados.</p>
+<p>Em outubro 23, apresente um caso de engenharia limitado: o que funcionou, o que a infraestrutura ajudou a expor e o que permanece incerto. Reserve aproximadamente três minutos para contexto, vinte para a demonstração e sete para discussão.</p>
+</section>
+</section>
+<section class="level2" id="a-twenty-minute-demonstration">
+<h2>Demonstração de vinte minutos</h2>
+<div aria-label="Tabela de comparação deslizante" class="scroll-table" role="region" tabindex="0"><table>
+<thead>
+<tr class="header">
+<th>Minutos</th>
+<th>Mostrar</th>
+<th>Apontar para estabelecer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0–3</td>
+<td>A pergunta educacional, previsão, ambiente de trabalho familiar e receita de construção fixa; use um contêiner pré-construído.</td>
+<td>Uma tarefa de ensino concreta e ambiente reprodutível.</td>
+</tr>
+<tr class="even">
+<td>3–6</td>
+<td>Uma transferência de contexto fresco recuperada por meio do GroundRecall, depois verificada contra o estado do repositório.</td>
+<td>As decisões podem ser recuperadas com fontes; a memória não é a autoridade do estado atual.</td>
+</tr>
+<tr class="odd">
+<td>6–10</td>
+<td>O relatório da tarefa, uma lacuna real, seu caminho de fonte e a revisão da reparação e da nova execução.</td>
+<td>Didactopus e verificações de rastreabilidade podem tornar uma omissão acionável. Prepare a reparação antecipadamente; não há dependência de codificação em tempo real.</td>
+</tr>
+<tr class="even">
+<td>10–17</td>
+<td>Execute ambas as configurações de mutação, inspecione um organismo, use os gráficos ao vivo, salve/reabra e compare com os replicados arquivados. Mostre um fluxo de trabalho espanhol verificado.</td>
+<td>O software resultante suporta uma atividade interpretável.</td>
+</tr>
+<tr class="odd">
+<td>17–20</td>
+<td>O registro de revisão guiado pelo ClaimWright, lacunas restantes e o próximo marco.</td>
+<td>Mostre exatamente quais verificações alteraram uma afirmação ou ação, sem exagerar a aplicação ou benefícios.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="level2" id="make-infrastructure-contributions-observable">
+<h2>Tornar as contribuições de infraestrutura observáveis</h2>
+<p>Registre <strong>informação recuperada → decisão alterada → artefato alterado → verificação</strong>, incluindo casos em que uma ferramenta não adiciona informações úteis. Isso é uma evidência mais forte do que listar repositórios instalados.</p>
+<ul>
+<li><strong>GroundRecall:</strong> compare a recuperação usando o mesmo repositório e resumo de transferência com e sem recuperação. Registre decisões corretas recuperadas, sugestões incorretas/obsoletas, perguntas repetidas e tempo de revisão. Uma pequena demonstração é um estudo de caso, não um experimento produtividade causal; equilibre a ordem ou use contextos independentes ao fazer uma comparação.</li>
+<li><strong>Didactopus:</strong> mostre a validação real do pacote e descobertas de pré-requisitos ou lacunas de avaliação, seu tratamento e as verificações de rastreabilidade separadas do adaptador. Atribua cada descoberta ao componente que a produziu.</li>
+<li><strong>AlegaçãoWright:</strong> aplique seus padrões atuais de artefatos públicos e preserve o registro de revisão. Se uma porta executável estiver conectada, demonstre uma verificação compatível e seu resultado. Caso contrário, descreva com precisão o uso da lista de verificação; não implique em aplicação automática. Registre tanto as capturas úteis quanto os falsos alarmes.</li>
+<li><strong>SciSiteForge/TalkOrigins métodos:</strong> documentam a fonte ou fluxo de trabalho reutilizada específica e a adaptação Avida. Demonstre uma correção de terminologia ou overflow mais uma verificação visual. A reutilização de método é distinta da importação de um pacote.</li>
+<li><strong>doclift e CiteGeist:</strong> use-os apenas onde uma fonte selecionada necessita genuinamente de ingestão ou verificação de citação. Registre a passagem convertida ou a referência verificada e seu uso. Eles não precisam estar ativos, e o uso proposto não deve ser relatado como contribuição passada.</li>
+</ul>
+<p>Inicie um log de esforço prospectivo separando direção/revisão do mantenedor, trabalho de implementação, execução automática em tempo de execução e rework. Não há medição histórica confiável de horas-humanas ou comparação controlada "Codex sozinho" para este projeto. A estimativa numérica anterior não deve ser usada como evidência de economia. Uma comparação deve dar à base o mesmo trabalho, repositório e acesso comum à documentação.</p>
+</section>
+<section class="level2" id="after-the-demonstration-a-functional-avida-ed-5">
+<h2>Após a demonstração: um Avida-ED 5 funcional</h2>
+<p>Estas fases têm portas de aceitação em vez de datas prometidas. Estime-as após a auditoria de tarefas escopadas e revisão upstream. Mantenha separados o shell de aplicação educacional, adaptador de motor, medições, armazenamento, localização e relatórios. A tarefa de demonstração e seus testes permanecem um exemplo de regressão mantido ao longo do tempo.</p>
+<section class="level3" id="phase-1-agree-on-the-release-scope-and-scientific-contracts">
+<h3>Fase 1: concordar sobre o escopo de lançamento e contratos científicos</h3>
+<p>Estenda o inventário de tarefas ao manual do laboratório e vídeos de tutoriais existentes. Revise prioridades com o grupo Avida-ED; fixe perfis de motor e instrução suportados, significados das métricas, comportamento de mutação e limites de reprodutibilidade. Classifique requisitos como preservados, redesenhados com explicação, adiados ou não suportados. Gere um relatório público de lacunas com denominadores e datas de evidência; não conte cada aresta de gráfico como progresso.</p>
+<p><strong>Sair:</strong> um escopo revisado de funcionalidades e oráculo científico para cada medida suportada. Paridade legada e novas lições são identificáveis separadamente. Esta revisão de escopo pode começar antes de outubro 23 se não deslocar o trabalho de demonstração.</p>
+</section>
+<section class="level3" id="phase-2-population-freezer-and-trustworthy-persistence">
+<h3>Fase 2: População, Congelador e persistência confiável</h3>
+<p>Conclua a configuração de pratos suportados, posicionamento de ancestral, configurações de mutação e ambiente, ciclo de vida da execução, medições de população e modos de cor familiares. Restaure transferências relevantes para o tutorial entre pratos configurados, organismos e pratos populados, com alternativas de teclado para arrastar-e-soltar. Teste importações inválidas sem danificar o trabalho existente.</p>
+<p>Separe artefatos de organismos, configurações, resultados registrados e pontos de verificação recuperáveis. Versione cada formato; teste migrações, limites de armazenamento, download/importação, restauração imediata e continuação onde a continuação determinística é suportada. Resultados apenas de dados não devem se disfarçar como pontos de verificação completos do motor.</p>
+<p><strong>Sair:</strong> fluxos de trabalho selecionados de população/tutorial sobrevivem ao salvar, reabrir e transferir entre navegadores com metadados científicos intactos. Esta é a base para a Análise completa.</p>
+</section>
+<section class="level3" id="phase-3-organism-and-analysis-continuity">
+<h3>Fase 3: Continuidade de Organismo e Análise</h3>
+<p>Conclua os controles de ciclo de Organismo e exibições de estado em uma disposição reconhecível; valide a avaliação isolada de organismo sem alterar a população ativa ou sua sequência aleatória. Mapeie fitness, viabilidade, gestação e observações de tarefas para definições revisadas em vez de substituir medidas com nomes semelhantes.</p>
+<p>Implemente o fluxo de trabalho de Análise do estilo v4 para até três pratos populados, medidas suportadas à esquerda/direita, cores de traço, operações de remover/alterar, gráficos interativos e exportação. Mantenha a comparação de execução de lição mais recente como uma capacidade explicitamente identificada. Se uma medida legada não puder ser suportada, torne essa lacuna visível e revise a orientação da lição afetada.</p>
+<p><strong>Sair:</strong> caminhadas guiadas pelo instrutor selecionando Organismo e Análise passam com exceções registradas; testes diferenciais são usados apenas onde as semânticas antigas e novas são comparáveis.</p>
+</section>
+<section class="level3" id="phase-4-curriculum-accessibility-localization-and-classroom-pilot">
+<h3>Fase 4: currículo, acessibilidade, localização e pilotagem em sala de aula</h3>
+<p>Amplie as atividades da mutação para seleção, aptidão e design experimental independente usando o gráfico de aprendizagem revisado. Alinhe prompts e rúbricas com conceitos e mal-entendidos; verifique se o software expõe as evidências necessárias. Complete a ajuda contextual, revisão em espanhol, cobertura de regressão visual, verificações de teclado/leitor de tela e a matriz de navegadores/dispositivos suportados.</p>
+<p>Teste a curricula suportada com instrutores e alunos. Observe separadamente a conclusão de tarefas, erros de interpretação, perda de dados e discrepâncias em tutoriais. Avalie o aprendizado com consentimento apropriado e design de estudo se fizer afirmações de pesquisa; não transforme telemetria de demonstração rotineira em dados de pesquisa de aluno.</p>
+<p><strong>Sair:</strong> não há defeitos críticos não resolvidos de fluxo de trabalho ou integridade de dados dentro do escopo acordado, aceitação do instrutor, limitações publicadas e instruções de suporte, e uma decisão explícita de liberação tomada pelos mantenedores responsáveis. Um lançamento funcional para ensino não requer todos os recursos possíveis do motor, mas requer atividades totalmente suportadas e limites de compatibilidade honestos.</p>
+<p>Extensões como CPUs alternadas, mundos contínuos, experimentos knockout e um framework geral de painel permanecem como extensões separadas a menos que uma tarefa de aprendizagem revisada as torne necessárias. Siga o Avida upstream através de uma fronteira de compatibilidade fixa e mudanças pequenas e revisáveis; evite vincular a versão educacional a cada proposta de design upstream.</p>
+</section>
+</section>
+<section class="level2" id="evidence-stewardship-and-limitations">
+<h2>Evidência, gestão e limitações</h2>
+<p>Preparado com assistência de OpenAI Codex para revisão de Wesley R. Elsberry. Proposto responsável pelo projeto: Wesley R. Elsberry; revisores instrucionais e de linguagem ainda não foram designados. Não há implicações de endosso externo ou revisão concluída por instrutor. Inspeção de evidências: <strong>2026-09-30, aproximadamente 11:01 UTC</strong>. Datas do roteiro são julgamentos de planejamento, não estimativas de esforço medido.</p>
+<ul>
+<li><strong>Funcionalidade atual e lacunas — alta confiança para fatos documentados de fonte, moderada para impacto do tutorial.</strong>Revisão de protótipo de referência <a href="https://github.com/welsberr/avida-ed-5-poc/tree/3dd5f8cb0b36b048c297592265df7947ed964397">3dd5f8c</a>, seu <a href="https://github.com/welsberr/avida-ed-5-poc/blob/3dd5f8cb0b36b048c297592265df7947ed964397/docs/avida-ed4-consilience-map.md">mapa de controle</a>, guia de experimento e roteiro anterior para o primeiro experimento foram inspecionados. Esta reassesssão não repetiu o conjunto completo de aceitação da aplicação nem observou cada tutorial.</li>
+<li><strong>Sequência educacional — alta confiança na sequência publicada, efetividade no aprendizado não testada aqui.</strong> <a href="https://avida-ed.github.io/curriculum/lab-manual/">Manual de laboratório oficial</a> e <a href="https://avida-ed.github.io/help/">índice de tutorial</a> estabelecem alvos de origem, sem verificações de compatibilidade concluídas.</li>
+<li><strong>Implementação do Didactopus — alta confiança no comportamento do código inspecionado.</strong> <a href="https://git.cns.fyi/welsberr/Didactopus">Didactopus</a>, revisão local <code>f0b0e8ac55459e05bdf16604ec971ea266278b84</code>; QA de gráfico, análise de pré-requisitos, qualidade da trajetória do currículo e documentação de fluxo de revisão. O novo adaptador Avida permanece proposto.</li>
+<li><strong>Racional de pesquisa — confiança moderada na aplicabilidade.</strong> Memon (2007), <em>Um modelo de fluxo de eventos para aplicações baseadas em GUI para testes</em>, STVR 17:137–157; Goknil et al. (2014), <em>Análise de impacto de mudanças para requisitos: Uma abordagem de metamodelagem</em>, IST 56:950–972, <a href="https://doi.org/10.1016/j.infsof.2014.03.002">doi:10.1016/j.infsof.2014.03.002</a>. Resumos de autor/instituição foram consultados; nenhum estabelece a efetividade deste projeto.</li>
+<li><strong>Impacto da infraestrutura e cronograma — hipóteses a serem avaliadas.</strong> Recuperação de memória limitada e evidências do repositório informaram este plano. Nenhum benefício quantitativo de produtividade, ganho de aprendizado ou garantia de conclusão em outubro foi estabelecido.</li>
+</ul>
+<p>Mantenha decisões futuras, mudanças e razões, execuções de testes e disposições de revisão em um registro de trabalho versionado. Regenere o status público após mudanças significativas em vez de permitir que um resultado passado antigo certifique uma nova compilação.</p>
+</section>
+</section>
+</main><footer><div class="wrap">Prova de conceito independente. Rota planejada proposta; implementação e revisão externa permanecem pendentes.</div></footer></body></html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Estado basado en evidencia de continuidad conceptual y funcional desde Avida-ED 4 hasta el Avida-ED 5 prueba de concepto." name="description"/>
+<title>Avida-ED 4 a 5: estado del puerto</title>
+<link href="../site-report.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="masthead"><div class="wrap">
+<div class="eyebrow">Avida-ED 5 concepto de prueba · BEACON notas de demostración</div>
+<h1>¿Con qué fidelidad lleva el prototipo adelante Avida-ED 4?</h1>
+<p>Una revisión basada en el código de las tareas de usuario que permanecen reconocibles, los lugares donde el prototipo difiere y el trabajo que aún queda antes de que pueda reclamar continuidad de nivel tutorial.</p>
+</div></header>
+<main class="wrap">
+<nav aria-label="Navegación de página"><a href="index.html">Página principal del proyecto</a> · <a href="codex-collaboration.html">Codex y la pila de herramientas</a> · <a href="porting-learning-roadmap.html">Ruta de aprendizaje y portabilidad</a> · <a href="roadmap.html">Ruta de progreso y avance</a></nav>
+<section class="callout">
+<h2>Evaluación</h2>
+<p>El prototipo es un <strong>puente conceptual en progreso</strong>, no un reemplazo funcional fiel para Avida-ED 4. Ahora utiliza las tres vistas familiares—Población, Organismo y Análisis—reutiliza gráficos y elecciones de color seleccionados de v4, y soporta tareas reconocibles como ejecutar una población, inspeccionar un organismo, guardar el trabajo y ver resultados. Varios flujos de trabajo importantes aún difieren en controles, valores disponibles y comportamiento.</p>
+<p>La brecha más consecuente es Análisis: el prototipo compara ejecuciones completadas de lecciones, mientras que v4 permite a los aprendices colocar hasta tres platos poblados en un analizador compartido y elegir series medidas y ejes. Alinear el nombre ayuda en la reconocibilidad, pero no hace que estos flujos de trabajo sean equivalentes.</p>
+</section>
+<section>
+<h2>¿Qué significa 'fiel' aquí</h2>
+<p>Para esta revisión, la fidelidad significa que un estudiante que regresa puede reconocer la misma tarea, encontrar sus controles en un área familiar, usar valores y elecciones comparables y obtener un resultado comparable. No se requiere coincidencia a nivel de píxeles en una pantalla móvil estrecha, pero las instrucciones de tutorial establecidas aún deben mapearse a la nueva interfaz sin adivinación.</p>
+<p>La referencia es la revisión de origen Avida-ED 4 <a href="https://github.com/Avida-ED/Avida-ED4/commit/fcfc5c60e03479c85eadad083ffb5e7d92a95781">fcfc5c6</a> (versión 4.0.33), verificada 30 de septiembre 2026. El inventario de control detallado y la comparación están en el <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md">Avida-ED 4 a 5 mapa de interfaz</a>.</p>
+</section>
+<section>
+<h2>Estado actual por tarea del usuario</h2>
+<div class="scroll-table"><table>
+<thead><tr><th scope="col">Área de tarea</th><th scope="col">Estado</th><th scope="col">Evidencia e impacto</th></tr></thead>
+<tbody>
+<tr><th scope="row">Navegación principal</th><td class="status aligned">Alineado en el nivel de etiqueta</td><td>Población, Organismo y Análisis usan nombres v4 y gráficos familiares seleccionados. El diseño es adaptable, por lo que algunas posiciones cambian en anchos pequeños.</td></tr>
+<tr><th scope="row">Configuración de la población</th><td class="status partial">Parcial, intencionalmente restringido</td><td>La primera lección ofrece dos tratamientos de mutación, tres semillas fijas y un mundo 10 × 10 fijo con un ancestro y entorno integrados. Sus nueve fuerzas recompensas por tarea predeterminadas ahora coinciden numéricamente con el perfil Avida-ED 4, pero usan el mecanismo de multiplicador metabólico del POC. La v4 expone un plato configurable, colocación de ancestro, colocación de descendientes y valores de mutación más amplios.</td></tr>
+<tr><th scope="row">Controles de ejecución y observaciones en vivo</th><td class="status partial">Mismo propósito general, flujo de trabajo diferente</td><td>El prototipo puede reiniciar, avanzar paso a paso, reproducir, pausar, acelerar y ejecutar hasta un objetivo; registra y grafica población, riqueza de secuencias y participación de secuencia de ancestro. La v4 usa una disposición diferente de Ejecutar/Pausar/Avanzar/Nuevo y estadísticas de población más amplias.</td></tr>
+<tr><th scope="row">Coloración de población</th><td class="status partial">Conceptos seleccionados conservados</td><td>Están disponibles la coloración de fitness, costo de gestación, tasa metabólica, fenotipo y genotipo, con opciones de paleta heredadas conservadas. V4 también ofrece vistas de tareas/recursos dependientes del antepasado y del entorno que no están todas representadas.</td></tr>
+<tr><th scope="row">Inspección de organismo</th><td class="status partial">Funcional, con una presentación cambiada</td><td>Los organismos se pueden cargar e inspeccionar mientras se avanza paso a paso en la ejecución, incluyendo paneles de genoma y estado. Los controles de ciclo, ajustes y disposición visual de v4 no se reproducen uno por uno.</td></tr>
+<tr><th scope="row">Análisis</th><td class="status gap">Diferencia funcional principal</td><td>La vista actual superpone ejecuciones completadas. El analizador v4 acepta hasta tres platos poblados y permite a los usuarios elegir medidas izquierda y derecha, eliminar trazas y establecer colores. Un analizador de estilo v4 sigue siendo un elemento prioritario de paridad.</td></tr>
+<tr><th scope="row">Almacén y trabajo guardado</th><td class="status partial">Propósito conservado, interacción diferente</td><td>El prototipo guarda e importa organismos, configuraciones y puntos de control. Los grupos de elementos y las rutas de arrastrar y soltar aún necesitan una comparación directa con las secuencias de trabajo del tutorial v4.</td></tr>
+<tr><th scope="row">Configuración y entorno</th><td class="status partial">Subconjunto disponible</td><td>La configuración y los controles de entorno basados en metadatos son funcionales, incluyendo opciones y límites numéricos. El subconjunto expuesto y la ruta de configuración de tareas aún no han sido recorridos en comparación con el tutorial.</td></tr>
+<tr><th scope="row">Continuidad del tutorial</th><td class="status partial">No validado de principio a fin</td><td>El mapa de origen es detallado, pero aún no se ha realizado una revisión paso a paso representativa con videos o una comparación visual completa entre escritorio y móvil.</td></tr>
+</tbody>
+</table></div>
+</section>
+<section>
+<h2>Interpretación</h2>
+<p>La continuidad más fuerte hoy es la <em>forma</em> del área de trabajo y varias tareas familiares; no es una equivalencia completa de controles científicos o resultados de tutoriales. La lección estrecha es útil para una primera demostración porque proporciona a la nueva interfaz un experimento concreto, semillas reproducibles, evidencia en vivo y caminos para guardar/exportar. Esas adiciones deben describirse como un nuevo flujo de trabajo de lección, en lugar de presentarse como si los tutoriales anteriores ya lo describieran.</p>
+<p>Una secuencia de portado sensata es comparar las tareas de tutorial con el mapa de control, luego decidir para cada una si preservar la interacción de v4, exponerla como un modo adicional o etiquetar claramente un rediseño deliberado. Priorice el flujo de trabajo de Análisis de platos poblados y las transferencias del Almacén porque afectan cómo los aprendices mueven resultados entre vistas. Mantenga disponibles los nuevos ajustes preconfigurados de lección como una ruta separada.</p>
+</section>
+<aside>
+<h2>Evidencia y límites</h2>
+<p>Las etiquetas, opciones y rangos de control se verificaron en v4 y en la fuente POC. Eso respalda una alta confianza en la comparación a nivel de fuente. La calificación del impacto del tutorial es una evaluación razonada; necesita validación con instructores, aprendices y los videos exactos de tutorial. El manual v3 más antiguo es contexto de apoyo solo, no la autoridad para el comportamiento de v4.</p>
+<p>Una auditoría visual de escritorio y de ancho estrecho <a href="visual-audit-2026-09-30.html">visual audit</a> verificó las áreas de interfaz descritas como funcionales en esta página. Corrigió el diseño roto de Organism y defectos relacionados de desbordamiento y contraste. Esa auditoría verifica la visibilidad y colocación renderizada; no establece paridad de tutorial ni preparación para el aula.</p>
+<p>Referencias principales: <a href="https://github.com/Avida-ED/Avida-ED4">Avida-ED 4 repositorio</a>, <a href="https://avida-ed.github.io/help/">Avida-ED videos de ayuda y tutoriales</a>, <a href="https://github.com/welsberr/avida-ed-5-poc">este repositorio prototipo</a>, y su <a href="https://github.com/welsberr/avida-ed-5-poc/blob/main/docs/avida-ed4-consilience-map.md"> mapa detallado de la interfaz</a>. El estado refleja la fuente inspeccionada el 30 de septiembre 2026.</p>
+</aside>
+</main>
+<footer><div class="wrap">Prueba de concepto independiente. Esta página es una evaluación funcional, no una declaración de lanzamiento del equipo Avida-ED.</div></footer>
+</body>
+</html>
